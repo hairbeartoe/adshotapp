@@ -1,0 +1,229 @@
+{% extends "navigation.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block head %}
+{{ super() }}
+    <link href="./static/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./static/assets/css/paper-bootstrap-wizard.css" rel="stylesheet" />
+
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="./static/assets/css/demo.css" rel="stylesheet" />
+
+	<!-- Fonts and Icons -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+	<link href="./static/assets/css/themify-icons.css" rel="stylesheet">
+
+{% endblock %}
+
+
+
+{% block scripts %}
+	<!-- Core JS files -->
+	<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+	<script src="./static/assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="./static/assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Wizard -->
+	<script src="./static/assets/js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+	<script src="./static/assets/js/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="//js.stripe.com/v2/"></script>
+
+
+{% endblock %}
+
+{% block content %}
+<script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="//js.stripe.com/v2/"></script>
+
+ <div class="container">
+	        <div class="row">
+		        <div class="col-sm-8 col-sm-offset-2">
+<!--  Start OF NEW MODAL-->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="green" id="wizard">
+		                <form action="/pay" method="POST" name="add_site" id="add_site">
+							{{ form.hidden_tag() }}
+							<input type="hidden" id="stripeToken" name="stripeToken" />
+   	 						<input type="hidden" id="stripeEmail" name="stripeEmail" />
+
+		                <!--        You can switch " data-color="green" "  with one of the next bright colors: "blue", "azure", "orange", "red"       -->
+
+		                    	<div class="wizard-header">
+		                        	<h3 class="wizard-title">Add a new site</h3>
+		                        	<p class="category">This information will let us know more about the website</p>
+		                    	</div>
+								<div class="wizard-navigation">
+									<div class="progress-with-circle">
+									    <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" style="width: 20%;"></div>
+									</div>
+									<ul>
+			                            <li>
+											<a href="#website" data-toggle="tab">
+												<div class="icon-circle">
+													<i class="ti-map"></i>
+												</div>
+												<center>Website</center>
+											</a>
+										</li>
+			                            <li>
+											<a href="#basics" data-toggle="tab">
+												<div class="icon-circle">
+													<i class="ti-direction-alt"></i>
+												</div>
+												Basics
+											</a>
+										</li>
+			                            <li>
+											<a href="#options" data-toggle="tab">
+												<div class="icon-circle">
+													<i class="ti-panel"></i>
+												</div>
+												Extra Options
+											</a>
+										</li>
+										<li>
+											<a href="#checkout" data-toggle="tab">
+												<div class="icon-circle">
+													<i class="ti-credit-card"></i>
+												</div>
+												Checkout
+											</a>
+										</li>
+			                        </ul>
+								</div>
+		                        <div class="tab-content">
+		                            <div class="tab-pane" id="website">
+		                            	<div class="row">
+		                                	<div class="col-sm-12 ">
+		                                    	<h5 class="info-text"> Let's start with the website</h5>
+		                            		</div>
+		                                	<div class="col-sm-10 col-sm-offset-1">
+		                                    	<div class="form-group">
+													{{ wtf.form_field(form.domain_name, type="text", class="form-control", placeholder= "What website should we add? ex: nytimes.com" ) }}
+		                                    	</div>
+		                                	</div>
+		                            	</div>
+		                            </div>
+		                            <div class="tab-pane" id="basics">
+		                                <h5 class="info-text">How often should we take a screenshot?</h5>
+		                                <div class="row">
+		                                    <div class="col-sm-10 col-sm-offset-1 center">
+		                                    	<div class="form-group">
+													{{ wtf.form_field(form.rate, class="form-control", id="rate" ) }}
+		                                    	</div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                            <div class="tab-pane" id="options">
+		                                <h5 class="info-text">Let's pick some options </h5>
+		                                <div class="row">
+		                                    <div class="col-sm-4 col-sm-offset-1">
+													<div class="choice" data-toggle="wizard-checkbox">
+														{{ wtf.form_field(form.article, type="checkbox", id="article") }}
+		                                                <div class="card card-checkboxes card-hover-effect">
+		                                                    <i class="ti-home"></i>
+															<p>Track Article Pages?</p>
+		                                                </div>
+		                                            </div>
+											</div>
+		                                    <div class="col-sm-4 col-sm-offset-1">
+													<div class="choice" data-toggle="wizard-checkbox">
+														{{ wtf.form_field(form.mobile, type="checkbox",id="mobile") }}
+		                                                <div class="card card-checkboxes card-hover-effect">
+		                                                    <i class="ti-home"></i>
+															<p>Track Mobile Screenshots too?</p>
+		                                                </div>
+		                                            </div>
+											</div>
+		                                </div>
+		                            </div>
+									<div class="tab-pane" id="checkout">
+		                                <h5 class="info-text">Checkout time</h5>
+		                                <div class="row">
+		                                    <div class="col-sm-10 col-sm-offset-1 center">
+		                                    	<div class="form-group">
+													<p id="amount"> 99</p>
+		                                    	</div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="wizard-footer">
+	                            	<div class="pull-right">
+	                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
+	                                    <input type='submit' id="stripe-button" class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Add Site' />
+									</div>
+
+	                                <div class="pull-left">
+	                                    <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Previous' />
+	                                </div>
+	                                <div class="clearfix"></div>
+		                        </div>
+
+							<script>
+								 var handler = StripeCheckout.configure({
+										  key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+										  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+										  locale: 'auto',
+										  token: function(token) {
+											// Use the token to create the charge with a server-side script.
+											// You can access the token ID with `token.id`
+											$("#stripeToken").val(token.id);
+											$("#stripeEmail").val(token.email);
+											$("#add_site").submit();
+										  }
+										});
+
+										var amount = 1000;
+
+										$('#rate').change(function(){
+											if($(this).val() == 'Hourly'){ // or this.value == 'volvo'
+											amount = 9900;
+											}
+
+										});
+
+										$('#article').change(function() {
+										  if ($(this).is(':checked')) {
+											amount = 19900;
+										  } else {
+											amount = 0;
+										  }
+										});
+
+										$('#mobile').change(function() {
+										  if ($(this).is(':checked')) {
+											amount = 19900;
+										  } else {
+											amount = 19900;
+										  }
+										});
+
+										$('#stripe-button').on('click', function (e) {
+											// Open Checkout with further options
+											handler.open({
+												name: 'Stripe.com',
+												description: '2 widgets',
+												amount: amount
+											});
+											e.preventDefault();
+										});
+
+										// Close Checkout on page navigation
+										$(window).on('popstate', function() {
+										  handler.close();
+										});
+							</script>
+		                    </form>
+		                </div>
+		            </div> <!-- wizard container -->
+				</div>
+	        </div> <!-- row -->
+ </div> <!--  big container -->
+
+{%endblock%}

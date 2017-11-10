@@ -1,0 +1,156 @@
+<!<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    {% extends "navigation.html" %}
+
+	{% block scripts %}
+
+    {% endblock %}
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="./static/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="./static/assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="./static/assets/css/paper-dashboard.css" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="./static/assets/css/demo.css" rel="stylesheet" />
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="./static/assets/css/themify-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-7">
+            <h3 class="card-title">{{ name }}</h3>
+            <br>
+        </div>
+        <div class="col-lg-5">
+            <div class="text-center" style="margin-top:20px">
+                <button class="btn btn-info btn-fill btn-wd" onclick="location.href = '{{ url_for('send_collection') }}';">
+                    Send Collection
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--
+      <div class="row text-center text-lg-left">
+        {% for image in image_names %}
+        <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-200">
+                    <img class="img-fluid img-thumbnail" src="{{ resized_img_src(image.name, width=400, height=300, mode='crop') }}" alt="">
+                    <div class="row" id="imagetime">
+                        <p>
+                            image.name
+                        </p>
+                    </div>
+                </a>
+
+
+        </div>
+      {% endfor %}
+-->
+    <div class="row text-center text-lg-left" id="">
+      {% for image in image_names %}
+
+        <div class="col-lg-3 col-sm-6" >
+            <div class="img-thumbnail">
+                <div class="content">
+                    <div class="row">
+
+                        <div class="col-xs-12" >
+                            <a href="#" id="">
+                                    <img src="{{ resized_img_src(image.name, width=400, height=300, mode='crop') }}" alt="image missing" class="img-responsive img-fluid thumbnail1" title="{{ image.name}}">
+                            </a>
+                        </div>
+
+
+                        <div class="caption">
+
+                            <a href="{{url_for('return_file', filepath=image.path, filename=image.name) }}" class="imagebutton">
+                                <div class="col-xs-6 text-center icon-big imagebutton">
+                                            <i class="ti-download"></i>
+                                </div>
+                            </a>
+
+
+
+                            <a href="{{ url_for('remove_image', image=image.id, collection=collection) }}">
+                                <div class="col-xs-6 imagebutton text-center icon-big">
+                                                <i class="ti-close"></i>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="footer">
+                        <hr />
+                        <div class="stats">
+                            {{ image.date }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       {% endfor %}
+
+
+    </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+        <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+
+
+{% endblock %}
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="./static/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="./static/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="./static/assets/js/bootstrap-checkbox-radio.js"></script>
+
+
+    <!--  Notifications Plugin    -->
+    <script src="./static/assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="./static/text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+	<script src="./static/assets/js/paper-dashboard.js"></script>
+
+	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+	<script src="./static/assets/js/demo.js"></script>
+
+
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div>Adshot -
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('login') }}">Login</a>
+    <a href="{{ url_for('admin.index') }}">Admin</a>
+    <a href="{{ url_for('signup') }}">Signup</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>
