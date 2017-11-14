@@ -3,6 +3,14 @@
 
 
 {% block head %}
+
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
 {{ super() }}
     <link href="./static/assets/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="./static/assets/css/paper-bootstrap-wizard.css" rel="stylesheet" />
@@ -15,11 +23,6 @@
 	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
 	<link href="./static/assets/css/themify-icons.css" rel="stylesheet">
 
-{% endblock %}
-
-
-
-{% block scripts %}
 	<!-- Core JS files -->
 	<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
 	<script src="./static/assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -126,6 +129,7 @@
 													<div class="choice" data-toggle="wizard-checkbox">
 														{{ wtf.form_field(form.article, type="checkbox", id="article") }}
 		                                                <div class="card card-checkboxes card-hover-effect">
+															{{ wtf.form_field(form.article, type="checkbox", id="article") }}
 		                                                    <i class="ti-home"></i>
 															<p>Track Article Pages?</p>
 		                                                </div>

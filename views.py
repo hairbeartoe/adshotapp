@@ -33,19 +33,20 @@ def load_user(user_id):
 
 
 @app.route('/')
-@app.route('/index')
+@app.route('/index',  methods=['GET', 'POST'])
 def index():
+    form = LoginForm()
     user = {'nickname': 'Eddie'}
     return render_template("index.html",
                            title='Home',
-                           user=user)
+                           user=user,form=form)
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data).first()
+        user = User.query.filter_by(email=form.email.data.lower()).first()
         if user is not None:
             if check_password_hash(user.password,form.password.data):
                 if user.status == 'Active':
@@ -54,7 +55,7 @@ def login():
                     user.last_login = datetime.today()
                     db.session.commit()
                     return redirect(url_for('dashboard'))
-        return "Invalid password or username"
+        flash("Invalid password or username")
     return render_template('login.html', form=form)
 
 
@@ -63,7 +64,7 @@ def signup():
     form = RegisterForm()
     if form.validate_on_submit():
         # send the confirmation email
-        email = form.email.data
+        email = form.email.data.lower()
         token = s.dumps(email, salt='email-confirm')
         msg = Message('Confirm Email', sender='e.eddieflores@gmail.com', recipients=[email])
         the_link = url_for('confirm_email', token=token, _external=True)
@@ -72,7 +73,7 @@ def signup():
         # Generate the hashed password
         hashed_password= generate_password_hash(form.password.data, 'sha256')
         # add the new user to the database
-        new_user = User(nickname=form.username.data, email=form.email.data, password=hashed_password)
+        new_user = User(nickname=form.username.data, email=form.email.data.lower(), password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
         login_user(new_user)
