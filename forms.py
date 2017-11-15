@@ -69,10 +69,10 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Remember me')
 
 class RegisterForm(FlaskForm):
-    email = StringField('Email', validators=[InputRequired(), Email(message='Please enter a valid email'), Length(max=50)])
-    team_name = StringField('Team', validators=[InputRequired(), Length(max=50)])
-    username = StringField('Name', validators=[InputRequired(), Length(min=4, max=18)])
-    password = PasswordField('Password', validators=[InputRequired(), Length(min=8, max=80)])
+    email = StringField('Email')
+    team_name = StringField('Team')
+    username = StringField('Name')
+    password = PasswordField('Password')
     remember = BooleanField('Remember me')
 
 class AddUserForm(FlaskForm):

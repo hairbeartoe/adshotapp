@@ -39,8 +39,6 @@
 		                <div class="card wizard-card" data-color="green" id="wizard">
 		                <form action="/signup" method="POST" name="signup" id="signup">
 							{{ form.hidden_tag() }}
-							<input type="hidden" id="stripeToken" name="stripeToken" />
-   	 						<input type="hidden" id="stripeEmail" name="stripeEmail" />
 
 		                <!--        You can switch " data-color="green" "  with one of the next bright colors: "blue", "azure", "orange", "red"       -->
 
@@ -50,7 +48,7 @@
 		                    	</div>
 								<div class="wizard-navigation">
 									<div class="progress-with-circle">
-									    <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" style="width: 20%;"></div>
+									    <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 20%;"></div>
 									</div>
 									<ul>
 			                            <li>
@@ -75,14 +73,6 @@
 													<i class="ti-panel"></i>
 												</div>
 												Extra Options
-											</a>
-										</li>
-										<li>
-											<a href="#checkout" data-toggle="tab">
-												<div class="icon-circle">
-													<i class="ti-credit-card"></i>
-												</div>
-												Checkout
 											</a>
 										</li>
 			                        </ul>
@@ -120,21 +110,11 @@
 		                                    </div>
 		                                </div>
 		                            </div>
-									<div class="tab-pane" id="checkout">
-		                                <h5 class="info-text">Checkout time</h5>
-		                                <div class="row">
-		                                    <div class="col-sm-10 col-sm-offset-1 center">
-		                                    	<div class="form-group">
-													<p id="amount"> 99</p>
-		                                    	</div>
-		                                    </div>
-		                                </div>
-		                            </div>
 		                        </div>
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
 	                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
-	                                    <input type='submit' id="stripe-button" class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='sign up' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Sign up' />
 									</div>
 
 	                                <div class="pull-left">

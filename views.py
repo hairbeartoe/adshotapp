@@ -12,7 +12,7 @@ from datetime import datetime
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 import stripe
-
+from wtforms import form, validators
 
 
 images=Images(app)
@@ -62,22 +62,35 @@ def login():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     form = RegisterForm()
-    if form.validate_on_submit():
-        # send the confirmation email
-        email = form.email.data.lower()
-        token = s.dumps(email, salt='email-confirm')
-        msg = Message('Confirm Email', sender='e.eddieflores@gmail.com', recipients=[email])
-        the_link = url_for('confirm_email', token=token, _external=True)
-        msg.html = render_template('/email-confirmation.html', link=the_link)
-        mail.send(msg)
-        # Generate the hashed password
-        hashed_password= generate_password_hash(form.password.data, 'sha256')
-        # add the new user to the database
-        new_user = User(nickname=form.username.data, email=form.email.data.lower(), password=hashed_password)
-        db.session.add(new_user)
-        db.session.commit()
-        login_user(new_user)
-        return redirect(url_for('dashboard'))
+    if request.method == "POST":
+        print(request.method)
+        if form.validate_on_submit():
+            '''
+            # send the confirmation email
+            email = form.email.data.lower()
+            token = s.dumps(email, salt='email-confirm')
+            msg = Message('Confirm Email', sender='e.eddieflores@gmail.com', recipients=[email])
+            the_link = url_for('confirm_email', token=token, _external=True)
+            msg.html = render_template('/email-confirmation.html', link=the_link)
+            mail.send(msg)
+            '''
+            # Generate the hashed password
+            hashed_password= generate_password_hash(form.password.data, 'sha256')
+            print(hashed_password)
+            # add the new user to the database
+            new_user = User(nickname=form.email.data, email=form.email.data, password=hashed_password)
+            db.session.add(new_user)
+            print(new_user)
+            db.session.commit()
+            login_user(new_user)
+            new_team = Team(name=form.team_name.data)
+            new_team.admin_user.append(new_user)
+            db.session.add(new_team)
+            print(new_team.id)
+            db.session.commit()
+            return redirect(url_for('dashboard'))
+        else:
+            print('not valid')
     return render_template('signup.html', form=form)
 
 
