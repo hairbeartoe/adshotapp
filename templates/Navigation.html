@@ -18,25 +18,25 @@
 
 
     <!-- Bootstrap core CSS     -->
-    <link href="./static/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- Animation library for notifications   -->
-    <link href="./static/assets/css/animate.min.css" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/animate.min.css') }}" rel="stylesheet"/>
 
     <!--  Paper Dashboard core CSS    -->
-    <link href="./static/assets/css/paper-dashboard.css" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/paper-dashboard.css') }}" rel="stylesheet"/>
 
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="./static/assets/css/demo.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='assets/css/demo.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="./static/assets/css/slimbox2.css" type="text/css" media="screen" />
 
 
     <!--  Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <link href="./static/assets/css/themify-icons.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/css/themify-icons.css') }}" rel="stylesheet">
 
 
     <!-- Javascript Gallery REMOVE WHEN DONE-->
@@ -96,7 +96,7 @@
                 {% else %}
                 <li>
                 {% endif %}
-                    <a href="/dashboard">
+                    <a href="{{ url_for('dashboard') }}">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
                     </a>
@@ -107,7 +107,7 @@
                 {% else %}
                 <li>
                 {% endif %}
-                    <a href="screenshots">
+                    <a href="{{ url_for('get_sites') }}">
                         <i class="ti-gallery"></i>
                         <p>Screenshots</p>
                     </a>
@@ -119,26 +119,26 @@
                 {% else %}
                 <li>
                 {% endif %}
-                    <a href="profile">
+                    <a href="{{ url_for('edit_user_profile') }}">
                         <i class="ti-settings"></i>
                         <p>User</p>
                     </a>
                 </li>
 
                 <li>
-                    <a href="collections">
+                    <a href="{{ url_for('get_user_collections') }}">
                         <i class="ti-archive"></i>
                         <p>Collections</p>
                     </a>
                 </li>
                 <li>
-                    <a href="team">
+                    <a href="{{ url_for('team') }}">
                         <i class="ti-user"></i>
                         <p>Team</p>
                     </a>
                 </li>
 				<li class="active-pro">
-                    <a href="/logout">
+                    <a href="{{ url_for('logout') }}">
                         <i class="ti-export"></i>
                         <p>Logout</p>
                     </a>

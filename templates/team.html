@@ -69,8 +69,8 @@
                                         	<td>{{ site.domain }}</td>
                                         	<td>{{ site.capture_rate }}</td>
                                         	<td>{{ site.status }}</td>
-                                        	<td> {{ site.last_screenshot }}</td>
-                                            <td>{{ site.date_added }}</td>
+                                        	<td> {{ site.last_screenshot.strftime('%m-%d-%Y %I:%M %p') }}</td>
+                                            <td>{{ site.date_added.strftime('%m-%d-%Y') }}</td>
                                         </tr>
                                     {% endfor %}
                                     </tbody>
@@ -107,6 +107,7 @@
                                         <th>Collections</th>
                                         <th>Date Joined</th>
                                         <th>Last Login</th>
+                                        <th>Actions</th>
                                     </thead>
                                     <tbody>
                                     {% for user in users %}
@@ -118,8 +119,14 @@
                                         	<td> {{ user.profile }} </td>
                                             <td>{{ user.status }}</td>
                                             <td>{{ user.collection_count }}</td>
-                                        	<td> {{ user.date_joined }} </td>
-                                            <td>{{ user.last_login }}</td>
+                                        	<td> {{ user.date_joined.strftime('%m-%d-%Y') }} </td>
+                                            <td>{{ user.last_login.strftime('%m-%d-%Y %I:%M %p') }}</td>
+
+                                            {% if current_user.profile == 'Team Administrator' or current_user.profile == 'System Administrator' %}
+                                            <td><a href="{{url_for('edit_user_profile_admin', userid=user.id) }}"><i class="fa fa-edit"></i> Edit User</a></td>
+                                            {% else %}
+                                            <td></td>
+                                            {% endif %}
                                         </tr>
                                     {% endfor %}
                                     </tbody>

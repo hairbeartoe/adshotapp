@@ -36,86 +36,114 @@
 <body>
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-lg-7">
-            <h3 class="card-title">{{ name }}</h3>
-            <br>
-        </div>
-        <div class="col-lg-5">
-            <div class="text-center" style="margin-top:20px">
-                <button class="btn btn-info btn-fill btn-wd" onclick="location.href = '{{ url_for('send_collection') }}';">
-                    Send Collection
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!--
-      <div class="row text-center text-lg-left">
-        {% for image in image_names %}
-        <div class="col-lg-3 col-md-4 col-xs-6">
-                <a href="#" class="d-block mb-4 h-200">
-                    <img class="img-fluid img-thumbnail" src="{{ resized_img_src(image.name, width=400, height=300, mode='crop') }}" alt="">
-                    <div class="row" id="imagetime">
-                        <p>
-                            image.name
-                        </p>
-                    </div>
-                </a>
 
 
-        </div>
-      {% endfor %}
--->
-    <div class="row text-center text-lg-left" id="">
-      {% for image in image_names %}
-
-        <div class="col-lg-3 col-sm-6" >
-            <div class="img-thumbnail">
-                <div class="content">
-                    <div class="row">
-
-                        <div class="col-xs-12" >
-                            <a href="#" id="">
-                                    <img src="{{ resized_img_src(image.name, width=400, height=300, mode='crop') }}" alt="image missing" class="img-responsive img-fluid thumbnail1" title="{{ image.name}}">
-                            </a>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 col-lg-offset-4 col-md-offset-3">
+                <div class="card">
+                    <div class="content text-center">
+                        <div class="author">
+                          <h2 class="card-title">{{ name }}</h2>
                         </div>
-
-
-                        <div class="caption">
-
-                            <a href="{{url_for('return_file', filepath=image.path, filename=image.name) }}" class="imagebutton">
-                                <div class="col-xs-6 text-center icon-big imagebutton">
-                                            <i class="ti-download"></i>
-                                </div>
-                            </a>
-
-
-
-                            <a href="{{ url_for('remove_image', image=image.id, collection=collection) }}">
-                                <div class="col-xs-6 imagebutton text-center icon-big">
-                                                <i class="ti-close"></i>
-                                </div>
-                            </a>
-                        </div>
-
                     </div>
-
-                    <div class="footer">
-                        <hr />
-                        <div class="stats">
-                            {{ image.date }}
+                    <hr>
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-md-3 col-md-offset-1">
+                                <h5>12<br /><small>Collections</small></h5>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>2<br /><small>Sent Collections</small></h5>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>24<br /><small>Saved Images</small></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-info btn-fill btn-wd" onclick="location.href = '{{ url_for('send_collection', collection=collection) }}';">
+                                Send Collection
+                            </button>
+                            <button class="btn btn-info btn-fill btn-wd" onclick="location.href = '{{ url_for('delete_collection', collection=collection) }}';">
+                                Delete Collection
+                            </button>
+                        </div>
+                        <div class="row">
+                            <br>
                         </div>
                     </div>
                 </div>
             </div>
+
+        <!--
+          <div class="row text-center text-lg-left">
+            {% for image in image_names %}
+            <div class="col-lg-3 col-md-4 col-xs-6">
+                    <a href="#" class="d-block mb-4 h-200">
+                        <img class="img-fluid img-thumbnail" src="{{ resized_img_src(image.name, width=400, height=300, mode='crop') }}" alt="">
+                        <div class="row" id="imagetime">
+                            <p>
+                                image.name
+                            </p>
+                        </div>
+                    </a>
+
+
+            </div>
+          {% endfor %}
+    -->
+    <div class="row col-lg-12">
+        <div class="row text-center text-lg-left" id="">
+          {% for image in image_names %}
+
+            <div class="col-lg-3 col-sm-6" >
+                <div class="img-thumbnail">
+                    <div class="content">
+                        <div class="row">
+
+                            <div class="col-xs-12" >
+                                <a href="#" id="">
+                                        <img src="{{ resized_img_src(image.name, width=400, height=300, mode='crop') }}" alt="image missing" class="img-responsive img-fluid thumbnail1" title="{{ image.name}}">
+                                </a>
+                            </div>
+
+
+                            <div class="caption">
+
+                                <a href="{{url_for('return_file', filepath=image.path, filename=image.name) }}" class="imagebutton">
+                                    <div class="col-xs-6 text-center icon-big imagebutton">
+                                                <i class="ti-download"></i>
+                                    </div>
+                                </a>
+
+
+
+                                <a href="{{ url_for('remove_image', image=image.id, collection=collection) }}">
+                                    <div class="col-xs-6 imagebutton text-center icon-big">
+                                                    <i class="ti-close"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="footer">
+                            <hr />
+                            <div class="stats">
+                                {{ image.date }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           {% endfor %}
+            </div>
         </div>
-       {% endfor %}
 
-
+        </div>
     </div>
-
+</div>
 
 
         <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>

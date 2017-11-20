@@ -126,18 +126,18 @@
 		                                <h5 class="info-text">Let's pick some options </h5>
 		                                <div class="row">
 		                                    <div class="col-sm-4 col-sm-offset-1">
+												{{ wtf.form_field(form.article, id='amount', name='amount' ) }}
 													<div class="choice" data-toggle="wizard-checkbox">
-														{{ wtf.form_field(form.article, type="checkbox", id="article") }}
 		                                                <div class="card card-checkboxes card-hover-effect">
-															{{ wtf.form_field(form.article, type="checkbox", id="article") }}
+
 		                                                    <i class="ti-home"></i>
 															<p>Track Article Pages?</p>
 		                                                </div>
 		                                            </div>
 											</div>
 		                                    <div class="col-sm-4 col-sm-offset-1">
+												{{ wtf.form_field(form.mobile, class="wizard-checkbox") }}
 													<div class="choice" data-toggle="wizard-checkbox">
-														{{ wtf.form_field(form.mobile, type="checkbox",id="mobile") }}
 		                                                <div class="card card-checkboxes card-hover-effect">
 		                                                    <i class="ti-home"></i>
 															<p>Track Mobile Screenshots too?</p>
@@ -149,11 +149,22 @@
 									<div class="tab-pane" id="checkout">
 		                                <h5 class="info-text">Checkout time</h5>
 		                                <div class="row">
-		                                    <div class="col-sm-10 col-sm-offset-1 center">
-		                                    	<div class="form-group">
-													<p id="amount"> 99</p>
-		                                    	</div>
-		                                    </div>
+		                                    <div class="col-lg-12 col-sm-12">
+												<div class="card">
+													<div class="content">
+														<div class="row">
+															<div class="col-xs-12 text-center">
+																<p>You're signing up for our</p><br>
+																<H3 id="plan">Basic Plan</H3><br>
+																<H4 id="amount">$199/mo</H4><br>
+															</div>
+														</div>
+														<div class="footer">
+															<hr />
+														</div>
+													</div>
+												</div>
+											</div>
 		                                </div>
 		                            </div>
 		                        </div>
@@ -183,37 +194,25 @@
 										  }
 										});
 
-										var amount = 1000;
 
 										$('#rate').change(function(){
-											if($(this).val() == 'Hourly'){ // or this.value == 'volvo'
-											amount = 9900;
+											if(($(this).val() == '30') || ($(this).val() == '15')){ // or this.value == 30 minutes or 15
+											$("#plan").html("Premium Plan");
+											$("#amount").html("299/mo");
+											}
+											else { // or this.value == 'volvo'
+											$("#plan").html("Basic Plan");
+											$("#amount").html("199/mo");
 											}
 
 										});
 
-										$('#article').change(function() {
-										  if ($(this).is(':checked')) {
-											amount = 19900;
-										  } else {
-											amount = 0;
-										  }
-										});
-
-										$('#mobile').change(function() {
-										  if ($(this).is(':checked')) {
-											amount = 19900;
-										  } else {
-											amount = 19900;
-										  }
-										});
 
 										$('#stripe-button').on('click', function (e) {
 											// Open Checkout with further options
 											handler.open({
 												name: 'Stripe.com',
 												description: '2 widgets',
-												amount: amount
 											});
 											e.preventDefault();
 										});

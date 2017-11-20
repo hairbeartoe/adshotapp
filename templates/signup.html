@@ -81,31 +81,37 @@
 		                            <div class="tab-pane" id="website">
 		                            	<div class="row">
 		                                	<div class="col-sm-12 ">
-		                                    	<h5 class="info-text"> Let's start with the website</h5>
+		                                    	<h5 class="info-text"> Let's start with the basics</h5>
 		                            		</div>
 		                                	<div class="col-sm-10 col-sm-offset-1">
 		                                    	<div class="form-group">
-													{{ wtf.form_field(form.email, type="text", class="form-control", placeholder= "What's your email?" ) }}
+													{{ wtf.form_field(form.first_name, type="text", class="form-control", placeholder= "What's your first name?" ) }}
+		                                    	</div>
+												<div class="form-group">
+													{{ wtf.form_field(form.last_name, type="text", class="form-control", placeholder= "What's your last name?" ) }}
 		                                    	</div>
 		                                	</div>
 		                            	</div>
 		                            </div>
 		                            <div class="tab-pane" id="basics">
-		                                <h5 class="info-text">How often should we take a screenshot?</h5>
+		                                <h5 class="info-text">Now your email</h5>
 		                                <div class="row">
 		                                    <div class="col-sm-10 col-sm-offset-1 center">
 		                                    	<div class="form-group">
-													{{ wtf.form_field(form.team_name, type="text", class="form-control", placeholder= "What's should we call your team?" ) }}
+													{{ wtf.form_field(form.email, type="text", class="form-control", placeholder= "What's your email address?" ) }}
+		                                    	</div>
+												<div class="form-group">
+													{{ wtf.form_field(form.password, type="password", class="form-control", placeholder= "What do you want to be your super secret password?" ) }}
 		                                    	</div>
 		                                    </div>
 		                                </div>
 		                            </div>
 		                            <div class="tab-pane" id="options">
-		                                <h5 class="info-text">Let's pick some options </h5>
+		                                <h5 class="info-text">Your team</h5>
 		                                <div class="row">
 		                                    <div class="col-sm-10 col-sm-offset-1 center">
 		                                    	<div class="form-group">
-													{{ wtf.form_field(form.password, type="text", class="form-control", placeholder= "What's should we call your team?" ) }}
+													{{ wtf.form_field(form.team_name, type="text", class="form-control", placeholder= "What's should we call your team?" ) }}
 		                                    	</div>
 		                                    </div>
 		                                </div>

@@ -2,7 +2,7 @@ import os
 from flask import render_template, redirect,url_for,send_from_directory, request, send_file, flash
 from app import app, db
 from app.models import User,Site, Image, subscriptions, Team, Collection
-from app.forms import LoginForm, RegisterForm, AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm
+from app.forms import LoginForm, RegisterForm, AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm, SendCollectionForm
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
@@ -78,7 +78,17 @@ def signup():
             hashed_password= generate_password_hash(form.password.data, 'sha256')
             print(hashed_password)
             # add the new user to the database
-            new_user = User(nickname=form.email.data, email=form.email.data, password=hashed_password)
+            new_user = User(nickname= form.first_name.data + " " + form.last_name.data,
+                            first_name=form.first_name.data,
+                            last_name=form.last_name.data,
+                            email=form.email.data,
+                            password=hashed_password,
+                            profile='Team Administrator',
+                            status='Active',
+                            date_joined=datetime.today(),
+                            last_login=datetime.today(),
+                            confirmed_email=False,
+                            collection_count=0)
             db.session.add(new_user)
             print(new_user)
             db.session.commit()
@@ -119,22 +129,36 @@ def dashboard():
 
 @app.route('/profile', methods=['GET', 'POST'])
 def edit_user_profile():
-    form = EditUserProfile(user=current_user)
     user = current_user
+    form = EditUserProfile(profile=user.profile, status=user.status)
     team = Team.query.filter(Team.id == current_user.team).first()
     if form.validate_on_submit():
         user.email = form.email.data
         user.first_name = form.first_name.data
         user.last_name = form.last_name.data
-        user.street_address = form.street_address.data
-        user.city = form.city.data
-        user.state = form.state.data
-        user.postal_code = form.postal_code.data
+        user.profile = form.profile.data
+        user.status = form.status.data
         db.session.commit()
         flash('Profile Updated', category='info')
         return redirect(url_for('edit_user_profile'))
     return render_template('user.html', form=form, title='Profile', user=user, team=team)
 
+
+@app.route('/profile/<userid>', methods=['GET', 'POST'])
+def edit_user_profile_admin(userid):
+    user = User.query.filter(User.id == userid).first()
+    form = EditUserProfile(profile=user.profile, status=user.status)
+    team = Team.query.filter(Team.id == user.team).first()
+    if form.validate_on_submit():
+        user.email = form.email.data
+        user.first_name = form.first_name.data
+        user.last_name = form.last_name.data
+        user.profile = form.profile.data
+        user.status = form.status.data
+        db.session.commit()
+        flash('Profile Updated', category='info')
+        return redirect(url_for('team'))
+    return render_template('user.html', form=form, title='Profile', user=user, team=team)
 
 
 @app.route('/screenshots')
@@ -188,6 +212,7 @@ def get_images():
 @app.route('/display/<filename>')
 def send_image(filename):
     return send_from_directory(filename)
+
 
 @app.route('/return-files/')
 def return_file():
@@ -246,8 +271,9 @@ def create_collection():
         # create the new collection
         new_collection = Collection(name=form.name.data)
         db.session.add(new_collection)
+        db.session.commit()
         # add it to the current user's list of collections
-        current_user.collections.append(new_collection)
+        current_user.collections_backref.append(new_collection)
         db.session.add(current_user)
         # add the image to the collection
         image_to_add = Image.query.filter_by(id=form.image.data).first()
@@ -306,36 +332,67 @@ def remove_image():
     print(image_to_remove.id)
     return redirect(url_for('get_user_collections'))
 
+
 @app.route('/team', methods=['GET', 'POST'])
 def team():
     user_team = Team.query.filter(Team.id==current_user.team).first()
     team_name = user_team.name
     users = User.query.filter(User.team == user_team.id).all()
     sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
-    return render_template('team.html', team=team_name, users=users, sites=sites)
+    return render_template('team.html', team=team_name, users=users, sites=sites,current_user=current_user)
 
 
-
-@app.route('/sendcollection', methods=['GET', 'POST'])
-def send_collection():
-    if request.method =='GET':
-        return '<form action="/sendcollection" method= "POST"><input name="email"><input type="submit"></form>'
-    email = request.form['email']
+@app.route('/sendcollection/<collection>', methods=['GET', 'POST'])
+def send_collection(collection):
+    form = SendCollectionForm()
+    if form.validate_on_submit():
+        email = form.email.data
+        collection = Collection.query.get(collection)
+        user = User.query.filter(User.email == email.lower()).first()
+        if user is None:
+            flash('User added')
+            return redirect( url_for('get_user_collections'))
+        else:
+            user.collections_backref.append(collection)
+            db.session.commit()
+            msg = Message('New Collection Added', sender='e.eddieflores@gmail.com', recipients=[email])
+            the_link = url_for('get_dates', _external=True, site='google.com')
+            msg.html = render_template('/email-confirmation.html', link=the_link)
+            mail.send(msg)
+            flash('Message Sent')
+            return redirect( url_for('get_user_collections'))
+    return render_template('/send_collection_form.html', form=form)
     # TODO Check if the user exist in the DB
     # TODO if user exists add to users collections and notify
     # TODO if user does not exist - Allow to download and invite to sign up
-    x=1 # to test sending each
-    if x == 1:  # Simultate user exists
-        # TODO add collection to user
-        msg = Message('Confirm Email', sender='e.eddieflores@gmail.com', recipients=[email])
+
+
+@app.route('/collection/sender', methods=['GET', 'POST'])
+def collectionsender():
+    collection = request.args.get('collection')
+    email = request.args.get('email')
+    collection = Collection.query.get(collection)
+    user = User.query.filter(User.email == email.lower()).first()
+    if user is None:
+        flash('User added')
+        return redirect( url_for('get_user_collections'))
+    else:
+        user.collections_backref.append(collection)
+        msg = Message('New Collection Added', sender='e.eddieflores@gmail.com', recipients=[email])
         the_link = url_for('get_dates', _external=True, site='google.com')
         msg.html = render_template('/email-confirmation.html', link=the_link)
         mail.send(msg)
-        return "an email confirmation link has been sent to {}".format(request.form['email'])
-    else:
-        # TODO invite user to join and download images
-        return 'yay'
+        return redirect( url_for('get_user_collections'))
 
+
+@app.route('/deletecollection/<collection>', methods=['GET', 'POST'])
+def delete_collection(collection):
+    collection_to_remove = Collection.query.get(collection)
+    current_user.collections_backref.remove(collection_to_remove)
+    db.session.commit()
+    # print('collection removed')
+    flash('Collection removed', category='alert-info')
+    return redirect(url_for('get_user_collections'))
 
 
 

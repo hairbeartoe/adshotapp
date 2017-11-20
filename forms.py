@@ -70,16 +70,23 @@ class LoginForm(FlaskForm):
 
 class RegisterForm(FlaskForm):
     email = StringField('Email')
+    first_name = StringField('First Name')
+    last_name = StringField('Last Name')
     team_name = StringField('Team')
-    username = StringField('Name')
     password = PasswordField('Password')
-    remember = BooleanField('Remember me')
+
 
 class AddUserForm(FlaskForm):
     email = StringField('Email', validators=[InputRequired(), Email(message='Please enter a valid email'), Length(max=50)])
     first_name = StringField('First Name', validators=[InputRequired(), Length(max=50)])
     last_name = StringField('Last Name', validators=[InputRequired(), Length(max=50)])
 
+
+class SendCollectionForm(FlaskForm):
+    email = StringField('Email', validators=[InputRequired(), Email(message='Please enter a valid email'), Length(max=50)])
+    first_name = StringField('First Name', validators=[InputRequired(), Length(max=50)])
+    last_name = StringField('Last Name', validators=[InputRequired(), Length(max=50)])
+    collection = HiddenField()
 
 class AddSiteForm(FlaskForm):
     domain_name = StringField(validators=[InputRequired()])
@@ -103,11 +110,8 @@ class EditUserProfile(FlaskForm):
     email = StringField('Email Address', validators=[InputRequired()])
     first_name = StringField('First Name', validators=[Length(min=2, max=20)])
     last_name = StringField('Last Name', validators=[Length(min=2, max=25)])
-    street_address = StringField('Street Address', validators=[Length(min=2, max=40)])
-    city = StringField('City', validators=[Length(min=2, max=30)])
-    state = SelectField(choices=STATE_ABBREV)
-    postal_code = StringField('Postal Code', validators=[Length(min=2, max=9)])
-
+    profile = SelectField(choices=[ ('Standard User', 'Standard User'), ('Team Administrator', 'Team Administrator')])
+    status = SelectField(choices=[('Active', 'Active'), ('Deactivated', 'Deactivated')])
 
 class AddImagetoCollection(FlaskForm):
     image_id = StringField('Image', validators=[InputRequired()])

@@ -55,6 +55,7 @@ class User(UserMixin, db.Model):
 class Collection(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(140))
+    cover_image_path = db.Column(db.String(140))
     _users = db.relationship('User', secondary=collections, backref=db.backref('collections_backref', lazy='dynamic'))
     images = db.relationship('Image',
                             secondary = image_collections,
@@ -94,6 +95,7 @@ class Site(db.Model):
     article_page_capture = db.Column(db.Boolean)
     date_added = db.Column(db.DateTime, index=True)
     last_screenshot = db.Column(db.DateTime, index=True)
+    cover_image_path = db.Column(db.String(140))
 
 
     def __repr__(self):

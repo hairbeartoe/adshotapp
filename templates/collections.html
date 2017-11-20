@@ -67,7 +67,11 @@
                         <div class="col-xs-12 card-hover-effect" >
 
                             <a href="{{ url_for('get_collection_images', collection=collection.id) }}" id="">
-                                    <img src="http://via.placeholder.com/400x300" alt="image missing" class="img-responsive img-fluid" title="">
+                                {% if collection.cover_image_path %}
+                                <img src="{{ resized_img_src(collection.cover_image_path, width=400, height=300, mode='crop') }}" alt="image missing" class="img-responsive img-fluid thumbnail1" title="Image">
+                                {% else %}
+                                <img src="http://via.placeholder.com/400x300" alt="image missing" class="img-responsive img-fluid" title="">
+                                {% endif %}
                             </a>
                         </div>
 
