@@ -1,7 +1,7 @@
 from flask import Flask
 from app import app,db
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SelectField, HiddenField
+from wtforms import StringField, PasswordField, BooleanField, SelectField, HiddenField, TextAreaField
 from wtforms.validators import InputRequired, Email, Length, URL
 from flask_bootstrap import Bootstrap
 
@@ -84,8 +84,7 @@ class AddUserForm(FlaskForm):
 
 class SendCollectionForm(FlaskForm):
     email = StringField('Email', validators=[InputRequired(), Email(message='Please enter a valid email'), Length(max=50)])
-    first_name = StringField('First Name', validators=[InputRequired(), Length(max=50)])
-    last_name = StringField('Last Name', validators=[InputRequired(), Length(max=50)])
+    message = TextAreaField('Message', validators=[InputRequired(), Length(max=255)])
     collection = HiddenField()
 
 class AddSiteForm(FlaskForm):

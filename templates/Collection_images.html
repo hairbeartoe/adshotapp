@@ -9,6 +9,7 @@
 
 	{% block scripts %}
 
+
     {% endblock %}
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -95,6 +96,7 @@
     -->
     <div class="row col-lg-12">
         <div class="row text-center text-lg-left" id="">
+
           {% for image in image_names %}
 
             <div class="col-lg-3 col-sm-6" >
@@ -131,7 +133,7 @@
                         <div class="footer">
                             <hr />
                             <div class="stats">
-                                {{ image.date }}
+                                {{ image.date.strftime('%m-%d-%Y %I:%M %p') }}
                             </div>
                         </div>
                     </div>
@@ -144,17 +146,6 @@
         </div>
     </div>
 </div>
-
-
-        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
-
 
 {% endblock %}
 

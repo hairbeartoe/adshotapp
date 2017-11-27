@@ -16,9 +16,8 @@ Sign Up
   <form class="form-signin" method="POST" >
     <h2 class="form-signin-heading">Send Collection</h2>
     {{ form.hidden_tag() }}
-    {{ wtf.form_field(form.first_name ) }}
-    {{ wtf.form_field(form.last_name) }}
-    {{ wtf.form_field(form.email) }}
+      {{ wtf.form_field(form.email, placeholder='recipients email') }}
+      {{ wtf.form_field(form.message, placeholder='any message?') }}
       {{ wtf.form_field(form.collection) }}
     <button class="btn btn-lg btn-primary btn-block" type="submit">Send Collection</button>
   </form>

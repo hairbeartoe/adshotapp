@@ -41,17 +41,14 @@
 
     <!-- Javascript Gallery REMOVE WHEN DONE-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="./static/assets/js/slimbox2.js"></script><!-- Include javascript files -->
+
 
     <!-- UPDATED LIGHT BOX -->
     <link rel="stylesheet" href="./static/assets/css/lightgallery.css">
     <script type="text/javascript" src="./static/assets/js/lightgallery.min.js"></script>
 
-    <!-- lightgallery plugins -->
-    <script type="text/javascript" src="./static/assets/js/lg-thumbnail.min.js"></script>
-    <script type="text/javascript" src="./static/assets/js/lg-fullscreen.min.js"></script>
 
-</head>
+
 <body>
 
 
@@ -223,7 +220,7 @@
 {% block scripts %}
     <!--   Core JS Files   -->
     <script src="./static/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="./static/assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<script src="./static/assets/js/bootstrap-checkbox-radio.js"></script>
