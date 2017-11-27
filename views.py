@@ -26,6 +26,11 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+stripe_pub_key = 'pk_test_upjxUBP80Gy8XJZMur6eSU28'
+stripe_secret_key = 'sk_test_PUE7j4ekbagC0dzP3HO0LD1T'
+stripe.api_key=stripe_secret_key
+
+
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -235,6 +240,7 @@ def add_site():
                         date_added=datetime.now())
         # Add the site to the DB
         db.session.add(new_site)
+        db.session.commit()
         #Add the new site to the current users team
         user_team = Team.query.filter(Team.id==current_user.team).first()
         user_team.subscriptions.append(new_site)
@@ -243,23 +249,25 @@ def add_site():
         db.session.commit()
         return redirect(url_for('pay'))
 
-    return render_template('addsite.html', form=form, title='Add site')
+    return render_template('addsite.html', form=form, title='Add site', pub_key=stripe_pub_key)
 
 
 @app.route('/pay', methods=['GET', 'POST'])
 def pay():
     print(request.form)
+    stripe.api_key = stripe_secret_key
     # Once they pay, the customer is created in Stripe
     customer = stripe.Customer.create(email=request.form['stripeEmail'], source=request.form['stripeToken'])
 
-    #after the customer is created, the Charge is handled
-    charge = stripe.Charge.create(
+    stripe.Subscription.create(
         customer=customer.id,
-        amount= 9900,
-        currency='usd',
-        description='The product'
+        items=[
+            {
+                "plan": "Pro",
+            },
+        ],
     )
-    return redirect(url_for('thanks'))
+    return redirect(url_for('dashboard'))
 
 
 
@@ -355,9 +363,9 @@ def send_collection(collection):
         else:
             user.collections_backref.append(collection)
             db.session.commit()
-            msg = Message('New Collection Added', sender='e.eddieflores@gmail.com', recipients=[email])
-            the_link = url_for('get_dates', _external=True, site='google.com')
-            msg.html = render_template('/email-confirmation.html', link=the_link)
+            msg = Message('New Collection Available', sender='e.eddieflores@gmail.com', recipients=[email])
+            the_link = url_for('get_collection_images', _external=True, collection=collection.id)
+            msg.html = render_template('/sent-collection-email.html', link=the_link, message=form.message.data)
             mail.send(msg)
             flash('Message Sent')
             return redirect( url_for('get_user_collections'))
@@ -382,7 +390,7 @@ def collectionsender():
         the_link = url_for('get_dates', _external=True, site='google.com')
         msg.html = render_template('/email-confirmation.html', link=the_link)
         mail.send(msg)
-        return redirect( url_for('get_user_collections'))
+        return redirect(url_for('get_user_collections'))
 
 
 @app.route('/deletecollection/<collection>', methods=['GET', 'POST'])

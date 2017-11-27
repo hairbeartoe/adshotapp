@@ -49,7 +49,7 @@
 <!--  Start OF NEW MODAL-->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="green" id="wizard">
-		                <form action="/pay" method="POST" name="add_site" id="add_site">
+		                <form method="POST" action="/pay" id="add_site">
 							{{ form.hidden_tag() }}
 							<input type="hidden" id="stripeToken" name="stripeToken" />
    	 						<input type="hidden" id="stripeEmail" name="stripeEmail" />
@@ -126,7 +126,9 @@
 		                                <h5 class="info-text">Let's pick some options </h5>
 		                                <div class="row">
 		                                    <div class="col-sm-4 col-sm-offset-1">
-												{{ wtf.form_field(form.article, id='amount', name='amount' ) }}
+												<p>Track Article Page Screenshots too?</p>
+												{{ form.article }}
+												<!--
 													<div class="choice" data-toggle="wizard-checkbox">
 		                                                <div class="card card-checkboxes card-hover-effect">
 
@@ -134,15 +136,20 @@
 															<p>Track Article Pages?</p>
 		                                                </div>
 		                                            </div>
+		                                            -->
 											</div>
 		                                    <div class="col-sm-4 col-sm-offset-1">
-												{{ wtf.form_field(form.mobile, class="wizard-checkbox") }}
+												<p>Track Mobile Screenshots too?</p>
+												{{ form.mobile(value="design") }}
+												<!--
 													<div class="choice" data-toggle="wizard-checkbox">
+
 		                                                <div class="card card-checkboxes card-hover-effect">
 		                                                    <i class="ti-home"></i>
 															<p>Track Mobile Screenshots too?</p>
 		                                                </div>
 		                                            </div>
+		                                            -->
 											</div>
 		                                </div>
 		                            </div>
@@ -171,7 +178,7 @@
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
 	                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
-	                                    <input type='submit' id="stripe-button" class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Add Site' />
+	                                    <input type='submit' id="stripe-button" class='btn btn-finish btn-fill btn-success btn-wd' value='Add Site' />
 									</div>
 
 	                                <div class="pull-left">
@@ -182,7 +189,7 @@
 
 							<script>
 								 var handler = StripeCheckout.configure({
-										  key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+										  key: '{{ pub_key }}',
 										  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
 										  locale: 'auto',
 										  token: function(token) {
@@ -194,19 +201,49 @@
 										  }
 										});
 
+										var count = 0;
 
-										$('#rate').change(function(){
-											if(($(this).val() == '30') || ($(this).val() == '15')){ // or this.value == 30 minutes or 15
+										function set_count(variable) {
+										  count += variable;
+										  if( count >0){
 											$("#plan").html("Premium Plan");
 											$("#amount").html("299/mo");
-											}
-											else { // or this.value == 'volvo'
+										  }
+										  else {
 											$("#plan").html("Basic Plan");
 											$("#amount").html("199/mo");
-											}
+										  }
+										}
 
+										$('#rate').change(function(){
+											if(($(this).val() == '30') || ($(this).val() == '15') || ($(this).val() == '60')){ // or this.value == 30 minutes or 15
+											set_count(1);
+											}
+											else {
+											set_count(-1);
+											}
 										});
 
+
+										$('#mobile').change(function(){
+											if ($('#mobile').is(":checked"))
+											{
+												set_count(1);
+											}
+											else {
+												set_count(-1);
+											}
+										});
+
+										$('#article').change(function(){
+											if ($('#article').is(":checked"))
+											{
+												set_count(1);
+											}
+											else {
+												set_count(-1);
+											}
+										});
 
 										$('#stripe-button').on('click', function (e) {
 											// Open Checkout with further options
