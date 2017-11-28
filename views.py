@@ -248,7 +248,6 @@ def add_site():
         #sites.append(new_site)
         db.session.commit()
         return redirect(url_for('pay'))
-
     return render_template('addsite.html', form=form, title='Add site', pub_key=stripe_pub_key)
 
 
@@ -258,7 +257,6 @@ def pay():
     stripe.api_key = stripe_secret_key
     # Once they pay, the customer is created in Stripe
     customer = stripe.Customer.create(email=request.form['stripeEmail'], source=request.form['stripeToken'])
-
     stripe.Subscription.create(
         customer=customer.id,
         items=[
