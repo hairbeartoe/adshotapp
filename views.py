@@ -237,7 +237,9 @@ def add_site():
                         capture_rate=form.rate.data,
                         mobile_capture=form.mobile.data,
                         article_page_capture=form.article.data,
-                        date_added=datetime.now())
+                        date_added=datetime.now(),
+                        status='Active')
+        print(new_site)
         # Add the site to the DB
         db.session.add(new_site)
         db.session.commit()
@@ -255,9 +257,38 @@ def add_site():
 def pay():
     print(request.form)
     stripe.api_key = stripe_secret_key
+
+    # create the site in the Database
+    new_site = Site(domain=request.form['domain_name'],
+                    capture_rate=request.form['rate'],
+                    date_added=datetime.now(),
+                    last_screenshot=datetime.now(),
+                    status='Active')
+    db.session.add(new_site)
+    db.session.commit()
+    #Add the new site to the current users team
+    user_team = Team.query.filter(Team.id==current_user.team).first()
+    user_team.subscriptions.append(new_site)
+    #sites.append(new_site)
+    db.session.commit()
+
     # Once they pay, the customer is created in Stripe
     customer = stripe.Customer.create(email=request.form['stripeEmail'], source=request.form['stripeToken'])
-    stripe.Subscription.create(
+
+    # Add the subscription in Stripe
+    if request.form['rate'] is str(1440):
+        print('first')
+        stripe.Subscription.create(
+        customer=customer.id,
+        items=[
+            {
+                "plan": "basic",
+            },
+        ],
+    )
+    else:
+        print('last')
+        stripe.Subscription.create(
         customer=customer.id,
         items=[
             {
@@ -265,7 +296,7 @@ def pay():
             },
         ],
     )
-    return redirect(url_for('dashboard'))
+    return redirect(url_for('get_sites'))
 
 
 
