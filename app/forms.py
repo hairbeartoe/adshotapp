@@ -109,7 +109,7 @@ class EditUserProfile(FlaskForm):
     email = StringField('Email Address', validators=[InputRequired()])
     first_name = StringField('First Name', validators=[Length(min=2, max=20)])
     last_name = StringField('Last Name', validators=[Length(min=2, max=25)])
-    profile = SelectField(choices=[ ('Standard User', 'Standard User'), ('Team Administrator', 'Team Administrator')])
+    profile = SelectField(choices=[('Standard User', 'Standard User'), ('Team Administrator', 'Team Administrator')])
     status = SelectField(choices=[('Active', 'Active'), ('Deactivated', 'Deactivated')])
 
 class AddImagetoCollection(FlaskForm):

@@ -2,303 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="231d7b04-24ae-4b5d-8ae3-c5e6f7eb6439" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/run.py" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/app/.gitattributes" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/app/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/app/README.md" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/adminview.py" afterPath="$PROJECT_DIR$/app/adminview.py" />
-      <change beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/app/config.py" />
-      <change beforePath="$PROJECT_DIR$/db_create.py" afterPath="$PROJECT_DIR$/app/db_create.py" />
-      <change beforePath="$PROJECT_DIR$/db_downgrade.py" afterPath="$PROJECT_DIR$/app/db_downgrade.py" />
-      <change beforePath="$PROJECT_DIR$/db_migrate.py" afterPath="$PROJECT_DIR$/app/db_migrate.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/README" afterPath="$PROJECT_DIR$/app/db_repository/README" />
-      <change beforePath="$PROJECT_DIR$/db_repository/__init__.py" afterPath="$PROJECT_DIR$/app/db_repository/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/manage.py" afterPath="$PROJECT_DIR$/app/db_repository/manage.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/migrate.cfg" afterPath="$PROJECT_DIR$/app/db_repository/migrate.cfg" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/001_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/001_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/002_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/002_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/003_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/003_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/004_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/004_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/005_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/005_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/006_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/006_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/007_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/007_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/008_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/008_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/009_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/009_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/010_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/010_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/011_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/011_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/012_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/012_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/013_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/013_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/014_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/014_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/015_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/015_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/016_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/016_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/017_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/017_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/018_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/018_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/019_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/019_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/020_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/020_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/021_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/021_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/022_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/022_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/023_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/023_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/024_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/024_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/025_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/025_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/026_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/026_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/027_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/027_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/028_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/028_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/029_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/029_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/030_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/030_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/031_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/031_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/032_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/032_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/033_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/033_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/034_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/034_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/035_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/035_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/036_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/036_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/037_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/037_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/038_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/038_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/039_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/039_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/040_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/040_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/041_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/041_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/042_migration.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/042_migration.py" />
-      <change beforePath="$PROJECT_DIR$/db_repository/versions/__init__.py" afterPath="$PROJECT_DIR$/app/db_repository/versions/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/db_upgrade.py" afterPath="$PROJECT_DIR$/app/db_upgrade.py" />
-      <change beforePath="$PROJECT_DIR$/forms.py" afterPath="$PROJECT_DIR$/app/forms.py" />
-      <change beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/app/models.py" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/css/demo.css" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/css/demo.css" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/css/themify-icons-demo.css" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/css/themify-icons-demo.css" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/css/themify-icons.css" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/css/themify-icons.css" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/fonts/themify.eot" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/fonts/themify.eot" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/fonts/themify.svg" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/fonts/themify.svg" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/fonts/themify.ttf" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/fonts/themify.ttf" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/fonts/themify.woff" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/fonts/themify.woff" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/apple-icon.png" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/apple-icon.png" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/default-avatar.jpg" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/default-avatar.jpg" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/favicon.png" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/favicon.png" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/new_logo.png" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/new_logo.png" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/paper-1.jpeg" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/paper-1.jpeg" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/paper-2.jpeg" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/paper-2.jpeg" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/paper-3.jpeg" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/paper-3.jpeg" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/thumb_list_boat.png" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/thumb_list_boat.png" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/thumb_list_place.png" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/thumb_list_place.png" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/thumb_register.png" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/thumb_register.png" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/tim_80x80.png" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/tim_80x80.png" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/wizard-boat.jpg" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/wizard-boat.jpg" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/wizard-city.jpg" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/wizard-city.jpg" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/img/wizard.jpg" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/img/wizard.jpg" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_buttons.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_buttons.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_card.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_card.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_footers.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_footers.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_inputs.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_inputs.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_labels-progress-bar.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_labels-progress-bar.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_misc.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_misc.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_mixins.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_navs-pagination.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_navs-pagination.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_responsive.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_responsive.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_tooltips.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_tooltips.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_typography.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_typography.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_variables.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_wizard-card.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/_wizard-card.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_buttons.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_buttons.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_inputs.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_inputs.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_labels.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_labels.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_transparency.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_transparency.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_vendor-prefixes.scss" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/assets/scss/paper-bootstrap-wizard/mixins/_vendor-prefixes.scss" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/changelog.txt" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/changelog.txt" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/documentation/css/documentation.css" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/documentation/css/documentation.css" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/documentation/elements.html" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/documentation/elements.html" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/documentation/themify-icons.html" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/documentation/themify-icons.html" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/wizard-create-profile.html" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/wizard-create-profile.html" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/wizard-find-desk.html" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/wizard-find-desk.html" />
-      <change beforePath="$PROJECT_DIR$/paper-bootstrap-wizard-v1.0.2/wizard-list-place.html" afterPath="$PROJECT_DIR$/app/paper-bootstrap-wizard-v1.0.2/wizard-list-place.html" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/animate.min.css" afterPath="$PROJECT_DIR$/app/static/assets/css/animate.min.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/closelabel.gif" afterPath="$PROJECT_DIR$/app/static/assets/css/closelabel.gif" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/demo.css" afterPath="$PROJECT_DIR$/app/static/assets/css/demo.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/landing-page.css" afterPath="$PROJECT_DIR$/app/static/assets/css/landing-page.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/lg-fb-comment-box.css" afterPath="$PROJECT_DIR$/app/static/assets/css/lg-fb-comment-box.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/lg-transitions.css" afterPath="$PROJECT_DIR$/app/static/assets/css/lg-transitions.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/lightgallery.css" afterPath="$PROJECT_DIR$/app/static/assets/css/lightgallery.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/loading.gif" afterPath="$PROJECT_DIR$/app/static/assets/css/loading.gif" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/login-register.css" afterPath="$PROJECT_DIR$/app/static/assets/css/login-register.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/nextlabel.gif" afterPath="$PROJECT_DIR$/app/static/assets/css/nextlabel.gif" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/paper-bootstrap-wizard.css" afterPath="$PROJECT_DIR$/app/static/assets/css/paper-bootstrap-wizard.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/paper-dashboard.css" afterPath="$PROJECT_DIR$/app/static/assets/css/paper-dashboard.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/pe-icon-7-stroke.css" afterPath="$PROJECT_DIR$/app/static/assets/css/pe-icon-7-stroke.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/prevlabel.gif" afterPath="$PROJECT_DIR$/app/static/assets/css/prevlabel.gif" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/slimbox2.css" afterPath="$PROJECT_DIR$/app/static/assets/css/slimbox2.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/themify-icons.css" afterPath="$PROJECT_DIR$/app/static/assets/css/themify-icons.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/thumbnail-gallery.css" afterPath="$PROJECT_DIR$/app/static/assets/css/thumbnail-gallery.css" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/app/static/assets/fonts/FontAwesome.otf" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/Pe-icon-7-stroke.eot" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Pe-icon-7-stroke.eot" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/Pe-icon-7-stroke.svg" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Pe-icon-7-stroke.svg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/Pe-icon-7-stroke.ttf" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Pe-icon-7-stroke.ttf" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/Pe-icon-7-stroke.woff" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Pe-icon-7-stroke.woff" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.eot" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.svg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.woff" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/app/static/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/app/static/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/app/static/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/app/static/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/lg.eot" afterPath="$PROJECT_DIR$/app/static/assets/fonts/lg.eot" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/lg.svg" afterPath="$PROJECT_DIR$/app/static/assets/fonts/lg.svg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/lg.ttf" afterPath="$PROJECT_DIR$/app/static/assets/fonts/lg.ttf" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/lg.woff" afterPath="$PROJECT_DIR$/app/static/assets/fonts/lg.woff" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/themify.eot" afterPath="$PROJECT_DIR$/app/static/assets/fonts/themify.eot" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/themify.svg" afterPath="$PROJECT_DIR$/app/static/assets/fonts/themify.svg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/themify.ttf" afterPath="$PROJECT_DIR$/app/static/assets/fonts/themify.ttf" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/themify.woff" afterPath="$PROJECT_DIR$/app/static/assets/fonts/themify.woff" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/apple-icon.png" afterPath="$PROJECT_DIR$/app/static/assets/img/apple-icon.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/background.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/background.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blue.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/blue.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/faces/face-0.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/faces/face-0.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/faces/face-1.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/faces/face-1.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/faces/face-2.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/faces/face-2.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/faces/face-3.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/faces/face-3.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/faces/face-4.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/faces/face-4.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/favicon.ico" afterPath="$PROJECT_DIR$/app/static/assets/img/favicon.ico" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/favicon.png" afterPath="$PROJECT_DIR$/app/static/assets/img/favicon.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/loading.gif" afterPath="$PROJECT_DIR$/app/static/assets/img/loading.gif" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logos/adobe.png" afterPath="$PROJECT_DIR$/app/static/assets/img/logos/adobe.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logos/airbnb.png" afterPath="$PROJECT_DIR$/app/static/assets/img/logos/airbnb.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logos/ebay.png" afterPath="$PROJECT_DIR$/app/static/assets/img/logos/ebay.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logos/evernote.png" afterPath="$PROJECT_DIR$/app/static/assets/img/logos/evernote.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logos/zappos.png" afterPath="$PROJECT_DIR$/app/static/assets/img/logos/zappos.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logos/zendesk.png" afterPath="$PROJECT_DIR$/app/static/assets/img/logos/zendesk.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/new_logo.png" afterPath="$PROJECT_DIR$/app/static/assets/img/new_logo.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/phone_app.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/phone_app.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-1/bg.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-1/bg.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-1/bg2.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-1/bg2.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-1/examples/home_1.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-1/examples/home_1.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-1/examples/home_2.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-1/examples/home_2.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-1/examples/home_3.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-1/examples/home_3.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-1/iphone.png" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-1/iphone.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-1/iphones.png" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-1/iphones.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-2/bg2.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-2/bg2.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-2/examples/home_4.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-2/examples/home_4.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-2/examples/home_6.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-2/examples/home_6.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-2/mac1.png" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-2/mac1.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/showcases/showcase-2/mac2.png" afterPath="$PROJECT_DIR$/app/static/assets/img/showcases/showcase-2/mac2.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/template/bg3.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/template/bg3.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/template/examples/home_11.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/template/examples/home_11.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/template/examples/home_22.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/template/examples/home_22.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/template/examples/home_33.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/template/examples/home_33.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/template/examples/home_44.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/template/examples/home_44.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/template/iphone3.png" afterPath="$PROJECT_DIR$/app/static/assets/img/template/iphone3.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/template/mac.png" afterPath="$PROJECT_DIR$/app/static/assets/img/template/mac.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/tim_80x80.png" afterPath="$PROJECT_DIR$/app/static/assets/img/tim_80x80.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/video-play.png" afterPath="$PROJECT_DIR$/app/static/assets/img/video-play.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/vimeo-play.png" afterPath="$PROJECT_DIR$/app/static/assets/img/vimeo-play.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/web_app.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/web_app.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/wizard-city.jpg" afterPath="$PROJECT_DIR$/app/static/assets/img/wizard-city.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/youtube-play.png" afterPath="$PROJECT_DIR$/app/static/assets/img/youtube-play.png" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/Gallery.js" afterPath="$PROJECT_DIR$/app/static/assets/js/Gallery.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/awesome-landing-page.js" afterPath="$PROJECT_DIR$/app/static/assets/js/awesome-landing-page.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-checkbox-radio.js" afterPath="$PROJECT_DIR$/app/static/assets/js/bootstrap-checkbox-radio.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-notify.js" afterPath="$PROJECT_DIR$/app/static/assets/js/bootstrap-notify.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap.js" afterPath="$PROJECT_DIR$/app/static/assets/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/app/static/assets/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/chartist.min.js" afterPath="$PROJECT_DIR$/app/static/assets/js/chartist.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/demo.js" afterPath="$PROJECT_DIR$/app/static/assets/js/demo.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-1.10.2.js" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery-1.10.2.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-2.2.4.min.js" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery-2.2.4.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-ui-1.10.4.custom.min.js" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery-ui-1.10.4.custom.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.bootstrap.wizard.js" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery.bootstrap.wizard.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.validate.min.js" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery.validate.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/lg-fullscreen.min.js" afterPath="$PROJECT_DIR$/app/static/assets/js/lg-fullscreen.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/lg-thumbnail.min.js" afterPath="$PROJECT_DIR$/app/static/assets/js/lg-thumbnail.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/lg-utils.js" afterPath="$PROJECT_DIR$/app/static/assets/js/lg-utils.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/lightgallery.js" afterPath="$PROJECT_DIR$/app/static/assets/js/lightgallery.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/lightgallery.min.js" afterPath="$PROJECT_DIR$/app/static/assets/js/lightgallery.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/login-register.js" afterPath="$PROJECT_DIR$/app/static/assets/js/login-register.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/paper-bootstrap-wizard.js" afterPath="$PROJECT_DIR$/app/static/assets/js/paper-bootstrap-wizard.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/paper-dashboard.js" afterPath="$PROJECT_DIR$/app/static/assets/js/paper-dashboard.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/slimbox2.js" afterPath="$PROJECT_DIR$/app/static/assets/js/slimbox2.js" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-animations.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-animations.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-autoplay.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-autoplay.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-fb-comment-box.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-fb-comment-box.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-fonts.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-fonts.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-fullscreen.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-fullscreen.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-mixins.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-pager.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-pager.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-share.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-share.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-theme-default.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-theme-default.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-thumbnail.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-thumbnail.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-transitions.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-transitions.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-variables.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-variables.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-video.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-video.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lg-zoom.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lg-zoom.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/lightgallery.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/lightgallery.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper-dashboard.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper-dashboard.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_alerts.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_alerts.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_buttons.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_buttons.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_cards.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_cards.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_chartist.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_chartist.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_checkbox-radio.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_checkbox-radio.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_dropdown.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_dropdown.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_footers.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_footers.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_inputs.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_inputs.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_misc.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_misc.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_mixins.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_navbars.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_navbars.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_responsive.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_responsive.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_sidebar-and-main-panel.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_sidebar-and-main-panel.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_tables.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_tables.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_typography.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_typography.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/_variables.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_buttons.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_buttons.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_cards.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_cards.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_chartist.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_chartist.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_icons.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_icons.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_inputs.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_inputs.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_labels.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_labels.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_navbars.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_navbars.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_sidebar.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_sidebar.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_tabs.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_tabs.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_transparency.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_transparency.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/paper/mixins/_vendor-prefixes.scss" afterPath="$PROJECT_DIR$/app/static/assets/sass/paper/mixins/_vendor-prefixes.scss" />
-      <change beforePath="$PROJECT_DIR$/static/assets/sass/prepros.cfg" afterPath="$PROJECT_DIR$/app/static/assets/sass/prepros.cfg" />
-      <change beforePath="$PROJECT_DIR$/static/dashboard.css" afterPath="$PROJECT_DIR$/app/static/dashboard.css" />
-      <change beforePath="$PROJECT_DIR$/static/gallery.css" afterPath="$PROJECT_DIR$/app/static/gallery.css" />
-      <change beforePath="$PROJECT_DIR$/static/images/elephant.jpg" afterPath="$PROJECT_DIR$/app/static/images/elephant.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/images/kitten.jpg" afterPath="$PROJECT_DIR$/app/static/images/kitten.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/images/koala.jpg" afterPath="$PROJECT_DIR$/app/static/images/koala.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/images/monkey.jpg" afterPath="$PROJECT_DIR$/app/static/images/monkey.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/images/puppy.jpg" afterPath="$PROJECT_DIR$/app/static/images/puppy.jpg" />
-      <change beforePath="$PROJECT_DIR$/static/images/variety.png" afterPath="$PROJECT_DIR$/app/static/images/variety.png" />
-      <change beforePath="$PROJECT_DIR$/static/signin.css" afterPath="$PROJECT_DIR$/app/static/signin.css" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" afterPath="$PROJECT_DIR$/app/templates/404.html" />
-      <change beforePath="$PROJECT_DIR$/templates/Collection_images.html" afterPath="$PROJECT_DIR$/app/templates/Collection_images.html" />
-      <change beforePath="$PROJECT_DIR$/templates/Gallery.html" afterPath="$PROJECT_DIR$/app/templates/Gallery.html" />
-      <change beforePath="$PROJECT_DIR$/templates/Navigation.html" afterPath="$PROJECT_DIR$/app/templates/Navigation.html" />
-      <change beforePath="$PROJECT_DIR$/templates/add_to_collection.html" afterPath="$PROJECT_DIR$/app/templates/add_to_collection.html" />
-      <change beforePath="$PROJECT_DIR$/templates/addsite.html" afterPath="$PROJECT_DIR$/app/templates/addsite.html" />
-      <change beforePath="$PROJECT_DIR$/templates/adduser.html" afterPath="$PROJECT_DIR$/app/templates/adduser.html" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/app/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/collections.html" afterPath="$PROJECT_DIR$/app/templates/collections.html" />
-      <change beforePath="$PROJECT_DIR$/templates/createcollection.html" afterPath="$PROJECT_DIR$/app/templates/createcollection.html" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/app/templates/dashboard.html" />
-      <change beforePath="$PROJECT_DIR$/templates/dates.html" afterPath="$PROJECT_DIR$/app/templates/dates.html" />
-      <change beforePath="$PROJECT_DIR$/templates/email-confirmation.html" afterPath="$PROJECT_DIR$/app/templates/email-confirmation.html" />
-      <change beforePath="$PROJECT_DIR$/templates/findteam.html" afterPath="$PROJECT_DIR$/app/templates/findteam.html" />
-      <change beforePath="$PROJECT_DIR$/templates/images.html" afterPath="$PROJECT_DIR$/app/templates/images.html" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/app/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/app/templates/login.html" />
-      <change beforePath="$PROJECT_DIR$/templates/login_register_modal.html" afterPath="$PROJECT_DIR$/app/templates/login_register_modal.html" />
-      <change beforePath="$PROJECT_DIR$/templates/screenshots.html" afterPath="$PROJECT_DIR$/app/templates/screenshots.html" />
-      <change beforePath="$PROJECT_DIR$/templates/send_collection_form.html" afterPath="$PROJECT_DIR$/app/templates/send_collection_form.html" />
-      <change beforePath="$PROJECT_DIR$/templates/sent-collection-email.html" afterPath="$PROJECT_DIR$/app/templates/sent-collection-email.html" />
-      <change beforePath="$PROJECT_DIR$/templates/signup.html" afterPath="$PROJECT_DIR$/app/templates/signup.html" />
-      <change beforePath="$PROJECT_DIR$/templates/signup1.html" afterPath="$PROJECT_DIR$/app/templates/signup1.html" />
-      <change beforePath="$PROJECT_DIR$/templates/team.html" afterPath="$PROJECT_DIR$/app/templates/team.html" />
-      <change beforePath="$PROJECT_DIR$/templates/user.html" afterPath="$PROJECT_DIR$/app/templates/user.html" />
-      <change beforePath="$PROJECT_DIR$/templates/web_app.html" afterPath="$PROJECT_DIR$/app/templates/web_app.html" />
-      <change beforePath="$PROJECT_DIR$/templates/wizard-list-place.html" afterPath="$PROJECT_DIR$/app/templates/wizard-list-place.html" />
-      <change beforePath="$PROJECT_DIR$/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/fresh-bootstrap-table.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/luminous-basic.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/luminous-basic.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/bootstrap-table.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery-1.11.2.min.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/forms.py" afterPath="$PROJECT_DIR$/app/forms.py" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/css/paper-dashboard.css" afterPath="$PROJECT_DIR$/app/static/assets/css/paper-dashboard.css" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/js/lg-fullscreen.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/js/lg-thumbnail.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/js/lg-utils.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/js/lightgallery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/js/lightgallery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/js/slimbox2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/templates/Collection_images.html" afterPath="$PROJECT_DIR$/app/templates/Collection_images.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/Navigation.html" afterPath="$PROJECT_DIR$/app/templates/Navigation.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/collections.html" afterPath="$PROJECT_DIR$/app/templates/collections.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/dates.html" afterPath="$PROJECT_DIR$/app/templates/dates.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images.html" afterPath="$PROJECT_DIR$/app/templates/images.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/screenshots.html" afterPath="$PROJECT_DIR$/app/templates/screenshots.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/team.html" afterPath="$PROJECT_DIR$/app/templates/team.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user.html" afterPath="$PROJECT_DIR$/app/templates/user.html" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
+      <change beforePath="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py" afterPath="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py" />
+      <change beforePath="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/transform.py" afterPath="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/transform.py" />
+      <change beforePath="$PROJECT_DIR$/flask/pip-selfcheck.json" afterPath="$PROJECT_DIR$/flask/pip-selfcheck.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -309,55 +44,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
+      <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#19#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-              <folding>
-                <element signature="e#19#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="166">
+              <caret line="16" column="83" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lg-utils.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/assets/js/lg-utils.js">
+      <file leaf-file-name="team.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/team.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="-604">
+              <caret line="119" column="80" lean-forward="true" selection-start-line="119" selection-start-column="80" selection-end-line="119" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lightgallery.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/assets/js/lightgallery.js">
+      <file leaf-file-name="Navigation.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/Navigation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="730" column="8" lean-forward="false" selection-start-line="730" selection-start-column="8" selection-end-line="730" selection-end-column="8" />
+            <state relative-caret-position="276">
+              <caret line="154" column="18" lean-forward="true" selection-start-line="154" selection-start-column="18" selection-end-line="154" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -366,21 +77,63 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="401" column="6" lean-forward="false" selection-start-line="401" selection-start-column="6" selection-end-line="401" selection-end-column="6" />
+            <state relative-caret-position="286">
+              <caret line="473" column="47" lean-forward="true" selection-start-line="473" selection-start-column="47" selection-end-line="473" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+            <state relative-caret-position="-671">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_register_modal.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/login_register_modal.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1934">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="80" column="14" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adduser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/adduser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="21" column="83" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="83" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -394,6 +147,28 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>String</find>
+      <find>encode</find>
+      <find>string</find>
+      <find>bootstrap.js</find>
+      <find>modal-backdrop</find>
+      <find>body</find>
+      <find>600</find>
+      <find>.modal</find>
+      <find>modal</find>
+      <find>modal-d</find>
+      <find>width</find>
+      <find>jq</find>
+      <find>user</find>
+      <find>coll</find>
+      <find>im</find>
+      <find>add</find>
+      <find>route</find>
+      <find>flash</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -402,14 +177,35 @@
       <list>
         <option value="$PROJECT_DIR$/app/run.py" />
         <option value="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py" />
+        <option value="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/transform.py" />
+        <option value="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/__init__.py" />
+        <option value="$PROJECT_DIR$/app/static/assets/css/paper-dashboard.css" />
+        <option value="$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.css" />
+        <option value="$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.min.css" />
+        <option value="$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.min.js" />
+        <option value="$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.js" />
+        <option value="$PROJECT_DIR$/app/static/assets/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/app/templates/user.html" />
+        <option value="$PROJECT_DIR$/app/templates/Navigation.html" />
+        <option value="$PROJECT_DIR$/app/templates/screenshots.html" />
+        <option value="$PROJECT_DIR$/app/templates/dates.html" />
+        <option value="$PROJECT_DIR$/app/templates/images.html" />
+        <option value="$PROJECT_DIR$/app/templates/collections.html" />
+        <option value="$PROJECT_DIR$/app/templates/Collection_images.html" />
+        <option value="$PROJECT_DIR$/app/forms.py" />
+        <option value="$PROJECT_DIR$/app/templates/team.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="949" />
+    <option name="x" value="273" />
+    <option name="y" value="70" />
+    <option name="width" value="1561" />
+    <option name="height" value="911" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -426,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -439,10 +234,17 @@
               <item name="adshotapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="adshotapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adshotapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -452,6 +254,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static/assets/js" />
+      <recent name="$PROJECT_DIR$/app/static/assets/css" />
+      <recent name="$PROJECT_DIR$/app/templates/vanillabox" />
+      <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
@@ -467,7 +273,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Python.run (1)">
     <configuration name="db_create (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -522,19 +328,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="db_migrate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="adshotapp" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_migrate.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -560,18 +366,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.db_create" />
-      <item index="1" class="java.lang.String" itemvalue="Python.db_migrate" />
-      <item index="2" class="java.lang.String" itemvalue="Python.run" />
-      <item index="3" class="java.lang.String" itemvalue="Python.db_create (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.db_migrate (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.run" />
+      <item index="2" class="java.lang.String" itemvalue="Python.db_create (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.db_migrate (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.run (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run" />
-        <item index="1" class="java.lang.String" itemvalue="Python.db_migrate (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.db_create (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.db_create" />
-        <item index="4" class="java.lang.String" itemvalue="Python.db_migrate" />
+        <item index="0" class="java.lang.String" itemvalue="Python.run (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.run" />
+        <item index="2" class="java.lang.String" itemvalue="Python.db_migrate (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.db_create (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.db_create" />
       </list>
     </recent_temporary>
   </component>
@@ -601,44 +407,75 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1400" height="949" extended-state="0" />
+    <frame x="273" y="70" width="1561" height="911" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22727273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5018431" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34478527" sideWeight="0.49815693" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.50516284" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.49815693" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20812182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36808237" sideWeight="0.49483716" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278867" sideWeight="0.49815693" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.50516284" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30956522" sideWeight="0.49483716" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869565" sideWeight="0.49815693" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1810961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#19#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -646,9 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="e#19#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,19 +490,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#19#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="210">
           <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="e#19#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,41 +504,298 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/js/lg-utils.js">
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/lg-utils.js" />
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/lightgallery.js" />
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://[Adshotapp] TABLE - public.images" />
+    <entry file="db://[Adshotapp] TABLE - public.image" />
+    <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="477" column="0" lean-forward="true" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/transform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/images/variety.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/images/elephant.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/luminous-master/luminous.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/vanillabox/demo.html" />
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="61" column="1" lean-forward="false" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="6" column="12408" lean-forward="true" selection-start-line="6" selection-start-column="12408" selection-end-line="6" selection-end-column="12408" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="4" column="109590" lean-forward="false" selection-start-line="4" selection-start-column="109590" selection-end-line="4" selection-end-column="109590" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="5613" column="13" lean-forward="true" selection-start-line="5613" selection-start-column="13" selection-end-line="5613" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8878">
+          <caret line="386" column="6" lean-forward="false" selection-start-line="386" selection-start-column="6" selection-end-line="386" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/paper-dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="1605" column="25" lean-forward="true" selection-start-line="1605" selection-start-column="25" selection-end-line="1605" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/email-confirmation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/findteam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/add_to_collection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-444">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/addsite.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/createcollection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/x_fresh_bootstrap_table_v1.1/full-screen-table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="28" column="72" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/bootstrap-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51558">
+          <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/screenshots.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="148" column="53" lean-forward="true" selection-start-line="148" selection-start-column="53" selection-end-line="148" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/images.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2829">
+          <caret line="123" column="18" lean-forward="false" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/js/lightgallery.js">
+    <entry file="file://$PROJECT_DIR$/app/templates/dates.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="730" column="8" lean-forward="false" selection-start-line="730" selection-start-column="8" selection-end-line="730" selection-end-column="8" />
+        <state relative-caret-position="2185">
+          <caret line="95" column="81" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="81" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/collections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Collection_images.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1288">
+          <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/login_register_modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1934">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="16" column="83" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/adduser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="21" column="83" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="80" column="14" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-671">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="401" column="6" lean-forward="false" selection-start-line="401" selection-start-column="6" selection-end-line="401" selection-end-column="6" />
+        <state relative-caret-position="286">
+          <caret line="473" column="47" lean-forward="true" selection-start-line="473" selection-start-column="47" selection-end-line="473" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py">
+    <entry file="file://$PROJECT_DIR$/app/templates/team.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-604">
+          <caret line="119" column="80" lean-forward="true" selection-start-line="119" selection-start-column="80" selection-end-line="119" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="154" column="18" lean-forward="true" selection-start-line="154" selection-start-column="18" selection-end-line="154" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

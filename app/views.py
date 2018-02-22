@@ -15,7 +15,20 @@ import stripe
 from wtforms import form, validators
 
 
-images=Images(app)
+
+
+''' 
+Table of contents
+1. Variables and Init
+2. User Management
+    a. Adding Users
+    b. Inviting Users
+3. Adding Sites
+4. Adding Collections
+
+'''
+
+images = Images(app)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
 mail = Mail(app)
@@ -83,6 +96,7 @@ def signup():
             hashed_password= generate_password_hash(form.password.data, 'sha256')
             print(hashed_password)
             # add the new user to the database
+            # noinspection PyArgumentList
             new_user = User(nickname= form.first_name.data + " " + form.last_name.data,
                             first_name=form.first_name.data,
                             last_name=form.last_name.data,
@@ -183,18 +197,13 @@ def logout():
 @app.route('/dates')
 def get_dates():
     domain = request.args.get('domain')
-    #sites = []
-    #for site in Site.query.join(User.subscriptions).filter(User.id == current_user.id).all():
-        #sites.append(site.domain)
     dates = set()
-    image_names =[]
     images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
     for image in images:
         imagedate = str(image.date)
         imagedate = datetime.strptime(imagedate, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
         dates.add(imagedate)
-        image_names.append(image.name)
-    return render_template('dates.html', nickname=current_user.nickname, image_names=images, site=domain, dates=dates)
+    return render_template('dates.html', nickname=current_user.nickname, site=domain, dates=dates,title='Screenshots')
 
 
 
@@ -211,7 +220,7 @@ def get_images():
     for image in images:
         image_names.append(image.name)
     print(image_names)
-    return render_template('images.html', nickname=current_user.nickname, image_names=images, site=domain, datepicked=dates, date=picked_date)
+    return render_template('images.html', nickname=current_user.nickname, image_names=images, site=domain, datepicked=dates, date=picked_date, title='Screenshots')
 
 
 @app.route('/display/<filename>')
@@ -223,7 +232,7 @@ def send_image(filename):
 def return_file():
     filepath =request.args.get('filepath')
     filename =request.args.get('filename')
-    return send_file( filepath, attachment_filename=filename, as_attachment=True)
+    return send_file(filepath, attachment_filename=filename, as_attachment=True)
 
 
 @app.route('/addsite', methods=['GET', 'POST'])
@@ -325,7 +334,7 @@ def create_collection():
 @app.route('/collections')
 def get_user_collections():
     collections = Collection.query.filter(Collection._users.any(id=current_user.id)).all()
-    return render_template('collections.html', collections=collections)
+    return render_template('collections.html', collections=collections,title='Collections')
 
 
 @app.route('/collection')
@@ -334,7 +343,7 @@ def get_collection_images():
     collection_images = Image.query.join(Collection.images).filter(Collection.id == collection).all()
     col_query = Collection.query.filter_by(id=collection).first()
     name = col_query.name
-    return render_template('collection_images.html', nickname=current_user.nickname, image_names=collection_images, collection=collection, name=name)
+    return render_template('collection_images.html', nickname=current_user.nickname, image_names=collection_images, collection=collection, name=name, title='Collections')
 
 
 @app.route('/pickcollection')
@@ -372,11 +381,12 @@ def remove_image():
 
 @app.route('/team', methods=['GET', 'POST'])
 def team():
+    form = AddUserForm()
     user_team = Team.query.filter(Team.id==current_user.team).first()
     team_name = user_team.name
     users = User.query.filter(User.team == user_team.id).all()
     sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
-    return render_template('team.html', team=team_name, users=users, sites=sites,current_user=current_user)
+    return render_template('team.html', team=team_name, users=users, sites=sites,current_user=current_user, title='Team',form=form)
 
 
 @app.route('/sendcollection/<collection>', methods=['GET', 'POST'])
@@ -432,7 +442,7 @@ def delete_collection(collection):
     return redirect(url_for('get_user_collections'))
 
 
-
+# noinspection PyArgumentList
 @app.route('/adduser', methods=['GET', 'POST'])
 def add_user():
     form = AddUserForm()
@@ -445,8 +455,13 @@ def add_user():
         msg.html = render_template('/email-confirmation.html', link=the_link)
         mail.send(msg)
         # add the new user to the database
-
-        new_user = User(first_name=form.first_name.data, email=form.email.data, last_name=form.last_name.data,nickname=form.first_name.data+form.last_name.data)
+        new_user = User(first_name=form.first_name.data,
+                        email=form.email.data,
+                        last_name=form.last_name.data,
+                        nickname=form.first_name.data+" "+form.last_name.data,
+                        profile='Standard User',
+                        status='Active',
+                        collection_count=0)
         db.session.add(new_user)
         ## addnew user to team
         team = Team.query.filter(Team.id==current_user.team).first()
@@ -456,7 +471,8 @@ def add_user():
         print(new_person.id)
         team.admin_user.append(new_person)
         db.session.commit()
-        return redirect(url_for('dashboard'))
+        flash('User Added', category='success')
+        return redirect(url_for('team'))
     return render_template('adduser.html', form=form)
 
 
