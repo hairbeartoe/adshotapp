@@ -10,27 +10,22 @@ Dashboard
 <div class="content">
     <div class="container-fluid">
                 <div class="row">
-                    {% for image in image_names %}
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card">
-                            <div class="content">
+                    <div class="col-lg-4 col-md-5 col-lg-offset-4 col-md-offset-3">
+                        <div class="card card-user">
+                            <div class="content" style="margin-top: 40px;">
+                                <div class="author">
+                                  <img class="avatar border-white" src="{{ url_for('static', filename='assets/img/faces/Profile_avatar_placeholder.png') }}" alt="..."/>
+                                  <h4 class="title">Welcome, {{ nickname }}</h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="text-center">
                                 <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="image">
-                                           <img src=" {{url_for('send_image', filename=image)}} " >
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <i class="ti-reload"></i> Eddie
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
 
                 <div class="row">
@@ -40,13 +35,13 @@ Dashboard
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-warning text-center">
-                                            <i class="ti-server"></i>
+                                            <i class="ti-user"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Capacity</p>
-                                            105GB
+                                            <p>Team Members</p>
+                                            {{ user_count }}
                                         </div>
                                     </div>
                                 </div>
@@ -70,15 +65,15 @@ Dashboard
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Revenue</p>
-                                            $1,345
+                                            <p>Collections</p>
+                                            {{ collection_count }}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-calendar"></i> Last day
+                                        <i class="ti-reload"></i> Updated now
                                     </div>
                                 </div>
                             </div>
@@ -95,15 +90,15 @@ Dashboard
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Errors</p>
-                                            23
+                                            <p>Images</p>
+                                            {{ images }}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-timer"></i> In the last hour
+                                        <i class="ti-reload"></i> Updated now
                                     </div>
                                 </div>
                             </div>
@@ -115,13 +110,13 @@ Dashboard
                                 <div class="row">
                                     <div class="col-xs-5">
                                         <div class="icon-big icon-info text-center">
-                                            <i class="ti-twitter-alt"></i>
+                                            <i class="ti-desktop"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Followers</p>
-                                            +45
+                                            <p>Sites</p>
+                                            {{ sites|count }}
                                         </div>
                                     </div>
                                 </div>
@@ -135,6 +130,7 @@ Dashboard
                         </div>
                     </div>
                 </div>
+<!--
                 <div class="row">
 
                     <div class="col-md-12">
@@ -160,54 +156,8 @@ Dashboard
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Email Statistics</h4>
-                                <p class="category">Last Campaign Performance</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+                -->
+    </div>
 
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Bounce
-                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-timer"></i> Campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">2015 Sales</h4>
-                                <p class="category">All products including Taxes</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart"></div>
-
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-warning"></i> BMW 5 Series
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-check"></i> Data information certified
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 {% endblock %}

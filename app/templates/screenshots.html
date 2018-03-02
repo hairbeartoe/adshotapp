@@ -115,19 +115,8 @@
                             <hr>
                             <div class="text-center">
                                 <div class="row">
-                                    <div class="col-md-3 col-md-offset-1">
-                                        <h5>12<br /><small>Collections</small></h5>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5>2<br /><small>Sent Collections</small></h5>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h5>24<br /><small>Saved Images</small></h5>
-                                    </div>
-                                </div>
-                                <div class="row">
                                     <button class="btn btn-info btn-fill btn-wd" onclick="location.href = '{{ url_for('add_site') }}';">
-                                        + Add Site
+                                        Request New Site
                                     </button>
                                 </div>
                                 <div class="row">
@@ -163,7 +152,12 @@
                                     <div class="footer">
                                         <hr />
                                         <div class="stats">
-                                            <i class="ti-reload"></i> Updated {{ site.last_screenshot.strftime('%b %d %I:%M %p') }}
+                                            <i class="ti-reload"></i> Updated
+                                             {% if site.last_screenshot %}
+                                            {{ site.last_screenshot.strftime('%b %d %I:%M %p') }}
+                                            {% else %}
+                                            Never
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>

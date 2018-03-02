@@ -2,7 +2,7 @@ from flask import Flask
 from app import app,db
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SelectField, HiddenField, TextAreaField
-from wtforms.validators import InputRequired, Email, Length, URL
+from wtforms.validators import InputRequired, Email, Length, URL,EqualTo
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -74,6 +74,11 @@ class RegisterForm(FlaskForm):
     last_name = StringField('Last Name')
     team_name = StringField('Team')
     password = PasswordField('Password')
+
+
+class ChangePasswordForm(FlaskForm):
+    password = PasswordField('New Password', validators=[InputRequired(),EqualTo('confirm', message='Passwords must match')])
+    confirm = PasswordField('Repeat Password', validators=[InputRequired()])
 
 
 class AddUserForm(FlaskForm):

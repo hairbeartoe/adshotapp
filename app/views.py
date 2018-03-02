@@ -2,7 +2,7 @@ import os
 from flask import render_template, redirect,url_for,send_from_directory, request, send_file, flash
 from app import app, db
 from app.models import User,Site, Image, subscriptions, Team, Collection
-from app.forms import LoginForm, RegisterForm, AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm, SendCollectionForm
+from app.forms import LoginForm,ChangePasswordForm, RegisterForm, AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm, SendCollectionForm
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
@@ -83,7 +83,7 @@ def signup():
     if request.method == "POST":
         print(request.method)
         if form.validate_on_submit():
-            '''
+
             # send the confirmation email
             email = form.email.data.lower()
             token = s.dumps(email, salt='email-confirm')
@@ -91,7 +91,7 @@ def signup():
             the_link = url_for('confirm_email', token=token, _external=True)
             msg.html = render_template('/email-confirmation.html', link=the_link)
             mail.send(msg)
-            '''
+
             # Generate the hashed password
             hashed_password= generate_password_hash(form.password.data, 'sha256')
             print(hashed_password)
@@ -123,6 +123,25 @@ def signup():
     return render_template('signup.html', form=form)
 
 
+@app.route('/changepw/<int:userid>', methods=['GET', 'POST'])
+def changepw(userid):
+    form = ChangePasswordForm()
+    user = User.query.filter_by(id=userid).first()
+    if request.method == "POST":
+        if form.validate_on_submit():
+            # Generate the hashed password
+            hashed_password= generate_password_hash(form.password.data, 'sha256')
+            print(hashed_password)
+            # add the new user to the database
+            user.password = hashed_password
+            db.session.commit()
+            flash('Password Updated', category='info')
+            return redirect(url_for('dashboard'))
+        else:
+            flash('Passwords must match',category='danger')
+    return render_template('ChangePW.html', form=form,userid=current_user.id)
+
+
 @app.route('/confirm/<token>')
 def confirm_email(token):
     try:
@@ -135,15 +154,22 @@ def confirm_email(token):
     return redirect(url_for('dashboard'))
 
 
-
-
 @app.route('/dashboard')
 @login_required
 def dashboard():
     sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
+    collections = Collection.query.filter(Collection._users.any(id=current_user.id)).all()
+    collection_count = len(collections)
+    user_team = Team.query.filter(Team.id == current_user.team).first()
+    users = User.query.filter(User.team == user_team.id).all()
+    user_count = len(users)
+    images = 0
+    for site in sites:
+        image_counter = Image.query.join(Site.images).filter(Site.domain == site.domain).all()
+        images += len(image_counter)
     if sites is None:
-        sites = "this is not cool"
-    return render_template('dashboard.html', nickname=current_user.nickname, sites=sites, title='Dashboard')
+        sites = 0
+    return render_template('dashboard.html', nickname=current_user.nickname, sites=sites, title='Dashboard',user_count=user_count, images=images,collection_count=collection_count)
 
 
 @app.route('/profile', methods=['GET', 'POST'])
@@ -199,11 +225,15 @@ def get_dates():
     domain = request.args.get('domain')
     dates = set()
     images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
+    image_count = len(images)
     for image in images:
         imagedate = str(image.date)
         imagedate = datetime.strptime(imagedate, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
         dates.add(imagedate)
-    return render_template('dates.html', nickname=current_user.nickname, site=domain, dates=dates,title='Screenshots')
+    date_count = len(dates)
+    return render_template('dates.html', nickname=current_user.nickname, site=domain, dates=dates,title='Screenshots',
+                           date_count=date_count,
+                           image_count=image_count)
 
 
 
@@ -212,7 +242,7 @@ def get_images():
     domain = request.args.get('site')
     date = request.args.get('date')
     images = Image.query.join(Site.images).filter(Site.domain == domain, cast(Image.date, Date) == date).all()
-
+    image_count = len(images)
     dates = set()
     image_names =[]
     picked_date = date
@@ -220,7 +250,7 @@ def get_images():
     for image in images:
         image_names.append(image.name)
     print(image_names)
-    return render_template('images.html', nickname=current_user.nickname, image_names=images, site=domain, datepicked=dates, date=picked_date, title='Screenshots')
+    return render_template('images.html', nickname=current_user.nickname, image_count=image_count, image_names=images, site=domain, datepicked=dates, date=picked_date, title='Screenshots')
 
 
 @app.route('/display/<filename>')
@@ -258,7 +288,9 @@ def add_site():
         # sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
         #sites.append(new_site)
         db.session.commit()
-        return redirect(url_for('pay'))
+        #TODO SEND REQUEST VIA EMAIL TO ADMIN
+        flash('Your request has been sent', category='success')
+        return redirect(url_for('get_sites'))
     return render_template('addsite.html', form=form, title='Add site', pub_key=stripe_pub_key)
 
 
@@ -315,7 +347,7 @@ def create_collection():
     form = CreateCollectionForm(image=image)
     if form.validate_on_submit():
         # create the new collection
-        new_collection = Collection(name=form.name.data)
+        new_collection = Collection(name=form.name.data, sent_count=0)
         db.session.add(new_collection)
         db.session.commit()
         # add it to the current user's list of collections
@@ -324,6 +356,7 @@ def create_collection():
         # add the image to the collection
         image_to_add = Image.query.filter_by(id=form.image.data).first()
         new_collection.images.append(image_to_add)
+        new_collection.cover_image_path = image_to_add.name
         db.session.commit()
 
         return redirect(url_for('get_collection_images', collection=new_collection.id))
@@ -334,16 +367,24 @@ def create_collection():
 @app.route('/collections')
 def get_user_collections():
     collections = Collection.query.filter(Collection._users.any(id=current_user.id)).all()
-    return render_template('collections.html', collections=collections,title='Collections')
+    image_count = 0
+    for collection in collections:
+        collection_images = Image.query.join(Collection.images).filter(Collection.id == collection.id).all()
+        image_count += len(collection_images)
+    collection_count = len(collections)
+    return render_template('collections.html', collections=collections,title='Collections', collection_count=collection_count, image_count=image_count)
 
 
 @app.route('/collection')
+@login_required
 def get_collection_images():
+    form = SendCollectionForm()
     collection = request.args.get('collection')
     collection_images = Image.query.join(Collection.images).filter(Collection.id == collection).all()
     col_query = Collection.query.filter_by(id=collection).first()
+    image_count = len(collection_images)
     name = col_query.name
-    return render_template('collection_images.html', nickname=current_user.nickname, image_names=collection_images, collection=collection, name=name, title='Collections')
+    return render_template('collection_images.html', form=form, image_names=collection_images,image_count=image_count,col_query=col_query, collection=collection, name=name, title='Collections')
 
 
 @app.route('/pickcollection')
@@ -351,7 +392,6 @@ def select_collection():
     selected_image = request.args.get('image')
     users_collections = Collection.query.filter(Collection._users.any(id=current_user.id)).all()
     return render_template('add_to_collection.html', image=selected_image, collections=users_collections)
-
 
 
 @app.route('/add_to_collection', methods=['GET', 'POST'])
@@ -389,18 +429,22 @@ def team():
     return render_template('team.html', team=team_name, users=users, sites=sites,current_user=current_user, title='Team',form=form)
 
 
-@app.route('/sendcollection/<collection>', methods=['GET', 'POST'])
-def send_collection(collection):
+@app.route('/sendcollection/<int:collection_id>', methods=['GET', 'POST'])
+def send_collection(collection_id):
     form = SendCollectionForm()
     if form.validate_on_submit():
         email = form.email.data
-        collection = Collection.query.get(collection)
+        form_collection = form.collection.data
+        print(form_collection)
+        #collection = Collection.query.filter_by(id=form_collection)
+        collection = Collection.query.get(collection_id)
         user = User.query.filter(User.email == email.lower()).first()
         if user is None:
             flash('User added')
             return redirect( url_for('get_user_collections'))
         else:
             user.collections_backref.append(collection)
+            collection.sent_count += 1
             db.session.commit()
             msg = Message('New Collection Available', sender='e.eddieflores@gmail.com', recipients=[email])
             the_link = url_for('get_collection_images', _external=True, collection=collection.id)
@@ -461,6 +505,7 @@ def add_user():
                         nickname=form.first_name.data+" "+form.last_name.data,
                         profile='Standard User',
                         status='Active',
+                        date_joined=datetime.today(),
                         collection_count=0)
         db.session.add(new_user)
         ## addnew user to team

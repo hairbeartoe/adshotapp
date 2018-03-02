@@ -56,6 +56,7 @@ class Collection(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(140))
     cover_image_path = db.Column(db.String(140))
+    sent_count = db.Column(db.Integer)
     _users = db.relationship('User', secondary=collections, backref=db.backref('collections_backref', lazy='dynamic'))
     images = db.relationship('Image',
                             secondary = image_collections,
