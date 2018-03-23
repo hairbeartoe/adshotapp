@@ -88,8 +88,10 @@ class Team(db.Model):
 #set the sites db model
 class Site(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    domain = db.Column(db.String(64), index=True, unique=True)
+    domain = db.Column(db.String(64), index=True)
+    url = db.Column(db.String(64), index=True, unique=True)
     images = db.relationship('Image', backref='images', lazy='dynamic')
+    pages = db.relationship('Page', backref='sites', lazy='dynamic')
     capture_rate = db.Column(db.Integer)
     status = db.Column(db.String(64), index=True)
     mobile_capture = db.Column(db.Boolean)
@@ -97,10 +99,31 @@ class Site(db.Model):
     date_added = db.Column(db.DateTime, index=True)
     last_screenshot = db.Column(db.DateTime, index=True)
     cover_image_path = db.Column(db.String(140))
+    directory = db.Column(db.String(140))
 
 
     def __repr__(self):
         return '<Site %r>' % (self.domain)
+
+
+#set the page db model
+class Page(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    site = db.Column(db.Integer, db.ForeignKey('site.id'))
+    name = db.Column(db.String(64), index=True)
+    url = db.Column(db.String(64), index=True, unique=True)
+    images = db.relationship('Image', backref='pages', lazy='dynamic')
+    capture_rate = db.Column(db.Integer)
+    status = db.Column(db.String(64), index=True)
+    mobile_capture = db.Column(db.Boolean)
+    date_added = db.Column(db.DateTime, index=True)
+    last_screenshot = db.Column(db.DateTime, index=True)
+    cover_image_path = db.Column(db.String(140))
+    directory = db.Column(db.String(140))
+
+    def __repr__(self):
+        return '<Page %r>' % (self.name)
+
 
 # set the image db
 class Image(db.Model):
@@ -108,10 +131,13 @@ class Image(db.Model):
     name = db.Column(db.String(140))
     path = db.Column(db.String(140))
     date = db.Column(db.DateTime)
+    directory = db.Column(db.String(140))
+    device = db.Column(db.String(20))
     website = db.Column(db.Integer, db.ForeignKey('site.id'))
+    page = db.Column(db.Integer, db.ForeignKey('page.id'))
 
     def __repr__(self):
-        return '<Image %r>' % (self.date)
+        return '<Image %r>' % (self.name)
 
 
 

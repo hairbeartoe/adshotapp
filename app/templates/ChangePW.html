@@ -13,7 +13,7 @@ Change Password
 {% block content %}
 <div class="container">
 
-  <form class="form-signin" method="POST" action="{{ url_for('changepw', userid=current_user.id) }}">
+  <form class="form-signin" method="POST" action="{{ url_for('changepw', userid=userid) }}">
 
 <!-- flash messages -->
     {% with messages = get_flashed_messages() %}

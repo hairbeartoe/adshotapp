@@ -1,11 +1,11 @@
 import os
 from flask import render_template, redirect,url_for,send_from_directory, request, send_file, flash
 from app import app, db
-from app.models import User,Site, Image, subscriptions, Team, Collection
-from app.forms import LoginForm,ChangePasswordForm, RegisterForm, AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm, SendCollectionForm
+from app.models import User,Site, Image, subscriptions, Team, Collection, Page
+from app.forms import LoginForm, PasswordResetRequestForm, ChangePasswordForm, RegisterForm,AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm,SendCollectionForm, AddPageForm
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user, AnonymousUserMixin
 from sqlalchemy import Date, cast, desc
 from flask_images import resized_img_src , Images
 from datetime import datetime
@@ -123,6 +123,18 @@ def signup():
     return render_template('signup.html', form=form)
 
 
+@app.route('/confirm/<token>')
+def confirm_email(token):
+    try:
+        email = s.loads(token, salt='email-confirm', max_age=86400)
+        user = User.query.filter(User.email == email).first()
+        user.confirmed_email = True
+        db.session.commit()
+    except SignatureExpired:
+        return 'The link is expired'
+    return redirect(url_for('dashboard'))
+
+
 @app.route('/changepw/<int:userid>', methods=['GET', 'POST'])
 def changepw(userid):
     form = ChangePasswordForm()
@@ -138,20 +150,57 @@ def changepw(userid):
             flash('Password Updated', category='info')
             return redirect(url_for('dashboard'))
         else:
-            flash('Passwords must match',category='danger')
-    return render_template('ChangePW.html', form=form,userid=current_user.id)
+            flash('Passwords must match', category='danger')
+    return render_template('ChangePW.html',
+                           form=form,
+                           userid=current_user.id)
 
 
-@app.route('/confirm/<token>')
-def confirm_email(token):
+@app.route('/passwordreset/<token>', methods=['GET', 'POST'])
+def password_reset(token):
+    form = ChangePasswordForm()
     try:
-        email = s.loads(token, salt='email-confirm', max_age=120)
-        user = User.query.filter(User.email == email).first()
-        user.confirmed_email = True
-        db.session.commit()
+        user_id = s.loads(token, salt='email-confirm', max_age=3600)
+        user = User.query.filter_by(id=user_id ).first()
+        if request.method == "POST":
+            if form.validate_on_submit():
+                # Generate the hashed password
+                hashed_password = generate_password_hash(form.password.data, 'sha256')
+                print(hashed_password)
+                # add the new user to the database
+                user.password = hashed_password
+                db.session.commit()
+                flash('Password Updated', category='info')
+                return redirect(url_for('login'))
+            else:
+                flash('Passwords must match', category='danger')
+        return render_template('ChangePW.html', form=form, userid=user_id)
     except SignatureExpired:
         return 'The link is expired'
-    return redirect(url_for('dashboard'))
+
+
+@app.route('/resetpw', methods=['GET', 'POST'])
+def reset_pw():
+    form = PasswordResetRequestForm()
+    if request.method == "POST":
+        if form.validate_on_submit():
+            # find the user
+            user = User.query.filter_by(email=form.email.data).first()
+            if user is not None:
+                # send the email to the reset page
+                email = user.email.lower()
+                token = s.dumps(user.id, salt='email-confirm')
+                msg = Message('Password Reset', sender='e.eddieflores@gmail.com', recipients=[email])
+                the_link = url_for('password_reset', token=token, _external=True)
+                msg.html = render_template('/email-confirmation.html', link=the_link)
+                mail.send(msg)
+                flash('Password Updated', category='info')
+            else:
+                flash('There was no user with that email', category='danger')
+            return redirect(url_for('login'))
+        else:
+            flash('Passwords must match', category='danger')
+    return render_template('passwordresetrequestform.html', form=form)
 
 
 @app.route('/dashboard')
@@ -206,6 +255,12 @@ def edit_user_profile_admin(userid):
     return render_template('user.html', form=form, title='Profile', user=user, team=team)
 
 
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+
 @app.route('/screenshots')
 def get_sites():
     sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
@@ -214,17 +269,32 @@ def get_sites():
     return render_template('screenshots.html', nickname=current_user.nickname, sites=sites, title='Screenshots')
 
 
-@app.route('/logout')
-def logout():
-    logout_user()
-    return redirect(url_for('index'))
+@app.route('/pages')
+def get_pages():
+    domain = request.args.get('domain')
+    print(domain)
+    pages = Page.query.join(Site.pages).filter(Site.domain == domain).all()
+    #images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
+    #image_count = len(images)
+    #for image in images:
+    #    imagedate = str(image.date)
+    #    imagedate = datetime.strptime(imagedate, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
+    #    dates.add(imagedate)
+    page_count = len(pages)
+    return render_template('pages.html', nickname=current_user.nickname, domain=domain, title='Screenshots', pages=pages,
+                           #date_count=date_count,
+                           image_count=page_count)
+
 
 
 @app.route('/dates')
 def get_dates():
-    domain = request.args.get('domain')
+    domain = request.args.get('page')
+    domain = Page.query.filter_by(url=domain).first()
+    domain = domain.name
+    print(domain)
     dates = set()
-    images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
+    images = Image.query.join(Page.images).filter(Page.name == domain).order_by(desc(Image.date)).all()
     image_count = len(images)
     for image in images:
         imagedate = str(image.date)
@@ -236,21 +306,29 @@ def get_dates():
                            image_count=image_count)
 
 
-
 @app.route('/images', methods=['GET', 'POST'])
 def get_images():
     domain = request.args.get('site')
     date = request.args.get('date')
-    images = Image.query.join(Site.images).filter(Site.domain == domain, cast(Image.date, Date) == date).all()
+    images = Image.query.join(Page.images).filter(Page.name == domain, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
     image_count = len(images)
     dates = set()
     image_names =[]
     picked_date = date
+    print(images)
     #picked_date = datetime.strptime(date, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
     for image in images:
+        f_path = image.path + image.name
         image_names.append(image.name)
     print(image_names)
-    return render_template('images.html', nickname=current_user.nickname, image_count=image_count, image_names=images, site=domain, datepicked=dates, date=picked_date, title='Screenshots')
+    return render_template('images.html',
+                           nickname=current_user.nickname,
+                           image_count=image_count,
+                           image_names=images,
+                           site=domain,
+                           datepicked=dates,
+                           date=picked_date,
+                           title='Screenshots')
 
 
 @app.route('/display/<filename>')
@@ -262,7 +340,8 @@ def send_image(filename):
 def return_file():
     filepath =request.args.get('filepath')
     filename =request.args.get('filename')
-    return send_file(filepath, attachment_filename=filename, as_attachment=True)
+    new_path = 'static/images' + filepath
+    return send_file(new_path, attachment_filename=filename, as_attachment=True)
 
 
 @app.route('/addsite', methods=['GET', 'POST'])
@@ -272,13 +351,15 @@ def add_site():
         # check if the site exists in the DB
         site = Site.query.filter_by(domain=form.domain_name.data).first()
         # if the site does not exist in the db
+        directory = 'static/images/' + form.domain_name.data
         new_site = Site(domain=form.domain_name.data,
+                        url=form.domain_name.data,
                         capture_rate=form.rate.data,
                         mobile_capture=form.mobile.data,
                         article_page_capture=form.article.data,
                         date_added=datetime.now(),
-                        status='Active')
-        print(new_site)
+                        status='Active',
+                        directory=directory)
         # Add the site to the DB
         db.session.add(new_site)
         db.session.commit()
@@ -292,6 +373,41 @@ def add_site():
         flash('Your request has been sent', category='success')
         return redirect(url_for('get_sites'))
     return render_template('addsite.html', form=form, title='Add site', pub_key=stripe_pub_key)
+
+
+@app.route('/addpage', methods=['GET', 'POST'])
+def add_page():
+    site = request.args.get('domain')
+    #print(site)
+    form = AddPageForm()
+    add_to_site = Site.query.filter_by(domain=site).first()
+    if form.validate_on_submit():
+        page_directory = add_to_site.directory + "/" + form.name.data
+        # check if the site exists in the DB
+        #site = Site.query.filter_by(domain=form.domain_name.data).first()
+        # if the site does not exist in the db
+        new_page = Page(name=form.name.data,
+                        url=form.url.data,
+                        capture_rate=form.rate.data,
+                        mobile_capture=form.mobile.data,
+                        date_added=datetime.now(),
+                        status='Active',
+                        site=add_to_site.id,
+                        directory=page_directory)
+        print(new_page)
+        # Add the site to the DB
+        db.session.add(new_page)
+        db.session.commit()
+        #Add the new site to the current users team
+        #user_team = Team.query.filter(Team.id==current_user.team).first()
+        #user_team.subscriptions.append(new_site)
+        # sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
+        #sites.append(new_site)
+       # db.session.commit()
+        #TODO SEND REQUEST VIA EMAIL TO ADMIN
+        flash('Your request has been sent', category='success')
+        return redirect(url_for('get_sites'))
+    return render_template('addpage.html', form=form, title='Add Page', domain=site)
 
 
 @app.route('/pay', methods=['GET', 'POST'])
@@ -356,7 +472,7 @@ def create_collection():
         # add the image to the collection
         image_to_add = Image.query.filter_by(id=form.image.data).first()
         new_collection.images.append(image_to_add)
-        new_collection.cover_image_path = image_to_add.name
+        new_collection.cover_image_path = image_to_add.path
         db.session.commit()
 
         return redirect(url_for('get_collection_images', collection=new_collection.id))
@@ -372,7 +488,11 @@ def get_user_collections():
         collection_images = Image.query.join(Collection.images).filter(Collection.id == collection.id).all()
         image_count += len(collection_images)
     collection_count = len(collections)
-    return render_template('collections.html', collections=collections,title='Collections', collection_count=collection_count, image_count=image_count)
+    return render_template('collections.html',
+                           collections=collections,
+                           title='Collections',
+                           collection_count=collection_count,
+                           image_count=image_count)
 
 
 @app.route('/collection')

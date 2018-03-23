@@ -46,14 +46,15 @@ User
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Team Name</label>
-                                                <input type="text" class="form-control border-input" disabled placeholder="Company" value= {{ team.name }} >
+                                                <p>{{ team.name }}</p>
+
                                             </div>
                                         </div>
 
 
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                {{ wtf.form_field(form.email, class="form-control border-input", placeholder= user.email, value = user.email ) }}
+                                                {{ wtf.form_field(form.email, class="form-control border-input disabled", placeholder= user.email, value = user.email ) }}
                                                 <!--<input type="email" class="form-control border-input" placeholder="Email"> -->
                                             </div>
                                         </div>

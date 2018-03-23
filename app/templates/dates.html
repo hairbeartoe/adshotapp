@@ -128,7 +128,6 @@
                             <thead>
                                 <th data-field="id" data-sortable="true"  class="text-center">ID</th>
                                 <th data-field="Date" data-sortable="true" class="text-center">Date</th>
-                                <th data-field="Last_Capture" data-sortable="true" class="text-center">Last Capture</th>
                                 <th data-field="image_count" data-sortable="true" class="text-center">Image Count</th>
                                 <th data-field="actions"  class="text-center">Actions</th>
                             </thead>
@@ -139,7 +138,6 @@
                                     <td>
                                         <a href="{{url_for('get_images', site=site, date=date)}}">{{ date }}</a>
                                     </td>
-                                    <td>Yesterday </td>
                                     <td>12</td>
                                 </tr>
                                 {% endfor %}

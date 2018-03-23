@@ -1,0 +1,170 @@
+
+    {% extends "Navigation.html" %}
+    {% block title %}
+    Sites
+    {% endblock %}
+
+    {% block scripts %}
+    <!-- Javascript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/bootstrap.js') }}" rel="stylesheet"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/bootstrap-table.js') }}"></script>
+
+
+     <!-- Ekko lightbox -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+    <style>
+        .link-spanner{
+          position:absolute;
+          width:100%;
+          height:100%;
+          top:0;
+          left: 0;
+          z-index: 1;
+
+          /* edit: fixes overlap error in IE7/8,
+             make sure you have an empty gif
+          background-image: url('empty.gif');*/
+        }
+    </style>
+    <script type="text/javascript">
+            var $table = $('#fresh-table'),
+                $alertBtn = $('#alertBtn'),
+                full_screen = false;
+
+            $().ready(function(){
+                $table.bootstrapTable({
+                    toolbar: ".toolbar",
+
+                    showRefresh: false,
+                    search: true,
+                    showToggle: false,
+                    showColumns: false,
+                    pagination: true,
+                    striped: false,
+                    sortable: true,
+                    pageSize: 8,
+                    pageList: [8,10,25,50,100],
+
+                    formatShowingRows: function(pageFrom, pageTo, totalRows){
+                        //do nothing here, we don't want to show the text "showing x of y from..."
+                    },
+                    formatRecordsPerPage: function(pageNumber){
+                        return pageNumber + " rows visible";
+                    },
+                    icons: {
+                        refresh: 'fa fa-refresh',
+                        toggle: 'fa fa-th-list',
+                        columns: 'fa fa-columns',
+                        detailOpen: 'fa fa-plus-circle',
+                        detailClose: 'fa fa-minus-circle'
+                    }
+                });
+            });
+
+            $(function () {
+                $alertBtn.click(function () {
+                    alert("You pressed on Alert");
+                });
+            });
+
+
+            function operateFormatter(value, row, index) {
+                return [
+                    '<a rel="tooltip" title="Like" class="table-action like" href="javascript:void(0)" title="Like">',
+                        '<i class="fa fa-heart"></i>',
+                    '</a>',
+                    '<a rel="tooltip" title="Edit" class="table-action edit" href="javascript:void(0)" title="Edit">',
+                        '<i class="fa fa-edit"></i>',
+                    '</a>',
+                    '<a rel="tooltip" title="Remove" class="table-action remove" href="javascript:void(0)" title="Remove">',
+                        '<i class="fa fa-remove"></i>',
+                    '</a>'
+                ].join('');
+            }
+
+            window.operateEvents = {
+                'click .like': function (e, value, row, index) {
+                    alert('You click like icon, row: ' + JSON.stringify(row.id));
+                    console.log(value, row, index);
+                },
+                'click .edit': function (e, value, row, index) {
+                    console.log(value, row, index);
+                },
+                'click .remove': function (e, value, row, index) {
+                    alert('You click remove icon, row: ' + JSON.stringify(row));
+                    console.log(value, row, index);
+                }
+            };
+
+        </script>
+    {% endblock %}
+
+{% block content %}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-5 col-lg-offset-4 col-md-offset-3">
+                        <div class="card">
+                            <div class="content text-center">
+                                <div class="author">
+                                  <h3 class="card-title">Your Pages</h3>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="text-center">
+                                <div class="row">
+                                    <button class="btn btn-info btn-fill btn-wd" onclick="location.href = '{{ url_for('add_page', domain=domain) }}';">
+                                        Add a Page
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="row col-lg-10 col-lg-offset-1">
+                        <div class="fresh-table toolbar-color-azure">
+                                    <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
+                                            Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
+                                    -->
+                            <div class="toolbar"></div>
+                            <table id="fresh-table" class="table">
+                                <thead>
+                                    <th data-field="id" data-sortable="true"  class="text-center">ID</th>
+                                    <th data-field="Page" data-sortable="true" class="text-center">Page</th>
+                                    <th data-field="Last_Capture" data-sortable="true" class="text-center">Last Capture</th>
+                                    <th data-field="image_count" data-sortable="true" class="text-center">Image Count</th>
+                                    <th data-field="actions"  class="text-center">Actions</th>
+                                </thead>
+                                <tbody>
+                                    {% for page in pages %}
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <a href="{{url_for('get_dates', page=page.url)}}">{{ page.name }}</a>
+                                        </td>
+                                        <td>{% if page.last_screenshot %}
+                                            {{ page.last_screenshot.strftime('%b %d %I:%M %p') }}
+                                            {% else %}
+                                            Never
+                                            {% endif %} </td>
+                                        <td>12</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+			        </div>
+
+                </div>
+			</div>
+		</div>
+{% endblock %}

@@ -81,6 +81,10 @@ class ChangePasswordForm(FlaskForm):
     confirm = PasswordField('Repeat Password', validators=[InputRequired()])
 
 
+class PasswordResetRequestForm(FlaskForm):
+    email = StringField('Email Address', validators=[InputRequired(), Length(min=4, max=80)])
+
+
 class AddUserForm(FlaskForm):
     email = StringField('Email', validators=[InputRequired(), Email(message='Please enter a valid email'), Length(max=50)])
     first_name = StringField('First Name', validators=[InputRequired(), Length(max=50)])
@@ -100,6 +104,15 @@ class AddSiteForm(FlaskForm):
     amount = StringField()
     stripeToken = HiddenField()
     stripeEmail = HiddenField()
+
+
+class AddPageForm(FlaskForm):
+    name = StringField(validators=[InputRequired()])
+    url = StringField(validators=[URL()])
+    rate = SelectField(choices=[('1440', 'Once daily'), ('60', 'Once every hour'), ('30', 'Once every 30 minutes'),
+                                ('15', 'Once every 15 minutes')])
+    mobile = BooleanField(default=False)
+    site = HiddenField()
 
 
 class FindTeamForm(FlaskForm):

@@ -10,7 +10,7 @@
         <script type="text/javascript" src="{{ url_for('static', filename='assets/js/bootstrap-table.js') }}"></script>
         <!-- ekko lightbox -->
          <script type="text/javascript" src="{{ url_for('static', filename='assets/js/ekko-lightbox.js') }}"></script>
-         <script type="text/javascript" src="{{ url_for('static', filename='assets/js/ekko-lightbox.min.js') }}"></script>
+
          <script type="text/javascript" src="{{ url_for('static', filename='assets/css/ekko-lightbox.css') }}"></script>
 
         <script>
@@ -69,7 +69,7 @@
                                 <div class="row">
                                         <div class="col-xs-12" >
                                             <a href="{{url_for('return_file', filepath=image.path, filename=image.name) }}" data-toggle="lightbox" data-width="1200" data-remote="{{url_for('return_file', filepath=image.path, filename=image.name) }}">
-                                                <img  src="{{ resized_img_src(image.name, width=200, height=150, mode='crop') }}" >
+                                                <img  src="{{ resized_img_src(image.path, width=200, height=150, mode='crop') }}" >
                                             </a>
                                         </div>
                                     <div class="caption">

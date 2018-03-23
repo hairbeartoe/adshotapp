@@ -2,24 +2,157 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="231d7b04-24ae-4b5d-8ae3-c5e6f7eb6439" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/engine.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/faces/Profile_avatar_placeholder.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/faces/multy-user.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/ChangePW.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/app_schedule.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/animate.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap/bootstrap-grid.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap/bootstrap-reboot.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap4.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/bootstrap4.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/font-awesome.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/ionicons.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/landingpagestyle.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/linearicons.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/magnific-popup.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/main.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/mdb.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/mdb.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/nice-select.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/owl.carousel.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/responsive.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/slick.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/style.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/style.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/css/theme/pages.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Bold.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Bold.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Bold.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Bold.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Light.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Light.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Light.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Light.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Medium.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Medium.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Medium.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Medium.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Regular.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Thin.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Thin.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Thin.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/font/roboto/Roboto-Thin.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Linearicons-Free.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Linearicons-Free.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Linearicons-Free.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Linearicons-Free.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/fonts/Linearicons-Free.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/fonts/fontawesome-webfont.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/about-img.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/b1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/b2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/bg-img/client-1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/bg-img/client-2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/bg-img/client-3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/bg-img/mobile-1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/bg-img/special.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/bg-img/video.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/bg-img/welcome-bg.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/bg-img/welcome-img.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/a.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/a2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/d.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/disabled-check.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/disabled-radio.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/f1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/f2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/f3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/f4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/f5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/f6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/f7.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/f8.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/g1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/g2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/g3.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/g4.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/g5.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/g6.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/g7.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/g8.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/primary-check.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/primary-radio.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/success-check.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/elements/success-radio.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/f1.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/f2.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/header-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/laptop.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/play-btn.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/small logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/t1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/t2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/t3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/video-bg.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/img/welcome-bg copy.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/active.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/bootstrap4.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/bootstrap4.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/easing.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/footer-reveal.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/hoverIntent.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery-3.2.1.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery.ajaxchimp.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery.magnific-popup.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery.nice-select.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/jquery.sticky.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/mail-script.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/main.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/mdb.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/mdb.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/owl.carousel.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/parallax.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/plugins.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/popper.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/slick.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/slick.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/superfish.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/static/assets/js/superfish.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/Addpage.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/oldindex.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/pages.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/templates/passwordresetrequestform.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/engine.py" afterPath="$PROJECT_DIR$/app/engine.py" />
       <change beforePath="$PROJECT_DIR$/app/forms.py" afterPath="$PROJECT_DIR$/app/forms.py" />
       <change beforePath="$PROJECT_DIR$/app/models.py" afterPath="$PROJECT_DIR$/app/models.py" />
+      <change beforePath="$PROJECT_DIR$/app/run.py" afterPath="$PROJECT_DIR$/app/run.py" />
+      <change beforePath="$PROJECT_DIR$/app/static/assets/img/loading.gif" afterPath="$PROJECT_DIR$/app/static/assets/img/loading.gif" />
       <change beforePath="$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.js" afterPath="$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.js" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/02242017.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/cat.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/elephant.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/flatiron.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/kitten.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/koala.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/monkey.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/puppy.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/static/images/variety.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/templates/ChangePW.html" afterPath="$PROJECT_DIR$/app/templates/ChangePW.html" />
       <change beforePath="$PROJECT_DIR$/app/templates/Collection_images.html" afterPath="$PROJECT_DIR$/app/templates/Collection_images.html" />
-      <change beforePath="$PROJECT_DIR$/app/templates/addsite.html" afterPath="$PROJECT_DIR$/app/templates/addsite.html" />
-      <change beforePath="$PROJECT_DIR$/app/templates/collections.html" afterPath="$PROJECT_DIR$/app/templates/collections.html" />
-      <change beforePath="$PROJECT_DIR$/app/templates/dashboard.html" afterPath="$PROJECT_DIR$/app/templates/dashboard.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/Navigation.html" afterPath="$PROJECT_DIR$/app/templates/Navigation.html" />
       <change beforePath="$PROJECT_DIR$/app/templates/dates.html" afterPath="$PROJECT_DIR$/app/templates/dates.html" />
       <change beforePath="$PROJECT_DIR$/app/templates/images.html" afterPath="$PROJECT_DIR$/app/templates/images.html" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" afterPath="$PROJECT_DIR$/app/templates/index.html" />
       <change beforePath="$PROJECT_DIR$/app/templates/screenshots.html" afterPath="$PROJECT_DIR$/app/templates/screenshots.html" />
-      <change beforePath="$PROJECT_DIR$/app/templates/team.html" afterPath="$PROJECT_DIR$/app/templates/team.html" />
       <change beforePath="$PROJECT_DIR$/app/templates/user.html" afterPath="$PROJECT_DIR$/app/templates/user.html" />
       <change beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
+      <change beforePath="$PROJECT_DIR$/flask/pip-selfcheck.json" afterPath="$PROJECT_DIR$/flask/pip-selfcheck.json" />
+      <change beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,46 +163,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="engine.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/engine.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding>
-                <element signature="e#18#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="258" column="0" lean-forward="true" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="images.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/images.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3266">
-              <caret line="142" column="156" lean-forward="false" selection-start-line="142" selection-start-column="156" selection-end-line="142" selection-end-column="156" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ekko-lightbox.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1726">
-              <caret line="253" column="28" lean-forward="false" selection-start-line="253" selection-start-column="23" selection-end-line="253" selection-end-column="28" />
+            <state relative-caret-position="1564">
+              <caret line="82" column="32" lean-forward="false" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
               <folding>
-                <element signature="e#0#18564#0" expanded="false" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="355" column="27" lean-forward="false" selection-start-line="355" selection-start-column="27" selection-end-line="355" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pricing.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Saas-Template-Bootstrap-master/pricing.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="251" column="14" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="251" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landing-page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Saas-Template-Bootstrap-master/landing-page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="116" column="44" lean-forward="false" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="oldindex.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/oldindex.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9522">
+              <caret line="414" column="8" lean-forward="false" selection-start-line="414" selection-start-column="8" selection-end-line="414" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,34 +227,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>String</find>
-      <find>encode</find>
-      <find>string</find>
-      <find>bootstrap.js</find>
-      <find>modal-backdrop</find>
-      <find>body</find>
-      <find>600</find>
-      <find>.modal</find>
-      <find>modal</find>
-      <find>modal-d</find>
-      <find>jq</find>
-      <find>user</find>
-      <find>coll</find>
-      <find>im</find>
+      <find>loading</find>
+      <find>create</find>
+      <find>age</find>
+      <find>max_</find>
+      <find>admin</find>
+      <find>adm</find>
+      <find>cast</find>
+      <find>offset</find>
+      <find>off</find>
+      <find>site</find>
       <find>add</find>
-      <find>route</find>
-      <find>flash</find>
-      <find>remote</find>
-      <find>force</find>
-      <find>heig</find>
-      <find>image</find>
-      <find>disable</find>
-      <find>iframe</find>
-      <find>disa</find>
-      <find>scale</find>
-      <find>width</find>
-      <find>file</find>
+      <find>get</find>
+      <find>get_dates</find>
+      <find>href</find>
+      <find>/</find>
+      <find>animate</find>
+      <find>bootst</find>
+      <find>ion</find>
+      <find>slic</find>
+      <find>ss</find>
+      <find>css</find>
+      <find>.css</find>
+      <find>bg</find>
+      <find>=&quot;</find>
+      <find>&quot;css</find>
+      <find>href=&quot;</find>
+      <find>owl</find>
+      <find>src</find>
+      <find>linear</find>
+      <find>js</find>
     </findStrings>
+    <replaceStrings>
+      <replace>&quot;{{ url_for('static', filename='assets/css</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -121,7 +268,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/run.py" />
         <option value="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py" />
         <option value="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/transform.py" />
         <option value="$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/__init__.py" />
@@ -130,30 +276,40 @@
         <option value="$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.min.css" />
         <option value="$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.min.js" />
         <option value="$PROJECT_DIR$/app/static/assets/css/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/app/templates/Navigation.html" />
-        <option value="$PROJECT_DIR$/app/templates/dates.html" />
         <option value="$PROJECT_DIR$/app/templates/collections.html" />
-        <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/templates/user.html" />
         <option value="$PROJECT_DIR$/app/templates/team.html" />
         <option value="$PROJECT_DIR$/app/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/app/templates/Collection_images.html" />
-        <option value="$PROJECT_DIR$/app/forms.py" />
-        <option value="$PROJECT_DIR$/app/templates/ChangePW.html" />
-        <option value="$PROJECT_DIR$/app/templates/screenshots.html" />
         <option value="$PROJECT_DIR$/app/templates/addsite.html" />
+        <option value="$PROJECT_DIR$/app/config.py" />
         <option value="$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.js" />
-        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/Collection_images.html" />
+        <option value="$PROJECT_DIR$/app/templates/passwordresetrequestform.html" />
+        <option value="$PROJECT_DIR$/app/templates/ChangePW.html" />
+        <option value="$PROJECT_DIR$/app/run.py" />
+        <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/templates/images.html" />
+        <option value="$PROJECT_DIR$/app/templates/screenshots.html" />
+        <option value="$PROJECT_DIR$/app/templates/dates.html" />
+        <option value="$PROJECT_DIR$/app/templates/pages.html" />
+        <option value="$PROJECT_DIR$/app/forms.py" />
+        <option value="$PROJECT_DIR$/app/templates/Addpage.html" />
+        <option value="$PROJECT_DIR$/app/templates/user.html" />
+        <option value="$PROJECT_DIR$/app/app_schedule.py" />
         <option value="$PROJECT_DIR$/app/engine.py" />
+        <option value="$PROJECT_DIR$/app/templates/Navigation.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/oldindex.html" />
+        <option value="$PROJECT_DIR$/app/saas/index.html" />
+        <option value="$PROJECT_DIR$/app/templates/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="158" />
-    <option name="y" value="83" />
-    <option name="width" value="1702" />
-    <option name="height" value="967" />
+    <option name="x" value="37" />
+    <option name="y" value="24" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -173,8 +329,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,6 +340,12 @@
               <item name="adshotapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="adshotapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adshotapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adshotapp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Saas-Template-Bootstrap-master" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="adshotapp" type="b2602c69:ProjectViewProjectNode" />
@@ -204,12 +364,16 @@
               <item name="adshotapp" type="b2602c69:ProjectViewProjectNode" />
               <item name="adshotapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,14 +383,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static/assets/img" />
       <recent name="$PROJECT_DIR$/app/static/images" />
       <recent name="$PROJECT_DIR$/app/static/assets/js" />
       <recent name="$PROJECT_DIR$/app/static/assets/css" />
       <recent name="$PROJECT_DIR$/app/templates/vanillabox" />
-      <recent name="$PROJECT_DIR$/app/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/static/assets/img/faces" />
+      <recent name="$PROJECT_DIR$/app/static/assets" />
+      <recent name="$PROJECT_DIR$/app/static/assets/js" />
+      <recent name="$PROJECT_DIR$/app/static/assets/css" />
+      <recent name="$PROJECT_DIR$/app/static/assets/fonts" />
+      <recent name="$PROJECT_DIR$/app/static/assets/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -242,7 +410,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.run">
-    <configuration name="db_create (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="app_schedule" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -254,7 +422,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="adshotapp" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/db_create.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/app_schedule.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -334,18 +502,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.run" />
-      <item index="1" class="java.lang.String" itemvalue="Python.db_create (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.db_migrate (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.run (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.engine" />
+      <item index="1" class="java.lang.String" itemvalue="Python.db_migrate (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.run (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.engine" />
+      <item index="4" class="java.lang.String" itemvalue="Python.app_schedule" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.run" />
-        <item index="1" class="java.lang.String" itemvalue="Python.engine" />
-        <item index="2" class="java.lang.String" itemvalue="Python.run (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.db_migrate (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.db_create (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.app_schedule" />
+        <item index="2" class="java.lang.String" itemvalue="Python.db_migrate (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.engine" />
+        <item index="4" class="java.lang.String" itemvalue="Python.run (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -375,16 +543,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="158" y="83" width="1702" height="967" extended-state="0" />
+    <frame x="37" y="24" width="1280" height="773" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18560381" sideWeight="0.49355432" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21286735" sideWeight="0.49355432" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.50516284" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11284514" sideWeight="0.49483716" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2877698" sideWeight="0.50793654" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3035994" sideWeight="0.4920635" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278302" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264418" sideWeight="0.49815693" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -397,6 +565,27 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2877698" sideWeight="0.50793654" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2877698" sideWeight="0.4920635" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853717" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264418" sideWeight="0.49815693" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24074075" sideWeight="0.49355432" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17633042" sideWeight="0.50644565" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
@@ -406,333 +595,357 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/static/assets/js/lg-utils.js" />
-    <entry file="file://$PROJECT_DIR$/app/static/assets/js/lightgallery.js" />
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+    <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="368">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="db://[Adshotapp] TABLE - public.images" />
-    <entry file="db://[Adshotapp] TABLE - public.image" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/tables.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="171" column="16" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/adminview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="477" column="0" lean-forward="true" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+        <state relative-caret-position="188">
+          <caret line="174" column="47" lean-forward="false" selection-start-line="174" selection-start-column="47" selection-end-line="174" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/modes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/transform.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+        <state relative-caret-position="188">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/__init__.py">
+    <entry file="file://$PROJECT_DIR$/flask/lib/python3.6/site-packages/flask_images/size.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/images/variety.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/images/elephant.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/luminous-master/luminous.html" />
-    <entry file="file://$PROJECT_DIR$/app/templates/vanillabox/demo.html" />
-    <entry file="file://$PROJECT_DIR$/app/static/assets/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="4" column="109590" lean-forward="false" selection-start-line="4" selection-start-column="109590" selection-end-line="4" selection-end-column="109590" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="5613" column="13" lean-forward="true" selection-start-line="5613" selection-start-column="13" selection-end-line="5613" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/css/paper-dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="1605" column="25" lean-forward="true" selection-start-line="1605" selection-start-column="25" selection-end-line="1605" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/email-confirmation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/findteam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/add_to_collection.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-444">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/createcollection.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/x_fresh_bootstrap_table_v1.1/full-screen-table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="28" column="72" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/js/bootstrap-table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51558">
-          <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/login_register_modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/adduser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="83" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/send_collection_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Navigation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3680">
-          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/dates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="108" column="7" lean-forward="true" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/collections.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        <state relative-caret-position="188">
+          <caret line="69" column="32" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="58" column="15" lean-forward="false" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
+        <state relative-caret-position="437">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/img/loading.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/dates.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state relative-caret-position="2415">
+          <caret line="105" column="58" lean-forward="false" selection-start-line="105" selection-start-column="58" selection-end-line="105" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/team.html">
+    <entry file="file://$PROJECT_DIR$/app/templates/pages.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="112" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="20" column="150" lean-forward="false" selection-start-line="20" selection-start-column="120" selection-end-line="20" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1771">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/Collection_images.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="126" column="30" lean-forward="false" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/ChangePW.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/images/cat.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/addsite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/screenshots.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="104" column="29" lean-forward="false" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/css/ekko-lightbox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="61" column="1" lean-forward="false" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="6" column="8674" lean-forward="true" selection-start-line="6" selection-start-column="8674" selection-end-line="6" selection-end-column="8674" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/assets/js/ekko-lightbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1726">
-          <caret line="253" column="28" lean-forward="false" selection-start-line="253" selection-start-column="23" selection-end-line="253" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#18564#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="258" column="0" lean-forward="true" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="2691">
+          <caret line="117" column="148" lean-forward="false" selection-start-line="117" selection-start-column="106" selection-end-line="117" selection-end-column="148" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/images.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3266">
-          <caret line="142" column="156" lean-forward="false" selection-start-line="142" selection-start-column="156" selection-end-line="142" selection-end-column="156" />
-          <folding />
+        <state relative-caret-position="888">
+          <caret line="153" column="33" lean-forward="false" selection-start-line="153" selection-start-column="33" selection-end-line="153" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/collections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/addsite.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1196">
+          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Addpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="104" column="84" lean-forward="true" selection-start-line="104" selection-start-column="84" selection-end-line="104" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/screenshots.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="143" column="59" lean-forward="false" selection-start-line="143" selection-start-column="59" selection-end-line="143" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Collection_images.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="151" column="5" lean-forward="false" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1909">
+          <caret line="83" column="68" lean-forward="false" selection-start-line="83" selection-start-column="68" selection-end-line="83" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app_schedule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/engine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="1288">
+          <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ca/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/landingpagestyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/Navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/active.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="23" column="62" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/footer-reveal.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="595" lean-forward="false" selection-start-line="0" selection-start-column="593" selection-end-line="0" selection-end-column="595" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/animate.min.css" />
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1214">
+          <caret line="38" column="3750" lean-forward="false" selection-start-line="38" selection-start-column="3746" selection-end-line="38" selection-end-column="3750" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/slick.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/magnific-popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/linearicons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/nice-select.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/easing.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/theme/pages.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/bootstrap/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/saas/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/Saas-Template-Bootstrap-master/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="161">
+            <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/oldindex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9522">
+          <caret line="414" column="8" lean-forward="false" selection-start-line="414" selection-start-column="8" selection-end-line="414" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/mdb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/bootstrap4.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/css/bootstrap4.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/bootstrap4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/assets/js/bootstrap4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="82" column="32" lean-forward="false" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="32" />
           <folding>
-            <element signature="e#18#29#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Saas-Template-Bootstrap-master/landing-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="116" column="44" lean-forward="false" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Saas-Template-Bootstrap-master/pricing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="251" column="14" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="251" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="355" column="27" lean-forward="false" selection-start-line="355" selection-start-column="27" selection-end-line="355" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
