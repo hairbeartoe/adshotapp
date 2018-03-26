@@ -1,7 +1,7 @@
 import os
 from flask import render_template, redirect,url_for,send_from_directory, request, send_file, flash
 from app import app, db
-from app.models import User,Site, Image, subscriptions, Team, Collection, Page
+from app.models import User, Site, Image, subscriptions, Team, Collection, Page
 from app.forms import LoginForm, PasswordResetRequestForm, ChangePasswordForm, RegisterForm,AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm,SendCollectionForm, AddPageForm
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -89,7 +89,7 @@ def signup():
             token = s.dumps(email, salt='email-confirm')
             msg = Message('Confirm Email', sender='e.eddieflores@gmail.com', recipients=[email])
             the_link = url_for('confirm_email', token=token, _external=True)
-            msg.html = render_template('/email-confirmation.html', link=the_link)
+            msg.html = render_template('/NewAccount.html', link=the_link)
             mail.send(msg)
 
             # Generate the hashed password
