@@ -78,18 +78,6 @@
                     </a>
                 </li>
 
-
-                {% if title=="Profile" %}
-                <li class="active">
-                {% else %}
-                <li>
-                {% endif %}
-                    <a href="{{ url_for('edit_user_profile') }}">
-                        <i class="ti-settings"></i>
-                        <p>User</p>
-                    </a>
-                </li>
-
                 {% if title=="Collections" %}
                 <li class="active">
                 {% else %}
@@ -101,13 +89,26 @@
                     </a>
                 </li>
 
+                {% if title=="Profile" %}
+                <li class="active">
+                {% else %}
+                <li>
+                {% endif %}
+                    <a href="{{ url_for('edit_user_profile') }}">
+                        <i class="ti-user"></i>
+                        <p>Profile</p>
+                    </a>
+                </li>
+
+
+
                 {% if title=="Team" %}
                 <li class="active">
                 {% else %}
                 <li>
                 {% endif %}
                     <a href="{{ url_for('team') }}">
-                        <i class="ti-user"></i>
+                        <i class="ti-settings"></i>
                         <p>Team</p>
                     </a>
                 </li>
