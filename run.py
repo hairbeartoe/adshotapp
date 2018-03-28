@@ -4,7 +4,7 @@ from app.models import User, Site, Image, Team, Collection, Page
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
-app.config['SECRET_KEY'] = 'echodog'
+
 adminpage = Admin(app)
 adminpage.add_view(ModelView(Team, db.session))
 adminpage.add_view(ModelView(User, db.session))
@@ -13,4 +13,4 @@ adminpage.add_view(ModelView(Image, db.session))
 adminpage.add_view(ModelView(Collection, db.session))
 adminpage.add_view(ModelView(Page, db.session))
 
-app.run(debug=True)
+app.run(host='0.0.0.0', port=8080, debug=True)
