@@ -1,0 +1,281 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Pagesnap | Automated Screenshots</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+
+  <!-- Material Design Bootstrap
+  <link href="{{url_for('static', filename='assets/css/mdb.min.css') }}" rel="stylesheet"> -->
+  <!-- Your custom styles (optional) -->
+  <link href="{{url_for('static', filename='assets/css/style.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/css/paper-dashboard.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/demo.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet"/>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+    <!-- Javascript -->
+<script type="text/javascript" src="{{ url_for('static', filename='assets/js/bootstrap.js') }}" rel="stylesheet"></script>
+<!-- ekko lightbox -->
+         <script type="text/javascript" src="{{ url_for('static', filename='assets/js/ekko-lightbox.js') }}"></script>
+
+         <script type="text/javascript" src="{{ url_for('static', filename='assets/css/ekko-lightbox.css') }}"></script>
+
+        <script>
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                            event.preventDefault();
+                            $(this).ekkoLightbox();
+                        });
+         </script>
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+
+    .hovereffect {
+width:100%;
+overflow:hidden;
+position:relative;
+text-align:center;
+cursor:default;
+}
+
+.hovereffect .overlay {
+width:100%;
+height:100%;
+position:absolute;
+overflow:hidden;
+top:0;
+left:0;
+opacity:0;
+background-color:rgba(0,0,0,0.5);
+-webkit-transition:all .4s ease-in-out;
+transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+display:block;
+position:relative;
+-webkit-transition:all .4s linear;
+transition:all .4s linear;
+}
+
+.hovereffect h2 {
+text-transform:uppercase;
+color:#fff;
+text-align:center;
+position:relative;
+font-size:17px;
+background:rgba(0,0,0,0.6);
+-webkit-transform:translatey(-100px);
+-ms-transform:translatey(-100px);
+transform:translatey(-100px);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+padding:10px;
+}
+
+.hovereffect a.info {
+text-decoration:none;
+display:inline-block;
+text-transform:uppercase;
+color:#fff;
+border:1px solid #fff;
+background-color:transparent;
+opacity:0;
+filter:alpha(opacity=0);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+margin:50px 0 0;
+padding:7px 14px;
+}
+
+.hovereffect a.info:hover {
+box-shadow:0 0 5px #fff;
+}
+
+.hovereffect:hover img {
+-ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+opacity:1;
+filter:alpha(opacity=100);
+-ms-transform:translatey(0);
+-webkit-transform:translatey(0);
+transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+-webkit-transition-delay:.2s;
+transition-delay:.2s;
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand LOGO-->
+      <a class="navbar-brand" href="/" >
+        <img src="{{url_for('static', filename='assets/img/logo-white.png') }}" height="30" >
+        <strong> </strong>
+      </a>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 col-lg-offset-4 col-md-offset-3">
+                <div class="card">
+                    <div class="content text-center">
+                        <div class="author">
+                          <h2 class="card-title">{{ name }}</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <div class="row">
+                            <a class="btn btn-info btn-fill btn-wd" href="{{url_for('login') }}" role="button">Login</a>
+                            <a class="btn btn-info btn-fill btn-wd" href="{{url_for('signup') }}" role="button">Signup for free</a>
+                        </div>
+                        <div class="row">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-lg-12">
+                <div class="row text-center text-lg-left" id="">
+
+                  {% for image in image_names %}
+                    <div class="col-lg-3 col-sm-6" >
+                        <div class="img-thumbnail">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="hovereffect">
+                                        <div class="col-xs-12" >
+                                            <a href="{{url_for('return_file', filepath=image.path, filename=image.name) }}" data-toggle="lightbox" data-width="900" data-remote="{{url_for('return_file', filepath=image.path, filename=image.name) }}">
+                                                <img  src="{{ resized_img_src(image.path, width=200, height=150, mode='crop') }}" >
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="caption">
+                                        <a href="{{url_for('return_file', filepath=image.path, filename=image.name) }}" class="imagebutton">
+                                            <div class="col-xs-12 text-center icon-big imagebutton">
+                                                        <i class="ti-download">Download Image</i>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="footer">
+                                    <hr />
+                                    <div class="stats">
+                                        {{ image.date.strftime('%m-%d-%Y %I:%M %p') }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- Modal -->
+    <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <br>
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                  <li class="active"><a href="#sendcollection" data-toggle="tab">Send Collection</a></li>
+                </ul>
+            </div>
+          <div class="modal-body">
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="sendcollection">
+                    <form method="post" action="{{ url_for('send_collection', collection_id=collection) }}" accept-charset="UTF-8" class="form-horizontal">
+                        {{ form.hidden_tag() }}
+                        <div class="control-group">
+                            {{ form.message.label(class_='control-label') }}
+                                <div class="controls">
+                                    {{ form.message(class="form-control input-medium", type="text", placeholder="Hi, please take a look at the collection",id="",label="none") }}
+                                </div>
+                        </div>
+
+                        <div class="control-group">
+                                <div class="controls">
+                                    {{ form.collection(value=collection) }}
+                                </div>
+                        </div>
+
+                        <div class="control-group">
+                            {{ form.email.label(class_='control-label') }}
+                                <div class="controls">
+                                    {{ form.email(class="form-control input-medium", type="email", placeholder="Elon@tesla.com",id="",label="none") }}
+                                </div>
+                        </div>
+
+                        <div class="control-group">
+                          <label class="control-label" for="signin"></label>
+                          <div class="controls">
+                            <button id="signin" name="signin" class="btn btn-success btn-block" type="submit">Send Collection</button>
+                          </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+          <center>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<footer class="footer">
+                <div class="container">
+                    <div class="copyright">
+                        &copy; 2018 <a href="http://www.pagesnap.com">Pagesnap LLC</a>
+                    </div>
+                </div>
+            </footer>
+</body>

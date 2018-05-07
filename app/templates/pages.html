@@ -1,4 +1,3 @@
-
     {% extends "Navigation.html" %}
     {% block title %}
     Sites
@@ -141,7 +140,6 @@
                                     <th data-field="id" data-sortable="true"  class="text-center">ID</th>
                                     <th data-field="Page" data-sortable="true" class="text-center">Page</th>
                                     <th data-field="Last_Capture" data-sortable="true" class="text-center">Last Capture</th>
-                                    <th data-field="image_count" data-sortable="true" class="text-center">Image Count</th>
                                     <th data-field="actions"  class="text-center">Actions</th>
                                 </thead>
                                 <tbody>
@@ -156,7 +154,6 @@
                                             {% else %}
                                             Never
                                             {% endif %} </td>
-                                        <td>12</td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>
@@ -168,3 +165,4 @@
 			</div>
 		</div>
 {% endblock %}
+

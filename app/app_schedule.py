@@ -39,7 +39,7 @@ for page in pages:
 def job_1():
     for item in list:
         screenshot_engine(item)
-        print('screenshot captured: ' + item.get('url'))
+        #print('screenshot captured: ' + item.get('url'))
 
 
 # function to make threads -> details here http://bit.ly/faq_schedule

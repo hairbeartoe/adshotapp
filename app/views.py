@@ -1,20 +1,18 @@
-import os
-from flask import render_template, redirect,url_for,send_from_directory, request, send_file, flash
+import flask
+from flask import render_template, redirect, url_for, send_from_directory, request, send_file, flash
 from app import app, db
-from app.models import User, Site, Image, subscriptions, Team, Collection, Page
+from app.models import User, Site, Image, Team, Collection, Page
 from app.forms import LoginForm, PasswordResetRequestForm, ChangePasswordForm, RegisterForm,AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm,SendCollectionForm, AddPageForm
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user, AnonymousUserMixin
 from sqlalchemy import Date, cast, desc
-from flask_images import resized_img_src , Images
+from flask_images import resized_img_src, Images
 from datetime import datetime
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 import stripe
 from wtforms import form, validators
-
-
 
 
 ''' 
@@ -41,8 +39,7 @@ login_manager.login_view = 'login'
 
 stripe_pub_key = 'pk_test_upjxUBP80Gy8XJZMur6eSU28'
 stripe_secret_key = 'sk_test_PUE7j4ekbagC0dzP3HO0LD1T'
-stripe.api_key=stripe_secret_key
-
+stripe.api_key = stripe_secret_key
 
 
 @login_manager.user_loader
@@ -53,54 +50,59 @@ def load_user(user_id):
 @app.route('/')
 @app.route('/index',  methods=['GET', 'POST'])
 def index():
-    form = LoginForm()
-    user = {'nickname': 'Eddie'}
+    login_form = LoginForm()
     return render_template("index.html",
                            title='Home',
-                           user=user,form=form)
+                           form=login_form)
+
+
+@app.route('/terms')
+def terms():
+    return render_template("terms.html",
+                           title='Terms')
+
+
+@app.route('/copyright')
+def copyright():
+    return render_template("copyright.html",
+                           title='Copyright')
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data.lower()).first()
+    login_form = LoginForm()
+    if login_form.validate_on_submit():
+        user = User.query.filter_by(email=login_form.email.data.lower()).first()
         if user is not None:
-            if check_password_hash(user.password,form.password.data):
+            if check_password_hash(user.password, login_form.password.data):
                 if user.status == 'Active':
-                    login_user(user, remember=form.remember.data)
-                    #update the last login date
-                    user.last_login = datetime.today()
-                    db.session.commit()
-                    return redirect(url_for('dashboard'))
+                    try:
+                        login_user(user, remember=login_form.remember.data)
+                        # update the last login date
+                        user.last_login = datetime.today()
+                        db.session.commit()
+                        return redirect(url_for('dashboard'))
+                    except Exception as e:
+                        flash("Something went wrong! We've been notified. Error: " + str(e), category='danger')
+                        return redirect(url_for('login'))
         flash("Invalid password or username")
-    return render_template('login.html', form=form)
+    return render_template('login.html', form=login_form)
 
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    form = RegisterForm()
-    if request.method == "POST":
-        print(request.method)
-        if form.validate_on_submit():
-
-            # send the confirmation email
-            email = form.email.data.lower()
-            token = s.dumps(email, salt='email-confirm')
-            msg = Message('Confirm Email', sender='e.eddieflores@gmail.com', recipients=[email])
-            the_link = url_for('confirm_email', token=token, _external=True)
-            msg.html = render_template('/NewAccount.html', link=the_link)
-            mail.send(msg)
-
+    register_form = RegisterForm()
+    if request.method == "POST" and register_form.validate_on_submit():
+        added = False
+        try:
             # Generate the hashed password
-            hashed_password= generate_password_hash(form.password.data, 'sha256')
-            print(hashed_password)
+            hashed_password = generate_password_hash(register_form.password.data, 'sha256')
             # add the new user to the database
             # noinspection PyArgumentList
-            new_user = User(nickname= form.first_name.data + " " + form.last_name.data,
-                            first_name=form.first_name.data,
-                            last_name=form.last_name.data,
-                            email=form.email.data,
+            new_user = User(nickname=register_form.first_name.data + " " + register_form.last_name.data,
+                            first_name=register_form.first_name.data,
+                            last_name=register_form.last_name.data,
+                            email=register_form.email.data,
                             password=hashed_password,
                             profile='Team Administrator',
                             status='Active',
@@ -108,19 +110,30 @@ def signup():
                             last_login=datetime.today(),
                             confirmed_email=False,
                             collection_count=0)
+            new_team = Team(name=register_form.team_name.data)
             db.session.add(new_user)
-            print(new_user)
             db.session.commit()
             login_user(new_user)
-            new_team = Team(name=form.team_name.data)
             new_team.admin_user.append(new_user)
             db.session.add(new_team)
-            print(new_team.id)
             db.session.commit()
+            added = True
+            email = register_form.email.data.lower()
+            token = s.dumps(email, salt='email-confirm')
+            msg = Message('Confirm Email', sender='Pagesnapsite@gmail.com', recipients=[email])
+            the_link = url_for('confirm_email', token=token, _external=True)
+            msg.body = 'Your username has been created'
+            msg.html = render_template('NewAccount.html', link=the_link)
+            mail.send(msg)
             return redirect(url_for('dashboard'))
-        else:
-            print('not valid')
-    return render_template('signup.html', form=form)
+        except Exception as e:
+            flash("Something went wrong! We've been notified. Error: " + str(e), category='danger')
+            email = "heribertoflores@me.com"
+            msg = Message('URGENT: ERROR', sender='e.eddieflores@gmail.com', recipients=[email])
+            msg.body = 'Error!!! Error is: ' + str(e)
+            mail.send(msg)
+            return redirect(url_for('signup'))
+    return render_template('signup.html', form=register_form)
 
 
 @app.route('/confirm/<token>')
@@ -131,19 +144,19 @@ def confirm_email(token):
         user.confirmed_email = True
         db.session.commit()
     except SignatureExpired:
-        return 'The link is expired'
+        flash("The link has expired", category='danger')
+        return redirect(url_for('login'))
     return redirect(url_for('dashboard'))
 
 
 @app.route('/changepw/<int:userid>', methods=['GET', 'POST'])
 def changepw(userid):
-    form = ChangePasswordForm()
+    change_pw_form = ChangePasswordForm()
     user = User.query.filter_by(id=userid).first()
     if request.method == "POST":
-        if form.validate_on_submit():
+        if change_pw_form.validate_on_submit():
             # Generate the hashed password
-            hashed_password= generate_password_hash(form.password.data, 'sha256')
-            print(hashed_password)
+            hashed_password = generate_password_hash(change_pw_form.password.data, 'sha256')
             # add the new user to the database
             user.password = hashed_password
             db.session.commit()
@@ -152,40 +165,41 @@ def changepw(userid):
         else:
             flash('Passwords must match', category='danger')
     return render_template('ChangePW.html',
-                           form=form,
+                           form=change_pw_form,
                            userid=current_user.id)
 
 
 @app.route('/passwordreset/<token>', methods=['GET', 'POST'])
 def password_reset(token):
-    form = ChangePasswordForm()
+    change_pw_form = ChangePasswordForm()
     try:
         user_id = s.loads(token, salt='email-confirm', max_age=3600)
-        user = User.query.filter_by(id=user_id ).first()
+        user = User.query.filter_by(id=user_id).first()
         if request.method == "POST":
-            if form.validate_on_submit():
+            if change_pw_form.validate_on_submit():
                 # Generate the hashed password
-                hashed_password = generate_password_hash(form.password.data, 'sha256')
-                print(hashed_password)
+                hashed_password = generate_password_hash(change_pw_form.password.data, 'sha256')
                 # add the new user to the database
                 user.password = hashed_password
+                db.session.add(user)
                 db.session.commit()
                 flash('Password Updated', category='info')
                 return redirect(url_for('login'))
             else:
                 flash('Passwords must match', category='danger')
-        return render_template('ChangePW.html', form=form, userid=user_id)
+        return render_template('ChangePW.html', form=change_pw_form, userid=user_id)
     except SignatureExpired:
-        return 'The link is expired'
+        flash("The link has expired", category='danger')
+        return redirect(url_for('login'))
 
 
 @app.route('/resetpw', methods=['GET', 'POST'])
 def reset_pw():
-    form = PasswordResetRequestForm()
+    pw_reset_request_form = PasswordResetRequestForm()
     if request.method == "POST":
-        if form.validate_on_submit():
+        if pw_reset_request_form.validate_on_submit():
             # find the user
-            user = User.query.filter_by(email=form.email.data).first()
+            user = User.query.filter_by(email=pw_reset_request_form.email.data).first()
             if user is not None:
                 # send the email to the reset page
                 email = user.email.lower()
@@ -200,7 +214,7 @@ def reset_pw():
             return redirect(url_for('login'))
         else:
             flash('Passwords must match', category='danger')
-    return render_template('passwordresetrequestform.html', form=form)
+    return render_template('passwordresetrequestform.html', form=pw_reset_request_form)
 
 
 @app.route('/dashboard')
@@ -212,13 +226,19 @@ def dashboard():
     user_team = Team.query.filter(Team.id == current_user.team).first()
     users = User.query.filter(User.team == user_team.id).all()
     user_count = len(users)
-    images = 0
+    images_count = 0
     for site in sites:
         image_counter = Image.query.join(Site.images).filter(Site.domain == site.domain).all()
-        images += len(image_counter)
+        images_count += len(image_counter)
     if sites is None:
         sites = 0
-    return render_template('dashboard.html', nickname=current_user.nickname, sites=sites, title='Dashboard',user_count=user_count, images=images,collection_count=collection_count)
+    return render_template('dashboard.html',
+                           nickname=current_user.nickname,
+                           sites=sites,
+                           title='Dashboard',
+                           user_count=user_count,
+                           images=images_count,
+                           collection_count=collection_count)
 
 
 @app.route('/profile', methods=['GET', 'POST'])
@@ -272,7 +292,7 @@ def get_sites():
 @app.route('/pages')
 def get_pages():
     domain = request.args.get('domain')
-    print(domain)
+    #print(domain)
     pages = Page.query.join(Site.pages).filter(Site.domain == domain).all()
     #images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
     #image_count = len(images)
@@ -292,7 +312,7 @@ def get_dates():
     domain = request.args.get('page')
     domain = Page.query.filter_by(url=domain).first()
     domain = domain.name
-    print(domain)
+    #print(domain)
     dates = set()
     images = Image.query.join(Page.images).filter(Page.name == domain).order_by(desc(Image.date)).all()
     image_count = len(images)
@@ -315,12 +335,12 @@ def get_images():
     dates = set()
     image_names =[]
     picked_date = date
-    print(images)
+    #print(images)
     #picked_date = datetime.strptime(date, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
     for image in images:
         f_path = image.path + image.name
         image_names.append(image.name)
-    print(image_names)
+    #print(image_names)
     return render_template('images.html',
                            nickname=current_user.nickname,
                            image_count=image_count,
@@ -345,6 +365,7 @@ def return_file():
 
 
 @app.route('/addsite', methods=['GET', 'POST'])
+@login_required
 def add_site():
     form = AddSiteForm()
     if form.validate_on_submit():
@@ -353,10 +374,6 @@ def add_site():
         # if the site does not exist in the db
         directory = 'static/images/' + form.domain_name.data
         new_site = Site(domain=form.domain_name.data,
-                        url=form.domain_name.data,
-                        capture_rate=form.rate.data,
-                        mobile_capture=form.mobile.data,
-                        article_page_capture=form.article.data,
                         date_added=datetime.now(),
                         status='Active',
                         directory=directory)
@@ -370,7 +387,7 @@ def add_site():
         #sites.append(new_site)
         db.session.commit()
         #TODO SEND REQUEST VIA EMAIL TO ADMIN
-        flash('Your request has been sent', category='success')
+        flash('Your site has been added. Please add some pages to track.', category='success')
         return redirect(url_for('get_sites'))
     return render_template('addsite.html', form=form, title='Add site', pub_key=stripe_pub_key)
 
@@ -394,7 +411,7 @@ def add_page():
                         status='Active',
                         site=add_to_site.id,
                         directory=page_directory)
-        print(new_page)
+        #print(new_page)
         # Add the site to the DB
         db.session.add(new_page)
         db.session.commit()
@@ -403,7 +420,7 @@ def add_page():
         #user_team.subscriptions.append(new_site)
         # sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
         #sites.append(new_site)
-       # db.session.commit()
+        #db.session.commit()
         #TODO SEND REQUEST VIA EMAIL TO ADMIN
         flash('Your request has been sent', category='success')
         return redirect(url_for('get_sites'))
@@ -412,7 +429,7 @@ def add_page():
 
 @app.route('/pay', methods=['GET', 'POST'])
 def pay():
-    print(request.form)
+    #print(request.form)
     stripe.api_key = stripe_secret_key
 
     # create the site in the Database
@@ -434,7 +451,7 @@ def pay():
 
     # Add the subscription in Stripe
     if request.form['rate'] is str(1440):
-        print('first')
+        #print('first')
         stripe.Subscription.create(
         customer=customer.id,
         items=[
@@ -444,7 +461,7 @@ def pay():
         ],
     )
     else:
-        print('last')
+        #print('last')
         stripe.Subscription.create(
         customer=customer.id,
         items=[
@@ -454,8 +471,6 @@ def pay():
         ],
     )
     return redirect(url_for('get_sites'))
-
-
 
 @app.route('/create_collection', methods=['GET', 'POST'])
 def create_collection():
@@ -507,7 +522,20 @@ def get_collection_images():
     return render_template('collection_images.html', form=form, image_names=collection_images,image_count=image_count,col_query=col_query, collection=collection, name=name, title='Collections')
 
 
+@app.route('/collectionrecieved/<token>')
+def collection_viewer(token):
+    token = s.loads(token, salt='collectionsender', max_age=3600)
+    form = SendCollectionForm()
+    # collection = request.args.get('collection')
+    collection_images = Image.query.join(Collection.images).filter(Collection.id == token).all()
+    col_query = Collection.query.filter_by(id=token).first()
+    image_count = len(collection_images)
+    name = col_query.name
+    return render_template('external_collection_images.html', form=form, image_names=collection_images,image_count=image_count,col_query=col_query, collection=token, name=name, title='Collections')
+
+
 @app.route('/pickcollection')
+@login_required
 def select_collection():
     selected_image = request.args.get('image')
     users_collections = Collection.query.filter(Collection._users.any(id=current_user.id)).all()
@@ -534,8 +562,8 @@ def remove_image():
     chosen_collection = Collection.query.filter_by(id=selected_collection).first()
     chosen_collection.images.remove(image_to_remove)
     db.session.commit()
-    print(chosen_collection.id)
-    print(image_to_remove.id)
+    #print(chosen_collection.id)
+    #print(image_to_remove.id)
     return redirect(url_for('get_user_collections'))
 
 
@@ -550,13 +578,14 @@ def team():
 
 
 @app.route('/sendcollection/<int:collection_id>', methods=['GET', 'POST'])
+@login_required
 def send_collection(collection_id):
     form = SendCollectionForm()
     if form.validate_on_submit():
         email = form.email.data
         form_collection = form.collection.data
-        print(form_collection)
-        #collection = Collection.query.filter_by(id=form_collection)
+        # print(form_collection)
+        # collection = Collection.query.filter_by(id=form_collection)
         collection = Collection.query.get(collection_id)
         user = User.query.filter(User.email == email.lower()).first()
         if user is None:
@@ -566,8 +595,9 @@ def send_collection(collection_id):
             user.collections_backref.append(collection)
             collection.sent_count += 1
             db.session.commit()
+            token = s.dumps(collection.id, salt='collectionsender')
             msg = Message('New Collection Available', sender='e.eddieflores@gmail.com', recipients=[email])
-            the_link = url_for('get_collection_images', _external=True, collection=collection.id)
+            the_link = url_for('collection_viewer', _external=True, token=token)
             msg.html = render_template('/sent-collection-email.html', link=the_link, message=form.message.data)
             mail.send(msg)
             flash('Message Sent')
@@ -576,7 +606,6 @@ def send_collection(collection_id):
     # TODO Check if the user exist in the DB
     # TODO if user exists add to users collections and notify
     # TODO if user does not exist - Allow to download and invite to sign up
-
 
 @app.route('/collection/sender', methods=['GET', 'POST'])
 def collectionsender():
@@ -628,12 +657,12 @@ def add_user():
                         date_joined=datetime.today(),
                         collection_count=0)
         db.session.add(new_user)
-        ## addnew user to team
+        # addnew user to team
         team = Team.query.filter(Team.id==current_user.team).first()
-        print(team)
+        #print(team)
         db.session.commit()
         new_person = User.query.filter(User.email==form.email.data).first()
-        print(new_person.id)
+        #print(new_person.id)
         team.admin_user.append(new_person)
         db.session.commit()
         flash('User Added', category='success')
@@ -652,16 +681,16 @@ def signup1():
     user = {'nickname': 'Eddie'}
     return render_template('/signup1.html', user=user)
 
-# The page if user seleceted  to find their team based on email address
+# The page if user seleceted  to find their team based on email addresssed on email address
 @app.route('/findteam', methods=['GET', 'POST'])
 def findteamform():
-    #add the form for finding your team
+    # add the form for finding your team
     # import the find a team form
     user = current_user
     formi = FindTeamForm()
     if formi.validate_on_submit():
-        #Add the portion if email found in database, send via email
-        # else send them to a page that says their team doesn't exist
+        # Add the portion if email found in database, send via emaile, send via email
+        # else send them to a page that says their team doesn't existteam doesn't exist
         return flask.errorhandler(404)
     return render_template('/findteam.html', form=formi, user=user)
 

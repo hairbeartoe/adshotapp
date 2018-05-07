@@ -13,4 +13,4 @@ adminpage.add_view(ModelView(Image, db.session))
 adminpage.add_view(ModelView(Collection, db.session))
 adminpage.add_view(ModelView(Page, db.session))
 
-app.run(host='0.0.0.0', port=8080, debug=True)
+app.run(host='0.0.0.0', debug=True)

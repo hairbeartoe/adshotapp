@@ -98,12 +98,8 @@ class SendCollectionForm(FlaskForm):
 
 class AddSiteForm(FlaskForm):
     domain_name = StringField(validators=[InputRequired()])
-    rate = SelectField(choices=[ ('1440', 'Once daily'), ('60', 'Once every hour'), ( '30', 'Once every 30 minutes'), ('15', 'Once every 15 minutes')])
-    article = BooleanField(default=False)
-    mobile = BooleanField(default=False)
-    amount = StringField()
-    stripeToken = HiddenField()
     stripeEmail = HiddenField()
+    stripeToken = HiddenField()
 
 
 class AddPageForm(FlaskForm):

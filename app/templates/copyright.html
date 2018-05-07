@@ -1,0 +1,188 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Pagesnap | Automated Screenshots</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static', filename='assets/css/bootstrap4.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{url_for('static', filename='assets/css/mdb.min.css') }}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{{url_for('static', filename='assets/css/style.min.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand LOGO-->
+      <a class="navbar-brand" href="{{url_for('index')}}" >
+        <img src="{{url_for('static', filename='assets/img/logo-white.png') }}" height="30" >
+        <strong> </strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <!--
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">About MDB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/getting-started/" target="_blank">Free download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/bootstrap-tutorial/" target="_blank">Free tutorials</a>
+          </li>
+          -->
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item mr-2">
+              <a href="{{url_for('login') }}" class="nav-link border border-light rounded">
+                <i class="fa fa-sign-in mr-2"></i>Login
+              </a>
+            </li>
+          <li class="nav-item mr-2">
+              <a href="{{url_for('signup') }}" class="nav-link border border-light rounded">
+                <i class="fa fa-user-plus mr-2"></i>Sign Up
+              </a>
+            </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+
+        <!--Grid row-->
+        <div class="row">
+
+
+          <!--Grid column-->
+          <div class="col-md-12 mb-8 mt-3 pt-4">
+
+            <!-- Main heading -->
+            <div class="col-md-12 mb-8 mt-4  text-center text-lg">
+
+                <h1 class="display-8 font-weight-bold text-center">Copyright Notice</h1>
+
+                <hr class="hr-dark">
+            </div>
+            <!-- Main heading -->
+
+
+
+            <p class="text-center">
+                Pagesnap is committed to compliance with international copyright law. Copyright owners have the right to notify Pagesnap, if they believe that an account user of a Pagesnap application has infringed the copyright owner's work(s). Notifications of claimed copyright infringement must be submitted in writing to Pagesnap's designated agent for receiving such notifications. <br>
+                <br>
+                By email: support@pagesnap.com <br>
+                <br>
+                By mail: Pagesnap LLC<br>
+                Add Address Here<br>
+                <br>
+                To be effective, the notification of claimed infringement must be a written communication and must include the following information:
+                <br>
+                <ol>
+                    <li>A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
+                    <li>Identification of the copyrighted work claimed to have been infringed, or, if multiple copyrighted works at a single online site are covered by a single Notification, a representative list of such works.</li>
+                    <li>Identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information sufficient to permit Pagesnap to locate the material.</li>
+                    <li>Information reasonably sufficient to permit Pagesnap to contact the complaining party, such as an address, telephone number and if available, an electronic mail address at which the complaining party may be contacted.</li>
+                    <li>A statement that the complaining party has a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.</li>
+                    <li>A statement that the information in the notification is accurate, and under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
+                </ol>
+
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+        </div>
+      </section>
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small wow fadeIn">
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-2">
+      <a href="{{url_for('terms') }}" class="mr-3">
+        Terms
+      </a>
+
+      <a href="{{url_for('terms') }}" class="mr-3">
+        Privacy
+      </a>
+
+      <a href="{{url_for('copyright') }}" class="mr-3">
+        Copyright Notice
+      </a>
+
+      <a href="{{url_for('login') }}" class="mr-3">
+        Login
+      </a>
+
+      <a href="{{url_for('signup') }}" class="mr-3">
+        Sign Up
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-2">
+      © 2018 Copyright Pagesnap, LLC
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/jquery-3.2.1.min.js') }}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/popper.min.js') }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/bootstrap4.min.js') }}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/mdb.min.js') }}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
- {% extends "navigation.html" %}
+ {% extends "Navigation.html" %}
  {% block title %}
  {{ date }} - {{ site }}
  {% endblock %}
@@ -130,7 +130,6 @@
                         <thead>
                             <th data-field="id" data-sortable="true"  class="text-center">ID</th>
                             <th data-field="image" data-sortable="false" class="text-center">Image</th>
-                            <th data-field="name" data-sortable="true" class="text-center">Name</th>
                             <th data-field="Capture_time" data-sortable="true" class="text-center">Capture Time</th>
                             <th data-field="Type" data-sortable="true" class="text-center">Type</th>
                             <th data-field="actions"  class="text-center">Actions</th>
@@ -144,7 +143,6 @@
                                         <img  src="{{ resized_img_src(image.path , width=200, height=150, mode='crop') }}" >
                                     </a>
                                 </td>
-                                <td>{{ image.name }}</td>
                                 <td>{{ image.date.strftime('%I:%M %p') }}</td>
                                 <td>{{ image.device }}</td>
                                 <td>

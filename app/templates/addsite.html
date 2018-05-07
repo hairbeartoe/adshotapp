@@ -1,4 +1,4 @@
-{% extends "navigation.html" %}
+{% extends "Navigation.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
 
@@ -58,7 +58,7 @@
 										</div>
 										<div class="wizard-navigation">
 											<div class="progress-with-circle">
-												<div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" style="width: 20%;"></div>
+												<div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="1" style="width: 20%;"></div>
 											</div>
 											<ul>
 												<li>
@@ -69,37 +69,16 @@
 														<center>Website</center>
 													</a>
 												</li>
-												<li>
-													<a href="#basics" data-toggle="tab">
-														<div class="icon-circle">
-															<i class="ti-direction-alt"></i>
-														</div>
-														Basics
-													</a>
-												</li>
-												<li>
-													<a href="#options" data-toggle="tab">
-														<div class="icon-circle">
-															<i class="ti-panel"></i>
-														</div>
-														Extra Options
-													</a>
-												</li>
-												<li>
-													<a href="#checkout" data-toggle="tab">
-														<div class="icon-circle">
-															<i class="ti-credit-card"></i>
-														</div>
-														Checkout
-													</a>
-												</li>
+
+
+
 											</ul>
 										</div>
 										<div class="tab-content">
 											<div class="tab-pane" id="website">
 												<div class="row">
 													<div class="col-sm-12 ">
-														<h5 class="info-text"> Let's start with the website</h5>
+														<h5 class="info-text"> What's the website?</h5>
 													</div>
 													<div class="col-sm-10 col-sm-offset-1">
 														<div class="form-group">
@@ -108,73 +87,14 @@
 													</div>
 												</div>
 											</div>
-											<div class="tab-pane" id="basics">
-												<h5 class="info-text">How often should we take a screenshot?</h5>
-												<div class="row">
-													<div class="col-sm-10 col-sm-offset-1 center">
-														<div class="form-group">
-															{{ wtf.form_field(form.rate, class="form-control", id="rate" ) }}
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane" id="options">
-												<h5 class="info-text">Let's pick some options </h5>
-												<div class="row">
-													<div class="col-sm-4 col-sm-offset-1">
-														<p>Track Article Page Screenshots too?</p>
-														{{ form.article }}
-														<!--
-															<div class="choice" data-toggle="wizard-checkbox">
-																<div class="card card-checkboxes card-hover-effect">
 
-																	<i class="ti-home"></i>
-																	<p>Track Article Pages?</p>
-																</div>
-															</div>
-															-->
-													</div>
-													<div class="col-sm-4 col-sm-offset-1">
-														<p>Track Mobile Screenshots too?</p>
-														{{ form.mobile }}
-														<!--
-															<div class="choice" data-toggle="wizard-checkbox">
 
-																<div class="card card-checkboxes card-hover-effect">
-																	<i class="ti-home"></i>
-																	<p>Track Mobile Screenshots too?</p>
-																</div>
-															</div>
-															-->
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane" id="checkout">
-												<h5 class="info-text">Checkout time</h5>
-												<div class="row">
-													<div class="col-lg-12 col-sm-12">
-														<div class="card">
-															<div class="content">
-																<div class="row">
-																	<div class="col-xs-12 text-center">
-																		<p>You're signing up for our</p><br>
-																		<H3 id="plan">Basic Plan</H3><br>
-																		<H4 id="amount">$199/mo</H4><br>
-																	</div>
-																</div>
-																<div class="footer">
-																	<hr />
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+
 										</div>
 										<div class="wizard-footer">
 											<div class="pull-right">
-												<input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
-												<input type='submit' id="button" class='btn btn-finish btn-fill btn-success btn-wd' value='Request Site' />
+												
+												<input type='submit' id='button' class='btn btn-finish btn-fill btn-success btn-wd' value='Request Site' />
 											</div>
 
 											<div class="pull-left">
@@ -263,3 +183,4 @@
 	 </div> <!--  big container -->
 </div>
 {%endblock%}
+
