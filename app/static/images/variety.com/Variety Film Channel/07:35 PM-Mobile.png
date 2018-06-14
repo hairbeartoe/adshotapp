@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8) ]><!-->
+<html lang="en"   xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<!-- Google Chrome Frame for IE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<link rel="pingback" href="https://variety.com/xmlrpc.php" />
+
+	
+	<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Film &#8211; Variety</title>
+<script type="text/javascript">dataLayer = window.dataLayer || []; /* Google Tag Manager */</script>
+<script type="text/javascript" src="//pmc-d.openx.net/w/1.0/jstag?nc=3782-PMC RON" async></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pmc_meta = {"lob":"pmc-core","page-type":"vertical","env":"desktop","primary-category":"","primary-vertical":"","vertical":"","category":"","tag":"","author":"","logged-in":"no","subscriber-type":"free","country":"us","page_access_level":"archive"};
+
+/* ]]> */
+</script>
+		<script>
+			(function(d,w){
+				var i, parts, name, c, rdecode = /(%[0-9A-Z]{2})+/g, rspace = /\+/g, ac = (d ? d.split('; ') : []);
+				for(w.pmc_cookies = {}, i = 0; i < ac.length; i++) {
+					parts = ac[i].split('='), name = parts[0].replace(rdecode, decodeURIComponent), c = parts.slice(1).join('=');
+					if(c.charAt(0) === '"') { c = c.slice(1, -1); } c = c.replace(rdecode, decodeURIComponent).replace(rspace, ' '); w['pmc_cookies'][name] = c;
+				}
+			})(document.cookie, window);
+
+			pmc_meta=pmc_meta || {}, pmc_meta.omni_visit_id = window.pmc_cookies.omni_visit_id || "pmc-core." + new Date().getTime() + '.' + (function(l,b,a,c,i,d){for(i=0;i<256;i++){l[i]=(i<16?'0':'')+(i).toString(16);}if(c&&c.getRandomValues){try{d=new Uint32Array(4),c.getRandomValues(d);}catch(e){d=0;}}d=d||[b()*a>>>0,b()*a>>>0,b()*a>>>0,b()*a>>>0];a=d[0],b=d[1],c=d[2],d=d[3];return l[a&0xff]+l[a>>8&0xff]+l[a>>16&0xff]+l[a>>24&0xff]+'-'+l[b&0xff]+l[b>>8&0xff]+'-'+l[b>>16&0x0f|0x40]+l[b>>24&0xff]+'-'+l[c&0x3f|0x80]+l[c>>8&0xff]+'-'+l[c>>16&0xff]+l[c>>24&0xff]+l[d&0xff]+l[d>>8&0xff]+l[d>>16&0xff]+l[d>>24&0xff];})([],Math.random,0x100000000,window.crypto||window.msCrypto);
+			var d = new Date(); d.setTime(d.getTime() + ( 60 * 60 * 1000 )); var expires = d.toGMTString(); var path = "/"; var domain = window.location.hostname;
+			document.cookie = 'omni_visit_id=' + encodeURIComponent(pmc_meta.omni_visit_id) + ( expires ? '; expires=' + expires : '' ) + ( path ? '; path=' + path : '' ) + ( domain ? '; domain=' + domain : '' );
+		</script>
+				<script type="text/javascript">
+		if( window.hasOwnProperty( 'pmc_meta' ) ) {
+			if( !window.hasOwnProperty( 'dataLayer' ) || !window.dataLayer.hasOwnProperty('push') ) {
+				window.dataLayer = [];
+			}
+			window.dataLayer.push( pmc_meta );
+		}
+		</script>
+
+				<script>
+			window.pmc_is_adblocked = false;
+		</script>
+				<script src='https://r-login.wordpress.com/remote-login.php?action=js&amp;host=variety.com&amp;id=43439658&amp;t=1527734114&amp;back=https%3A%2F%2Fvariety.com%2Fv%2Ffilm%2F' type="text/javascript"></script>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		</script>
+		<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.swiftypecdn.com' />
+<link rel='dns-prefetch' href='//content.jwplatform.com' />
+<link rel='dns-prefetch' href='//s.ntv.io' />
+<link rel='dns-prefetch' href='//pmcvariety.wordpress.com' />
+<link rel="alternate" type="application/rss+xml" title="Variety &raquo; Feed" href="https://variety.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Variety &raquo; Comments Feed" href="https://variety.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Variety &raquo; Film Vertical Feed" href="https://variety.com/v/film/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s2.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1516999477h&ver=4.9.7-alpha-43298"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJydU+1ugzAMfKGFFNS1+zPtUaaQGHCbLyWBqm8/B1pK1a4T+4N8ie8c2wc/eSadTWATNz3zum/RRq7xCJEfIHkhj2xEhYzxjT9Ply4AnRsvUs4woFCABkNpr2jG766sHHZU62WZk6dsVtc+QIyMvgZ7w1JHhR550zEf0HNv5KyR41a7WmjW9FYmdPn98e7CDRACqnWijXMJwiw1wTUC0Umk4rETNMxaBP5d96jVqNiEka9W6Z2wSWcPXMQIaWoyprOGNSIBtEigyAL2+D+FQyRyHUTAnEA9OBpS5yJYXhZVsbmAwqD9S3bIIunMqk2559ca0dMGyX9qZl36vU3PiCfaS1+hajPjsgGU2RNLsKZfocxsAorZYmDIrUuT+jV49awWHNNOiuzRO8AaLfDRWwtqgFq7lsJ2fMsNrumk13HpHYKrFvSwBhFkh8Ov5um2fPr/csKX+Szfq/2u/NhW+8MPENe83w==?cssminify=yes' type='text/css' media='all' />
+<style id='pmc-adm-style-inline-css' type='text/css'>
+div.admz, div.admz-sp { margin-left: auto; margin-right: auto; text-align: center; } #skin-ad-inject-container { display: none; }
+</style>
+<script type="text/javascript" src="https://s1.wp.com/wp-content/themes/vip/pmc-plugins/pmc-global-functions/js/pmc-utils.js?m=1517507240h"></script>			<script type="text/javascript">
+			var pmc_do_analytics_pagecount = true;		//flag to allow analytics code to count a page view
+			var pmc_common_urls = {
+				parent_theme_uri: 'https://s2.wp.com/wp-content/themes/vip/pmc-core/',
+				current_theme_uri: 'https://s2.wp.com/wp-content/themes/vip/pmc-variety-2017/',
+				fb_channel_uri: 'https://s1.wp.com/wp-content/themes/vip/pmc-plugins/partner/facebook/channel.html'
+			};
+			</script>
+		<script type="text/javascript">
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			var pmc_ga_dimensions = {"dimension1":"vertical","dimension17":"archive","dimension18":"no","dimension24":"no","dimension29":"anonymous"};			pmc_ga_dimensions["dimension15"] = document.location.protocol.replace(':', '');
+			(function(dim){
+				var ac = document.cookie ? document.cookie.split('; ') : [];
+				var i, parts, name, c, cookies = {}, rdecode = /(%[0-9A-Z]{2})+/g, rspace = /\+/g;
+				for(i = 0; i < ac.length; i++) {
+					parts = ac[i].split('=');
+					name = parts[0].replace(rdecode, decodeURIComponent);
+					c = parts.slice(1).join('=');
+					if(c.charAt(0) === '"') { c = c.slice(1, -1); }
+					c = c.replace(rdecode, decodeURIComponent).replace(rspace, ' ');
+					cookies[name] = c;
+				}
+				window[dim] = window[dim] || {};
+							if( 'undefined' !== typeof pmc_meta && 'string' === typeof pmc_meta.omni_visit_id ){
+				window[dim]["dimension28"] = pmc_meta.omni_visit_id;
+			}
+		
+			function uls_cookie( name, default_value ) {
+				var names = [];
+				if ( typeof name === 'string') {
+					names.push( name );
+				} else if ( name instanceof Array ) {
+					names = name;
+				}
+
+				for (var i = 0; i < names.length; i++) {
+					var cookie_name = "uls3_" + names[ i ];
+					var value = cookies.hasOwnProperty( cookie_name ) ? cookies[ cookie_name ] : false;
+					if ( value && value.length ) {
+						return value;
+					}
+				}
+
+				return ( typeof default_value !== 'undefined' ) ? default_value : '';
+			}
+
+			var p = uls_cookie( ['provider_name'], 'none' );
+
+			window[dim]["dimension16"] = uls_cookie( ['entitlement'], 'none' );
+			window[dim]["dimension23"] = p;
+			if( p === 'ip' ) {
+				window[dim]["dimension19"] = 'organization';
+				window[dim]["dimension22"] = uls_cookie( ['org_id','user_identifer'], false );
+				window[dim]["dimension21"] = uls_cookie( ['username'], false );
+			} else {
+				window[dim]["dimension19"] = 'individual';
+				window[dim]["dimension20"] = uls_cookie( ['user_id','username'], false );
+				if( p === 'cds' ) {
+					window[dim]["dimension32"] = uls_cookie( ['spc'], false );
+					window[dim]["dimension33"] = uls_cookie( ['product_id'], false );
+				}
+			}
+
+					})('pmc_ga_dimensions');
+
+			var pmc_ga_fields_obj = {"useAmpClientId":true};
+			ga('create', "UA-9332405-1", 'auto', pmc_ga_fields_obj);
+			ga('set', 'forceSSL', true);
+			ga('set', 'hitCallback', function() { if ( typeof pmc === 'object' && typeof pmc.tracking === 'object' && typeof pmc.tracking.do_call_events === 'function' ) { pmc.tracking.do_call_events(); } } );
+						ga('require', 'linkid', 'linkid.js');
+			ga('require', 'displayfeatures');			ga('set', pmc_ga_dimensions);
+			
+			
+			ga('send', 'pageview');
+		</script>
+
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var pmc_header_bidder_script_object = {"pmc_header_bidder_timeout":"800","pmc_header_bidding_on_gallery":"yes","pmc_hb_gallery_timeout":"400"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pmc_comscore_options = {"pageview_candidate_url":"\/\/variety.com\/wp-content\/themes\/vip\/pmc-plugins\/pmc-comscore\/xml\/comscore-pageview-candidate.xml"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJytj+FOAyEQhF9Iir3UGH8Yn4XjttxeYRfZ5Rp9emnr/Wi8aKomJMDs8DFjj9kg+VgHEDu19VqhvH1um0nu7HcGkzAUp7BJSIvZMymQnryJe4xgqkBxoWkNtOcVX2bRBCLNtDK9joQ0Ixx/tE2g2fmDKSD4/oWqI7T/7IzZ5uRNjjUgyfk8ghugmB6HASlYJwJ6Lp4LNHGt6W9o14MbqSFy76LZV/KKTJd4TS+QeAajpTU/Uf9OvOj/FG9kPsgNHM9JPBdY3i/3hnhJz9uH7nH7dL/ruukDAswJfw=='></script>
+<script type='text/javascript' src='//content.jwplatform.com/libraries/plsZnDJi.js?ver=4.9.7-alpha-43298'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pmc_apstag = {"is_enabled":"enabled","is_gallery":"enabled","is_video":""};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var scorecard_script_admin = {"ajax_endpoint":"https:\/\/pmcvariety.wordpress.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _varietyVerticalsLazyLoadExports = {"ajaxUrl":"https:\/\/pmcvariety.wordpress.com\/wp-admin\/admin-ajax.php","wrapper":".l-more-from--vertical","container":".l-more-from__list","data":{"action":"lazy_load_more_vertical","nonce":"927630d272","postId":1202826154,"page":1}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pmc_adm_config = {"dfp_skin_main_content":["site-wrap"],"disable_gpt_single_request":"0","krux_header_bidder_active":"","lazy_load_override":"disable","page_level_referrer_targeting":"enable"};
+var pmc_header_bidder = {"active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SafeCommentsAjax = {"ajaxurl":"https:\/\/variety.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var uls = {"url":"https:\/\/uls.variety.com","fast":"0","cookie_prefix":"uls3","ping_back_grace_minute":"5"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var login_object = {"login_url":"https:\/\/variety.com\/digital-subscriber-access\/","enable_premier":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var variety_authentication_object = {"ajax_url":"https:\/\/pmcvariety.wordpress.com\/wp-admin\/admin-ajax.php","bypass_authentication":"0","ajax_nonce":"79491e4ee6"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJytk9tuwyAMhl9ohLXa1qtpz+KCy5xyGoZ06dMPolbLpE49XgVs/Nk//JG7KFTwGX2W+RMdshwoyuiUiLYY8jytB9IYagRGTLJnySpRzF3PT/J/gAoJpbLUUrWmZLKSHBhkG0Cj7uLW6M6Rv4HTfxVMY02FLeHN9Z2F/diGOUOYXwU42AcvIHIGI4EZMzfsn/gFqgZIhHkUy+fFSh4bHIPcZlaQ9O9l8zW8w1jrQnZCDOh1SPWTMimwLJpwca1y7RpLb6LACszTsjPVBzYYg6kLlZ+qUy5Qf4LLoSSF68K5emy+uQ03eexs7aGOYYMiYQwp12POTerao/bwfUXrYnnmiLp7wJuxJbV9AGfm+MfRdjDGQP4+czq472eBUk/7ZuxMwU9DnszUHh/uffG6XK0q5uWt/wE7gdvA'></script>
+<script type='text/javascript'>
+varietyVerticalsLazyLoad.init();
+</script>
+<meta name="generator" content="WordPress.com" />
+<link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/8181b523e3c891bc770494a0bbbe8244?s=32" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/8181b523e3c891bc770494a0bbbe8244?s=32" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="https://secure.gravatar.com/blavatar/8181b523e3c891bc770494a0bbbe8244?s=114" />
+<link rel='openid.server' href='https://pmcvariety.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://pmcvariety.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://variety.com/osd.xml" title="Variety" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+		<script>
+			try {
+				// Don't rely on jQuery being loaded yet.
+				document.addEventListener( 'DOMContentLoaded', function() {
+					// Record in GA event if ads are blocked.
+					if ( true === window.pmc_is_adblocked ) {
+						ga( 'send', 'event', 'ad_blocker', 'blocked', 'ads_blocked', {
+							nonInteraction: true
+						});
+					}
+				});
+			} catch( err ) {
+				// Do nothing...
+			}
+		</script>
+		<link rel="canonical" href="https://variety.com/v/film/" />
+
+<style type="text/css">
+.vvqbox {
+	visibility: visible !important;
+	display: block;
+	clear: both;
+	width: 100%;
+}
+.vvqbox div {
+	margin: 10px auto;
+}
+.vvqbox img {
+	max-width: 100%;
+	height: 100%;
+}
+.vvqbox object {
+	max-width: 100%;
+}
+</style>
+<meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="//aax.amazon-adsystem.com"/><link rel="dns-prefetch" href="//ajax.googleapis.com"/><link rel="dns-prefetch" href="//apiservices.krxd.net"/><link rel="dns-prefetch" href="//beacon.krxd.net"/><link rel="dns-prefetch" href="//boygeniusreport.files.wordpress.com"/><link rel="dns-prefetch" href="//cdn.krxd.net"/><link rel="dns-prefetch" href="//cdn.syndication.twimg.com"/><link rel="dns-prefetch" href="//cdn.syndication.twimg.com"/><link rel="dns-prefetch" href="//disqus.com"/><link rel="dns-prefetch" href="//edge.quantserve.com"/><link rel="dns-prefetch" href="//googleads.g.doubleclick.net"/><link rel="dns-prefetch" href="//i0.wp.com"/><link rel="dns-prefetch" href="//i1.wp.com"/><link rel="dns-prefetch" href="//i2.wp.com"/><link rel="dns-prefetch" href="//load.instinctiveads.com"/><link rel="dns-prefetch" href="//load.s3.amazonaws.com"/><link rel="dns-prefetch" href="//o.twimg.com"/><link rel="dns-prefetch" href="//o.twimg.com"/><link rel="dns-prefetch" href="//p.skimresources.com"/><link rel="dns-prefetch" href="//pagead2.googlesyndication.com"/><link rel="dns-prefetch" href="//pbs.twimg.com"/><link rel="dns-prefetch" href="//pbs.twimg.com"/><link rel="dns-prefetch" href="//pixel.quantserve.com"/><link rel="dns-prefetch" href="//pmcdeadline2.files.wordpress.com"/><link rel="dns-prefetch" href="//pmcfootwearnews.files.wordpress.com"/><link rel="dns-prefetch" href="//pmchollywoodlife.files.wordpress.com"/><link rel="dns-prefetch" href="//pmcvariety.files.wordpress.com"/><link rel="dns-prefetch" href="//r.skimresources.com"/><link rel="dns-prefetch" href="//s.gravatar.com"/><link rel="dns-prefetch" href="//s.skimresources.com"/><link rel="dns-prefetch" href="//s0.wp.com"/><link rel="dns-prefetch" href="//securepubads.g.doubleclick.net"/><link rel="dns-prefetch" href="//stats.wordpress.com"/><link rel="dns-prefetch" href="//ton.twimg.com"/><link rel="dns-prefetch" href="//tpc.googlesyndication.com"/><link rel="dns-prefetch" href="//www.google-analytics.com"/><link rel="dns-prefetch" href="//www.googletagmanager.com"/><link rel="dns-prefetch" href="//www.googletagservices.com"/><link rel="dns-prefetch" href="//www.youtube.com"/><link rel="dns-prefetch" href="//x.skimresources.com"/>			<meta property="fb:pages" content="12616252196" />
+							<meta property="ia:markup_url_dev" content="https://variety.com/2018/film/news/haley-lu-richardson-cole-sprouse-five-feet-apart-1202826154/?ia_markup=1" />
+				<meta name="application-name" content="Variety" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://variety.com/feed/;icon-uri=https://secure.gravatar.com/blavatar/8181b523e3c891bc770494a0bbbe8244?s=16" /><script type="text/javascript">
+/* <![CDATA[ */
+var pmc_site_config = {"rot13_hostname":"inevrgl.pbz","hostname":"variety.com","is_proxied":null};
+
+/* ]]> */
+</script>
+		<script type='text/javascript'>
+			var pmc_tracking_url = "https://s3.amazonaws.com/heartbeat.pmc.com/track?host=variety.com&path=%2Fv%2Ffilm%2F&ct=vertical&lob=pmc-core&loc=us&env=desktop";
+			var pmc_tracking_image = new Image();
+			if ( 'undefined' !== typeof pmc_meta && 'string' === typeof pmc_meta.omni_visit_id ) {
+				pmc_tracking_url = pmc_tracking_url + '&omni_visit_id=' + pmc_meta.omni_visit_id;
+			}
+			if ( 'string' === typeof window.location.hash && window.location.hash.length ) {
+				pmc_tracking_url = pmc_tracking_url + "&h=" + encodeURIComponent( window.location.hash );
+			}
+			pmc_tracking_image.src = pmc_tracking_url + "&ts=" + Date.now();
+		</script>
+		<script async src="//js-sec.indexww.com/ht/p/182698-177425364502273.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var pmc_krux = {"lob":"pmc-core","page-type":"vertical","env":"desktop","primary-category":"","primary-vertical":"","vertical":"","category":"","tag":"","author":"","logged-in":"no","subscriber-type":"free","page_access_level":"archive"};
+
+/* ]]> */
+</script>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+		<link rel="stylesheet" id="custom-css-css" type="text/css" href="https://s0.wp.com/?custom-css=1&#038;csblog=2WgDE&#038;cscache=6&#038;csrev=11" />
+			<!-- Start: Youtube Iframe API -->
+<script>
+	( function(){ 
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		tag.async = true;
+		window.onload = function() {
+			document.getElementsByTagName('head')[0].appendChild( tag );
+		}
+	} )();
+</script>
+<!-- End: Youtube Iframe API -->
+<!-- Start BounceExchange tag. Deploy at the beginning of document head. -->
+<script>
+(function(d) {
+    var e = d.createElement('script');
+    e.src = d.location.protocol + '//tag.bounceexchange.com/2026/i.js';
+    e.async = true;
+    d.getElementsByTagName("head")[0].appendChild(e);
+}(document));
+</script>
+<!-- End BounceExchange Tag-->
+
+<!-- BEGIN Amazon Apstag -->
+<script>
+	!function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+	apstag.init({
+		pubID: 3157,
+		adServer: 'googletag',
+		videoAdServer: 'DFP',
+		bidTimeout: 2e3
+	});
+</script>
+<!-- End Amazon Apstag -->
+<!-- Swiftype custom VY Meta Tags -->
+<meta name="st:robots" content="noindex, nofollow">
+
+<!-- BEGIN Krux Control Tag -->
+<script class="kxct" data-id="Jhm7DHJf" data-timing="async" data-version="3.0" type="text/javascript">
+  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+  (function(){
+    var k=document.createElement('script');k.type='text/javascript';k.async=true;
+    k.src="https:\/\/cdn.krxd.net\/controltag\/Jhm7DHJf.js";
+    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+  }());
+
+</script>
+<!-- END Krux Controltag -->
+
+<!-- GPT interchange code -->
+<script>
+ window.Krux || ((Krux = function() {
+   Krux.q.push(arguments);
+ }).q = []);
+ (function() {
+   function retrieve(n) {
+     var m, k = 'kx' + n;
+     if (window.localStorage) {
+       return window.localStorage[k] || "";
+     } else if (navigator.cookieEnabled) {
+       m = document.cookie.match(k + '=([^;]*)');
+       return (m && unescape(m[1])) || "";
+     } else {
+       return '';
+     }
+   }
+   Krux.user = retrieve('user');
+   Krux.segments = retrieve('segs') && retrieve('segs').split(',') || [];
+ })();
+</script>
+	<!-- Begin comScore Tag -->
+<noscript> <img src="http://b.scorecardresearch.com/p?c1=2&c2=6035310&c3=&c4=&c5=&c6=&c15=&cv=2.0&cj=1" /> </noscript>
+<!-- End comScore Tag -->
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+	var _qevents = _qevents || [];
+
+	(function() {
+		var elem = document.createElement('script');
+		elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+		elem.async = true;
+		elem.type = "text/javascript";
+		var scpt = document.getElementsByTagName('script')[0];
+		scpt.parentNode.insertBefore(elem, scpt);
+	})();
+
+	_qevents.push({
+		qacct:"p-31f3D02tYU8zY"
+	});
+</script>
+
+<noscript>
+	<div style="display:none;">
+		<img src="//pixel.quantserve.com/pixel/p-31f3D02tYU8zY.gif" border="0" height="1" width="1" alt="Quantcast"/>
+	</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+<!-- Pingdom RUM - Start -->
+<script>
+var _prum = [['id', '55133c47abe53d890db40683'],
+			 ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+	var s = document.getElementsByTagName('script')[0]
+	  , p = document.createElement('script');
+	p.async = 'async';
+	p.src = '//rum-static.pingdom.net/prum.min.js';
+	s.parentNode.insertBefore(p, s);
+})();
+</script>
+<!-- Pingdom RUM - End -->
+
+<!-- CrazyEgg Start -->
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0011/4414.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+<!-- CrazyEgg End -->
+</head>
+<body class="archive tax-vertical term-film term-524 mp6 customizer-styles-applied highlander-enabled highlander-light pmc-desktop pmc-no-tablet pmc-no-mobile geo-us archive-not-gallery">
+		<!-- Google Tag Manager -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWPZPX"
+					  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NWPZPX');</script>
+	<!-- End Google Tag Manager -->
+
+	<script async="1">
+	(function() {
+		__mtm = [ "578cff4eaa04d0826f287009", "cdn01.mzbcdn.net/mngr" ];
+		var s = document.createElement('script');
+		s.async = 1;
+		s.src = '//' + __mtm[1] + '/mtm.js';
+		var e = document.getElementsByTagName('script')[0];
+		(e.parentNode || document.body).insertBefore(s, e);
+	})();
+</script><!-- Placeholder for Responsive Skin Ad -->
+<div id="skin-ad-section">
+
+	<div id="skin-ad-left-rail-container"></div>
+
+	<div id="skin-ad-right-rail-container"></div>
+	<div id="skin-ad-inject-container">
+		<div class="admz" id="adm-responsive-skin-ad">
+	
+		<div class="adma google-publisher" data-device="Desktop"
+			 data-width="1">
+			
+<div class="pmc-adm-goog-pub-div ">
+	<div id="gpt-dsk-ros-skin-uid0" class=" adw-1 adh-1"></div>
+	</div>
+		</div>
+
+	</div>
+	</div>
+</div>
+
+<!-- End Placeholder for Responsive Skin Ad -->	
+	<div id="modal-background" class="modal-background"></div>
+
+	
+		<!-- @TODO Wire this in -->
+		<div id="site-wrap" class="site-wrap l-page__content">
+		<div id="leaderboard-no-padding" class="l-header__leaderboard-no-padding"><div class="l-header__leaderboard">
+	<div class="admz" id="adm-leaderboard">
+	
+		<div class="adma google-publisher" data-device="Desktop"
+			 data-width="728">
+			
+<div class="pmc-adm-goog-pub-div ">
+	<div id="div-gpt-dsk-tab-ros-leaderboard-uid1" class="ad-rotatable adw-728 adh-90"></div>
+	</div>
+		</div>
+
+	</div>
+</div><!-- .l-header__leaderboard -->
+</div><header id="vy-site-header" class="l-header" data-trigger="header-manager">
+
+	<div class="l-header__topbar">
+	<div class="c-top-bar">
+		<div class="c-top-bar__signin">
+			<a class="c-signin"
+			   href="https://variety.com/digital-subscriber-access/#r=/premier/">
+				<span class="c-icon c-icon--user"></span>
+				<span id="signin-link-text" class="c-signin__text">Login</span>
+			</a><!-- .c-signin -->
+		</div><!-- .c-top-bar__signin -->
+
+		<div class="c-top-bar__logo u-tablet">
+			<svg xmlns="http://www.w3.org/2000/svg" width="63" height="11" viewBox="0 0 63 11">
+	<defs>
+		<linearGradient id="a" x1="50%" x2="50%" y1="100%" y2="0%">
+			<stop offset="0%" stop-color="#8999A4"/>
+			<stop offset="100%" stop-color="#E7EBED"/>
+		</linearGradient>
+	</defs>
+	<g fill="url(#a)" fill-rule="evenodd">
+		<path d="M57.079 6.333c.853.1 1.52-.273 1.776-1.065.37-1.142.335-2.3-.052-3.429-.272-.796-.82-1.046-1.724-.824v5.318zm-.076.316c0 1.121-.002 2.204.002 3.288.001.396.186.641.597.697.15.02.294.07.427.182h-4.155c.006-.033.004-.068.014-.07 1.123-.366 1.12-.366 1.126-1.597.011-2.171.025-4.343.039-6.514.008-1.243.009-1.243-1.153-1.639.297-.03.594-.062.89-.091C55.87.8 56.956.727 58.03.585c2.948-.392 3.513 1.766 3.133 3.707-.223 1.138-1.05 1.69-2.116 2.113 1.52.223 1.828 1.32 1.974 2.538.03.25.072.506.182.735a.921.921 0 0 0 .22.3c.087.076.227.18.352.158a.252.252 0 0 0 .13-.077 1.41 1.41 0 0 0 .341-.59c.07-.231.095-.472.113-.713-.002.032.033.09.043.12a1.81 1.81 0 0 1 .048.91 1.37 1.37 0 0 1-.379.68 1.473 1.473 0 0 1-1.018.391c-1.523.01-1.962-.395-2.156-1.923-.066-.514-.16-1.038-.34-1.519-.277-.733-.665-.902-1.554-.766zM50.693 4.365v3.8c-.811-1.86-.864-1.807-2.502-1.671 0 1.17-.032 2.348.03 3.522.01.21.381.532.623.57.528.084 1.09.079 1.618-.008.3-.05.634-.275.828-.52.432-.542.786-1.145 1.277-1.882l-.162 2.621h-7.296c.008-.012.022-.066.044-.07 1.168-.201.998-.312 1.007-1.309.018-2.11.029-4.221.046-6.332.008-1.126.011-1.126-1.028-1.473l6.785-.426v2.875a17.41 17.41 0 0 1-.083.01l-.658-1.38c-.38-.794-.928-1.293-1.89-1.133-.351.059-.712.056-1.087.082-.017.218-.04.375-.04.531-.003 1.343-.001 2.686-.001 4.024 1.398.29 1.776.025 2.489-1.83M43.33 10.835h-4.04c.005-.04.004-.096.013-.097 1.229-.245 1.018-.268 1.026-1.411.015-2.051.01-4.103.014-6.154.001-.97.002-.97-.897-1.35h3.964c.022-.059.017-.003-.004.003-1.027.314-1.03.314-1.034 1.442-.007 2.01-.012 4.021-.016 6.032-.003 1.132-.001 1.132.975 1.535M37.509 10.827h-4.26c.034-.05.051-.101.076-.105 1.265-.178 1.135-.368 1.137-1.398.003-2.008 0-4.016-.088-6.056-.35.96-.69 1.923-1.052 2.878a328.37 328.37 0 0 1-1.582 4.101c-.059.15-.198.268-.3.4-.108-.148-.256-.282-.317-.447-.81-2.183-1.606-4.371-2.407-6.557-.02-.053-.057-.099-.195-.11 0 1.233-.003 2.465.001 3.697.003.744-.021 1.49.034 2.23.067.895.233 1.04 1.103 1.21.09.018.176.05.244.151h-2.92a8.295 8.295 0 0 1-.012-.053c.163-.034.324-.083.489-.1.504-.052.76-.355.8-.828.053-.62.082-1.243.087-1.864.014-1.408.01-2.815.008-4.223-.002-1.15-.157-1.376-1.25-1.799.973 0 1.891-.02 2.807.02.157.008.374.256.442.438.614 1.635 1.201 3.28 1.798 4.92.067.183.147.361.285.698l2.115-6.064h2.889c-1.086.058-.965.846-.962 1.59.008 1.91-.003 3.82-.005 5.73-.002 1.139-.001 1.139 1.035 1.54M18.532 1.661l6.701.255v2.457c-1.518-2.446-1.724-2.58-3.687-2.374V6.23c1.362.285 1.6.136 2.472-1.572v3.4c-.394-1.152-1.05-1.907-2.485-1.5 0 1.143-.027 2.339.03 3.531.009.185.39.466.63.501a5.18 5.18 0 0 0 1.559-.007c.304-.05.648-.253.844-.493.44-.538.797-1.143 1.297-1.88l-.154 2.593h-7.325c1.085-.425 1.084-.425 1.085-1.7l.002-5.91c0-1.111 0-1.111-.969-1.533M11.75 6.376c1.102.104 1.781-.324 1.907-1.33a7.334 7.334 0 0 0-.059-2.204c-.175-.958-.947-1.447-1.849-1.314v4.848zm.88 4.454H8.604c.012-.038.015-.093.032-.097 1.092-.304 1.093-.303 1.093-1.436 0-2.111-.02-4.222.004-6.333.01-.915.02-1.776-1.163-2.014 1.205.1 2.41.195 3.614.302.54.049 1.088.079 1.615.194 2.003.441 2.889 2.744 1.56 4.123-.407.423-1.015.654-1.515.962l.42.133c.684.223 1.139.665 1.295 1.38.098.45.132.922.287 1.352.1.279.339.672.564.708.436.07.55-.37.614-.737.03-.168.031-.341.051-.58.44 1.04-.206 2.057-1.24 2.07-1.613.02-2.016-.353-2.204-1.987a5.988 5.988 0 0 0-.265-1.234c-.274-.807-.683-1.04-1.631-.962 0 1.133-.06 2.279.042 3.41.026.282.576.516.853.746zM3.25 6.753c.797.081 1.39-.212 1.617-.876.534-1.563.47-3.117-.374-4.582C4.226.833 3.803.669 3.25.727v6.026zM0 0c1.17.136 2.34.265 3.508.41.517.065 1.043.115 1.543.252 1.512.413 2.316 1.591 2.284 3.27-.031 1.59-.83 2.577-2.422 2.924-.523.114-1.069.123-1.67.186 0 1.01-.024 2.028.022 3.044.009.182.288.38.48.517.13.091.326.087.48.207H.068c.02-.03.036-.08.06-.085 1.067-.189 1.078-.133 1.074-1.378-.007-2.412-.003-4.824-.004-7.236C1.197.705 1.196.705 0 0z"/>
+	</g>
+</svg>
+		</div><!-- .c-top-bar__logo -->
+
+					<div class="c-top-bar__exclusive-wrap logged-in-no">
+				Get the magazine and exclusive online content - 					<a href="https://variety.com/subscribe-us/" class="c-top-bar__subscribe-link">
+						Subscribe Today!					</a>
+								</div>
+		
+					<div class="c-top-bar__read-next">
+				<a href="https://variety.com/2018/film/news/tyler-james-williams-anna-camp-jenna-dewan-wedding-year-1202825424/"
+				   class="c-top-bar__read-next__link">
+					Read Next:					<strong>Tyler James Williams, Anna Camp, Jenna Dewan Join &#039;The Wedding Year&#039;</strong>
+				</a>
+			</div><!-- .c-top-bar__read-next -->
+		
+		<ul class="c-top-bar__social"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573186 c-top-bar__social-icon"><a target="_blank" rel="nofollow" href="https://www.instagram.com/variety/" class="c-icon" data-track="www.instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573187 c-top-bar__social-icon"><a target="_blank" rel="nofollow" href="https://twitter.com/variety" class="c-icon" data-track="twitter.com"><span class="screen-reader-text">Twitter</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573192 c-top-bar__social-icon"><a target="_blank" rel="nofollow" href="https://www.youtube.com/user/Variety" class="c-icon" data-track="www.youtube.com"><span class="screen-reader-text">YouTube</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573191 c-top-bar__social-icon"><a target="_blank" rel="nofollow" href="https://www.facebook.com/Variety" class="c-icon" data-track="www.facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
+</ul>
+		<div class="c-top-bar__search">
+
+			<div class="c-search c-search--expandable">
+				<div data-st-search-form="small_search_form"></div>
+			</div><!-- .c-search c-search--expandable -->
+
+		</div><!-- .c-top-bar__search -->
+
+	</div><!-- .c-top-bar -->
+
+</div><!-- .l-header__topbar -->
+
+	
+	<div class="l-header__logo">
+		<a href="https://variety.com/" title="Variety" class="c-logo c-logo--flexible"><span class="screen-reader-text">Variety.com</span></a>	</div>
+
+<div class="l-header__hamburger">
+
+	<button class="c-hamburger" data-toggle="mega-menu">
+		<span class="screen-reader-text">Menu</span>
+	</button>
+
+</div><!-- .l-header__hamburger -->
+
+<nav class="l-header__nav"><ul class="c-nav c-nav--main"><li class="menu-item menu-item-type-taxonomy menu-item-object-vertical current-menu-item menu-item-1202570270 c-nav__item"><a href="https://variety.com/v/film/" class="c-nav__link">Film</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202570271 c-nav__item"><a href="https://variety.com/v/tv/" class="c-nav__link">TV</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202570272 c-nav__item"><a href="https://variety.com/v/music/" class="c-nav__link">Music</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202570273 c-nav__item"><a href="https://variety.com/v/digital/" class="c-nav__link">Tech</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202755023 c-nav__item"><a href="https://variety.com/v/gaming/" class="c-nav__link">Gaming</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202570281 c-nav__item"><a href="https://variety.com/v/legit/" class="c-nav__link">Theater</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202570282 c-nav__item"><a href="https://variety.com/v/dirt/" class="c-nav__link">Real Estate</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570279 c-nav__item"><a href="/e/contenders/" class="c-nav__link">Awards</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573207 c-nav__item"><a href="/videos" class="c-nav__link">Video</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570291 c-nav__item"><a href="/variety-500" class="c-nav__link">V500</a></li>
+</ul></nav>
+	
+	<div class="vy-leaderboard-ad"></div> <!-- marker for pmc-sticky-ad (aka Mobile Adhesion Ads) -->
+
+</header><!-- .l-header -->
+
+	
+		<!--todo: pageType-and-userState? -->
+	<a name="pagetop"></a>
+	<div id="eventListHolder" class="nodisplay"></div>
+<div class="l-page__content">
+	<div class="l-page-header">
+	<div class="l-page-header__heading">
+		<h1 class="c-heading c-heading--page">Film</h1>
+	</div>
+
+	<nav class="l-page-header__nav">
+		<ul id="vertical-header-menu" class="c-page-nav" data-dropdown="mobile-only">
+<li class="c-page-nav__item"><a href='/v/film/news' class="c-page-nav__link">News</a></li>
+
+<li class="c-page-nav__item"><a href='/v/film/reviews' class="c-page-nav__link">Reviews</a></li>
+
+<li class="c-page-nav__item"><a href='/c/news/podcasts/' class="c-page-nav__link">Podcasts</a></li>
+
+<li class="c-page-nav__item"><a href='/v/film/box-office' class="c-page-nav__link">Box Office</a></li>
+
+<li class="c-page-nav__item"><a href='/c/news/events/' class="c-page-nav__link">Events</a></li>
+
+<li class="c-page-nav__item"><a href='/v/film/columns' class="c-page-nav__link">Columns</a></li>
+
+<li class="c-page-nav__item"><a href='/v/film/trailers' class="c-page-nav__link">Trailers</a></li>
+</ul>	</nav>
+</div><!-- .l-page-header -->
+
+	<section class="l-top-grid">
+	<div class="l-top-grid__featured">
+		<article class="c-card c-card--lead-story" itemscope itemtype="http://schema.org/Article">
+	
+			<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/04/solo-a-star-wars-story-17.jpg?w=700&#038;h=393&#038;crop=1');">
+			<a href="https://variety.com/2018/film/news/solo-a-star-wars-story-box-office-losses-1202825432/" class="c-card__video-link">
+							<img src="https://pmcvariety.files.wordpress.com/2018/04/solo-a-star-wars-story-17.jpg?w=700&#038;h=393&#038;crop=1" alt="solo a star wars story" itemprop="contentUrl" />
+					</a>
+	</figure>
+	<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/box-office/">Box Office</a>	</span>
+	<time class="c-card__posted" datetime="2018-05-30T13:05:32+00:00" itemprop="datePublished">
+		7 hours ago	</time>
+
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/solo-a-star-wars-story-box-office-losses-1202825432/">&#8216;Solo&#8217;: How Big a Box Office Dud Is the &#8216;Star Wars&#8217; Spinoff?</a>
+	</h3>
+</header>
+	<div class="c-card__content" itemprop="description">
+	<p>At this rate, &#8220;Solo&#8221; will fall short of the $1 billion mark that each Disney-released “Star Wars” adventure has managed to fly past.</p>
+</div>
+</article>
+	</div><!-- .l-top-grid__featured -->
+
+	<ul class="l-top-grid__list">
+		<li class="l-top-grid__item">
+	<article class="c-card c-card--feature-story" itemscope itemtype="http://schema.org/Article">
+	
+			<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/04/hs-090443_rsm.jpg?crop=132px%2C0px%2C7820px%2C4403px&#038;resize=700%2C393');">
+			<a href="https://variety.com/2018/film/box-office/solo-star-wars-story-box-office-preview-deadpool-2-action-point-1202825361/" class="c-card__video-link">
+							<img src="https://pmcvariety.files.wordpress.com/2018/04/hs-090443_rsm.jpg?crop=132px%2C0px%2C7820px%2C4403px&#038;resize=700%2C393" alt="Solo A Star Wars Story" itemprop="contentUrl" />
+					</a>
+	</figure>
+	<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/box-office/">Box Office</a>	</span>
+	<time class="c-card__posted" datetime="2018-05-30T14:34:02+00:00" itemprop="datePublished">
+		5 hours ago	</time>
+
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/box-office/solo-star-wars-story-box-office-preview-deadpool-2-action-point-1202825361/">&#8216;Solo&#8217; Tries to Rebound From Rough Start</a>
+	</h3>
+</header>
+
+	</article>
+</li>
+<li class="l-top-grid__item">
+	<article class="c-card c-card--feature-story" itemscope itemtype="http://schema.org/Article">
+	
+			<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2017/09/gatsby.png?w=700&#038;h=393&#038;crop=1');">
+			<a href="https://variety.com/2018/tv/news/leaving-netflix-june-2018-1202823158/" class="">
+							<img src="https://pmcvariety.files.wordpress.com/2017/09/gatsby.png?w=700&#038;h=393&#038;crop=1" alt="carey mulligan great gatsby" itemprop="contentUrl" />
+					</a>
+	</figure>
+	<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<time class="c-card__posted" datetime="2018-05-30T08:00:28+00:00" itemprop="datePublished">
+		12 hours ago	</time>
+
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/tv/news/leaving-netflix-june-2018-1202823158/">What&#8217;s Leaving Netflix in June 2018</a>
+	</h3>
+</header>
+
+	</article>
+</li>
+	</ul><!-- .l-top-grid__list -->
+
+	<div class="l-top-grid__ad">
+	<div class="c-ad">
+		<div class="admz" id="adm-section-front-top">
+	
+		<div class="adma google-publisher" data-device="Desktop"
+			 data-width="300">
+			
+<div class="pmc-adm-goog-pub-div ad-text">
+	<div id="gpt-dsk-tab-vert-rail-top-uid2" class="ad-rotatable adw-300 adh-600"></div>
+	</div>
+		</div>
+
+	</div>
+	</div>
+</div><!-- .l-top-grid__ad -->
+</section><!-- .l-top-grid -->
+
+	<div class="l-wrap">
+		<div class="l-wrap__main">
+			<section class="l-river">
+	<header class="l-river__header">
+		<h3 class="c-heading c-heading--section-block">Film  News</h3>
+	</header><!-- .l-river__header -->
+
+	<div class="l-river__content">
+		<ul class="l-list">
+			
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/five-feet-apart.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/haley-lu-richardson-cole-sprouse-five-feet-apart-1202826154/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/five-feet-apart.jpg?w=250&#038;h=140&#038;crop=1" alt="Five Feet Apart" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/haley-lu-richardson-cole-sprouse-five-feet-apart-1202826154/">Film News Roundup: Haley Lu Richardson-Cole Sprouse&#039;s &#039;Five Feet Apart&#039; Set for March Release</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T18:27:09+00:00" itemprop="datePublished">
+		1 hour ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/be-natural-cannes.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/reviews/be-natural-the-untold-story-of-alice-guy-blache-review-1202826198/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/be-natural-cannes.jpg?w=250&#038;h=140&#038;crop=1" alt="&#039;Be Natural: The Untold Story of" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/festivals/">Festivals</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/reviews/be-natural-the-untold-story-of-alice-guy-blache-review-1202826198/">Film Review: &#039;Be Natural: The Untold Story of Alice Guy-Blaché&#039;</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T17:59:34+00:00" itemprop="datePublished">
+		2 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/james-marsden.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/james-marsden-sonic-the-hedgehog-movie-1202825952/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/james-marsden.jpg?w=250&#038;h=140&#038;crop=1" alt="James Marsden" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/james-marsden-sonic-the-hedgehog-movie-1202825952/">James Marsden to Star in &#039;Sonic the Hedgehog&#039; Movie (EXCLUSIVE)</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T16:11:00+00:00" itemprop="datePublished">
+		3 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river">
+		<div class="admz" id="adm-sponsored-section-front-river-desktop">
+	
+		<div class="adma google-publisher" data-device="Desktop"
+			 data-width="645">
+			
+<div class="pmc-adm-goog-pub-div ">
+	<div id="gpt-1506442714-uid3" class="ad-rotatable adw-645 adh-120"></div>
+	</div>
+		</div>
+
+	</div>
+	</article>
+</li>
+<li class="l-list__item u-mobile">
+	<div class="c-ad c-ad--dotted u-mobile">
+			</div><!-- /.c-ad -->
+</li>
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/julia-roberts-george-clooney.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/julia-roberts-george-clooney-afi-life-achievement-award-1202825966/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/julia-roberts-george-clooney.jpg?w=250&#038;h=140&#038;crop=1" alt="Julia Roberts George Clooney" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/awards/">Awards</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/julia-roberts-george-clooney-afi-life-achievement-award-1202825966/">Julia Roberts to Present George Clooney With AFI Life Achievement Award</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T16:05:12+00:00" itemprop="datePublished">
+		4 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/angelina-jolie-david-oyelowo.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/angelina-jolie-david-oyelowo-come-away-1202825973/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/angelina-jolie-david-oyelowo.jpg?w=250&#038;h=140&#038;crop=1" alt="Angelina Jolie David Oyelowo" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/angelina-jolie-david-oyelowo-come-away-1202825973/">Angelina Jolie, David Oyelowo in Talks to Star in Fantasy-Drama &#039;Come Away&#039;</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T15:53:17+00:00" itemprop="datePublished">
+		4 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/michael-moore-donald-trump.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/michael-moore-trump-documentary-1202825796/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/michael-moore-donald-trump.jpg?w=250&#038;h=140&#038;crop=1" alt="Michael Moore Donald Trump" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/michael-moore-trump-documentary-1202825796/">Michael Moore Teases Donald Trump Documentary</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T15:12:24+00:00" itemprop="datePublished">
+		4 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/dave-bautista.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/dave-bautista-bold-film-dogtown-1202825754/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/dave-bautista.jpg?w=250&#038;h=140&#038;crop=1" alt="Dave Bautista&#039;Avengers: Infinity War&#039; film premiere," itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/dave-bautista-bold-film-dogtown-1202825754/">Dave Bautista to Star in Bold Films&#039; Action-Comedy &#039;Dogtown&#039;</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T14:39:00+00:00" itemprop="datePublished">
+		5 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/04/hs-312441_rsm.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/box-office/solo-star-wars-story-box-office-preview-deadpool-2-action-point-1202825361/" class="c-card__video-link">
+					<img src="https://pmcvariety.files.wordpress.com/2018/04/hs-312441_rsm.jpg?w=250&#038;h=140&#038;crop=1" alt="Solo A Star Wars Story" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/box-office/">Box Office</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/box-office/solo-star-wars-story-box-office-preview-deadpool-2-action-point-1202825361/">Box Office Preview: &#039;Solo&#039; Tries to Rebound From Rough Start</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T14:34:02+00:00" itemprop="datePublished">
+		5 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/04/solo-a-star-wars-story-19.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/solo-a-star-wars-story-box-office-losses-1202825432/" class="c-card__video-link">
+					<img src="https://pmcvariety.files.wordpress.com/2018/04/solo-a-star-wars-story-19.jpg?w=250&#038;h=140&#038;crop=1" alt="solo a star wars story" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/box-office/">Box Office</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/solo-a-star-wars-story-box-office-losses-1202825432/">&#039;Solo&#039;: How Big a Box Office Dud Is the &#039;Star Wars&#039; Spinoff?</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T13:05:32+00:00" itemprop="datePublished">
+		7 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/keanu-reeves-daniel-dae-kim.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/keanu-reeves-daniel-dae-kim-ali-wong-always-be-my-maybe-1202825534/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/keanu-reeves-daniel-dae-kim.jpg?w=250&#038;h=140&#038;crop=1" alt="Keanu Reeves Daniel Dae Kim" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/keanu-reeves-daniel-dae-kim-ali-wong-always-be-my-maybe-1202825534/">Keanu Reeves, Daniel Dae Kim Join Ali Wong&#039;s &#039;Always Be My Maybe&#039;</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T12:35:27+00:00" itemprop="datePublished">
+		7 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/jesse-tyler-williams-anna-camp-jenna-dewan.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/tyler-james-williams-anna-camp-jenna-dewan-wedding-year-1202825424/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/jesse-tyler-williams-anna-camp-jenna-dewan.jpg?w=250&#038;h=140&#038;crop=1" alt="Jesse Tyler Williams Anna Camp Jenna" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/tyler-james-williams-anna-camp-jenna-dewan-wedding-year-1202825424/">Tyler James Williams, Anna Camp, Jenna Dewan Join &#039;The Wedding Year&#039;</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T11:30:33+00:00" itemprop="datePublished">
+		8 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/jack1.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/jack-johnson-boxer-movie-sylvester-stallone-1202825380/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/jack1.jpg?w=250&#038;h=140&#038;crop=1" alt="Jack Johnson" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/jack-johnson-boxer-movie-sylvester-stallone-1202825380/">Sylvester Stallone to Make Movie About Trump-Pardoned Boxer Jack Johnson</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T11:11:17+00:00" itemprop="datePublished">
+		8 hours ago	</time>
+</footer>
+</article>
+</li>
+
+
+<li class="l-list__item">
+	<article class="c-card c-card--river" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/force-awakens-solo.jpg?w=700&#038;h=393&#038;crop=1');">
+				<a href="https://variety.com/2018/film/news/disney-star-wars-movies-poll-1202824202/" class="">
+					<img src="https://pmcvariety.files.wordpress.com/2018/05/force-awakens-solo.jpg?w=250&#038;h=140&#038;crop=1" alt="What&#039;s Disney&#039;s Best &#039;Star Wars&#039; Movie" itemprop="contentUrl">
+			</a>
+		</figure>
+	
+		<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/c/news/">News</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/film/news/disney-star-wars-movies-poll-1202824202/">Poll: What&#039;s the Best Disney &#039;Star Wars&#039; Movie So Far?</a>
+	</h3>
+</header>
+	
+	<footer class="c-card__footer">
+	<time class="c-card__posted" datetime="2018-05-30T11:09:47+00:00" itemprop="datePublished">
+		8 hours ago	</time>
+</footer>
+</article>
+</li>
+
+		</ul><!-- .l-list -->
+
+					<div class="c-arrows">
+								<a href="https://variety.com/v/film/page/2/" class="c-arrows__next">Next</a>			</div>
+			</div><!-- .l-river__content -->
+
+	</section><!-- .l-river -->
+		</div><!-- .l-wrap__main -->
+
+		<aside class="l-wrap__secondary">
+			<div data-sticky-widgets>
+				<div class="u-tablet" data-sticky-widgets-top>
+					<div data-sticky-widgets-fixable>
+
+						<div class="c-ad">
+	</div><!-- .c-ad -->
+
+					</div>
+				</div>
+
+				<div data-sticky-widgets-bottom>
+											<div class="admz" id="adm-widget-dsk-tab-ros-rail-bottom">
+	
+		<div class="adma google-publisher" data-device="Desktop"
+			 data-width="300">
+			
+<div class="pmc-adm-goog-pub-div rail-ads-2 ad-text">
+	<div id="gpt-dsk-tab-ros-rail-bottom-uid4" class=" adw-300 adh-250"></div>
+	</div>
+		</div>
+
+	</div>
+<div class="c-widget c-widget--newsletter">
+	<h3 class="c-heading c-heading--widget">Sign Up for Daily Insider Newsletter</h3>
+	<div class="c-widget__content">
+		<div class="c-newsletter c-newsletter--widget">
+			<form method="post" action="https://pages.email.variety.com/api/" name="newsletter-module-form" class="c-newsletter__form" target="_blank">
+	<input name="EmailAddress" required class="c-newsletter__email js-newsletter-email" placeholder="Email" type="email">
+	<span class="c-newsletter__tooltiptext tooltip-bottom">Please fill out this field with valid email address.</span>
+	<button type="submit" class="c-newsletter__button">Sign Up</button>
+	<input name="Editorial_Daily_Headlines_Opted_In" value="Yes" type="hidden">
+	<input name="__contextName" value="NewsletterFormPost" type="hidden">
+	<input name="__executionContext" value="Post" type="hidden">
+	<input name="__successPage" class="js-newsletter-successpage" value="" data-base-url="https://pages.email.variety.com/signup/?signup=success" type="hidden">
+</form>
+		</div>
+	</div>
+	<!-- /.c-widget__content -->
+</div>
+<!-- /.c-widget -->
+<div class="admz" id="adm-widget-am-dsktab-right-rail-b-vertical">
+	
+		<div class="adma google-publisher" data-device="Desktop"
+			 data-width="300">
+			
+<div class="pmc-adm-goog-pub-div ">
+	<div id="gpt-v-am-rr-b-vert-uid5" class="ad-rotatable adw-300 adh-600"></div>
+	</div>
+		</div>
+
+	</div>
+<div class="c-widget c-widget--must-read">
+	<h3 class="c-heading c-heading--widget">Must Read</h3>
+	<div class="c-widget__content">
+					<ul class="l-list">
+				<li class="l-list__item">
+	<article class="c-card c-card--small" itemscope itemtype="http://schema.org/Article">
+	
+			<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/trump.jpg?w=700&#038;h=393&#038;crop=1');">
+			<a href="https://variety.com/2018/politics/news/president-trump-roseanne-cancellation-1202825221/" class="">
+							<img src="https://pmcvariety.files.wordpress.com/2018/05/trump.jpg?w=700&#038;h=393&#038;crop=1" alt="Donald Trump" itemprop="contentUrl" />
+					</a>
+	</figure>
+	<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/v/politics/">Politics</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/politics/news/president-trump-roseanne-cancellation-1202825221/">Trump Sounds Off on &#8216;Roseanne&#8217; Cancellation</a>
+	</h3>
+</header>
+</article>
+</li>
+<li class="l-list__item">
+	<article class="c-card c-card--small" itemscope itemtype="http://schema.org/Article">
+	
+			<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2018/05/harvey-weinstein-perp-walk-nyc-e1527697561333.jpg?w=700&#038;h=393&#038;crop=1');">
+			<a href="https://variety.com/2018/biz/news/harvey-weinstein-will-not-testify-grand-jury-1202825211/" class="c-card__video-link">
+							<img src="https://pmcvariety.files.wordpress.com/2018/05/harvey-weinstein-perp-walk-nyc-e1527697561333.jpg?w=700&#038;h=393&#038;crop=1" alt="Harvey Weinstein Perp Walk NYC" itemprop="contentUrl" />
+					</a>
+	</figure>
+	<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/v/biz/">Biz</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/biz/news/harvey-weinstein-will-not-testify-grand-jury-1202825211/">Harvey Weinstein Will Not Testify to Manhattan Grand Jury</a>
+	</h3>
+</header>
+</article>
+</li>
+<li class="l-list__item">
+	<article class="c-card c-card--small" itemscope itemtype="http://schema.org/Article">
+	
+			<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmcvariety.files.wordpress.com/2017/12/fox-disney-sale-placeholder-rupert-murdoch-bob-iger.jpg?w=700&#038;h=393&#038;crop=1');">
+			<a href="https://variety.com/2018/biz/news/fox-sets-shareholder-vote-on-disney-sale-1202825071/" class="">
+							<img src="https://pmcvariety.files.wordpress.com/2017/12/fox-disney-sale-placeholder-rupert-murdoch-bob-iger.jpg?w=700&#038;h=393&#038;crop=1" alt="Fox Sets Shareholder Vote on Disney" itemprop="contentUrl" />
+					</a>
+	</figure>
+	<header class="c-card__header">
+	<span class="c-card__section" itemprop="articleSection">
+		<a href="https://variety.com/v/biz/">Biz</a>	</span>
+	<h3 class="c-card__title" itemprop="headline">
+		<a href="https://variety.com/2018/biz/news/fox-sets-shareholder-vote-on-disney-sale-1202825071/">Fox Sets Shareholder Vote on Disney Sale</a>
+	</h3>
+</header>
+</article>
+</li>
+			</ul><!-- .l-must-read__list -->
+			</div>
+	<!-- /.c-widget__content -->
+</div>
+<!-- /.c-widget -->
+									</div>
+			</div>
+		</aside><!-- .l-wrap__secondary -->
+	</div>
+	<!-- /.l-wrap -->
+
+	
+<div class="l-ads-leaderborard l-vertical__leaderboard">
+	</div><!-- .l-vertical__leaderboard -->
+
+	<section class="l-more-from">
+
+	<header class="l-more-from__header">
+
+		<h3 class="c-heading c-heading--section">More From Our Brands</h3>
+
+	</header><!-- .l-more-from__header -->
+
+	<ul class="l-more-from__list">
+									<li class="l-more-from__item">
+
+	<article class="c-card c-card--small" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmcfootwearnews.files.wordpress.com/2018/05/olivia.jpg?resize=230%2C135');">
+					<a href="https://footwearnews.com/2018/fashion/celebrity-style/olivia-culpo-sexy-yellow-dress-balenciaga-boots-mnky-hse-1202568327/">
+									<img src="https://pmcfootwearnews.files.wordpress.com/2018/05/olivia.jpg?resize=230%2C135" alt="Olivia Culpo Goes Clubbing Dressed Like a Sexy Taxi in a Yellow Minidress and Black Balenciaga Boots" itemprop="contentUrl" />
+							</a>
+		</figure>
+		<header class="c-card__header">
+							<a href="https://footwearnews.com/custom-feed/pmc_footer/" class="c-card__source" itemprop="sourceOrganization">Footwear News</a>
+						<h3 class="c-card__title" itemprop="headline">
+				<a href="https://footwearnews.com/2018/fashion/celebrity-style/olivia-culpo-sexy-yellow-dress-balenciaga-boots-mnky-hse-1202568327/">Olivia Culpo Goes Clubbing Dressed Like a Sexy Taxi in a Yellow Minidress and Black Balenciaga Boots</a>
+			</h3>
+		</header>
+		<footer class="c-card__footer">
+			<time class="c-card__posted" itemprop="datePublished">3 hours ago</time>
+		</footer>
+	</article>
+
+</li><!-- .l-more-from__item -->
+												<li class="l-more-from__item">
+
+	<article class="c-card c-card--small" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmcdeadline2.files.wordpress.com/2018/05/180530193222-trump-meets-kim-kardashian-0530-exlarge-169.jpg?resize=230%2C135');">
+					<a href="http://deadline.com/2018/05/donald-trump-kim-kardashian-white-house-visit-prison-twitter-1202400603/">
+									<img src="https://pmcdeadline2.files.wordpress.com/2018/05/180530193222-trump-meets-kim-kardashian-0530-exlarge-169.jpg?resize=230%2C135" alt="Donald Trump Finally Gets The “Hot” Kardashian On His Reality Show" itemprop="contentUrl" />
+							</a>
+		</figure>
+		<header class="c-card__header">
+							<a href="https://deadline.com/feed/pmc_footer/" class="c-card__source" itemprop="sourceOrganization">Deadline</a>
+						<h3 class="c-card__title" itemprop="headline">
+				<a href="http://deadline.com/2018/05/donald-trump-kim-kardashian-white-house-visit-prison-twitter-1202400603/">Donald Trump Finally Gets The “Hot” Kardashian On His Reality Show</a>
+			</h3>
+		</header>
+		<footer class="c-card__footer">
+			<time class="c-card__posted" itemprop="datePublished">7 hours ago</time>
+		</footer>
+	</article>
+
+</li><!-- .l-more-from__item -->
+												<li class="l-more-from__item">
+
+	<article class="c-card c-card--small" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://pmctvline2.files.wordpress.com/2018/05/famous-in-love-recap-2.jpg?w=200&#038;resize=230%2C135');">
+					<a href="http://tvline.com/2018/05/30/famous-in-love-recap-season-2-finale-ending-marlene-king-interview/">
+									<img src="https://pmctvline2.files.wordpress.com/2018/05/famous-in-love-recap-2.jpg?w=200&#038;resize=230%2C135" alt="Famous in Love EP Breaks Down Those Finale Cliffhangers: &#039;All Bets Are Off&#039;" itemprop="contentUrl" />
+							</a>
+		</figure>
+		<header class="c-card__header">
+							<a href="https://tvline.com/custom-feed/pmc_footer-2/" class="c-card__source" itemprop="sourceOrganization">TVLine</a>
+						<h3 class="c-card__title" itemprop="headline">
+				<a href="http://tvline.com/2018/05/30/famous-in-love-recap-season-2-finale-ending-marlene-king-interview/">Famous in Love EP Breaks Down Those Finale Cliffhangers: &#039;All Bets Are Off&#039;</a>
+			</h3>
+		</header>
+		<footer class="c-card__footer">
+			<time class="c-card__posted" itemprop="datePublished">6 hours ago</time>
+		</footer>
+	</article>
+
+</li><!-- .l-more-from__item -->
+												<li class="l-more-from__item">
+
+	<article class="c-card c-card--small" itemscope itemtype="http://schema.org/Article">
+					<figure class="c-card__image" itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="background-image:url('https://i2.wp.com/www.indiewire.com/wp-content/uploads/2018/05/emmy-scene.jpg?resize=230%2C135&#038;ssl=1');">
+					<a href="http://www.indiewire.com/2018/05/emmys-screen-talk-podcast-contenders-episode-1-1201969860/">
+									<img src="https://i2.wp.com/www.indiewire.com/wp-content/uploads/2018/05/emmy-scene.jpg?resize=230%2C135&#038;ssl=1" alt="Emmys: An Early Look at What’s Hot (‘The Handmaid’s Tale’) and What’s Not (Um, ‘Roseanne’)" itemprop="contentUrl" />
+							</a>
+		</figure>
+		<header class="c-card__header">
+							<a href="https://indiewire.com/custom-feed/pmc_footer/" class="c-card__source" itemprop="sourceOrganization">Indiewire</a>
+						<h3 class="c-card__title" itemprop="headline">
+				<a href="http://www.indiewire.com/2018/05/emmys-screen-talk-podcast-contenders-episode-1-1201969860/">Emmys: An Early Look at What’s Hot (‘The Handmaid’s Tale’) and What’s Not (Um, ‘Roseanne’)</a>
+			</h3>
+		</header>
+		<footer class="c-card__footer">
+			<time class="c-card__posted" itemprop="datePublished">4 hours ago</time>
+		</footer>
+	</article>
+
+</li><!-- .l-more-from__item -->
+						</ul>
+
+</section>
+</div><!-- .l-page__content -->
+		<footer class="l-footer" data-trigger="footer-manager">
+
+	<div class="l-footer__nav__wrap"><ul class="l-footer__nav"><li id="menu-item-1202570721" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1202570721 l-footer__nav__item"><a href="#" class="c-heading c-heading--mobile-expander js-expander">Variety</a>
+<ul class="sub-menu">
+	<li id="menu-item-1202570722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570722 c-nav__item"><a href="/variety-about-us/" class="c-nav__link">About Us</a></li>
+	<li id="menu-item-1202570723" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570723 c-nav__item"><a href="http://careers.variety.com/" class="c-nav__link">Careers</a></li>
+	<li id="menu-item-1202596998" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202596998 c-nav__item"><a href="http://www.varietyscreeningseries.com" class="c-nav__link">Variety Screening Series</a></li>
+	<li id="menu-item-1202570724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570724 c-nav__item"><a href="http://variety411.com/" class="c-nav__link">Variety 411</a></li>
+	<li id="menu-item-1202590939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202590939 c-nav__item"><a href="https://www.varietyinsight.com/" class="c-nav__link">Variety Insight</a></li>
+	<li id="menu-item-1202591633" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202591633 c-nav__item"><a href="http://www.vscore.com/" class="c-nav__link">Vscore</a></li>
+	<li id="menu-item-1202579766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202579766 c-nav__item"><a href="https://events.variety.com/" class="c-nav__link">Live Media Summits</a></li>
+</ul>
+</li>
+<li id="menu-item-1202570726" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1202570726 l-footer__nav__item"><a href="#" class="c-heading c-heading--mobile-expander js-expander">Legal</a>
+<ul class="sub-menu">
+	<li id="menu-item-1202570727" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570727 c-nav__item"><a href="http://pmc.com/privacy-policy" class="c-nav__link">Privacy Policy</a></li>
+	<li id="menu-item-1202570728" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570728 c-nav__item"><a href="http://pmc.com/terms-of-use/" class="c-nav__link">Terms of Use</a></li>
+	<li id="menu-item-1202570729" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570729 c-nav__item"><a href="http://pmc.com/privacy-policy/#california" class="c-nav__link">Your Privacy Rights</a></li>
+	<li id="menu-item-1202812912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202812912 c-nav__item"><a href="https://pmc.com/privacy-policy/#adchoices" class="c-nav__link">Ad Choices</a></li>
+	<li id="menu-item-1202821954" class="privacy-consent menu-item menu-item-type-custom menu-item-object-custom menu-item-1202821954 c-nav__item"><a href="#" class="c-nav__link">Privacy Preferences</a></li>
+</ul>
+</li>
+<li id="menu-item-1202570730" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1202570730 l-footer__nav__item"><a href="#" class="c-heading c-heading--mobile-expander js-expander">Customer Service</a>
+<ul class="sub-menu">
+	<li id="menu-item-1202570739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202570739 c-nav__item"><a href="https://variety.com/premier/" class="c-nav__link">Variety Premier</a></li>
+	<li id="menu-item-1202570741" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570741 c-nav__item"><a href="http://varietyultimate.com/" class="c-nav__link">Variety Archives</a></li>
+	<li id="menu-item-1202570740" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570740 c-nav__item"><a href="/subscribe-us/" class="c-nav__link">Variety Print</a></li>
+	<li id="menu-item-1202592220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202592220 c-nav__item"><a href="/static-pages/contact-us/" class="c-nav__link">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-1202570742" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1202570742 l-footer__nav__item"><a href="#" class="c-heading c-heading--mobile-expander js-expander">Account</a>
+<ul class="sub-menu">
+	<li id="menu-item-1202570743" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570743 c-nav__item"><a href="/digital-subscriber-access/#r=/premier/" class="c-nav__link">Login</a></li>
+	<li id="menu-item-1202570744" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570744 c-nav__item"><a href="/subscribe-us/" class="c-nav__link">Subscribe</a></li>
+	<li id="menu-item-1202570746" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570746 c-nav__item"><a href="/static-pages/help/" class="c-nav__link">Help</a></li>
+</ul>
+</li>
+<li class="l-footer__nav__item"><a href class="c-heading c-heading--mobile-expander js-expander">Connect</a><ul class="sub-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573186 l-list__item"><a target="_blank" rel="nofollow" href="https://www.instagram.com/variety/" class="c-nav__link" data-track="www.instagram.com">Instagram</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573187 l-list__item"><a target="_blank" rel="nofollow" href="https://twitter.com/variety" class="c-nav__link" data-track="twitter.com">Twitter</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573192 l-list__item"><a target="_blank" rel="nofollow" href="https://www.youtube.com/user/Variety" class="c-nav__link" data-track="www.youtube.com">YouTube</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573191 l-list__item"><a target="_blank" rel="nofollow" href="https://www.facebook.com/Variety" class="c-nav__link" data-track="www.facebook.com">Facebook</a></li>
+</ul></li></ul></div>
+	
+<div class="l-footer__copy">
+
+	<a class="c-logo c-logo--with-motto" href="https://variety.com" title="Variety">The Business of Entertainment</a>
+
+	<a href="/subscribe-us/" class="l-footer__copy__subscribe">Subscribe Today</a>
+
+	<p class="c-smallprint">
+		&copy; Copyright 2018 Variety Media, LLC, a subsidiary of Penske Business Media, LLC. Variety and the Flying V logos are trademarks of Variety Media, LLC.		<br>Powered by <a class="c-smallprint__link powered-by-wpcom" href="https://vip.wordpress.com/?utm_source=vip_powered_wpcom&#038;utm_medium=web&#038;utm_campaign=VIP%20Footer%20Credit" rel="generator nofollow">WordPress.com VIP</a>
+	</p>
+
+			<a class="l-footer__copy__tip" href="https://variety.com/tips"><strong>Have a tip?</strong> Let us know</a>
+	
+</div>
+<!-- .l-footer__copy -->
+
+</footer>
+<!-- .l-footer -->
+
+		</div><!-- /.site-wrap -->
+
+		<div class="l-page__mega" id="mega-menu">
+	<div class="l-mega">
+
+		<div class="l-mega__top-bar">
+			<div class="l-mega__logo">
+
+				<a class="c-logo c-logo--flexible" href="" title="Variety">
+					<span class="screen-reader-text">Variety.com</span>
+				</a>
+
+			</div><!-- .l-mega__logo -->
+			<div class="l-mega__search">
+
+				<div class="c-search">
+					<div data-st-search-form="search_form"></div>
+				</div><!-- .c-search c-search--expandable -->
+
+			</div><!-- .l-mega__search -->
+			<div class="l-mega__close">
+
+				<button class="c-button c-button--mega-close" data-toggle="mega-menu">
+					<span class="screen-reader-text">Close Menu</span>
+				</button>
+
+			</div><!-- .l-mega__close -->
+		</div><!-- .l-mega__top-bar -->
+
+		<div class="l-mega__nav-primary">
+			<div class="l-mega__nav-primary"><ul class="c-nav c-nav--mega"><li class="menu-item menu-item-type-taxonomy menu-item-object-vertical current-menu-item menu-item-has-children menu-item-1202570298 c-nav__item"><a href="https://variety.com/v/film/" class="c-nav__link">Film</a><button class="c-button c-button--mega-expander js-expander"></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570305 c-nav__sub-item"><a href="/v/film/news" class="c-nav__sub-link">News</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573204 c-nav__sub-item"><a href="https://variety.com/v/film/reviews/" class="c-nav__sub-link">Reviews</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573230 c-nav__sub-item"><a href="/c/news/podcasts/" class="c-nav__sub-link">Podcasts</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570311 c-nav__sub-item"><a href="/v/film/box-office" class="c-nav__sub-link">Box Office</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570313 c-nav__sub-item"><a href="/c/news/events/" class="c-nav__sub-link">Events</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570317 c-nav__sub-item"><a href="/v/film/columns" class="c-nav__sub-link">Columns</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-has-children menu-item-1202570319 c-nav__item"><a href="https://variety.com/v/tv/" class="c-nav__link">TV</a><button class="c-button c-button--mega-expander js-expander"></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570322 c-nav__sub-item"><a href="/v/tv/news" class="c-nav__sub-link">News</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570323 c-nav__sub-item"><a href="/v/tv/reviews" class="c-nav__sub-link">Reviews</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570324 c-nav__sub-item"><a href="/c/news/podcasts/" class="c-nav__sub-link">Podcasts</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570325 c-nav__sub-item"><a href="/c/news/recaps/" class="c-nav__sub-link">Recaps</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570326 c-nav__sub-item"><a href="/c/news/events/" class="c-nav__sub-link">Events</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570327 c-nav__sub-item"><a href="/cable-tv-pilot-season-list-network-scorecard/#networktype-1/" class="c-nav__sub-link">Pilot Scorecard</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570329 c-nav__sub-item"><a href="/v/tv/columns" class="c-nav__sub-link">Columns</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-has-children menu-item-1202570336 c-nav__item"><a href="https://variety.com/v/music/" class="c-nav__link">Music</a><button class="c-button c-button--mega-expander js-expander"></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570338 c-nav__sub-item"><a href="/v/music/news" class="c-nav__sub-link">News</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570340 c-nav__sub-item"><a href="/v/music/new-music" class="c-nav__sub-link">New Music</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570342 c-nav__sub-item"><a href="/v/music/album-reviews" class="c-nav__sub-link">Album Reviews</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570343 c-nav__sub-item"><a href="/v/music/concert-reviews" class="c-nav__sub-link">Concert Reviews</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-editorial menu-item-has-children menu-item-1202570345 c-nav__item"><a href="https://variety.com/e/contenders/" class="c-nav__link">Awards</a><button class="c-button c-button--mega-expander js-expander"></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570348 c-nav__sub-item"><a href="/c/awards" class="c-nav__sub-link">News</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1202570347 c-nav__sub-item"><a href="https://variety.com/c/in-contention/" class="c-nav__sub-link">In Contention</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570349 c-nav__sub-item"><a href="/v/artisans" class="c-nav__sub-link">Artisans</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570350 c-nav__sub-item"><a href="/e/contenders/features" class="c-nav__sub-link">Features</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570351 c-nav__sub-item"><a href="/c/columns" class="c-nav__sub-link">Columns</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570354 c-nav__sub-item"><a href="/v/video/contenders" class="c-nav__sub-link">Video</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1202573212 c-nav__item"><a href="/videos" class="c-nav__link">Video</a><button class="c-button c-button--mega-expander js-expander"></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573211 c-nav__sub-item"><a href="/vcategory/trailers" class="c-nav__sub-link">Trailers</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573213 c-nav__sub-item"><a href="/vcategory/" class="c-nav__sub-link">Cover Shoots &#8211; Behind the Scenes</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573214 c-nav__sub-item"><a href="/vcategory/actors-on-actors" class="c-nav__sub-link">Actors on Actors</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573217 c-nav__sub-item"><a href="/vcategory/power-of-women" class="c-nav__sub-link">Power of Women</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573218 c-nav__sub-item"><a href="/vcategory/events-2" class="c-nav__sub-link">Events</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573220 c-nav__sub-item"><a href="/vcategory/artisans-2" class="c-nav__sub-link">Artisans</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573222 c-nav__sub-item"><a href="/vcategory/toronto" class="c-nav__sub-link">Toronto</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-has-children menu-item-1202570361 c-nav__item"><a href="https://variety.com/v/dirt/" class="c-nav__link">Dirt</a><button class="c-button c-button--mega-expander js-expander"></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570365 c-nav__sub-item"><a href="/v/dirt/real-estate" class="c-nav__sub-link">Real Estate News</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570378 c-nav__sub-item"><a href="/v/dirt/" class="c-nav__sub-link">Photos</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570377 c-nav__sub-item"><a href="/v/dirt/lifestyle" class="c-nav__sub-link">Lifestyle</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-has-children menu-item-1202570389 c-nav__item"><a href="https://variety.com/v/digital/" class="c-nav__link">Digital</a><button class="c-button c-button--mega-expander js-expander"></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570392 c-nav__sub-item"><a href="/v/digital/news" class="c-nav__sub-link">News</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570394 c-nav__sub-item"><a href="/v/digital/features" class="c-nav__sub-link">Features</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570395 c-nav__sub-item"><a href="/v/digital/global" class="c-nav__sub-link">Global</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1202570400 c-nav__item"><a href="#" class="c-nav__link">More</a><button class="c-button c-button--mega-expander js-expander"></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1202570473 c-nav__sub-item"><a href="https://variety.com/c/people-news/obituaries-people-news/" class="c-nav__sub-link">Obituaries</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202570401 c-nav__sub-item"><a href="https://variety.com/v/politics/" class="c-nav__sub-link">Politics</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202570517 c-nav__sub-item"><a href="/gallery/" class="c-nav__sub-link">Photos</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202573699 c-nav__sub-item"><a href="https://variety.com/v/scene/" class="c-nav__sub-link">Scene</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-vertical menu-item-1202573700 c-nav__sub-item"><a href="https://variety.com/v/voices/" class="c-nav__sub-link">Voices</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202579763 c-nav__sub-item"><a href="https://events.variety.com/" class="c-nav__sub-link">Live Media Summits</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202591628 c-nav__sub-item"><a href="http://www.vscore.com/" class="c-nav__sub-link">Vscore</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202590936 c-nav__sub-item"><a href="https://www.varietyinsight.com/" class="c-nav__sub-link">Variety Insight</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202591629 c-nav__sub-item"><a href="http://www.varietyultimate.com/" class="c-nav__sub-link">Variety Archives</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202586221 c-nav__sub-item"><a href="/variety-500" class="c-nav__sub-link">V500</a></li>
+</ul>
+</li>
+</ul></div>		</div><!-- .l-mega__nav-primary -->
+
+					<div class="c-top-bar c-top-bar__mobile logged-in-no">
+
+				<div class="c-top-bar__mobile_logo">
+					<svg width="170px" height="30px" viewBox="0 0 63 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+	<title>Premier Logo</title>
+	<desc>Created with Sketch.</desc>
+	<defs>
+		<linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+			<stop stop-color="#8999A4" offset="0%"></stop>
+			<stop stop-color="#E7EBED" offset="100%"></stop>
+		</linearGradient>
+	</defs>
+	<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="Header--LoggedOut" transform="translate(-79.000000, -109.000000)" fill="url(#linearGradient-1)">
+			<g id="Top-Nav" transform="translate(0.000000, 99.179688)">
+				<g id="Login-&amp;-Edition" transform="translate(7.542969, 0.263672)">
+					<g id="Logged-Out" transform="translate(0.457031, 0.736328)">
+						<g id="Subscribe" transform="translate(71.542969, 8.263672)">
+							<g id="Premier-Logo" transform="translate(0.000000, 1.000000)">
+								<g>
+									<path d="M57.0789346,6.33320527 C57.9323212,6.43340485 58.599916,6.05988977 58.8554853,5.26795089 C59.2241715,4.12579635 59.1896449,2.96867224 58.8030918,1.83907283 C58.5306214,1.04315011 57.982421,0.793134035 57.0789346,1.01514251 L57.0789346,6.33320527 Z M57.0034831,6.64925649 C57.0034831,7.77016388 57.0013101,8.8534059 57.0046904,9.93676863 C57.0060183,10.333221 57.1914479,10.5781667 57.6021455,10.6344233 C57.7511169,10.6548254 57.8963459,10.7033558 58.0290199,10.8155069 L53.8736344,10.8155069 C53.8796706,10.7825497 53.8784633,10.7480231 53.8875175,10.7451258 C55.0110808,10.3799405 55.0084249,10.3799405 55.014461,9.14893431 C55.0252053,6.97762139 55.0390884,4.80618775 55.0528508,2.63463338 C55.0606977,1.39215854 55.0620257,1.39215854 53.9004348,0.996068374 C54.1972912,0.965646331 54.4939061,0.933896342 54.7908832,0.904922969 C55.8708657,0.799532322 56.9554356,0.726857442 58.0304685,0.584284299 C60.9780264,0.193264475 61.5428865,2.35105649 61.1627317,4.29191036 C60.9398781,5.42983962 60.1135334,5.98274817 59.0474339,6.4045522 C60.5667252,6.62752646 60.874688,7.72465154 61.0210036,8.94286119 C61.0510635,9.19275654 61.0933163,9.44929162 61.203053,9.67818127 C61.2568951,9.79033237 61.3282421,9.89524013 61.4224055,9.97733135 C61.5104122,10.0539901 61.6502087,10.1580528 61.7746735,10.1357191 C61.824894,10.1267857 61.8682333,10.0955186 61.9042086,10.0594226 C62.0676667,9.89511941 62.1790935,9.68940845 62.2460944,9.4686072 C62.3158719,9.23802743 62.3412237,8.99658265 62.3592113,8.75634509 C62.3569176,8.78761219 62.3922892,8.84592111 62.4020677,8.87694676 C62.4173995,8.925115 62.4305582,8.97376612 62.4417854,9.02290013 C62.4633947,9.11742576 62.4775192,9.21376223 62.4840382,9.31046087 C62.4947825,9.46993515 62.4853662,9.6303752 62.4496324,9.78634853 C62.3905991,10.0432458 62.2614262,10.2823968 62.0712884,10.4657741 C61.7994216,10.7283453 61.426993,10.8542588 61.052995,10.8570354 C59.5302028,10.8677797 59.0914976,10.4617903 58.896531,8.93392773 C58.8309787,8.4204954 58.7374188,7.8964395 58.5563353,7.41499861 C58.2802432,6.68161009 57.8923621,6.5134438 57.0034831,6.64925649 L57.0034831,6.64925649 Z" id="Fill-1"></path>
+									<path d="M50.6929133,4.365213 L50.6929133,8.16446736 C49.8816589,6.30425604 49.8292653,6.35773606 48.1908211,6.49391091 C48.1908211,7.66359016 48.1594332,8.84208214 48.2201566,10.0159867 C48.2307802,10.2253193 48.602243,10.548131 48.8439292,10.5865207 C49.3719689,10.6704227 49.9335695,10.6648695 50.4620921,10.5779494 C50.7626909,10.5284532 51.0955225,10.3025816 51.2904892,10.0578773 C51.7220717,9.51631669 52.0757883,8.91270473 52.5667663,8.17593598 C52.506888,9.14449172 52.4572711,9.94681273 52.4047568,10.7974227 L45.109382,10.7974227 C45.1166254,10.7853505 45.1306292,10.7310254 45.153325,10.7271623 C46.3210727,10.5257973 46.1507334,10.4148534 46.1595461,9.41841083 C46.1783788,7.30782127 46.1888817,5.19699027 46.2056621,3.08615927 C46.2144748,1.95994009 46.2171307,1.95994009 45.1783145,1.61286321 C47.4326844,1.47149729 49.6870544,1.33013137 51.9630336,1.18743751 L51.9630336,4.06207908 C51.9352674,4.06570075 51.907622,4.0692017 51.8797352,4.07270265 C51.6605033,3.61287106 51.4412714,3.15267731 51.2216774,2.692725 C50.8420055,1.8980095 50.2935637,1.39882241 49.3316476,1.55926247 C48.9807077,1.61769211 48.6197477,1.61467405 48.2451461,1.64099153 C48.2280036,1.85937833 48.2055492,2.01583455 48.2053077,2.17229077 C48.2024104,3.51520665 48.2037384,4.85812252 48.2037384,6.19560589 C49.6017036,6.48642613 49.9800476,6.22095759 50.6929133,4.365213" id="Fill-11"></path>
+									<path d="M43.3308515,10.8353054 L39.2900316,10.8353054 C39.2949812,10.7957084 39.2938947,10.7394518 39.3034318,10.7375202 C40.5316614,10.4931781 40.3205179,10.469758 40.3290892,9.32663767 C40.3441795,7.27556425 40.3389885,5.22424939 40.3426101,3.17305525 C40.344421,2.20208506 40.3447832,2.20208506 39.4462464,1.82205097 L43.4101661,1.82205097 C43.4324997,1.76434567 43.4269465,1.81999869 43.4061823,1.82627625 C42.3788347,2.14015447 42.3762995,2.13967158 42.372195,3.26758088 C42.3648309,5.27857446 42.3601227,7.28944732 42.3557767,9.30044091 C42.3533623,10.4319719 42.3546902,10.4319719 43.3308515,10.8353054" id="Fill-15"></path>
+									<path d="M37.5087003,10.8265772 L33.2486486,10.8265772 C33.2829337,10.7778053 33.3004385,10.725774 33.324583,10.7223937 C34.5901158,10.5443282 34.4599771,10.3543112 34.4617879,9.32442845 C34.4651681,7.31609076 34.4627537,5.30775306 34.3741434,3.26790683 C34.02429,4.22752911 33.6833699,5.19053162 33.3222892,6.14604935 C32.8045109,7.51685209 32.2763505,8.883671 31.740343,10.2472304 C31.6814305,10.3968054 31.541634,10.5145098 31.4393821,10.647063 C31.3318185,10.4986951 31.184175,10.3654176 31.1229687,10.2000279 C30.3138873,8.01664279 29.5173609,5.8287909 28.7160057,3.64250841 C28.6968108,3.59011489 28.6587833,3.5443611 28.5209183,3.53325464 C28.5209183,4.76558881 28.5179003,5.99792297 28.5221255,7.23013641 C28.52454,7.97378634 28.5008784,8.72021288 28.5561693,9.46048258 C28.6229287,10.3546733 28.7894049,10.4990573 29.6587269,10.6707245 C29.7484236,10.68835 29.835223,10.7208243 29.9025861,10.8210239 L26.9830358,10.8210239 C26.979052,10.8033985 26.9751888,10.785773 26.9713257,10.7681475 C27.1340595,10.7338624 27.2952239,10.6849698 27.4598892,10.6681894 C27.9637845,10.6163995 28.2209232,10.3131448 28.2607616,9.84027522 C28.3127929,9.22048647 28.3415249,8.59743821 28.3474402,7.97559718 C28.3608404,6.56821555 28.3564944,5.16059247 28.3545629,3.75309012 C28.3528728,2.60345079 28.1976238,2.37733775 27.1059312,1.95444722 C28.0776257,1.95444722 28.9960817,1.93320008 29.9116403,1.9748493 C30.0690623,1.98197192 30.2855175,2.23005643 30.3539671,2.41234724 C30.9684441,4.04656625 31.5552756,5.6912881 32.1523686,7.33214683 C32.219128,7.5152827 32.2994084,7.69346895 32.4372734,8.0301637 C33.1692133,5.93128421 33.8476731,3.98560144 34.5520882,1.96555368 L37.4408543,1.96555368 C36.3554393,2.02422476 36.4756788,2.81230053 36.4788176,3.5551054 C36.4865438,5.46517506 36.4756788,7.37536545 36.4735058,9.28543512 C36.4720571,10.4249338 36.4729022,10.4249338 37.5087003,10.8265772" id="Fill-6"></path>
+									<path d="M18.5324201,1.66134532 C20.7480382,1.74548883 22.9635355,1.82963234 25.2331164,1.9157074 L25.2331164,4.37277022 C23.7151531,1.92657242 23.5085971,1.7932949 21.5458925,1.99852296 L21.5458925,6.2311707 C22.907641,6.51571338 23.1467921,6.36662123 24.0180456,4.65888229 L24.0180456,8.05926987 C23.6241284,6.9067332 22.9682437,6.15197681 21.5334581,6.55929416 C21.5334581,7.70156942 21.5055712,8.89792831 21.5627936,10.0903034 C21.5716063,10.2748879 21.9534513,10.5564125 22.1922401,10.5913013 C22.7031373,10.6661492 23.2426457,10.6667528 23.7519734,10.5841787 C24.0564353,10.5349239 24.4000112,10.3309031 24.5961851,10.0906655 C25.0353732,9.55260584 25.3934358,8.94839027 25.8927436,8.21162152 C25.8360041,9.1701573 25.7886809,9.9675287 25.7391847,10.804497 L18.41375,10.804497 C19.4988029,10.3788299 19.4984407,10.3788299 19.4988029,9.10460505 C19.4994065,7.13405346 19.5001308,5.1636226 19.5010966,3.19307102 C19.5015795,2.08254575 19.5019417,2.08254575 18.5324201,1.66134532" id="Fill-13"></path>
+									<path d="M11.7490894,6.37623073 C12.8523713,6.48029343 13.5309519,6.05197039 13.6574689,5.04659432 C13.7483729,4.32358792 13.7294195,3.5589323 13.5981942,2.84244491 C13.4227846,1.88439201 12.6510064,1.39498344 11.7490894,1.52814024 L11.7490894,6.37623073 Z M12.6296385,10.8301626 L8.60366749,10.8301626 C8.615619,10.7921351 8.61899923,10.7374478 8.63638325,10.7327396 C9.72783439,10.429485 9.72940378,10.4298472 9.72916234,9.29662608 C9.72880017,7.18567436 9.70912242,5.07460191 9.73302545,2.96389163 C9.74340758,2.0492988 9.75342754,1.18842743 8.56962377,0.950121432 C9.77467468,1.05007957 10.9800877,1.1446052 12.1842936,1.2524103 C12.7241641,1.30069925 13.2716402,1.33051768 13.7985934,1.44641118 C15.80174,1.88716863 16.6877217,4.18970679 15.3595339,5.5689601 C14.9519751,5.99209208 14.3441379,6.22267185 13.8443472,6.53111755 C13.932716,6.55912515 14.0991922,6.61007 14.2647026,6.66415363 C14.9476291,6.88736933 15.4028733,7.32885111 15.5587259,8.0431655 C15.6571146,8.49418435 15.6907962,8.9662089 15.8455623,9.39573916 C15.946124,9.67497005 16.1845507,10.0684043 16.409698,10.1041382 C16.8463509,10.1730706 16.9599506,9.73472764 17.0244164,9.36664507 C17.0537519,9.19884094 17.0553213,9.02596648 17.0752405,8.78717759 C17.5149115,9.82792532 16.868926,10.8436835 15.8353009,10.8568423 C14.2222083,10.8774858 13.8189955,10.5042122 13.63091,8.86975171 C13.5828625,8.45325946 13.5004091,8.03217976 13.3659244,7.63633104 C13.0916431,6.82918114 12.6825149,6.5960662 11.7348441,6.67429431 C11.7348441,7.80727395 11.6747244,8.95280871 11.777097,10.0834946 C11.8026901,10.3655021 12.3525806,10.6000657 12.6296385,10.8301626 L12.6296385,10.8301626 Z" id="Fill-4"></path>
+									<path d="M3.24995541,6.75325883 C4.04720608,6.83438427 4.63947013,6.54139103 4.86703183,5.87657282 C5.40134913,4.31442509 5.33712482,2.76036575 4.49255098,1.29491665 C4.22611666,0.832670618 3.80298468,0.669453946 3.24995541,0.727038526 L3.24995541,6.75325883 Z M-1.20722391e-05,4.82889563e-05 C1.16954645,0.135981701 2.33970858,0.265275381 3.50793916,0.41062514 C4.02535532,0.474970174 4.55134278,0.525311411 5.05149565,0.66208988 C6.5630607,1.0752019 7.36731327,2.25296954 7.3345975,3.93270089 C7.30357184,5.52128683 6.50559684,6.50855454 4.91290634,6.85623503 C4.39017839,6.97031768 3.84439246,6.97852681 3.24295351,7.04226823 C3.24295351,8.05186958 3.21880903,9.07016295 3.26540787,10.085559 C3.273617,10.2680912 3.55284789,10.466076 3.7454001,10.6027337 C3.87433161,10.6942413 4.07135055,10.6896538 4.22454727,10.8104969 C2.83925784,10.8104969 1.45372696,10.8104969 0.0680753561,10.8102555 C0.0877531058,10.7805578 0.103688461,10.72913 0.127953662,10.724784 C1.19453598,10.5363364 1.20624606,10.591748 1.20238294,9.34710011 C1.19489815,6.93518747 1.19876127,4.52303338 1.19755404,2.11100001 C1.19682971,0.704584161 1.19646754,0.704584161 -1.20722391e-05,4.82889563e-05 L-1.20722391e-05,4.82889563e-05 Z" id="Fill-8"></path>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+				</div><!-- .c-top-bar__mobile_logo -->
+
+									<p>Access exclusive content</p>
+					<a href="https://variety.com/subscribe-us/" class="c-top-bar__subscribe-link">
+						Subscribe Today!					</a>
+								</div>
+		
+		<div class="l-mega__bottom-bar">
+			<a class="c-signin" href="https://variety.com/digital-subscriber-access/#r=/premier/">
+				<span class="c-icon c-icon--user"></span>
+				<span class="c-signin__text">Login</span>
+			</a><!-- .c-signin -->
+
+			<div class="l-mega__social">
+
+				<div class="l-mega__bottom-bar__heading">
+					<h3 class="c-heading">Follow Us</h3>
+				</div>
+
+				<ul class="l-list l-list--row"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573186 l-list__item"><a target="_blank" rel="nofollow" href="https://www.instagram.com/variety/" class="c-icon c-icon--dark-pin" data-track="www.instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573187 l-list__item"><a target="_blank" rel="nofollow" href="https://twitter.com/variety" class="c-icon c-icon--dark-pin" data-track="twitter.com"><span class="screen-reader-text">Twitter</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573192 l-list__item"><a target="_blank" rel="nofollow" href="https://www.youtube.com/user/Variety" class="c-icon c-icon--dark-pin" data-track="www.youtube.com"><span class="screen-reader-text">YouTube</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573191 l-list__item"><a target="_blank" rel="nofollow" href="https://www.facebook.com/Variety" class="c-icon c-icon--dark-pin" data-track="www.facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
+</ul>
+			</div><!-- .l-mega__social -->
+
+			<div class="l-mega__newsletter">
+
+				<div class="l-mega__bottom-bar__heading">
+					<h3 class="c-heading">Alerts &amp; Newsletters</h3>
+				</div>
+				<div class="c-newsletter c-newsletter--mega">
+					<form method="post" action="https://pages.email.variety.com/api/" name="newsletter-module-form" class="c-newsletter__form" target="_blank">
+						<input name="EmailAddress" required class="c-newsletter__email js-newsletter-email" placeholder="Email address" type="email">
+						<span class="c-newsletter__tooltiptext tooltip-bottom">Please fill out this field with valid email address.</span>
+						<button type="submit" class="c-newsletter__button">Sign Up</button>
+						<input name="Editorial_Daily_Headlines_Opted_In" value="Yes" type="hidden">
+						<input name="__contextName" value="NewsletterFormPost" type="hidden">
+						<input name="__executionContext" value="Post" type="hidden">
+						<input name="__successPage" class="js-newsletter-successpage" value="" data-base-url="https://pages.email.variety.com/signup/?signup=success" type="hidden">
+					</form>
+				</div>
+
+			</div><!-- .l-mega__newsletter -->
+		</div><!-- .l-mega__bottom-bar -->
+		<div class="l-mega__footer">
+			<div class="l-mega__footer-nav">
+
+				<div class="c-nav c-nav--row"><ul class="l-list l-list--row"><li id="menu-item-1202573196" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573196 l-list__item"><a href="#" class="c-nav__link">Advertise</a></li>
+<li id="menu-item-1202573195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573195 l-list__item"><a href="/variety-about-us" class="c-nav__link">About</a></li>
+<li id="menu-item-1202573197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202573197 l-list__item"><a href="/tips" class="c-nav__link">Tips</a></li>
+<li id="menu-item-1202592221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1202592221 l-list__item"><a href="/static-pages/contact-us/" class="c-nav__link">Contact Us</a></li>
+</ul></div>
+			</div><!-- .l-mega__footer-nav -->
+			<div class="l-mega__copyright">
+
+				<div class="c-copyright">
+					<a class="c-copyright__logo" href="https://pmc.com/" title="PMC Network"  target="_blank">
+						<span class="screen-reader-text">PMC</span>
+					</a>
+
+					<p class="c-copyright__text">&copy; 2018 Penske Media Corporation</p>
+				</div>
+
+			</div><!-- .l-mega__copyright -->
+		</div><!-- .l-mega__footer -->
+	</div><!-- .l-mega -->
+	<div class="l-mega__mobile-close">
+
+		<button class="c-button c-button--mega-close" data-toggle="mega-menu">
+			<span class="screen-reader-text">Close menu</span>
+		</button>
+
+	</div><!-- .l-mega__mobile-close -->
+</div><!-- .l-page__mega -->
+
+				<div id="pmc-ad-bait" class="pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links" style="width: 0 !important; height: 0 !important; position: fixed !important; left: -99999px !important;">ad</div>
+
+		<script>
+			if ( 'undefined' !== typeof jQuery ) {
+				var $pmc_ad_bait = jQuery('#pmc-ad-bait');
+				if ( $pmc_ad_bait.length ) {
+					if ( 'block' !== $pmc_ad_bait.css('display') ) {
+						window.pmc_is_adblocked = true;
+					}
+				}
+			}
+		</script>
+		<script type='text/javascript' class="script-mobile">
+pmc_adm_gpt.init({
+    "ad_targetings": {
+        "host": "variety.com",
+        "kw": [
+            "film",
+            "archive"
+        ],
+        "featured-video": "no",
+        "content-video": "no"
+    },
+    "ad_list": {
+        "default": [
+            {
+                "targeting": {
+                    "pos": "top"
+                },
+                "slot": "3782/Variety/ros/leaderboard",
+                "id": "div-gpt-dsk-tab-ros-leaderboard-uid1",
+                "width": [
+                    [
+                        728,
+                        90
+                    ],
+                    [
+                        970,
+                        90
+                    ],
+                    [
+                        970,
+                        250
+                    ],
+                    [
+                        1000,
+                        150
+                    ]
+                ],
+                "adunit-order": "1",
+                "bidders": {
+                    "bids": [
+                        {
+                            "bidder": "appnexusAst",
+                            "params": {
+                                "placementId": "9527314"
+                            }
+                        },
+                        {
+                            "bidder": "rubicon",
+                            "params": {
+                                "accountId": "11714",
+                                "siteId": "37954",
+                                "zoneId": "704220"
+                            }
+                        },
+                        {
+                            "bidder": "sovrn",
+                            "params": {
+                                "tagid": "369377"
+                            }
+                        },
+                        {
+                            "bidder": "triplelift",
+                            "params": {
+                                "inventoryCode": "variety_desktop_top_728x90"
+                            }
+                        },
+                        {
+                            "bidder": "sonobi",
+                            "params": {
+                                "ad_unit": "3782/Variety/ros/leaderboard"
+                            }
+                        }
+                    ],
+                    "code": "div-gpt-dsk-tab-ros-leaderboard-uid1",
+                    "sizes": [
+                        [
+                            728,
+                            90
+                        ],
+                        [
+                            970,
+                            90
+                        ],
+                        [
+                            970,
+                            250
+                        ],
+                        [
+                            1000,
+                            150
+                        ]
+                    ]
+                },
+                "is_lazy_load": "no"
+            },
+            {
+                "targeting": {
+                    "pos": "top"
+                },
+                "slot": "3782/variety/ros/skin",
+                "id": "gpt-dsk-ros-skin-uid0",
+                "adunit-order": 2,
+                "bidders": false,
+                "is_lazy_load": "no",
+                "oop": true
+            },
+            {
+                "targeting": {
+                    "pos": "bottom"
+                },
+                "slot": "3782/variety/ros/right-rail-bottom",
+                "id": "gpt-dsk-tab-ros-rail-bottom-uid4",
+                "width": [
+                    [
+                        300,
+                        250
+                    ],
+                    [
+                        300,
+                        251
+                    ]
+                ],
+                "adunit-order": "3",
+                "bidders": {
+                    "bids": [
+                        {
+                            "bidder": "appnexusAst",
+                            "params": {
+                                "placementId": "9527315"
+                            }
+                        },
+                        {
+                            "bidder": "rubicon",
+                            "params": {
+                                "accountId": "11714",
+                                "siteId": "37954",
+                                "zoneId": "704224"
+                            }
+                        },
+                        {
+                            "bidder": "sovrn",
+                            "params": {
+                                "tagid": "435114"
+                            }
+                        },
+                        {
+                            "bidder": "triplelift",
+                            "params": {
+                                "inventoryCode": "variety_desktop_bottom_300x250"
+                            }
+                        },
+                        {
+                            "bidder": "sonobi",
+                            "params": {
+                                "ad_unit": "3782/variety/ros/right-rail-bottom"
+                            }
+                        }
+                    ],
+                    "code": "gpt-dsk-tab-ros-rail-bottom-uid4",
+                    "sizes": [
+                        [
+                            300,
+                            250
+                        ],
+                        [
+                            300,
+                            251
+                        ]
+                    ]
+                },
+                "is_lazy_load": "no"
+            },
+            {
+                "targeting": {
+                    "pos": "bottom"
+                },
+                "slot": "3782/Variety/native/verticaltest",
+                "id": "gpt-1506442714-uid3",
+                "width": [
+                    [
+                        645,
+                        120
+                    ],
+                    [
+                        1,
+                        1
+                    ]
+                ],
+                "adunit-order": 10,
+                "bidders": {
+                    "bids": [
+                        {
+                            "bidder": "appnexusAst",
+                            "params": {
+                                "placementId": "9527315"
+                            }
+                        },
+                        {
+                            "bidder": "rubicon",
+                            "params": {
+                                "accountId": "11714",
+                                "siteId": "37954",
+                                "zoneId": "704224"
+                            }
+                        },
+                        {
+                            "bidder": "triplelift",
+                            "params": {
+                                "inventoryCode": "variety_desktop_bottom_645x120"
+                            }
+                        },
+                        {
+                            "bidder": "sonobi",
+                            "params": {
+                                "ad_unit": "3782/Variety/native/verticaltest"
+                            }
+                        }
+                    ],
+                    "code": "gpt-1506442714-uid3",
+                    "sizes": [
+                        [
+                            645,
+                            120
+                        ],
+                        [
+                            1,
+                            1
+                        ]
+                    ]
+                },
+                "is_lazy_load": "no"
+            },
+            {
+                "targeting": [],
+                "slot": "3782/Variety_CM/rightrail_b/film",
+                "id": "gpt-v-am-rr-b-vert-uid5",
+                "width": [
+                    [
+                        300,
+                        600
+                    ],
+                    [
+                        160,
+                        600
+                    ]
+                ],
+                "adunit-order": 10,
+                "bidders": false,
+                "is_lazy_load": "no"
+            },
+            {
+                "targeting": {
+                    "pos": "top"
+                },
+                "slot": "3782/Variety/ros/right-rail-top",
+                "id": "gpt-dsk-tab-vert-rail-top-uid2",
+                "width": [
+                    [
+                        300,
+                        600
+                    ],
+                    [
+                        300,
+                        250
+                    ]
+                ],
+                "adunit-order": "11",
+                "bidders": {
+                    "bids": [
+                        {
+                            "bidder": "appnexusAst",
+                            "params": {
+                                "placementId": "9527314"
+                            }
+                        },
+                        {
+                            "bidder": "rubicon",
+                            "params": {
+                                "accountId": "11714",
+                                "siteId": "37954",
+                                "zoneId": "704220"
+                            }
+                        },
+                        {
+                            "bidder": "sovrn",
+                            "params": {
+                                "tagid": "369375"
+                            }
+                        },
+                        {
+                            "bidder": "triplelift",
+                            "params": {
+                                "inventoryCode": "variety_desktop_top_300x250"
+                            }
+                        },
+                        {
+                            "bidder": "sonobi",
+                            "params": {
+                                "ad_unit": "3782/Variety/ros/right-rail-top"
+                            }
+                        }
+                    ],
+                    "code": "gpt-dsk-tab-vert-rail-top-uid2",
+                    "sizes": [
+                        [
+                            300,
+                            600
+                        ],
+                        [
+                            300,
+                            250
+                        ]
+                    ]
+                },
+                "is_lazy_load": "no"
+            }
+        ]
+    },
+    "ad_vast_tags": []
+});
+</script>
+
+<!-- wpcom_wp_footer -->
+<script type="text/liquid" id="ac_article">
+	<div class="ac_title">{{ result | highlight: 'title' | unescape }}</div>
+	<div class="ac_sub">{{ result.published_at | date: "%h %d, %Y" }}</div>
+</script>
+
+<script type="text/liquid" id="ac_tag">
+	<div class="ac_title">
+		<a href="{{ result.url }}">{{ result.name }}</a>
+	</div>
+</script>
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201822y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+<noscript><img src="https://s3.amazonaws.com/heartbeat.pmc.com/track?host=variety.com&#038;path=%2Fv%2Ffilm%2F&#038;ct=vertical&#038;lob=pmc-core&#038;loc=us&#038;env=desktop" border="0" width="0" height="0" style="z-index: 0; bottom: -1px; left: -1px; display: inline; position: fixed;" /></noscript><script type='text/javascript'>
+/* <![CDATA[ */
+var krux_event_pixels = {"gallery_slide_view":""};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pmc_ga_event_tracking = {"events":[{"selector":".subscriber-ad.river-text-ad a","category":"Audience Marketing","label":"Text Ad - Film - Logged Out"},{"selector":".site-header__daily a","category":"Digital Daily","label":"Digital Daily cover in navigation"},{"selector":"#site-header__subscribe","action":"hover","category":"Subscribe","label":"Subscribe nav item","nonInteraction":true},{"selector":".site-header:not(.styles__stickyHeader__1rICW) #site-header__subscribe","category":"Subscribe","label":"Subscribe nav item"},{"selector":".site-header.styles__stickyHeader__1rICW #site-header__subscribe","category":"Subscribe","label":"Subscribe nav item persistent"},{"selector":".site-header.styles__stickyHeader__1rICW #site-header__subscribe","category":"Subscribe","label":"Subscribe nav item persistent"},{"selector":".site-footer__subscribe-link","category":"Subscribe","label":"Subscribe area in footer"},{"selector":"nav.site-header__nav.site-header__nav--top ul a","category":"Navigation","label":"Nav item","details":true},{"selector":"nav.site-header__nav.site-header__nav--top ul a","action":"hover","category":"Navigation","label":"Mega menu","details":true,"nonInteraction":true},{"selector":"nav.site-header__nav.site-header__nav--sticky ul a","category":"Navigation","label":"Nav item persistent","details":true},{"selector":".site-header:not(.mobile-active) #toggle-mobile-menu","category":"Navigation","label":"Activate mobile nav"},{"selector":"#site-header__subscriber-flyout","category":"Audience Marketing","label":"Subscribe hover flyout"},{"selector":".pmc-image-widget-container a","category":"Widget","label":"Image Widget","url":true},{"selector":".hp-panel__essentialist a","category":"right-rail","label":"essentialist"},{"selector":".hp-panel__latest-galleries-post-wrapper.eye-gallery a","category":"right-rail","label":"latest-galleries-eye"},{"selector":".hp-panel__latest-galleries-post-wrapper.collections-gallery a","category":"right-rail","label":"latest-galleries-collections"},{"selector":".hp-panel__latest-galleries-post-wrapper.taw-gallery a","category":"right-rail","label":"latest-galleries-taw"},{"selector":".pdf-tool a.pdf-loggedin","category":"Audience Marketing","label":"Download PDF Success"},{"selector":".pdf-tool a.pdf-loggedout","category":"Audience Marketing","label":"Download PDF Roadblock"},{"selector":"body.roadblock .site-header a.login-link","category":"Audience Marketing","label":"Login Roadblock Header"},{"selector":"body.roadblock .roadblock-container a.login-link","category":"Audience Marketing","label":"Login Roadblock Banner"},{"selector":"body.roadblock .promo:not(.archive-upsell) a","category":"Audience Marketing","label":"Subscribe Banner"},{"selector":"body.roadblock .promo.archive-upsell a","category":"Audience Marketing","label":"Subscribe Banner (Archive Upsell)"},{"selector":"a.subs","category":"Audience Marketing","label":"Text Ad in Login Box","iframe":"iframe#log-in-iframe"},{"selector":"#main .subscriber-ad a","category":"Audience Marketing","label":"End of Free Article Text Ad"},{"selector":"body.digital-daily-info #dd-sub-btn a","category":"Audience Marketing","label":"Subscribe Button on DD Promo Page"},{"selector":"#adm-right-rail-am-1","category":"Audience Marketing","label":"Right Rail AM Ad 1 - Enter","action":"mouseover","nonInteraction":true},{"selector":"#adm-right-rail-am-1","category":"Audience Marketing","label":"Right Rail AM Ad 1 - Leave","action":"mouseout","nonInteraction":true},{"selector":"#adm-right-rail-am-2","category":"Audience Marketing","label":"Right Rail AM Ad 2 - Enter","action":"mouseover","nonInteraction":true},{"selector":"#adm-right-rail-am-2","category":"Audience Marketing","label":"Right Rail AM Ad 2 - Leave","action":"mouseout","nonInteraction":true},{"selector":".footer-sites.feed-footwear-news a","category":"footer","label":"more-from-our-brands-fn"},{"selector":".footer-sites.feed-fairchild-summits-events a","category":"footer","label":"more-from-our-brands-fse"},{"selector":".footer-sites.feed-variety a","category":"footer","label":"more-from-our-brands-vy"},{"selector":".footer-sites.feed-bgr a","category":"footer","label":"more-from-our-brands-bgr"},{"selector":".l-mega__nav-primary .c-nav--mega a","category":"Navigation","label":"Overlay Nav item","details":true}],"device":"[D]"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pmc_share_bar_lob_ga_tracking = {"permalink":"https:\/\/variety.com\/2018\/film\/news\/haley-lu-richardson-cole-sprouse-five-feet-apart-1202826154\/","is_mobile":"","share_list":{"facebook":{"name":"Facebook","title":"Share on Facebook","class":"btn-facebook","url":"https:\/\/www.facebook.com\/sharer.php","popup":true,"javascript":false,"popup_title":"Share on Facebook"},"twitter":{"name":"Twitter","title":"Tweet","class":"btn-twitter","url":"https:\/\/twitter.com\/intent\/tweet","popup":true,"javascript":false,"popup_title":"Share on Twitter"},"tumblr":{"name":"Tumblr","title":"Post to Tumblr","class":"btn-tumblr","url":"https:\/\/www.tumblr.com\/widgets\/share\/tool\/preview","popup":true,"javascript":false,"popup_title":"Share on Tumblr"},"pinit":{"name":"Pin It","title":"Pin it","class":"btn-pinterest","url":"http:\/\/pinterest.com\/pin\/create\/link\/","popup":true,"javascript":false,"popup_title":"Share on Pinterest"},"reddit":{"name":"Reddit","title":"Submit to Reddit","class":"btn-reddit","url":"http:\/\/www.reddit.com\/submit","popup":true,"javascript":false,"popup_title":"Share on Reddit"},"linkedin":{"name":"LinkedIn","title":"Share on LinkedIn","class":"btn-linkedin","url":"http:\/\/www.linkedin.com\/shareArticle","popup":true,"javascript":false,"popup_title":"Share on LinkedIn"},"whatsapp":{"name":"WhatsApp","title":"Share on WhatsApp","class":"btn-whatsapp","url":"whatsapp:\/\/send","popup":false,"javascript":false,"popup_title":"Share on Whats App"},"email":{"name":"Email","title":"Email","class":"btn-email","url":"mailto:","popup":true,"javascript":false,"popup_title":"Send an Email"},"print":{"name":"Print","title":"Print This Page","class":"btn-print","url":"javascript:window.print()","popup":false,"javascript":true,"popup_title":"Print the Article"},"comment":{"name":"Talk","title":"Talk","class":"btn-comment","url":"","popup":false,"javascript":false,"popup_title":"Post a Comment"}}};
+var pmc_share_bar_lob_ga_tracking = {"permalink":"https:\/\/variety.com\/2018\/film\/news\/haley-lu-richardson-cole-sprouse-five-feet-apart-1202826154\/","is_mobile":"","share_list":{"facebook":{"name":"Facebook","title":"Share on Facebook","class":"btn-facebook","url":"https:\/\/www.facebook.com\/sharer.php","popup":true,"javascript":false,"popup_title":"Share on Facebook"},"twitter":{"name":"Twitter","title":"Tweet","class":"btn-twitter","url":"https:\/\/twitter.com\/intent\/tweet","popup":true,"javascript":false,"popup_title":"Share on Twitter"},"tumblr":{"name":"Tumblr","title":"Post to Tumblr","class":"btn-tumblr","url":"https:\/\/www.tumblr.com\/widgets\/share\/tool\/preview","popup":true,"javascript":false,"popup_title":"Share on Tumblr"},"pinit":{"name":"Pin It","title":"Pin it","class":"btn-pinterest","url":"http:\/\/pinterest.com\/pin\/create\/link\/","popup":true,"javascript":false,"popup_title":"Share on Pinterest"},"reddit":{"name":"Reddit","title":"Submit to Reddit","class":"btn-reddit","url":"http:\/\/www.reddit.com\/submit","popup":true,"javascript":false,"popup_title":"Share on Reddit"},"linkedin":{"name":"LinkedIn","title":"Share on LinkedIn","class":"btn-linkedin","url":"http:\/\/www.linkedin.com\/shareArticle","popup":true,"javascript":false,"popup_title":"Share on LinkedIn"},"whatsapp":{"name":"WhatsApp","title":"Share on WhatsApp","class":"btn-whatsapp","url":"whatsapp:\/\/send","popup":false,"javascript":false,"popup_title":"Share on Whats App"},"email":{"name":"Email","title":"Email","class":"btn-email","url":"mailto:","popup":true,"javascript":false,"popup_title":"Send an Email"},"print":{"name":"Print","title":"Print This Page","class":"btn-print","url":"javascript:window.print()","popup":false,"javascript":true,"popup_title":"Print the Article"},"comment":{"name":"Talk","title":"Talk","class":"btn-comment","url":"","popup":false,"javascript":false,"popup_title":"Post a Comment"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJytj9FuwyAMRX9ohHZLpb5M+5SJgEtMwDADafr3I9lUddJeou3Nsu8991pek9CRClCRoYrkq0XK0uMEWX5UqDAqMh64c/lJPojLCKFJZkwyBX03rvPEdRFFWemy3OaEC/gdAJeFx4EV4yoAMpG/9q0Q3wQsDZAxNvWxO/x+6QLSHxO/mUgzwnVL+rF5TEDSvppmbR9XMsBZR4adHWyM1oOohHMDKC8UKX8rqDcstFZFFFZ6QrI70TlqbMA8KgYxKJbvQ0VvVu6FN7v5H9q9n8tv4fV4eu4P/fnl3LtPMf3mRA=='></script>
+<script type='text/javascript' src='//s.swiftypecdn.com/cc/1byyzyzxQM-Y595mXFkG.js?ver=2.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var SwiftypeConfigs = {"engine_key":"1byyzyzxQM-Y595mXFkG","redirect_to":"\/results","home_url":"https:\/\/variety.com\/","placeholder_image":"https:\/\/pmcvariety.files.wordpress.com\/2015\/10\/logo_variety.png","image_size":"river-small","sort_field":"_score","specific_dates":"","sort_direction":"desc","autocomplete":{"tags":{"include":false,"name":"Tags"},"articles":{"include":true,"name":"Content"}},"author_list":[],"date_filters":{"date_options:radio-options":{"title":"Date Filter","default_option":0},"0":"content_type_facet:checkbox-facet","topics_facet:checkbox-facet":{"limit":7,"allowed_items":[],"disallowed_items":[]},"tags_facet:checkbox-facet":{"limit":7,"allowed_items":[],"disallowed_items":[]},"author_facet:checkbox-facet":[]},"custom_facet_settings":[],"meta_tags":{"post_types":{"post":"Article","pmc-gallery":"Gallery","variety_top_video":"Video","hollywood_exec":"Hollywood Exec Profile"},"show_content_type_meta_tag":true,"tags":["post_tag"],"topics":["category"],"custom_topics":[],"comment_count":true,"appeared_in_print":"No"},"trans":{"search":"Search People and Companies","search_button":"Search","reference":"Relevance","pub_date_new":"Published Date (newest first)","pub_date_old":"Published Date (oldest first)","most_commented":"Most Commented","clear":"Clear","content_type":"Content Type","topics":"Topics","tags":"Tags","all":"All","twentyfour_hours":"Past 24 Hours","seven_days":"Past 7 Days","thirty_days":"Past 30 Days","twelve_months":"Past 12 Months","specific_dates":"Specific Dates"},"q":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJylkMsSgjAMRX9ICDoqK8eFK9d+QS0BwtDHNC0Mf28BccaVD1ZtbuecpIHeJtJoj9qDr1EhQ0cWrJKJbUNFmqc791T6wSIIZvQMDcPtGV2MskZHnlNFOm14A387l0i+nAnhOmWkSqqCE56M/nHCjgo0MREDutFViWTwc7nSNNeieNsZadmGAqexa9Ohu07eL1pJ4xDYxz/KERZO1tRheg+6aD/tb2JlS+NTZIk54HJE9KxO28Muz7PdcZ81D2M30jY='></script>
+<script type='text/javascript' src='//s.ntv.io/serve/load.js?ver=4.9.7-alpha-43298'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"0","is_front_page":"0","is_archive":"1","percentToTrack":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pmc_sticky_rail_ads = {"rail_selector":"aside.l-wrap__secondary","first_ad_selector":".rail-ads-1","second_ad_selector":".rail-ads-2","nav_bar_selector":".c-top-bar__search","admin_bar_selector":"#wpadminbar","first_ad_limit":"750","ad_container_width":"310"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyVUVtSwzAMvBCKkjBl+GE4i2qL1q4fQXJScnvsluHRYWDyt9LKu1oZzxOYnAqnguXIkRUXN+EUDUxhPrikF+wVgtsLiWsDnGwWNMesnHDoxq7/KDr/OrOsXXQV6h1+E4/zp+AIzcJfnIAShbU4o7cP/thmcZZz7dDK0nQOBP58LX+z3phLjeQQSn5xb2xrvB6vqeAHsdFIa8TTCkIuAFlFUuWibfkb5p/bka087EkwkhaWiiAvLFJPol+9jQpFyJzaDzzHp2E3Puwe+/tx8O+gxsj6'></script>
+		<script type="text/javascript">
+			(function(){
+				try {
+					if ( document.cookie.indexOf("detect_cookie") < 0 ) {
+						document.cookie = "detect_cookie=js; path=\/; domain=.variety.com";
+					}
+				}catch(ignore) {}
+			})();
+		</script>
+		<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?56" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'43439658','blog_tz':'-7','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'43439658','v':'wpcom','tz':'-7','user_id':'0','subd':'pmcvariety'}]);
+function st_vt() {var x=document.createElement("img");x.src="https://pixel.wp.com/g.gif?blog=43439658&v=wpcomvt&tz=-7&user_id=0&subd=pmcvariety&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTc/SE4sUTE5TixNJlBubm5bRHNdY0UlLW1YLnU0YnhrUVUzNmlqaExvJSVFWWMxbXZTRnA3ZzZwfl1uW3xpTnl+WHowYmFnejktfEN2RkR1c2t+cktdXU1jTVQmM2ZiTG1kSkw3U2c9SGVybTZwfFolSlIlYy15U21bTnZdcSswQnY/aDEySWhVfERNL1EyRDBdL2tWXVN5bFpwdjljbTBMYV1wQ3BBLHVIcnZZSCVJK1B6dEsl'}]);
+_stq.push([ 'clickTrackerInit', '43439658', '0' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+		<!-- Begin comScore Tag -->
+<script type="text/javascript">
+	var _comscore = _comscore || []; _comscore.push({ c1: "2", c2: "6035310", c3: "", c4: "", c5: "", c6: "", c15: "" }); (function() { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();
+</script>
+<!-- End comScore Tag -->
+
+	<script src="//dc8xl0ndzn2cb.cloudfront.net/js/varietycom/v0/keywee.min.js" type="text/javascript" async></script>
+<!-- START callback function for onhashchange(when the hash tag in the url gets updated) -->
+<script type="text/javascript">
+function global_urlhashchanged() {
+
+	/**
+	 * Track pageview
+	 */
+	// Build the current domain name
+	var tmp_td = document.domain.split( '.' );
+	var tracking_domain = tmp_td[ tmp_td.length - 2 ] + "." + tmp_td[ tmp_td.length - 1 ];
+
+	// Build the current image
+	var imgname = location.hash.replace( '#', '' );
+
+	// Track PV in GA
+	try {
+		ga( 'send', 'pageview', location.pathname + location.hash );
+	} catch( err ) {}
+
+	// Track PV in comScore
+	// For content changes where the page does not reload
+	// we need to send both the beacon and the fake pageview
+	try {
+		// Send the comScore beacon
+		setTimeout(function(){ var url = "http" + (/^https:/.test(document.location.href) ? "s" : "") + "://beacon.scorecardresearch.com/scripts/beacon.dll" + "?c1=2&amp;c2=6035310&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c7=" + escape(document.location.href) + "&amp;c8=" + escape(document.title) + "&amp;c9=" + escape(document.referrer) + "&amp;c10=" + escape(screen.width+'x'+screen.height) + "&amp;rn=" + (new Date()).getTime(); var i = new Image(); i.src = url; }, 1);
+
+		COMSCORE.beacon({ c1: "2", c2: "6035310", c3: "", c4: "", c5: "", c6: "", c15: "" });
+	} catch( err ) {}
+
+	// Send the comScore fake pageview
+	if ('function' === typeof pmc_comscore.pageview) {
+		pmc_comscore.pageview();
+	}
+
+	// PMCVIP-2580. Try PV in Keywee
+	try {
+		if ( typeof window.snowplowKW == 'function' ) {
+			window.snowplowKW( 'trackPageView' );
+		}
+	} catch ( err ) {
+	}
+	// Track Quantcast
+	try {
+		_qevents.push([
+			{ qacct:"p-31f3D02tYU8zY" } // PMC P-Code
+		]);
+	} catch( err ) {}
+
+	/**
+	 * Track pageview end
+	 */
+}
+</script>
+
+		<script async src="https://load.instinctiveads.com/i.js" class="script-mobile"></script>
+		
+		<!-- Start: Localize Video Player Events -->
+<script type="text/javascript">
+/* <![CDATA[ */
+	var pmc_video_player_event_tracking = {"basic":{"autoplay":"1","content_consumed":"1","play":"1","_100_percent_played":"1","error":"1","show_ad":"1","skip_ad":"1"},"advanced":{"pause":"0","seconds_played":{"_5":"0","_10":"0","_30":"0","_60":"0","_90":"0","_120":"0","_300":"0","_600":"0"},"percent_played":{"_5":"0","_10":"0","_25":"0","_50":"0","_75":"0","_95":"0"},"jump_forward":"0","jump_backward":"0","mute":"0","unmute":"0","volume_up":"0","volume_down":"0","settings":"0","full_screen":"0","watch_on_youtube":"0"}};
+/* ]]> */
+</script>
+<!-- End: Localize Video Player Events -->
+
+<!-- pmc-adm targeting -->
+<script>
+if ( typeof pmc !== 'undefined' && typeof pmc.hooks !== 'undefined' ) {
+	pmc.hooks.add_filter( 'pmc-adm-set-targeting-keywords', function( keywords ) {
+		try {
+			if ( typeof Krux !== 'undefined' ) {
+				if ( typeof keywords['ksg'] === 'undefined' ) {
+					keywords['ksg']  = Krux.segments;
+				}
+				if ( typeof keywords['kuid'] === 'undefined' ) {
+					keywords['kuid']  = Krux.user;
+				}
+			}
+		} catch(e) {}
+		return keywords;
+	} );
+}
+
+(function() {
+	if( window.hasOwnProperty('pmc_krux' ) ) {
+		window.pmc_krux['destination-url'] = window.location.href;
+		if( document.hasOwnProperty('referrer') && document.referrer.length ) {
+			window.pmc_krux['referrer'] = document.referrer;
+		}
+		if( 'undefined' !== typeof pmc_meta && 'string' === typeof pmc_meta.omni_visit_id ) {
+			window.pmc_krux['omni_visit_id'] = pmc_meta.omni_visit_id;
+		}
+	}
+})();
+
+</script>
+
+		<!-- pmc-tags-bottom SkimLinks -->
+<script type="text/javascript" src="https://s.skimresources.com/js/87443X1540253.skimlinks.js" async></script>
+<!-- end pmc-tags-bottom SkimLinks -->
+		<!-- DO NOT REMOVE, comment for engineering, 4BAfe4nkpyAktm3S -->
+	</body>
+</html>

@@ -46,7 +46,7 @@
 		                    	</div>
 								<div class="wizard-navigation">
 									<div class="progress-with-circle">
-									    <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" style="width: 20%;"></div>
+									    <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="1" style="width: 20%;"></div>
 									</div>
 									<ul>
 			                            <li>
@@ -57,68 +57,39 @@
 												<center>You</center>
 											</a>
 										</li>
-			                            <li>
-											<a href="#email" data-toggle="tab">
-												<div class="icon-circle">
-													<i class="ti-email"></i>
-												</div>
-												Your profile
-											</a>
-										</li>
-			                            <li>
-											<a href="#team" data-toggle="tab">
-												<div class="icon-circle">
-													<i class="ti-announcement"></i>
-												</div>
-												Your team
-											</a>
-										</li>
 			                        </ul>
 								</div>
 		                        <div class="tab-content">
 		                            <div class="tab-pane" id="user">
 		                            	<div class="row">
 		                                	<div class="col-sm-12 ">
-		                                    	<h5 class="info-text"> So tell me about yourself</h5>
+		                                    	<h5 class="info-text"></h5>
 		                            		</div>
 		                                	<div class="col-sm-10 col-sm-offset-1">
-		                                    	<div class="form-group">
+		                                    	<div class="form-group col-lg-6" style="padding-left:0px;">
 													{{ wtf.form_field(form.first_name, type="text", class="form-control", placeholder= "What's your first name?" ) }}
 		                                    	</div>
-												<div class="form-group">
+												<div class="form-group col-lg-6" style="padding-right:0px;">
 													{{ wtf.form_field(form.last_name, type="text", class="form-control", placeholder= "What's your last name?" ) }}
 		                                    	</div>
-		                                	</div>
-		                            	</div>
-		                            </div>
-		                            <div class="tab-pane" id="email">
-		                                <h5 class="info-text">Now let's create your username & password</h5>
-		                                <div class="row">
-		                                    <div class="col-sm-10 col-sm-offset-1 center">
-		                                    	<div class="form-group">
+												<div class="form-group">
+													{{ wtf.form_field(form.team_name, type="text", class="form-control", placeholder= "What's should we call your team?" ) }}
+												</div>
+												<div class="form-group">
 													{{ wtf.form_field(form.email, type="email", class="form-control", placeholder= "What's your email address?" ) }}
 		                                    	</div>
 												<div class="form-group">
 													{{ wtf.form_field(form.password, type="password", class="form-control", placeholder= "What do you want to be your super secret password?" ) }}
 		                                    	</div>
-		                                    </div>
-		                                </div>
-		                            </div>
-		                            <div class="tab-pane" id="team">
-		                                <h5 class="info-text">What should I call your team?</h5>
-		                                <div class="row">
-		                                    <div class="col-sm-10 col-sm-offset-1 center">
-		                                    	<div class="form-group">
-													{{ wtf.form_field(form.team_name, type="text", class="form-control", placeholder= "What's should we call your team?" ) }}
 		                                    	<div class="checkbox checkbox-info col-sm-8 col-sm-offset-3 center">
 													<input id="checkbox4" type="checkbox" required="required">
 													<label for="checkbox4">
-														I Accept The <a href="{{url_for('terms')}}" target="_blank"> Terms Of Service </a>
+														I Accept the <a href="{{url_for('terms')}}" target="_blank"> Terms Of Service</a>
 													</label>
 												</div>
-												</div>
-		                                    </div>
-		                                </div>
+
+		                                	</div>
+		                            	</div>
 		                            </div>
 		                        </div>
 		                        <div class="wizard-footer">

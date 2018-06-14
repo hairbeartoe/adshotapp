@@ -89,7 +89,7 @@ class Team(db.Model):
 class Site(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     domain = db.Column(db.String(64), index=True)
-    url = db.Column(db.String(64), index=True, unique=True)
+    url = db.Column(db.String(64), index=True)
     images = db.relationship('Image', backref='images', lazy='dynamic')
     pages = db.relationship('Page', backref='sites', lazy='dynamic')
     capture_rate = db.Column(db.Integer)

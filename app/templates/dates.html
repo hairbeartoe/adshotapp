@@ -127,7 +127,6 @@
                             <thead>
                                 <th data-field="id" data-sortable="true"  class="text-center">ID</th>
                                 <th data-field="Date" data-sortable="true" class="text-center">Date</th>
-                                <th data-field="image_count" data-sortable="true" class="text-center">Image Count</th>
                                 <th data-field="actions"  class="text-center">Actions</th>
                             </thead>
                             <tbody>
@@ -137,7 +136,7 @@
                                     <td>
                                         <a href="{{url_for('get_images', site=site, date=date)}}">{{ date }}</a>
                                     </td>
-                                    <td>{{ image_count }}</td>
+                                    <td><a href="{{url_for('get_images', site=site, date=date)}}">view images</a></td>
                                 </tr>
                                 {% endfor %}
                             </tbody>

@@ -6,40 +6,38 @@ from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 import schedule
 import threading
 import time
-from app.engine import screenshot_engine
-
-pages = Page.query.all()
-list =[]
-
-for page in pages:
-    if page.mobile_capture:
-        data = {
-            'url': page.url,
-            'rate': page.capture_rate,
-            'directory': page.directory,
-            'type': 'Mobile',
-            'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
-            'width': '508'
-        }
-        list.append(data)
-
-    data = {
-        'url': page.url,
-        'rate': page.capture_rate,
-        'directory': page.directory,
-        'type': 'Desktop',
-        'user_agent': 'desktop',
-        'width': '1280'
-    }
-    list.append(data)
-
-#print(list[4])
+import app.engine
 
 
-def job_1():
-    for item in list:
-        screenshot_engine(item)
-        #print('screenshot captured: ' + item.get('url'))
+# function to gather what's needed to take a screenshot automatically
+# set an empty list that will be the container for the pages
+# Query the db for all pages
+# Create a dictionary with all needed info for each page
+# Add each dictionary to the empty pages list (a list of dictionary's)
+def query_db():
+    pages_list = []
+    db_pages = Page.query.all()
+    for page in db_pages:
+
+        # set the mobile information
+        if page.mobile_capture:
+            page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Mobile',
+                'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+                         'width': '508'}
+            pages_list.append(page_data)
+
+        # Set the desktop information
+        page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
+                     'user_agent': 'desktop', 'width': '1280'}
+        pages_list.append(page_data)
+    return pages_list
+
+
+# function to auto-run the screenshots
+def screenshot_engine():
+    pages_list = query_db()
+    for page in pages_list:
+        engine.capture(page)
 
 
 # function to make threads -> details here http://bit.ly/faq_schedule
@@ -48,14 +46,10 @@ def run_threaded(job_fn):
     job_thread.start()
 
 
-#schedule.every(2).minutes.do(run_threaded,job_1(list))              # like hashtag
-#schedule.every(1).days.at("14:00").do(run_threaded, job_1(list))    # like followers of users from file
-schedule.every(20).minutes.do(run_threaded, job_1)    # capture images
+# setting the schedule to run the screenshot engine function
+schedule.every(20).minutes.do(run_threaded, screenshot_engine())
 
-job_1()
-
-'''
+# runs the scheduled jobs
 while True:
     schedule.run_pending()
     time.sleep(1)
-'''

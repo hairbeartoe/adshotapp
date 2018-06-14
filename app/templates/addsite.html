@@ -43,7 +43,7 @@
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2">
 	<!--  Start OF NEW MODAL-->
-						<div class="wizard-container">
+						<div class="wizard-container" style="padding:0px;">
 							<div class="card wizard-card" data-color="green" id="wizard">
 								<form method="POST" action="/addsite" id="add_site">
 									{{ form.hidden_tag() }}
@@ -74,27 +74,25 @@
 
 											</ul>
 										</div>
-										<div class="tab-content">
+										<div class="tab-content" style="min-height:350px;">
 											<div class="tab-pane" id="website">
 												<div class="row">
 													<div class="col-sm-12 ">
-														<h5 class="info-text"> What's the website?</h5>
+														<p class="info-text">
+														You won't need to add the exact url yet. <br>We just need to know what to call this site.</p>
 													</div>
 													<div class="col-sm-10 col-sm-offset-1">
 														<div class="form-group">
-															{{ wtf.form_field(form.domain_name, type="text", class="form-control", placeholder= "What website should we add? ex: nytimes.com" ) }}
+															{{ wtf.form_field(form.domain_name, type="text", class="form-control", placeholder= "ex: nytimes.com or Google" ) }}
 														</div>
 													</div>
 												</div>
 											</div>
-
-
-
 										</div>
 										<div class="wizard-footer">
 											<div class="pull-right">
 												
-												<input type='submit' id='button' class='btn btn-finish btn-fill btn-success btn-wd' value='Request Site' />
+												<input type='submit' id='button' class='btn btn-finish btn-fill btn-success btn-wd' value='Add Site' />
 											</div>
 
 											<div class="pull-left">

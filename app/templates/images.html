@@ -143,7 +143,11 @@
                                         <img  src="{{ resized_img_src(image.path , width=200, height=150, mode='crop') }}" >
                                     </a>
                                 </td>
+                                {% if image.date %}
                                 <td>{{ image.date.strftime('%I:%M %p') }}</td>
+                                {% else %}
+                                <td>Error</td>
+                                {% endif %}
                                 <td>{{ image.device }}</td>
                                 <td>
                                     <a href="{{url_for('return_file', filepath=image.path, filename=image.name) }}" class="imagebutton">

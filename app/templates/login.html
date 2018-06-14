@@ -8,6 +8,8 @@ Login
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" href="{{url_for('.static', filename='signin.css')}}">
+
+
 {% endblock %}
 
 {% block content %}
@@ -27,9 +29,11 @@ Login
         {% endfor %}
       {% endif %}
     {% endwith %}
+    <div class="col-md-12" style="margin-bottom:30px;">
+      <img src="{{url_for('static', filename='assets/img/icon-left-font-trans.png')}}" alt="Pagesnap logo" class="img-responsive mb-2">
+    </div>
 
 
-    <h2 class="form-signin-heading">Please sign in</h2>
     {{ form.hidden_tag() }}
     {{ wtf.form_field(form.email) }}
     {{ wtf.form_field(form.password) }}

@@ -1,0 +1,176 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Pagesnap | Automated Screenshots</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static', filename='assets/css/bootstrap4.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{url_for('static', filename='assets/css/mdb.min.css') }}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{{url_for('static', filename='assets/css/style.min.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand LOGO-->
+      <a class="navbar-brand" href="{{url_for('index')}}" >
+        <img src="{{url_for('static', filename='assets/img/logo-white.png') }}" height="30" >
+        <strong> </strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <!--
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">About MDB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/getting-started/" target="_blank">Free download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/bootstrap-tutorial/" target="_blank">Free tutorials</a>
+          </li>
+          -->
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item mr-2">
+              <a href="{{url_for('login') }}" class="nav-link border border-light rounded">
+                <i class="fa fa-sign-in mr-2"></i>Login
+              </a>
+            </li>
+          <li class="nav-item mr-2">
+              <a href="{{url_for('signup') }}" class="nav-link border border-light rounded">
+                <i class="fa fa-user-plus mr-2"></i>Sign Up
+              </a>
+            </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+
+        <!--Grid row-->
+        <div class="row">
+
+
+          <!--Grid column-->
+          <div class="col-md-12 mb-8 mt-3 pt-4">
+
+            <!-- Main heading -->
+            <div class="col-md-12 mb-8 mt-4  text-center text-lg">
+
+                <h1 class="display-8 font-weight-bold text-center">Privacy Policy </h1>
+
+                <hr class="hr-dark">
+            </div>
+            <!-- Main heading -->
+
+
+
+            <p class="text-center">
+              Your privacy is very important to us. It is Pagesnap's policy to respect your privacy regarding any information we may collect from you across our website, http://www.pagesnap.com, and other sites we own and operate.
+We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.
+We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorised access, disclosure, copying, use or modification.
+We don’t share any personally identifying information publicly or with third-parties, except when required to by law. <br><br>
+Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies. You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services. Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.
+<br><br>
+This policy is effective as of 1 June 2018.</p>
+        </div>
+        <!--Grid row-->
+        </div>
+      </section>
+    </div>
+  </main>
+  <!--Main layout-->
+
+    <!--Footer-->
+  <footer class="page-footer text-center font-small wow fadeIn">
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-2">
+      <a href="{{url_for('terms') }}" class="mr-3">
+        Terms
+      </a>
+
+      <a href="{{url_for('privacy') }}" class="mr-3">
+        Privacy
+      </a>
+
+      <a href="{{url_for('copyright') }}" class="mr-3">
+        Copyright Notice
+      </a>
+
+      <a href="{{url_for('login') }}" class="mr-3">
+        Login
+      </a>
+
+      <a href="{{url_for('signup') }}" class="mr-3">
+        Sign Up
+      </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-2">
+      © 2018 Copyright Pagesnap, LLC
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/jquery-3.2.1.min.js') }}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/popper.min.js') }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/bootstrap4.min.js') }}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{url_for('static', filename='assets/js/mdb.min.js') }}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>

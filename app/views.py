@@ -62,6 +62,12 @@ def terms():
                            title='Terms')
 
 
+@app.route('/privacy')
+def privacy():
+    return render_template("privacy.html",
+                           title='Privacy')
+
+
 @app.route('/copyright')
 def copyright():
     return render_template("copyright.html",
