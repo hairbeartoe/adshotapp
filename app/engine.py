@@ -71,25 +71,17 @@ def download_image(file_params):
     # else, make the new directory to save the image, download the image there, and return to main working directory
     if os.path.isdir(directory):
         default_dir = os.getcwd()
-        print('the current default dir is '+ default_dir)
         file_dir = 'app/' + directory
         os.chdir(file_dir)
-        print('the file will be saved into ' + os.getcwd())
         urllib.request.urlretrieve(url, image_name)
-        print('image downloaded - exist')
         os.chdir('../../../../../')
-        print('moved back into ' + os.getcwd())
     else:
         default_dir = os.getcwd()
         file_dir = 'app/' + directory
-        print('the current default dir is ' + default_dir)
         os.makedirs(file_dir)
         os.chdir(file_dir)
-        print('the file will be saved into ' + os.getcwd())
         urllib.request.urlretrieve(url, image_name)
-        print('image downloaded - DNE')
         os.chdir(default_dir)
-        print('moved back into ' + os.getcwd())
     return
 
 
