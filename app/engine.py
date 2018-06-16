@@ -6,7 +6,7 @@ from urllib import parse, request
 import datetime
 import os
 from app import db
-from app.models import User,Site, Image, subscriptions, Team, Collection, Page
+from app.models import User, Site, Image, subscriptions, Team, Collection, Page
 
 
 # util for making the name work by removing un-needed prefix
@@ -40,16 +40,18 @@ def set_file_params(query):
     full_page = True
     directory = query.get('directory')
     capture_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    capture_url = 'abc'
     name = datetime.datetime.now().strftime("%I:%M %p") + '-' + query.get('type') + '.png'
     file_path = remove_prefix(directory, 'static/images') + "/" + name
     file_args = {'url': url, 'delay': delay, 'width': width, 'user_agent': user_agent, 'force': force,
-                 'full_page': full_page, 'type': type, 'directory': directory, 'name': name, 'file_path': file_path}
+                 'capture_date': capture_date, 'full_page': full_page, 'type': type, 'directory': directory,
+                 'name': name, 'file_path': file_path, 'capture_url': capture_url}
     return file_args
 
 
 # Pass the json arguments into the generate url class
 def generate_url(args):
-    api_key = "mMb16EovKVO0Oakc"
+    api_key = "vB6MvLUCmPp31An8"
     api_secret = "072aac879ad646719e06a8d48a5c1c43"
     query_string = urllib.parse.urlencode(args, True)
     # hmacToken = hmac.new(apiSecret, queryString, sha1)
@@ -63,20 +65,23 @@ def download_image(file_params):
 
     # Set the variables
     directory = file_params.get('directory')
-    url = file_params.get('url')
+    url = file_params.get('capture_url')
     image_name = file_params.get('name')
-
     # If the directory to save the image exists change working directory to save location, download image, and return
     # else, make the new directory to save the image, download the image there, and return to main working directory
     if os.path.isdir(directory):
+        default_dir = os.getcwd()
+        file_dir = default_dir + directory
         os.chdir(directory)
         urllib.request.urlretrieve(url, image_name)
         os.chdir('../../../../')
     else:
-        os.mkdir(directory)
-        os.chdir(directory)
+        default_dir = os.getcwd()
+        file_dir = directory
+        os.makedirs(file_dir)
+        os.chdir(file_dir)
         urllib.request.urlretrieve(url, image_name)
-        os.chdir('../../../../')
+        os.chdir(default_dir)
     return
 
 

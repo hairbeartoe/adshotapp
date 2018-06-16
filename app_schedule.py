@@ -47,7 +47,7 @@ def run_threaded(job_fn):
 
 
 # setting the schedule to run the screenshot engine function
-schedule.every(20).minutes.do(run_threaded, screenshot_engine())
+schedule.every(5).minutes.do(screenshot_engine)
 
 # runs the scheduled jobs
 while True:
