@@ -78,7 +78,7 @@ def download_image(file_params):
         urllib.request.urlretrieve(url, image_name)
         print('image downloadaed')
         os.chdir('../../../../')
-        print('moved back into ' os.getcwd())
+        print('moved back into ' + os.getcwd())
     else:
         default_dir = os.getcwd()
         file_dir = directory
@@ -89,7 +89,7 @@ def download_image(file_params):
         urllib.request.urlretrieve(url, image_name)
         print('image downloaded')
         os.chdir(default_dir)
-        print('moved back into ' os.getcwd())
+        print('moved back into ' + os.getcwd())
     return
 
 
