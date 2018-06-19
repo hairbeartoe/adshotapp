@@ -66,7 +66,7 @@ def download_image(file_params):
     directory = file_params.get('directory')
     url = file_params.get('capture_url')
     image_name = file_params.get('name')
-    file_dir = directory
+    file_dir = 'app/' + directory
     default_dir = os.getcwd()
     print('current dir: ' + default_dir)
     print('file dir: ' + file_dir)
