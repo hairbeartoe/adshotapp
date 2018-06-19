@@ -66,7 +66,7 @@ def download_image(file_params):
     file_dir = 'app/' + file_params.get('directory')
     url = file_params.get('capture_url')
     image_name = file_params.get('name')
-    default_dir = os.getcwd()
+    default_dir = "/home/hflores/adshotapp"
     print('the current default working directory is ' + default_dir)
     # If the directory to save the image exists change working directory to save location, download image, and return
     # else, make the new directory to save the image, download the image there, and return to main working directory
