@@ -62,25 +62,26 @@ def generate_url(args):
 
 # Using the url returned by generate capture url class, download image and save into proper location
 def download_image(file_params):
-
     # Set the variables
     directory = file_params.get('directory')
     url = file_params.get('capture_url')
     image_name = file_params.get('name')
+    file_dir = directory
+    default_dir = os.getcwd()
+    print('current dir: ' + default_dir)
+    print('file dir: ' + file_dir)
     # If the directory to save the image exists change working directory to save location, download image, and return
     # else, make the new directory to save the image, download the image there, and return to main working directory
-    if os.path.isdir(directory):
-        default_dir = os.getcwd()
-        file_dir = 'app/' + directory
+    if os.path.isdir(file_dir):
         os.chdir(file_dir)
         urllib.request.urlretrieve(url, image_name)
-        os.chdir('../../../../../')
+        print('image downloaded to ' + str(os.getcwd()))
+        os.chdir(default_dir)
     else:
-        default_dir = os.getcwd()
-        file_dir = 'app/' + directory
         os.makedirs(file_dir)
         os.chdir(file_dir)
         urllib.request.urlretrieve(url, image_name)
+        print('image downloaded to ' + str(os.getcwd()))
         os.chdir(default_dir)
     return
 
