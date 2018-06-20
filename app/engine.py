@@ -63,27 +63,24 @@ def generate_url(args):
 # Using the url returned by generate capture url class, download image and save into proper location
 def download_image(file_params):
     # Set the variables
-    file_dir = 'app/' + file_params.get('directory')
+    file = os.path.join(file_params.get('directory'), file_params.get('name'))
+    print('file path is ' + file)
+    print('current working directory is ' + os.getcwd())
+    file_dir = os.path.join(file_params.get('directory'))
     url = file_params.get('capture_url')
-    image_name = file_params.get('name')
-    default_dir = "/home/hflores/adshotapp"
-    print('the current default working directory is ' + default_dir)
+    print('checking conditions for ' + file_dir)
     # If the directory to save the image exists change working directory to save location, download image, and return
     # else, make the new directory to save the image, download the image there, and return to main working directory
     if os.path.exists(file_dir):
-        os.chdir(file_dir)
-        print('Changed directory to ' + file_dir)
-        urllib.request.urlretrieve(url, image_name)
-        os.chdir(default_dir)
-        print('changed directory back to ' + os.getcwd())
+        urllib.request.urlretrieve(url, file)
+        print('File was saved at  ' + file)
+        print('Working directory stayed  ' + os.getcwd())
     else:
-        os.makedirs(file_dir)
+        os.makedirs(file_dir, exist_ok=True)
         print('Created directory at ' + file_dir)
-        os.chdir(file_dir)
-        print('changed directory to ' + os.getcwd())
-        urllib.request.urlretrieve(url, image_name)
-        os.chdir(default_dir)
-        print('changed directory back to ' + os.getcwd())
+        urllib.request.urlretrieve(url, file)
+        print('File was saved at  ' + file)
+        print('Working directory stated  ' + os.getcwd())
     return
 
 
