@@ -63,10 +63,10 @@ def generate_url(args):
 # Using the url returned by generate capture url class, download image and save into proper location
 def download_image(file_params):
     # Set the variables
-    file = os.path.join(file_params.get('directory'), file_params.get('name'))
+    file = os.path.join('app', file_params.get('directory'), file_params.get('name'))
     print('file path is ' + file)
     print('current working directory is ' + os.getcwd())
-    file_dir = os.path.join(file_params.get('directory'))
+    file_dir = os.path.join('app', file_params.get('directory'))
     url = file_params.get('capture_url')
     print('checking conditions for ' + file_dir)
     # If the directory to save the image exists change working directory to save location, download image, and return
