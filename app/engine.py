@@ -66,23 +66,15 @@ def download_image(file_params):
     # Set the variables
     date_folder = datetime.datetime.now().strftime("%m-%d-%Y")
     file = os.path.join('app', file_params.get('directory'), date_folder, file_params.get('name'))
-    print('file path is ' + file)
-    print('current working directory is ' + os.getcwd())
     file_dir = os.path.join('app', file_params.get('directory'), date_folder)
     url = file_params.get('capture_url')
-    print('checking conditions for ' + file_dir)
     # If the directory to save the image exists change working directory to save location, download image, and return
     # else, make the new directory to save the image, download the image there, and return to main working directory
     if os.path.exists(file_dir):
         urllib.request.urlretrieve(url, file)
-        print('File was saved at  ' + file)
-        print('Working directory stayed  ' + os.getcwd())
     else:
         os.makedirs(file_dir, exist_ok=True)
-        print('Created directory at ' + file_dir)
         urllib.request.urlretrieve(url, file)
-        print('File was saved at  ' + file)
-        print('Working directory stated  ' + os.getcwd())
     return
 
 

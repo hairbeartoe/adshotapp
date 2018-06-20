@@ -105,8 +105,8 @@ def run_threaded(job_fn):
 
 # setting the schedule to run the desired functions
 schedule.every(10).minutes.do(run_threaded, query)  # this is to query the database every X minutes
-schedule.every(1).minute.do(run_threaded, capture_20)  # this will get screenshots every 20 minutes
-schedule.every(3).minutes.do(run_threaded, capture_60)  # this will get screenshots every 60 minutes
+schedule.every(20).minutes.do(run_threaded, capture_20)  # this will get screenshots every 20 minutes
+schedule.every(60).minutes.do(run_threaded, capture_60)  # this will get screenshots every 60 minutes
 schedule.every(1).day.at("05:00").do(run_threaded, capture_daily)  # this will get screenshots every 24 hours
 
 # runs the scheduled jobs
