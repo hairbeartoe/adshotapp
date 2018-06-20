@@ -42,7 +42,8 @@ def set_file_params(query):
     capture_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     capture_url = 'abc'
     name = datetime.datetime.now().strftime("%I:%M %p") + '-' + query.get('type') + '.png'
-    file_path = remove_prefix(directory, 'static/images') + "/" + name
+    date_folder = datetime.datetime.now().strftime("%m-%d-%Y")
+    file_path = remove_prefix(directory, 'static/images') + "/" + date_folder + "/" + name
     file_args = {'url': url, 'delay': delay, 'width': width, 'user_agent': user_agent, 'force': force,
                  'capture_date': capture_date, 'full_page': full_page, 'type': type, 'directory': directory,
                  'name': name, 'file_path': file_path, 'capture_url': capture_url}
@@ -63,10 +64,11 @@ def generate_url(args):
 # Using the url returned by generate capture url class, download image and save into proper location
 def download_image(file_params):
     # Set the variables
-    file = os.path.join('app', file_params.get('directory'), file_params.get('name'))
+    date_folder = datetime.datetime.now().strftime("%m-%d-%Y")
+    file = os.path.join('app', file_params.get('directory'), date_folder, file_params.get('name'))
     print('file path is ' + file)
     print('current working directory is ' + os.getcwd())
-    file_dir = os.path.join('app', file_params.get('directory'))
+    file_dir = os.path.join('app', file_params.get('directory'), date_folder)
     url = file_params.get('capture_url')
     print('checking conditions for ' + file_dir)
     # If the directory to save the image exists change working directory to save location, download image, and return
