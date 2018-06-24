@@ -51,7 +51,7 @@ class User(UserMixin, db.Model):
         return '<User %r>' % (self.nickname)
 
 
-    # set the collections db
+# set the collections db
 class Collection(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(140))
@@ -80,12 +80,14 @@ class Team(db.Model):
                                  #secondaryjoin=(subscriptions.c.site_id == id),
                                  backref=db.backref('subscribers', lazy='dynamic'),
                                  lazy='dynamic')
+    plan = db.Column(db.String(64), index=True)
+    pages_available = db.Column(db.Integer)
 
     def __repr__(self):
         return '<Team %r>' % (self.name)
 
 
-#set the sites db model
+# set the sites db model
 class Site(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     domain = db.Column(db.String(64), index=True)
@@ -106,7 +108,7 @@ class Site(db.Model):
         return '<Site %r>' % (self.domain)
 
 
-#set the page db model
+# set the page db model
 class Page(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     site = db.Column(db.Integer, db.ForeignKey('site.id'))

@@ -63,10 +63,12 @@ STATE_ABBREV = [
   ('WY', 'Wyoming'),
 ]
 
+
 class LoginForm(FlaskForm):
     email = StringField('Email Address', validators=[InputRequired(), Length(min=4, max=80)])
     password = PasswordField('Password', validators=[InputRequired(), Length(min=8, max=80)])
     remember = BooleanField('Remember me')
+
 
 class RegisterForm(FlaskForm):
     email = StringField('Email')
@@ -74,10 +76,11 @@ class RegisterForm(FlaskForm):
     last_name = StringField('Last Name')
     team_name = StringField('Team')
     password = PasswordField('Password')
+    subscription_plan = SelectField(choices=[('Free', 'Free plan - $0 /mo'), ('Basic', 'Basic plan - $299 /mo'), ('Pro', 'Pro plan - $499 /mo')])
 
 
 class ChangePasswordForm(FlaskForm):
-    password = PasswordField('New Password', validators=[InputRequired(),EqualTo('confirm', message='Passwords must match')])
+    password = PasswordField('New Password', validators=[InputRequired(), EqualTo('confirm', message='Passwords must match')])
     confirm = PasswordField('Repeat Password', validators=[InputRequired()])
 
 
@@ -96,6 +99,7 @@ class SendCollectionForm(FlaskForm):
     message = TextAreaField('Message', validators=[InputRequired(), Length(max=255)])
     collection = HiddenField()
 
+
 class AddSiteForm(FlaskForm):
     domain_name = StringField(validators=[InputRequired()])
     stripeEmail = HiddenField()
@@ -105,14 +109,14 @@ class AddSiteForm(FlaskForm):
 class AddPageForm(FlaskForm):
     name = StringField(validators=[InputRequired()])
     url = StringField(validators=[URL()])
-    rate = SelectField(choices=[('1440', 'Once daily'), ('60', 'Once every hour'), ('30', 'Once every 30 minutes'),
-                                ('15', 'Once every 15 minutes')])
+    rate = SelectField(choices=[('1440', 'Once daily'), ('60', 'Once every hour'), ('20', 'Once every 20 minutes')])
     mobile = BooleanField(default=False)
     site = HiddenField()
 
 
 class FindTeamForm(FlaskForm):
     email = StringField(validators=[InputRequired()])
+
 
 class CreateCollectionForm(FlaskForm):
     name = StringField(validators=[InputRequired()])
@@ -125,6 +129,7 @@ class EditUserProfile(FlaskForm):
     last_name = StringField('Last Name', validators=[Length(min=2, max=25)])
     profile = SelectField(choices=[('Standard User', 'Standard User'), ('Team Administrator', 'Team Administrator')])
     status = SelectField(choices=[('Active', 'Active'), ('Deactivated', 'Deactivated')])
+
 
 class AddImagetoCollection(FlaskForm):
     image_id = StringField('Image', validators=[InputRequired()])

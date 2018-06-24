@@ -116,13 +116,19 @@ def signup():
                             last_login=datetime.today(),
                             confirmed_email=False,
                             collection_count=0)
-            new_team = Team(name=register_form.team_name.data)
+            subscription = register_form.subscription_plan.data
+            plans = {'Free': 1, 'Basic': 10, 'Pro': 15}
+            new_team = Team(name=register_form.team_name.data, plan=subscription, pages_available=plans[subscription])
             db.session.add(new_user)
-            db.session.commit()
-            login_user(new_user)
-            new_team.admin_user.append(new_user)
-            db.session.add(new_team)
-            db.session.commit()
+            try:
+                db.session.commit()
+                login_user(new_user)
+                new_team.admin_user.append(new_user)
+                db.session.add(new_team)
+                db.session.commit()
+            except Exception as e:
+                flash("Yikes, looks like you've already signed up. Try logging in instead.", category='danger')
+                return redirect(url_for('signup'))
             added = True
             email = register_form.email.data.lower()
             token = s.dumps(email, salt='email-confirm')
@@ -133,7 +139,7 @@ def signup():
             mail.send(msg)
             return redirect(url_for('dashboard'))
         except Exception as e:
-            flash("Something went wrong! We've been notified. Error: " + str(e), category='danger')
+            flash("Uh oh! Something went wrong. We've been notified and we're on it!.", category='danger')
             email = "heribertoflores@me.com"
             msg = Message('URGENT: ERROR', sender='e.eddieflores@gmail.com', recipients=[email])
             msg.body = 'Error!!! Error is: ' + str(e)
@@ -317,6 +323,7 @@ def get_pages():
 def get_dates():
     domain = request.args.get('page')
     domain = Page.query.filter_by(url=domain).first()
+    page = domain
     domain = domain.name
     #print(domain)
     dates = set()
@@ -327,9 +334,35 @@ def get_dates():
         imagedate = datetime.strptime(imagedate, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
         dates.add(imagedate)
     date_count = len(dates)
-    return render_template('dates.html', nickname=current_user.nickname, site=domain, dates=dates,title='Screenshots',
-                           date_count=date_count,
+    return render_template('dates.html', nickname=current_user.nickname, site=domain, dates=dates, title='Screenshots',
+                           date_count=date_count, page=page,
                            image_count=image_count)
+
+
+@app.route('/deactivate_page')
+def deactivate_page():
+    domain = request.args.get('page')
+    page = Page.query.filter_by(url=domain).first()
+    team = Team.query.filter(Team.id == current_user.team).first()
+    page.status = 'Inactive'
+    team.pages_available += 1
+    db.session.commit()
+    return redirect(url_for('get_dates', page=page.url))
+
+
+@app.route('/activate_page')
+def activate_page():
+    domain = request.args.get('page')
+    page = Page.query.filter_by(url=domain).first()
+    team = Team.query.filter(Team.id == current_user.team).first()
+    if team.pages_available < 1:
+        flash('Page limit reached. Please upgrade to add more pages', category='danger')
+        return redirect(url_for('get_dates', page=page.url))
+    else:
+        page.status = 'Active'
+        team.pages_available -= 1
+        db.session.commit()
+    return redirect(url_for('get_dates', page=page.url))
 
 
 @app.route('/images', methods=['GET', 'POST'])
@@ -580,7 +613,7 @@ def team():
     team_name = user_team.name
     users = User.query.filter(User.team == user_team.id).all()
     sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
-    return render_template('team.html', team=team_name, users=users, sites=sites,current_user=current_user, title='Team',form=form)
+    return render_template('team.html', teamname=user_team.name, team=user_team, users=users, sites=sites,current_user=current_user, title='Team',form=form)
 
 
 @app.route('/sendcollection/<int:collection_id>', methods=['GET', 'POST'])

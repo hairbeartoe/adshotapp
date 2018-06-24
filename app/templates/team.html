@@ -94,16 +94,22 @@
                             <div class="content" style="margin-top: 40px;">
                                 <div class="author">
                                   <img class="avatar border-white" src="{{ url_for('static', filename='assets/img/faces/Profile_avatar_placeholder.png') }}" alt="..."/>
-                                  <h4 class="title">{{ team }}</h4>
+                                  <h4 class="title">{{ teamname }}</h4>
                                 </div>
                             </div>
                             <hr>
                             <div class="text-center">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-3">
+                                        <h5>{{ team.plan }}<br /><small>Subscription</small></h5>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h5>{{ team.pages_available }}<br /><small>Available Pages</small></h5>
+                                    </div>
+                                    <div class="col-md-3">
                                         <h5>{{ users|count }}<br /><small>Users</small></h5>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-3">
                                         <h5>{{ sites|count }}<br /><small>Sites</small></h5>
                                     </div>
                                 </div>

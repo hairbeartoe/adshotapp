@@ -60,6 +60,19 @@
 			                        </ul>
 								</div>
 		                        <div class="tab-content">
+									{% with messages = get_flashed_messages() %}
+									  {% if messages %}
+										{% for message in messages %}
+
+										  <div class="alert alert-danger alert-dismissible" role="alert">
+											{{ message }}
+										  <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true"> &times;</span> </button>
+										  </div>
+
+										{% endfor %}
+									  {% endif %}
+									{% endwith %}
+
 		                            <div class="tab-pane" id="user">
 		                            	<div class="row">
 		                                	<div class="col-sm-12 ">
@@ -81,6 +94,10 @@
 												<div class="form-group">
 													{{ wtf.form_field(form.password, type="password", class="form-control", placeholder= "What do you want to be your super secret password?" ) }}
 		                                    	</div>
+												<div class="form-group" label="Please select a plan">
+
+													{{ wtf.form_field(form.subscription_plan, type="dropdown", class="form-control", label= "Which plan would you like?" ) }}
+												</div>
 		                                    	<div class="checkbox checkbox-info col-sm-8 col-sm-offset-3 center">
 													<input id="checkbox4" type="checkbox" required="required">
 													<label for="checkbox4">
@@ -95,7 +112,7 @@
 		                        <div class="wizard-footer">
 	                            	<div class="pull-right">
 	                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd' name='next' value='Next' />
-	                                    <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Sign up' />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Start for free' />
 									</div>
 
 	                                <div class="pull-left">

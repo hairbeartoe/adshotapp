@@ -142,7 +142,7 @@
                                     <th data-field="id" data-sortable="true"  class="text-center">ID</th>
                                     <th data-field="Page" data-sortable="true" class="text-center">Page</th>
                                     <th data-field="Last_Capture" data-sortable="true" class="text-center">Last Capture</th>
-                                    <th data-field="actions"  class="text-center">Actions</th>
+                                    <th data-field="actions"  class="text-center">Status</th>
                                 </thead>
                                 <tbody>
                                     {% for page in pages %}
@@ -155,7 +155,11 @@
                                             {{ page.last_screenshot.strftime('%b %d %I:%M %p') }}
                                             {% else %}
                                             Never
-                                            {% endif %} </td>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {{ page.status }}
+                                        </td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>

@@ -19,44 +19,45 @@ class db_Query:
         self.pl1440 = []
         db_pages = Page.query.all()
         for page in db_pages:
-            if page.capture_rate is 20:  # set the information for the 20 minute list
-                # set the mobile information
-                if page.mobile_capture:
-                    page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Mobile',
-                                 'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
-                                 'width': '508'}
+            if page.status is 'Active':  # only capture active pages
+                if page.capture_rate is 20:  # set the information for the 20 minute list
+                    # set the mobile information
+                    if page.mobile_capture:
+                        page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Mobile',
+                                     'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+                                     'width': '508'}
+                        self.pl20.append(page_data)
+
+                    # Set the desktop information
+                    page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
+                                 'user_agent': 'desktop', 'width': '1280'}
                     self.pl20.append(page_data)
 
-                # Set the desktop information
-                page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
-                             'user_agent': 'desktop', 'width': '1280'}
-                self.pl20.append(page_data)
+                elif page.capture_rate is 60:
+                    # set the mobile information
+                    if page.mobile_capture:
+                        page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Mobile',
+                                     'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+                                     'width': '508'}
+                        self.pl60.append(page_data)
 
-            elif page.capture_rate is 60:
-                # set the mobile information
-                if page.mobile_capture:
-                    page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Mobile',
-                                 'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
-                                 'width': '508'}
+                    # Set the desktop information
+                    page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
+                                 'user_agent': 'desktop', 'width': '1280'}
                     self.pl60.append(page_data)
 
-                # Set the desktop information
-                page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
-                             'user_agent': 'desktop', 'width': '1280'}
-                self.pl60.append(page_data)
+                else:
+                    # set the mobile information
+                    if page.mobile_capture:
+                        page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Mobile',
+                                     'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+                                     'width': '508'}
+                        self.pl1440.append(page_data)
 
-            else:
-                # set the mobile information
-                if page.mobile_capture:
-                    page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Mobile',
-                                 'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
-                                 'width': '508'}
+                    # Set the desktop information
+                    page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
+                                 'user_agent': 'desktop', 'width': '1280'}
                     self.pl1440.append(page_data)
-
-                # Set the desktop information
-                page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
-                             'user_agent': 'desktop', 'width': '1280'}
-                self.pl1440.append(page_data)
 
 
 # This is the function that will create the lists
