@@ -1,5 +1,8 @@
 from app import db
-from flask_login import UserMixin
+from flask_login import UserMixin, current_user
+from flask_admin.contrib.sqla import ModelView
+from flask import redirect, url_for, flash
+from flask_admin import AdminIndexView
 
 
 subscriptions = db.Table('subscriptions',
@@ -142,6 +145,39 @@ class Image(db.Model):
         return '<Image %r>' % (self.name)
 
 
+''' 
+ This is the area that handles the Admin Login Functions
+ The AdminIndexView stops users from accessing the Admin Home
+ The MyAdminModel is what stops users from accessing the Models
+  within the index
+'''
 
 
+class MyAdminModel(ModelView):
+    def is_accessible(self):
+        if current_user.is_authenticated:
+            if current_user.profile == 'System Administrator':
+                return True
+            else:
+                return False
+        else:
+            return False
 
+    def inaccessible_callback(self, name, **kwargs):
+        flash('Please login as an Administrator', category='info')
+        return redirect(url_for('login'))
+
+
+class MyAdminIndexView(AdminIndexView):
+    def is_accessible(self):
+        if current_user.is_authenticated:
+            if current_user.profile == 'System Administrator':
+                return True
+            else:
+                return False
+        else:
+            return False
+
+    def inaccessible_callback(self, name, **kwargs):
+        flash('Please login as an Administrator', category='info')
+        return redirect(url_for('login'))

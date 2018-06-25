@@ -1,7 +1,7 @@
 import flask
 from flask import render_template, redirect, url_for, send_from_directory, request, send_file, flash
 from app import app, db
-from app.models import User, Site, Image, Team, Collection, Page
+from app.models import User, Site, Image, Team, Collection, Page, MyAdminModel, MyAdminIndexView
 from app.forms import LoginForm, PasswordResetRequestForm, ChangePasswordForm, RegisterForm,AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm,SendCollectionForm, AddPageForm
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -12,6 +12,10 @@ from datetime import datetime
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 import stripe
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
+import os.path as op
+from flask_admin.contrib.fileadmin import FileAdmin
 from wtforms import form, validators
 
 
@@ -40,6 +44,17 @@ login_manager.login_view = 'login'
 stripe_pub_key = 'pk_test_upjxUBP80Gy8XJZMur6eSU28'
 stripe_secret_key = 'sk_test_PUE7j4ekbagC0dzP3HO0LD1T'
 stripe.api_key = stripe_secret_key
+
+
+path = op.join(op.dirname(__file__), 'static')
+admin = Admin(app, index_view=MyAdminIndexView())
+admin.add_view(ModelView(Team, db.session))
+admin.add_view(ModelView(User, db.session))
+admin.add_view(ModelView(Site, db.session))
+admin.add_view(ModelView(Page, db.session))
+admin.add_view(ModelView(Image, db.session))
+admin.add_view(ModelView(Collection, db.session))
+admin.add_view(FileAdmin(path, '/static', name='Static Files'))
 
 
 @login_manager.user_loader

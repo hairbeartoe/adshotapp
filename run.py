@@ -1,16 +1,4 @@
 #!flask/bin/python
-from app import app, db
-from app.models import User, Site, Image, Team, Collection, Page
-from flask_admin import Admin
-from flask_admin.contrib.sqla import ModelView
-
-
-adminpage = Admin(app)
-adminpage.add_view(ModelView(Team, db.session))
-adminpage.add_view(ModelView(User, db.session))
-adminpage.add_view(ModelView(Site, db.session))
-adminpage.add_view(ModelView(Image, db.session))
-adminpage.add_view(ModelView(Collection, db.session))
-adminpage.add_view(ModelView(Page, db.session))
+from app import app
 
 app.run(host='0.0.0.0', debug=True)
