@@ -448,37 +448,38 @@ def add_site():
 
 @app.route('/addpage', methods=['GET', 'POST'])
 def add_page():
-    site = request.args.get('domain')
-    #print(site)
-    form = AddPageForm()
-    add_to_site = Site.query.filter_by(domain=site).first()
-    if form.validate_on_submit():
-        page_directory = add_to_site.directory + "/" + form.name.data
-        # check if the site exists in the DB
-        #site = Site.query.filter_by(domain=form.domain_name.data).first()
-        # if the site does not exist in the db
-        new_page = Page(name=form.name.data,
-                        url=form.url.data,
-                        capture_rate=form.rate.data,
-                        mobile_capture=form.mobile.data,
-                        date_added=datetime.now(),
-                        status='Active',
-                        site=add_to_site.id,
-                        directory=page_directory)
-        #print(new_page)
-        # Add the site to the DB
-        db.session.add(new_page)
-        db.session.commit()
-        #Add the new site to the current users team
-        #user_team = Team.query.filter(Team.id==current_user.team).first()
-        #user_team.subscriptions.append(new_site)
-        # sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
-        #sites.append(new_site)
-        #db.session.commit()
-        #TODO SEND REQUEST VIA EMAIL TO ADMIN
-        flash('Your request has been sent', category='success')
+    team = Team.query.filter(Team.id == current_user.team).first()
+    if team.pages_available > 0:
+        site = request.args.get('domain')
+        form = AddPageForm()
+        add_to_site = Site.query.filter_by(domain=site).first()
+        if form.validate_on_submit():
+            page_directory = add_to_site.directory + "/" + form.name.data
+            # check if the site exists in the DB
+            #site = Site.query.filter_by(domain=form.domain_name.data).first()
+            # if the site does not exist in the db
+            new_page = Page(name=form.name.data,
+                            url=form.url.data,
+                            capture_rate=form.rate.data,
+                            mobile_capture=form.mobile.data,
+                            date_added=datetime.now(),
+                            status='Active',
+                            site=add_to_site.id,
+                            directory=page_directory)
+            db.session.add(new_page)
+            db.session.commit()
+            #Add the new site to the current users team
+            #user_team = Team.query.filter(Team.id==current_user.team).first()
+            #user_team.subscriptions.append(new_site)
+            # sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
+            #sites.append(new_site)
+            #db.session.commit()
+            flash('New page added', category='success')
+            return redirect(url_for('get_dates', page=new_page.url))
+        return render_template('addpage.html', form=form, title='Add Page', domain=site)
+    else:
+        flash('Not enough pages available at this plan. Please upgrade to continue', category='danger')
         return redirect(url_for('get_sites'))
-    return render_template('addpage.html', form=form, title='Add Page', domain=site)
 
 
 @app.route('/pay', methods=['GET', 'POST'])
