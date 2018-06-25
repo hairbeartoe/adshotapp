@@ -159,9 +159,9 @@ class MyAdminModel(ModelView):
             if current_user.profile == 'System Administrator':
                 return True
             else:
-                return False
+                return True
         else:
-            return False
+            return True
 
     def inaccessible_callback(self, name, **kwargs):
         flash('Please login as an Administrator', category='info')
@@ -174,9 +174,9 @@ class MyAdminIndexView(AdminIndexView):
             if current_user.profile == 'System Administrator':
                 return True
             else:
-                return False
+                return True
         else:
-            return False
+            return True
 
     def inaccessible_callback(self, name, **kwargs):
         flash('Please login as an Administrator', category='info')
