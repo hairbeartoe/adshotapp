@@ -140,8 +140,7 @@
                                 <td>{{image.id }}</td>
                                 <td>
                                     <a href="{{ resized_img_src(image.path, width=800, sharpen='.5,150,6') }}" data-toggle="lightbox"  data-width="600" data-gallery="remoteload" >
-                                        <img data-piio="{{ resized_img_src(image.path , width=200, height=150, mode='crop') }}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+f9vPQAJZAN2rlRQVAAAAABJRU5ErkJggg==" />
-                                       <!-- <img  src="{{ resized_img_src(image.path , width=200, height=150, mode='crop') }}" > -->
+                                        <img  src="{{ resized_img_src(image.path , width=200, height=150, mode='crop') }}" >
                                     </a>
                                 </td>
                                 {% if image.date %}
@@ -172,6 +171,4 @@
 
     </div>
 </div>
-
-
 {% endblock %}
