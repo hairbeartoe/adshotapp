@@ -30,7 +30,6 @@ class User(UserMixin, db.Model):
     nickname = db.Column(db.String(64), index=True)
     first_name = db.Column(db.String(64), index=True)
     last_name = db.Column(db.String(64), index=True)
-    street_address = db.Column(db.String(64), index=True)
     city = db.Column(db.String(64), index=True)
     state = db.Column(db.String(64), index=True)
     postal_code = db.Column(db.String(9), index=True)
