@@ -109,7 +109,7 @@ class Page(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     site = db.Column(db.Integer, db.ForeignKey('site.id'))
     name = db.Column(db.String(64), index=True)
-    # url = db.Column(db.String(64), index=True)
+    url = db.Column(db.String(64), index=True)
     images = db.relationship('Image', backref='pages', lazy='dynamic')
     capture_rate = db.Column(db.Integer)
     status = db.Column(db.String(64), index=True)
