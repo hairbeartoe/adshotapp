@@ -90,13 +90,10 @@ class Team(db.Model):
 class Site(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     domain = db.Column(db.String(64), index=True)
-    url = db.Column(db.String(64), index=True)
     images = db.relationship('Image', backref='images', lazy='dynamic')
     pages = db.relationship('Page', backref='sites', lazy='dynamic')
-    capture_rate = db.Column(db.Integer)
     status = db.Column(db.String(64), index=True)
     mobile_capture = db.Column(db.Boolean)
-    article_page_capture = db.Column(db.Boolean)
     date_added = db.Column(db.DateTime, index=True)
     last_screenshot = db.Column(db.DateTime, index=True)
     cover_image_path = db.Column(db.String(140))
