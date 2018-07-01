@@ -21,11 +21,12 @@ def set_url_params(query):
     url = query.get('url')
     width = query.get('width')
     user_agent = query.get('user_agent')
-    delay = 15
+    delay = 5000
     force = True
     full_page = True
+    scroll = True
     url_args = {'url': url, 'delay': delay, 'width': width, 'user_agent': user_agent, 'force': force,
-                'full_page': full_page}
+                'full_page': full_page, 'scroll': scroll}
     return url_args
 
 
@@ -57,7 +58,8 @@ def generate_url(args):
     query_string = urllib.parse.urlencode(args, True)
     # hmacToken = hmac.new(apiSecret, queryString, sha1)
     # token = hmacToken.digest().encode('hex')
-    capture_url = "https://api.urlbox.io/v1/%s/png?%s" % (api_key, query_string)
+    capture_url = "http://138.197.201.156:5000/png?%s" % (query_string)
+    # capture_url = "https://api.urlbox.io/v1/%s/png?%s" % (api_key, query_string)
     return capture_url
 
 
