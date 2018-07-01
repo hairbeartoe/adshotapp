@@ -19,7 +19,7 @@ class db_Query:
         self.pl1440 = []
         db_pages = Page.query.all()
         for page in db_pages:
-            if page.status is 'Active':  # only capture active pages
+            if page.status == 'Active':  # only capture active pages
                 if page.capture_rate is 20:  # set the information for the 20 minute list
                     # set the mobile information
                     if page.mobile_capture:
@@ -33,7 +33,7 @@ class db_Query:
                                  'user_agent': 'desktop', 'width': '1280'}
                     self.pl20.append(page_data)
 
-                elif page.capture_rate is 60:
+                elif page.capture_rate == 60:
                     # set the mobile information
                     if page.mobile_capture:
                         page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Mobile',
