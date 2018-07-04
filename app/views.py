@@ -46,6 +46,7 @@ stripe_secret_key = 'sk_test_PUE7j4ekbagC0dzP3HO0LD1T'
 stripe.api_key = stripe_secret_key
 
 
+# set up the admin page
 path = op.join(op.dirname(__file__), 'static')
 admin = Admin(app, index_view=MyAdminIndexView())
 admin.add_view(ModelView(Team, db.session))
@@ -57,11 +58,13 @@ admin.add_view(ModelView(Collection, db.session))
 admin.add_view(FileAdmin(path, '/static', name='Static Files'))
 
 
+# load the user
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
 
+# the index page
 @app.route('/')
 @app.route('/index',  methods=['GET', 'POST'])
 def index():
@@ -319,8 +322,8 @@ def get_sites():
 @app.route('/pages')
 def get_pages():
     domain = request.args.get('domain')
-    #print(domain)
-    pages = Page.query.join(Site.pages).filter(Site.domain == domain).all()
+    id = request.args.get('id')
+    pages = Page.query.join(Site.pages).filter(Site.id == id).all()
     #images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
     #image_count = len(images)
     #for image in images:
@@ -336,11 +339,9 @@ def get_pages():
 
 @app.route('/dates')
 def get_dates():
-    domain = request.args.get('page')
-    domain = Page.query.filter_by(url=domain).first()
-    page = domain
-    domain = domain.name
-    #print(domain)
+    id = request.args.get('id')
+    page = Page.query.filter_by(id=id).first()
+    domain = page.name
     dates = set()
     images = Image.query.join(Page.images).filter(Page.name == domain).order_by(desc(Image.date)).all()
     image_count = len(images)

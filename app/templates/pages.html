@@ -149,7 +149,7 @@
                                     <tr>
                                         <td>1</td>
                                         <td>
-                                            <a href="{{url_for('get_dates', page=page.url)}}">{{ page.name }}</a>
+                                            <a href="{{url_for('get_dates', page=page.url, id=page.id)}}">{{ page.name }}</a>
                                         </td>
                                         <td>{% if page.last_screenshot %}
                                             {{ page.last_screenshot.strftime('%b %d %I:%M %p') }}
