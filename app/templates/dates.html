@@ -144,9 +144,9 @@
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <a href="{{url_for('get_images', site=site, date=date)}}">{{ date }}</a>
+                                        <a href="{{url_for('get_images', site=site, date=date, id=id)}}">{{ date }}</a>
                                     </td>
-                                    <td><a href="{{url_for('get_images', site=site, date=date)}}">view images</a></td>
+                                    <td><a href="{{url_for('get_images', site=site, date=date, id=id)}}">view images</a></td>
                                 </tr>
                                 {% endfor %}
                             </tbody>

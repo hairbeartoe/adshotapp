@@ -350,7 +350,7 @@ def get_dates():
         imagedate = datetime.strptime(imagedate, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
         dates.add(imagedate)
     date_count = len(dates)
-    return render_template('dates.html', nickname=current_user.nickname, site=domain, dates=dates, title='Screenshots',
+    return render_template('dates.html', nickname=current_user.nickname, site=domain, id=page.id, dates=dates, title='Screenshots',
                            date_count=date_count, page=page,
                            image_count=image_count)
 
@@ -383,15 +383,14 @@ def activate_page():
 
 @app.route('/images', methods=['GET', 'POST'])
 def get_images():
+    page_id = request.args.get('id')
     domain = request.args.get('site')
     date = request.args.get('date')
-    images = Image.query.join(Page.images).filter(Page.name == domain, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
+    images = Image.query.join(Page.images).filter(Page.id == page_id, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
     image_count = len(images)
     dates = set()
     image_names =[]
     picked_date = date
-    #print(images)
-    #picked_date = datetime.strptime(date, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
     for image in images:
         f_path = image.path + image.name
         image_names.append(image.name)
@@ -443,7 +442,7 @@ def add_site():
         db.session.commit()
         #TODO SEND REQUEST VIA EMAIL TO ADMIN
         flash('Your site has been added. Please add some pages to track.', category='success')
-        return redirect(url_for('get_sites'))
+        return redirect(url_for('get_pages'))
     return render_template('addsite.html', form=form, title='Add site', pub_key=stripe_pub_key)
 
 
