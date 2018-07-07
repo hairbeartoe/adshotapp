@@ -68,6 +68,8 @@ def load_user(user_id):
 @app.route('/')
 @app.route('/index',  methods=['GET', 'POST'])
 def index():
+    if current_user.is_authenticated:
+        return redirect(url_for('dashboard'))
     login_form = LoginForm()
     return render_template("index.html",
                            title='Home',
@@ -358,27 +360,27 @@ def get_dates():
 @app.route('/deactivate_page')
 def deactivate_page():
     domain = request.args.get('page')
-    page = Page.query.filter_by(url=domain).first()
+    page = Page.query.filter_by(id=domain).first()
     team = Team.query.filter(Team.id == current_user.team).first()
     page.status = 'Inactive'
     team.pages_available += 1
     db.session.commit()
-    return redirect(url_for('get_dates', page=page.url))
+    return redirect(url_for('get_dates', id=page.id))
 
 
 @app.route('/activate_page')
 def activate_page():
     domain = request.args.get('page')
-    page = Page.query.filter_by(url=domain).first()
+    page = Page.query.filter_by(id=domain).first()
     team = Team.query.filter(Team.id == current_user.team).first()
     if team.pages_available < 1:
         flash('Page limit reached. Please upgrade to add more pages', category='danger')
-        return redirect(url_for('get_dates', page=page.url))
+        return redirect(url_for('get_dates', id=page.id))
     else:
         page.status = 'Active'
         team.pages_available -= 1
         db.session.commit()
-    return redirect(url_for('get_dates', page=page.url))
+    return redirect(url_for('get_dates', id=page.id))
 
 
 @app.route('/images', methods=['GET', 'POST'])
@@ -386,7 +388,7 @@ def get_images():
     page_id = request.args.get('id')
     domain = request.args.get('site')
     date = request.args.get('date')
-    images = Image.query.join(Page.images).filter(Page.id == page_id, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
+    images = Image.query.join(Page.images).filter(Page.id == page_id, Image.isDeleted == False, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
     image_count = len(images)
     dates = set()
     image_names =[]
@@ -604,6 +606,7 @@ def add_to_collection():
     image_to_add = Image.query.filter_by(id=selected_image).first()
     chosen_collection = Collection.query.filter_by(id=selected_collection).first()
     chosen_collection.images.append(image_to_add)
+    image_to_add.isSaved = True
     db.session.add(chosen_collection)
     db.session.commit()
     return redirect(url_for('get_user_collections'))
@@ -616,6 +619,7 @@ def remove_image():
     image_to_remove = Image.query.filter_by(id=selected_image).first()
     chosen_collection = Collection.query.filter_by(id=selected_collection).first()
     chosen_collection.images.remove(image_to_remove)
+    image_to_remove.isSaved = False
     db.session.commit()
     #print(chosen_collection.id)
     #print(image_to_remove.id)
@@ -751,5 +755,10 @@ def findteamform():
 
 @app.errorhandler(404)
 def page_not_found(e):
+    if current_user.is_authenticated:
+        user = current_user
+        return render_template('/404.html', user=user), 404
+    else:
+        return render_template('/external404.html'), 404
     user = {'nickname': 'Eddie'}
-    return render_template('/404.html',user=user), 404
+    return render_template('/404.html', user=user), 404

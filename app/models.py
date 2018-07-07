@@ -133,9 +133,11 @@ class Image(db.Model):
     device = db.Column(db.String(20))
     website = db.Column(db.Integer, db.ForeignKey('site.id'))
     page = db.Column(db.Integer, db.ForeignKey('page.id'))
+    isDeleted = db.Column(db.Boolean)
+    isSaved = db.Column(db.Boolean)
 
     def __repr__(self):
-        return '<Image %r>' % (self.name)
+        return '<Image %r>' % self.name
 
 
 ''' 

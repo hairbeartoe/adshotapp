@@ -19,6 +19,13 @@
                             $(this).ekkoLightbox();
                         });
          </script>
+        <script>
+            $(function() {
+                $('.confirm').click(function() {
+                    return window.confirm("Are you sure you want to delete this collection? Deleted collections can't be recovered");
+                });
+            });
+        </script>
     {% endblock %}
 
 {% block content %}
@@ -30,6 +37,7 @@
                     <div class="content text-center">
                         <div class="author">
                           <h2 class="card-title">{{ name }}</h2>
+                            <a class="confirm" href="{{url_for('delete_collection', collection=collection)}}" style="color:red;"> Delete Collection</a>
                         </div>
                     </div>
                     <hr>

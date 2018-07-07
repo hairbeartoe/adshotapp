@@ -89,8 +89,13 @@ def add_db_record(query, file_params):
                       date=date,
                       pages=page,
                       images=site,
+                      isDeleted=False,
                       device=file_params.get('type'),
                       path=file_params.get('file_path'))
+    if page.cover_image_path is None:
+        page.cover_image_path = new_image.path
+    if site.cover_image_path is None:
+        site.cover_image_path = new_image.path
     page.last_screenshot = date
     site.last_screenshot = date
     db.session.add(new_image)
