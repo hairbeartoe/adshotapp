@@ -12,19 +12,18 @@ subscriptions = db.Table('subscriptions',
 
 
 collections = db.Table('collections',
-                         db.Column('id', db.Integer, primary_key=True),
-                         db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
-                         db.Column('collection_id', db.Integer, db.ForeignKey('collection.id')))
+                       db.Column('id', db.Integer, primary_key=True),
+                       db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
+                       db.Column('collection_id', db.Integer, db.ForeignKey('collection.id')))
 
 
 image_collections = db.Table('images',
-                         db.Column('id', db.Integer, primary_key=True),
-                         db.Column('image_id', db.Integer, db.ForeignKey('image.id')),
-                         db.Column('collection_id', db.Integer, db.ForeignKey('collection.id')))
+                             db.Column('id', db.Integer, primary_key=True),
+                             db.Column('image_id', db.Integer, db.ForeignKey('image.id')),
+                             db.Column('collection_id', db.Integer, db.ForeignKey('collection.id')))
 
 
-
-#set the user db model and link to sites (many to many relationship)
+# set the user db model and link to sites (many to many relationship)
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nickname = db.Column(db.String(64), index=True)
@@ -40,14 +39,14 @@ class User(UserMixin, db.Model):
     confirmed_email = db.Column(db.Boolean, index=True)
     team = db.Column(db.Integer, db.ForeignKey('team.id'))
     collections = db.relationship('Collection',
-                            secondary=collections,
-                            primaryjoin=(collections.c.collection_id == id),
-                            #secondaryjoin=(subscriptions.c.site_id == id),
-                            backref=db.backref('users', lazy='dynamic'),
-                            lazy='dynamic')
+                                  secondary=collections,
+                                  primaryjoin=(collections.c.collection_id == id),
+                                  # secondaryjoin=(subscriptions.c.site_id == id),
+                                  backref=db.backref('users', lazy='dynamic'),
+                                  lazy='dynamic')
 
     def __repr__(self):
-        return '<User %r>' % (self.nickname)
+        return '<User %r>' % self.nickname
 
 
 # set the collections db
@@ -58,15 +57,15 @@ class Collection(db.Model):
     sent_count = db.Column(db.Integer)
     _users = db.relationship('User', secondary=collections, backref=db.backref('collections_backref', lazy='dynamic'))
     images = db.relationship('Image',
-                            secondary = image_collections,
-                            primaryjoin=(image_collections.c.collection_id == id),
-                            #secondaryjoin=(subscriptions.c.site_id == id),
-                            backref=db.backref('Collections', lazy='dynamic'),
-                            lazy='dynamic',
-                            passive_deletes=True)
+                             secondary=image_collections,
+                             primaryjoin=(image_collections.c.collection_id == id),
+                             # secondaryjoin=(subscriptions.c.site_id == id),
+                             backref=db.backref('Collections', lazy='dynamic'),
+                             lazy='dynamic',
+                             passive_deletes=True)
 
     def __repr__(self):
-        return '<Collection %r>' % (self.name)
+        return '<Collection %r>' % self.name
 
 
 class Team(db.Model):
@@ -74,16 +73,18 @@ class Team(db.Model):
     name = db.Column(db.String(64), index=True)
     admin_user = db.relationship('User', backref='admin', lazy='dynamic')
     subscriptions = db.relationship('Site',
-                                 secondary=subscriptions,
-                                 primaryjoin=(subscriptions.c.subscriber_id == id),
-                                 #secondaryjoin=(subscriptions.c.site_id == id),
-                                 backref=db.backref('subscribers', lazy='dynamic'),
-                                 lazy='dynamic')
+                                    secondary=subscriptions,
+                                    primaryjoin=(subscriptions.c.subscriber_id == id),
+                                    # secondaryjoin=(subscriptions.c.site_id == id),
+                                    backref=db.backref('subscribers', lazy='dynamic'),
+                                    lazy='dynamic')
     plan = db.Column(db.String(64), index=True)
     pages_available = db.Column(db.Integer)
+    trial = db.Column(db.Boolean)
+    created_date = db.Column(db.Date, index=True)
 
     def __repr__(self):
-        return '<Team %r>' % (self.name)
+        return '<Team %r>' % self.name
 
 
 # set the sites db model
@@ -99,9 +100,8 @@ class Site(db.Model):
     cover_image_path = db.Column(db.String(140))
     directory = db.Column(db.String(140))
 
-
     def __repr__(self):
-        return '<Site %r>' % (self.domain)
+        return '<Site %r>' % self.domain
 
 
 # set the page db model
@@ -120,7 +120,7 @@ class Page(db.Model):
     directory = db.Column(db.String(140))
 
     def __repr__(self):
-        return '<Page %r>' % (self.name)
+        return '<Page %r>' % self.name
 
 
 # set the image db
@@ -141,10 +141,10 @@ class Image(db.Model):
 
 
 ''' 
- This is the area that handles the Admin Login Functions
- The AdminIndexView stops users from accessing the Admin Home
- The MyAdminModel is what stops users from accessing the Models
-  within the index
+ This is the area that handles the Admin Login Functions.
+ The AdminIndexView stops users from accessing the Admin
+ Home. The MyAdminModel is what stops users from accessing
+  the Models within the index.
 '''
 
 

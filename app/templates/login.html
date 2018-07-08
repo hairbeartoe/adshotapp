@@ -39,7 +39,10 @@ Login
     {{ wtf.form_field(form.password) }}
     {{ wtf.form_field(form.remember) }}
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <br>
+    <a href="{{url_for('reset_pw') }}" class="text-center">Forgot password?</a>
   </form>
+
 
 </div> <!-- /container -->
 {% endblock %}

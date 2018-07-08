@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user, AnonymousUserMixin
 from sqlalchemy import Date, cast, desc
 from flask_images import resized_img_src, Images
-from datetime import datetime
+from datetime import datetime,date
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 import stripe
@@ -112,14 +112,16 @@ def login():
                         flash("Something went wrong! We've been notified. Error: " + str(e), category='danger')
                         return redirect(url_for('login'))
         flash("Invalid password or username")
-    return render_template('login.html', form=login_form)
+    return render_template('login.html',
+                           form=login_form)
 
 
+# noinspection PyBroadException
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     register_form = RegisterForm()
     if request.method == "POST" and register_form.validate_on_submit():
-        added = False
+        # added = False
         try:
             # Generate the hashed password
             hashed_password = generate_password_hash(register_form.password.data, 'sha256')
@@ -138,7 +140,12 @@ def signup():
                             collection_count=0)
             subscription = register_form.subscription_plan.data
             plans = {'Free': 1, 'Basic': 10, 'Pro': 15}
-            new_team = Team(name=register_form.team_name.data, plan=subscription, pages_available=plans[subscription])
+            # noinspection PyUnresolvedReferences
+            new_team = Team(name=register_form.team_name.data,
+                            plan=subscription,
+                            pages_available=plans[subscription],
+                            created_date=datetime.date.today(),
+                            trial=True)
             db.session.add(new_user)
             try:
                 db.session.commit()
@@ -146,10 +153,10 @@ def signup():
                 new_team.admin_user.append(new_user)
                 db.session.add(new_team)
                 db.session.commit()
-            except Exception as e:
+            except Exception:
                 flash("Yikes, looks like you've already signed up. Try logging in instead.", category='danger')
                 return redirect(url_for('signup'))
-            added = True
+            # added = True
             email = register_form.email.data.lower()
             token = s.dumps(email, salt='email-confirm')
             msg = Message('Confirm Email', sender='Pagesnapsite@gmail.com', recipients=[email])
@@ -165,7 +172,8 @@ def signup():
             msg.body = 'Error!!! Error is: ' + str(e)
             mail.send(msg)
             return redirect(url_for('signup'))
-    return render_template('signup.html', form=register_form)
+    return render_template('signup.html',
+                           form=register_form)
 
 
 @app.route('/confirm/<token>')
@@ -219,7 +227,9 @@ def password_reset(token):
                 return redirect(url_for('login'))
             else:
                 flash('Passwords must match', category='danger')
-        return render_template('ChangePW.html', form=change_pw_form, userid=user_id)
+        return render_template('ChangePW.html',
+                               form=change_pw_form,
+                               userid=user_id)
     except SignatureExpired:
         flash("The link has expired", category='danger')
         return redirect(url_for('login'))
@@ -246,13 +256,15 @@ def reset_pw():
             return redirect(url_for('login'))
         else:
             flash('Passwords must match', category='danger')
-    return render_template('passwordresetrequestform.html', form=pw_reset_request_form)
+    return render_template('passwordresetrequestform.html',
+                           form=pw_reset_request_form)
 
 
 @app.route('/dashboard')
 @login_required
 def dashboard():
     sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
+    # noinspection PyProtectedMember
     collections = Collection.query.filter(Collection._users.any(id=current_user.id)).all()
     collection_count = len(collections)
     user_team = Team.query.filter(Team.id == current_user.team).first()
@@ -276,35 +288,43 @@ def dashboard():
 @app.route('/profile', methods=['GET', 'POST'])
 def edit_user_profile():
     user = current_user
-    form = EditUserProfile(profile=user.profile, status=user.status)
-    team = Team.query.filter(Team.id == current_user.team).first()
-    if form.validate_on_submit():
-        user.email = form.email.data
-        user.first_name = form.first_name.data
-        user.last_name = form.last_name.data
-        user.profile = form.profile.data
-        user.status = form.status.data
+    edit_user_form = EditUserProfile(profile=user.profile, status=user.status)
+    user_team = Team.query.filter(Team.id == current_user.team).first()
+    if edit_user_form.validate_on_submit():
+        user.email = edit_user_form.email.data
+        user.first_name = edit_user_form.first_name.data
+        user.last_name = edit_user_form.last_name.data
+        user.profile = edit_user_form.profile.data
+        user.status = edit_user_form.status.data
         db.session.commit()
         flash('Profile Updated', category='info')
         return redirect(url_for('edit_user_profile'))
-    return render_template('user.html', form=form, title='Profile', user=user, team=team)
+    return render_template('user.html',
+                           form=edit_user_form,
+                           title='Profile',
+                           user=user,
+                           team=user_team)
 
 
 @app.route('/profile/<userid>', methods=['GET', 'POST'])
 def edit_user_profile_admin(userid):
     user = User.query.filter(User.id == userid).first()
-    form = EditUserProfile(profile=user.profile, status=user.status)
-    team = Team.query.filter(Team.id == user.team).first()
-    if form.validate_on_submit():
-        user.email = form.email.data
-        user.first_name = form.first_name.data
-        user.last_name = form.last_name.data
-        user.profile = form.profile.data
-        user.status = form.status.data
+    edit_user_form = EditUserProfile(profile=user.profile, status=user.status)
+    user_team = Team.query.filter(Team.id == user.team).first()
+    if edit_user_form.validate_on_submit():
+        user.email = edit_user_form.email.data
+        user.first_name = edit_user_form.first_name.data
+        user.last_name = edit_user_form.last_name.data
+        user.profile = edit_user_form.profile.data
+        user.status = edit_user_form.status.data
         db.session.commit()
         flash('Profile Updated', category='info')
         return redirect(url_for('team'))
-    return render_template('user.html', form=form, title='Profile', user=user, team=team)
+    return render_template('user.html',
+                           form=edit_user_form,
+                           title='Profile',
+                           user=user,
+                           team=user_team)
 
 
 @app.route('/logout')
@@ -318,41 +338,48 @@ def get_sites():
     sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
     if sites is None:
         sites = "this is not cool"
-    return render_template('screenshots.html', nickname=current_user.nickname, sites=sites, title='Screenshots')
+    return render_template('screenshots.html',
+                           nickname=current_user.nickname,
+                           sites=sites,
+                           title='Screenshots')
 
 
 @app.route('/pages')
 def get_pages():
     domain = request.args.get('domain')
-    id = request.args.get('id')
-    pages = Page.query.join(Site.pages).filter(Site.id == id).all()
-    # images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
-    # image_count = len(images)
-    # for image in images:
-    #    imagedate = str(image.date)
-    #    imagedate = datetime.strptime(imagedate, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
-    #    dates.add(imagedate)
+    site_id = request.args.get('id')
+    pages = Page.query.join(Site.pages).filter(Site.id == site_id).all()
     page_count = len(pages)
-    return render_template('pages.html', nickname=current_user.nickname, domain=domain, title='Screenshots', pages=pages,
+    return render_template('pages.html',
+                           nickname=current_user.nickname,
+                           domain=domain,
+                           title='Screenshots',
+                           pages=pages,
                            # date_count=date_count,
                            image_count=page_count)
 
 
-
 @app.route('/dates')
 def get_dates():
-    id = request.args.get('id')
-    page = Page.query.filter_by(id=id).first()
+    page_id = request.args.get('id')
+    page = Page.query.filter_by(id=page_id).first()
     site = Site.query.filter_by(id=page.site).first()
     domain = page.name
     dates = set()
-    images = Image.query.join(Page.images).filter(Page.id == id).order_by(desc(Image.date)).all()
-    image_count = len(images)
-    for image in images:
+    page_images = Image.query.join(Page.images).filter(Page.id == page_id).order_by(desc(Image.date)).all()
+    image_count = len(page_images)
+    for image in page_images:
         dates.add(image.date.date())
     date_count = len(dates)
-    return render_template('dates.html', nickname=current_user.nickname, domain=domain, id=page.id, dates=dates, title='Screenshots',
-                           date_count=date_count, page=page, site=site,
+    return render_template('dates.html',
+                           nickname=current_user.nickname,
+                           domain=domain,
+                           id=page.id,
+                           dates=dates,
+                           title='Screenshots',
+                           date_count=date_count,
+                           page=page,
+                           site=site,
                            image_count=image_count)
 
 
@@ -390,15 +417,15 @@ def get_images():
     domain = request.args.get('site')
     date = request.args.get('date')
     formatted_date = datetime.strptime(date, "%Y-%m-%d").strftime('%B %d, %Y')
-    images = Image.query.join(Page.images).filter(Page.id == page_id, Image.isDeleted == False, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
+    images = Image.query.join(Page.images).filter(Page.id == page_id, Image.isDeleted is not True, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
     image_count = len(images)
     dates = set()
-    image_names =[]
-    picked_date = date
+    image_names = []
+    # picked_date = date
     for image in images:
-        f_path = image.path + image.name
+        # f_path = image.path + image.name
         image_names.append(image.name)
-    #print(image_names)
+    # print(image_names)
     return render_template('images.html',
                            nickname=current_user.nickname,
                            image_count=image_count,
@@ -418,10 +445,12 @@ def send_image(filename):
 
 @app.route('/return-files/')
 def return_file():
-    filepath =request.args.get('filepath')
-    filename =request.args.get('filename')
-    new_path = 'static/images' + filepath
-    return send_file(new_path, attachment_filename=filename, as_attachment=True)
+    file_path = request.args.get('filepath')
+    filename = request.args.get('filename')
+    new_path = 'static/images' + file_path
+    return send_file(new_path,
+                     attachment_filename=filename,
+                     as_attachment=True)
 
 
 @app.route('/addsite', methods=['GET', 'POST'])
@@ -430,7 +459,7 @@ def add_site():
     form = AddSiteForm()
     if form.validate_on_submit():
         # check if the site exists in the DB
-        site = Site.query.filter_by(domain=form.domain_name.data).first()
+        # site = Site.query.filter_by(domain=form.domain_name.data).first()
         # if the site does not exist in the db
         directory = 'static/images/' + form.domain_name.data
         new_site = Site(domain=form.domain_name.data,
@@ -440,16 +469,19 @@ def add_site():
         # Add the site to the DB
         db.session.add(new_site)
         db.session.commit()
-        #Add the new site to the current users team
-        user_team = Team.query.filter(Team.id==current_user.team).first()
+        # Add the new site to the current users team
+        user_team = Team.query.filter(Team.id == current_user.team).first()
         user_team.subscriptions.append(new_site)
         # sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
-        #sites.append(new_site)
+        # sites.append(new_site)
         db.session.commit()
-        #TODO SEND REQUEST VIA EMAIL TO ADMIN
+        # TODO SEND REQUEST VIA EMAIL TO ADMIN
         flash('Your site has been added. Please add some pages to track.', category='success')
         return redirect(url_for('get_pages', domain=new_site.domain))
-    return render_template('addsite.html', form=form, title='Add site', pub_key=stripe_pub_key)
+    return render_template('addsite.html',
+                           form=form,
+                           title='Add site',
+                           pub_key=stripe_pub_key)
 
 
 @app.route('/addpage', methods=['GET', 'POST'])
@@ -462,7 +494,7 @@ def add_page():
         if form.validate_on_submit():
             page_directory = add_to_site.directory + "/" + form.name.data
             # check if the site exists in the DB
-            #site = Site.query.filter_by(domain=form.domain_name.data).first()
+            #  site = Site.query.filter_by(domain=form.domain_name.data).first()
             # if the site does not exist in the db
             new_page = Page(name=form.name.data,
                             url=form.url.data,
@@ -474,15 +506,18 @@ def add_page():
                             directory=page_directory)
             db.session.add(new_page)
             db.session.commit()
-            #Add the new site to the current users team
-            #user_team = Team.query.filter(Team.id==current_user.team).first()
-            #user_team.subscriptions.append(new_site)
+            # Add the new site to the current users team
+            # user_team = Team.query.filter(Team.id==current_user.team).first()
+            # user_team.subscriptions.append(new_site)
             # sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
-            #sites.append(new_site)
-            #db.session.commit()
+            # sites.append(new_site)
+            # db.session.commit()
             flash('New page added', category='success')
             return redirect(url_for('get_dates', page=new_page.url))
-        return render_template('addpage.html', form=form, title='Add Page', domain=site)
+        return render_template('addpage.html',
+                               form=form,
+                               title='Add Page',
+                               domain=site)
     else:
         flash('Not enough pages available at this plan. Please upgrade to continue', category='danger')
         return redirect(url_for('get_sites'))
@@ -490,7 +525,7 @@ def add_page():
 
 @app.route('/pay', methods=['GET', 'POST'])
 def pay():
-    #print(request.form)
+    # print(request.form)
     stripe.api_key = stripe_secret_key
 
     # create the site in the Database
@@ -501,10 +536,10 @@ def pay():
                     status='Active')
     db.session.add(new_site)
     db.session.commit()
-    #Add the new site to the current users team
-    user_team = Team.query.filter(Team.id==current_user.team).first()
+    # Add the new site to the current users team
+    user_team = Team.query.filter(Team.id == current_user.team).first()
     user_team.subscriptions.append(new_site)
-    #sites.append(new_site)
+    # sites.append(new_site)
     db.session.commit()
 
     # Once they pay, the customer is created in Stripe
@@ -512,26 +547,23 @@ def pay():
 
     # Add the subscription in Stripe
     if request.form['rate'] is str(1440):
-        #print('first')
-        stripe.Subscription.create(
-        customer=customer.id,
-        items=[
-            {
-                "plan": "basic",
-            },
-        ],
-    )
+        # print('first')
+        stripe.Subscription.create(customer=customer.id,
+                                   items=[
+                                       {
+                                           "plan": "basic",
+                                       },
+                                   ],)
     else:
-        #print('last')
-        stripe.Subscription.create(
-        customer=customer.id,
-        items=[
-            {
-                "plan": "Pro",
-            },
-        ],
-    )
+        # print('last')
+        stripe.Subscription.create(customer=customer.id,
+                                   items=[
+                                       {
+                                           "plan": "Pro",
+                                       },
+                                       ],)
     return redirect(url_for('get_sites'))
+
 
 @app.route('/create_collection', methods=['GET', 'POST'])
 def create_collection():
@@ -556,6 +588,7 @@ def create_collection():
     return render_template('CreateCollection.html', form=form, title='Add collection', image=image)
 
 
+# noinspection PyProtectedMember
 @app.route('/collections')
 def get_user_collections():
     collections = Collection.query.filter(Collection._users.any(id=current_user.id)).all()
@@ -580,7 +613,13 @@ def get_collection_images():
     col_query = Collection.query.filter_by(id=collection).first()
     image_count = len(collection_images)
     name = col_query.name
-    return render_template('collection_images.html', form=form, image_names=collection_images,image_count=image_count,col_query=col_query, collection=collection, name=name, title='Collections')
+    return render_template('collection_images.html',
+                           form=form, image_names=collection_images,
+                           image_count=image_count,
+                           col_query=col_query,
+                           collection=collection,
+                           name=name,
+                           title='Collections')
 
 
 @app.route('/collectionrecieved/<token>')
@@ -592,15 +631,25 @@ def collection_viewer(token):
     col_query = Collection.query.filter_by(id=token).first()
     image_count = len(collection_images)
     name = col_query.name
-    return render_template('external_collection_images.html', form=form, image_names=collection_images,image_count=image_count,col_query=col_query, collection=token, name=name, title='Collections')
+    return render_template('external_collection_images.html',
+                           form=form,
+                           image_names=collection_images,
+                           image_count=image_count,
+                           col_query=col_query,
+                           collection=token,
+                           name=name,
+                           title='Collections')
 
 
+# noinspection PyProtectedMember
 @app.route('/pickcollection')
 @login_required
 def select_collection():
     selected_image = request.args.get('image')
     users_collections = Collection.query.filter(Collection._users.any(id=current_user.id)).all()
-    return render_template('add_to_collection.html', image=selected_image, collections=users_collections)
+    return render_template('add_to_collection.html',
+                           image=selected_image,
+                           collections=users_collections)
 
 
 @app.route('/add_to_collection', methods=['GET', 'POST'])
@@ -625,19 +674,26 @@ def remove_image():
     chosen_collection.images.remove(image_to_remove)
     image_to_remove.isSaved = False
     db.session.commit()
-    #print(chosen_collection.id)
-    #print(image_to_remove.id)
+    # print(chosen_collection.id)
+    # print(image_to_remove.id)
     return redirect(url_for('get_user_collections'))
 
 
 @app.route('/team', methods=['GET', 'POST'])
 def team():
     form = AddUserForm()
-    user_team = Team.query.filter(Team.id==current_user.team).first()
-    team_name = user_team.name
+    user_team = Team.query.filter(Team.id == current_user.team).first()
+    # team_name = user_team.name
     users = User.query.filter(User.team == user_team.id).all()
     sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
-    return render_template('team.html', teamname=user_team.name, team=user_team, users=users, sites=sites,current_user=current_user, title='Team',form=form)
+    return render_template('team.html',
+                           teamname=user_team.name,
+                           team=user_team,
+                           users=users,
+                           sites=sites,
+                           current_user=current_user,
+                           title='Team',
+                           form=form)
 
 
 @app.route('/sendcollection/<int:collection_id>', methods=['GET', 'POST'])
@@ -646,14 +702,14 @@ def send_collection(collection_id):
     form = SendCollectionForm()
     if form.validate_on_submit():
         email = form.email.data
-        form_collection = form.collection.data
+        # form_collection = form.collection.data
         # print(form_collection)
         # collection = Collection.query.filter_by(id=form_collection)
         collection = Collection.query.get(collection_id)
         user = User.query.filter(User.email == email.lower()).first()
         if user is None:
             flash('User added')
-            return redirect( url_for('get_user_collections'))
+            return redirect(url_for('get_user_collections'))
         else:
             user.collections_backref.append(collection)
             collection.sent_count += 1
@@ -664,11 +720,12 @@ def send_collection(collection_id):
             msg.html = render_template('/sent-collection-email.html', link=the_link, message=form.message.data)
             mail.send(msg)
             flash('Message Sent')
-            return redirect( url_for('get_user_collections'))
+            return redirect(url_for('get_user_collections'))
     return render_template('/send_collection_form.html', form=form)
     # TODO Check if the user exist in the DB
     # TODO if user exists add to users collections and notify
     # TODO if user does not exist - Allow to download and invite to sign up
+
 
 @app.route('/collection/sender', methods=['GET', 'POST'])
 def collectionsender():
@@ -678,7 +735,7 @@ def collectionsender():
     user = User.query.filter(User.email == email.lower()).first()
     if user is None:
         flash('User added')
-        return redirect( url_for('get_user_collections'))
+        return redirect(url_for('get_user_collections'))
     else:
         user.collections_backref.append(collection)
         msg = Message('New Collection Added', sender='e.eddieflores@gmail.com', recipients=[email])
@@ -721,11 +778,11 @@ def add_user():
                         collection_count=0)
         db.session.add(new_user)
         # addnew user to team
-        team = Team.query.filter(Team.id==current_user.team).first()
-        #print(team)
+        team = Team.query.filter(Team.id == current_user.team).first()
+        # print(team)
         db.session.commit()
-        new_person = User.query.filter(User.email==form.email.data).first()
-        #print(new_person.id)
+        new_person = User.query.filter(User.email == form.email.data).first()
+        # print(new_person.id)
         team.admin_user.append(new_person)
         db.session.commit()
         flash('User Added', category='success')
@@ -733,16 +790,13 @@ def add_user():
     return render_template('adduser.html', form=form)
 
 
-
-    # TODO
-
-# THE REGISTRAION PROCESS
-
+# The registration process
 # The page with the two buttons
 @app.route('/signup1')
 def signup1():
     user = {'nickname': 'Eddie'}
     return render_template('/signup1.html', user=user)
+
 
 # The page if user seleceted  to find their team based on email addresssed on email address
 @app.route('/findteam', methods=['GET', 'POST'])
@@ -754,9 +808,12 @@ def findteamform():
     if formi.validate_on_submit():
         # Add the portion if email found in database, send via emaile, send via email
         # else send them to a page that says their team doesn't existteam doesn't exist
+        # noinspection PyUnresolvedReferences
         return flask.errorhandler(404)
     return render_template('/findteam.html', form=formi, user=user)
 
+
+# noinspection PyUnusedLocal
 @app.errorhandler(404)
 def page_not_found(e):
     if current_user.is_authenticated:
@@ -764,5 +821,3 @@ def page_not_found(e):
         return render_template('/404.html', user=user), 404
     else:
         return render_template('/external404.html'), 404
-    user = {'nickname': 'Eddie'}
-    return render_template('/404.html', user=user), 404
