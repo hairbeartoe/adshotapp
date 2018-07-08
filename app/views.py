@@ -326,15 +326,15 @@ def get_pages():
     domain = request.args.get('domain')
     id = request.args.get('id')
     pages = Page.query.join(Site.pages).filter(Site.id == id).all()
-    #images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
-    #image_count = len(images)
-    #for image in images:
+    # images = Image.query.join(Site.images).filter(Site.domain == domain).order_by(desc(Image.date)).all()
+    # image_count = len(images)
+    # for image in images:
     #    imagedate = str(image.date)
     #    imagedate = datetime.strptime(imagedate, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
     #    dates.add(imagedate)
     page_count = len(pages)
     return render_template('pages.html', nickname=current_user.nickname, domain=domain, title='Screenshots', pages=pages,
-                           #date_count=date_count,
+                           # date_count=date_count,
                            image_count=page_count)
 
 
@@ -343,17 +343,16 @@ def get_pages():
 def get_dates():
     id = request.args.get('id')
     page = Page.query.filter_by(id=id).first()
+    site = Site.query.filter_by(id=page.site).first()
     domain = page.name
     dates = set()
-    images = Image.query.join(Page.images).filter(Page.name == domain).order_by(desc(Image.date)).all()
+    images = Image.query.join(Page.images).filter(Page.id == id).order_by(desc(Image.date)).all()
     image_count = len(images)
     for image in images:
-        imagedate = str(image.date)
-        imagedate = datetime.strptime(imagedate, '%Y-%m-%d %H:%M:%S').strftime('%B %d, %Y')
-        dates.add(imagedate)
+        dates.add(image.date.date())
     date_count = len(dates)
-    return render_template('dates.html', nickname=current_user.nickname, site=domain, id=page.id, dates=dates, title='Screenshots',
-                           date_count=date_count, page=page,
+    return render_template('dates.html', nickname=current_user.nickname, domain=domain, id=page.id, dates=dates, title='Screenshots',
+                           date_count=date_count, page=page, site=site,
                            image_count=image_count)
 
 
@@ -386,8 +385,11 @@ def activate_page():
 @app.route('/images', methods=['GET', 'POST'])
 def get_images():
     page_id = request.args.get('id')
+    page = Page.query.filter_by(id=page_id).first()
+    site = Site.query.filter_by(id=page.site).first()
     domain = request.args.get('site')
     date = request.args.get('date')
+    formatted_date = datetime.strptime(date, "%Y-%m-%d").strftime('%B %d, %Y')
     images = Image.query.join(Page.images).filter(Page.id == page_id, Image.isDeleted == False, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
     image_count = len(images)
     dates = set()
@@ -401,9 +403,11 @@ def get_images():
                            nickname=current_user.nickname,
                            image_count=image_count,
                            image_names=images,
-                           site=domain,
+                           domain=domain,
+                           site=site,
+                           page=page,
                            datepicked=dates,
-                           date=picked_date,
+                           date=formatted_date,
                            title='Screenshots')
 
 
@@ -444,7 +448,7 @@ def add_site():
         db.session.commit()
         #TODO SEND REQUEST VIA EMAIL TO ADMIN
         flash('Your site has been added. Please add some pages to track.', category='success')
-        return redirect(url_for('get_pages'))
+        return redirect(url_for('get_pages', domain=new_site.domain))
     return render_template('addsite.html', form=form, title='Add site', pub_key=stripe_pub_key)
 
 

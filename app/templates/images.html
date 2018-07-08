@@ -1,6 +1,6 @@
  {% extends "Navigation.html" %}
  {% block title %}
- {{ date }} - {{ site }}
+ {{ date }} - {{ domain }}
  {% endblock %}
 
  {% block scripts %}
@@ -96,13 +96,14 @@
 {% block content %}
 <div class="content">
     <div class="container-fluid">
+        <h5><a href="{{ url_for('get_sites') }}">SITES</a> > <a href="{{ url_for('get_pages', id=site.id, domain=site.domain) }}"> {{ site.domain.upper() }} </a> > <a href="{{url_for('get_dates', page=page.url, id=page.id)}}" >{{ page.name.upper() }} </a> > {{ date }} </h5>
         <div class="row">
             <div class="col-lg-4 col-md-5 col-lg-offset-4 col-md-offset-3">
                 <div class="card">
                     <div class="content text-center">
                         <div class="author">
                           <h3 class="card-title">{{ date }}</h3>
-                          <p >{{ site }}</p>
+                          <p >{{ domain }}</p>
                         </div>
                     </div>
                     <hr>

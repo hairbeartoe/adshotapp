@@ -103,6 +103,7 @@
 {% block content %}
         <div class="content">
             <div class="container-fluid">
+                <h5><a href="{{ url_for('get_sites') }}">SITES</a> >  {{ domain.upper() }}</h5>
                 <div class="row">
                     <div class="col-lg-4 col-md-5 col-lg-offset-4 col-md-offset-3">
                         <div class="card">
@@ -132,6 +133,7 @@
                 <div class="row">
 
                     <div class="row col-lg-10 col-lg-offset-1">
+                        {% if pages %}
                         <div class="fresh-table toolbar-color-azure">
                                     <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
                                             Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
@@ -172,6 +174,9 @@
                                 </tbody>
                             </table>
                         </div>
+                        {% else %}
+                        <h4 class="text-center">Uh oh! You have no pages for this site. <br>Please add some pages above to get started.</h4>
+                        {% endif %}
 			        </div>
 
                 </div>

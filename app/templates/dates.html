@@ -1,6 +1,6 @@
 	{% extends "Navigation.html" %}
 	{% block title %}
-        Sites - {{ site }}
+        Pagesnap - {{ site.domain }}
     {% endblock %}
 
 
@@ -92,12 +92,13 @@
 {% block content %}
         <div class="content">
             <div class="container-fluid">
+                <h5><a href="{{ url_for('get_sites') }}">SITES</a> > <a href="{{ url_for('get_pages', id=site.id, domain=site.domain) }}"> {{ site.domain.upper() }} </a> > {{ domain.upper() }}</h5>
                 <div class="row">
                     <div class="col-lg-4 col-md-5 col-lg-offset-4 col-md-offset-3">
                         <div class="card">
                             <div class="content text-center">
                                 <div class="author">
-                                  <h3 class="card-title" style="margin-bottom:2px;">{{ site }}</h3>
+                                  <h3 class="card-title" style="margin-bottom:2px;">{{ domain }}</h3>
                                     {% if page.status == 'Active' %}
                                     <a href="{{url_for('deactivate_page', page=page.id)}}" style="color:red;">Deactivate</a>
                                     {% elif page.status == 'Inactive' %}
@@ -144,10 +145,10 @@
                                         Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
                                 -->
                         <div class="toolbar"></div>
-                        <table id="fresh-table" class="table">
+                        <table id="fresh-table" class="table" data-sort-order="desc" data-sort-name="date">
                             <thead>
                                 <th data-field="id" data-sortable="true"  class="text-center" data-visible="false">ID</th>
-                                <th data-field="Date" data-sortable="true" data-order="desc" class="text-center">Date</th>
+                                <th data-field="date" data-sortable="True" data-order="desc" class="text-center">Date</th>
                                 <th data-field="actions"  class="text-center">Actions</th>
                             </thead>
                             <tbody>
@@ -155,7 +156,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <a href="{{url_for('get_images', site=site, date=date, id=id)}}">{{ date }}</a>
+                                        <a href="{{url_for('get_images', site=domain, date=date, id=id)}}">{{ date.strftime('%B %d, %Y') }}</a>
                                     </td>
                                     <td><a href="{{url_for('get_images', site=site, date=date, id=id)}}">view images</a></td>
                                 </tr>
