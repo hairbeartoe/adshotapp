@@ -2,13 +2,13 @@ import flask
 from flask import render_template, redirect, url_for, send_from_directory, request, send_file, flash
 from app import app, db
 from app.models import User, Site, Image, Team, Collection, Page, MyAdminModel, MyAdminIndexView
-from app.forms import LoginForm, PasswordResetRequestForm, ChangePasswordForm, RegisterForm,AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm,SendCollectionForm, AddPageForm
+from app.forms import LoginForm, PasswordResetRequestForm, ChangePasswordForm, RegisterForm, AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm, SendCollectionForm, EditPageOptions, AddPageForm
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user, AnonymousUserMixin
 from sqlalchemy import Date, cast, desc
 from flask_images import resized_img_src, Images
-from datetime import datetime,date
+from datetime import datetime, date
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 import stripe
@@ -250,7 +250,7 @@ def reset_pw():
                 the_link = url_for('password_reset', token=token, _external=True)
                 msg.html = render_template('/email-confirmation.html', link=the_link)
                 mail.send(msg)
-                flash('Password Updated', category='info')
+                flash('Email sent. Please check your email to reset your password', category='success')
             else:
                 flash('There was no user with that email', category='danger')
             return redirect(url_for('login'))
@@ -361,6 +361,7 @@ def get_pages():
 
 @app.route('/dates')
 def get_dates():
+    form = EditPageOptions()
     page_id = request.args.get('id')
     page = Page.query.filter_by(id=page_id).first()
     site = Site.query.filter_by(id=page.site).first()
@@ -380,7 +381,27 @@ def get_dates():
                            date_count=date_count,
                            page=page,
                            site=site,
-                           image_count=image_count)
+                           image_count=image_count,
+                           form=form)
+
+
+@app.route('/edit_page', methods=['GET', 'POST'])
+def edit_page():
+    update_form = EditPageOptions()
+    domain = request.args.get('page')
+    page = Page.query.filter_by(id=domain).first()
+    team = Team.query.filter(Team.id == current_user.team).first()
+    page.capture_rate = int(update_form.updated_rate.data)
+    print(page.capture_rate)
+    if page.capture_rate is 20 and ((team.plan == 'Basic') or (team.plan == 'Free')):
+        flash('Please update to a Pro plan to track pages every 20 minutes.', category='danger')
+        return redirect(url_for('get_dates', id=page.id))
+    elif page.capture_rate is 60 and team.plan == 'Free':
+        flash('Please update to the Basic or Pro plans to track pages at higher rates', category='danger')
+        return redirect(url_for('get_dates', id=page.id))
+    else:
+        db.session.commit()
+        return redirect(url_for('get_dates', id=page.id))
 
 
 @app.route('/deactivate_page')
@@ -438,6 +459,7 @@ def get_images():
                            title='Screenshots')
 
 
+# noinspection PyArgumentList
 @app.route('/display/<filename>')
 def send_image(filename):
     return send_from_directory(filename)

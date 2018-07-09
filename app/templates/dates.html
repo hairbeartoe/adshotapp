@@ -120,12 +120,21 @@
                                     <div class="col-md-3">
                                         <h5>{% if page.capture_rate == 20 %}
                                             20 Mins
+                                            <a href="#" data-toggle="modal" data-target=".bs-modal-sm">
+                                               <small> <i class="ti-pencil"></i></small>
+                                            </a>
                                             {% elif page.capture_rate == 60%}
                                             Hourly
+                                            <a href="#" data-toggle="modal" data-target=".bs-modal-sm">
+                                                <small> <i class="ti-pencil"></i></small>
+                                            </a>
                                             {% else %}
                                             Once daily
+                                            <a href="#" data-toggle="modal" data-target=".bs-modal-sm">
+                                                <small> <i class="ti-pencil"></i></small>
+                                            </a>
                                             {% endif %}
-                                            <br /><small>Screenshot Rate</small></h5>
+                                            <br /><small>Screenshot Rate</small></h5><br>
                                     </div>
                                     <div class="col-md-3">
                                         <h5>{{ image_count }}<br /><small>Images</small></h5>
@@ -167,5 +176,47 @@
 			    </div>
 		    </div>
         </div>
+
+    <!-- Modal -->
+    <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <br>
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                  <li class="active"><a href="#sendcollection" data-toggle="tab">Update Page</a></li>
+                </ul>
+            </div>
+          <div class="modal-body">
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="sendcollection">
+                    <form method="post" action="{{ url_for('edit_page', page=page.id) }}" accept-charset="UTF-8" class="form-horizontal">
+                        {{ form.hidden_tag() }}
+
+                        <div class="control-group">
+                                <div class="controls">
+                                    {{ form.updated_rate(class="form-control input-medium", type="dropdown", placeholder="{{ page.capture_rate }}", id="", label="none") }}
+                                </div>
+                        </div>
+
+                        <div class="control-group">
+                          <label class="control-label" for="signin"></label>
+                          <div class="controls">
+                            <button id="signin" name="signin" class="btn btn-success btn-block" type="submit">Save Settinngs</button>
+                          </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+          <center>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
 {% endblock %}
 

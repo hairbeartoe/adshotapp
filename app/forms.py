@@ -1,5 +1,5 @@
 from flask import Flask
-from app import app,db
+from app import app, db
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SelectField, HiddenField, TextAreaField
 from wtforms.validators import InputRequired, Email, Length, URL,EqualTo
@@ -134,3 +134,7 @@ class EditUserProfile(FlaskForm):
 class AddImagetoCollection(FlaskForm):
     image_id = StringField('Image', validators=[InputRequired()])
     colllection = StringField('Collection', validators=[InputRequired()])
+
+
+class EditPageOptions(FlaskForm):
+    updated_rate = SelectField(choices=[('1440', 'Once daily'), ('60', 'Once every hour'), ('20', 'Once every 20 minutes')])
