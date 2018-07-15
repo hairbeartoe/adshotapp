@@ -1,5 +1,5 @@
 import flask
-from flask import render_template, redirect, url_for, send_from_directory, request, send_file, flash
+from flask import render_template, redirect, url_for, send_from_directory, request, send_file, flash, jsonify
 from app import app, db
 from app.models import User, Site, Image, Team, Collection, Page, MyAdminModel, MyAdminIndexView
 from app.forms import LoginForm, PasswordResetRequestForm, ChangePasswordForm, RegisterForm, AddSiteForm, EditUserProfile, AddImagetoCollection, CreateCollectionForm, AddUserForm, FindTeamForm, SendCollectionForm, EditPageOptions, AddPageForm
@@ -413,6 +413,25 @@ def deactivate_page():
     team.pages_available += 1
     db.session.commit()
     return redirect(url_for('get_dates', id=page.id))
+
+
+@app.route('/getimages', methods=['GET', 'POST'])
+def get_images_json():
+    page_id = request.args.get('id')
+    page = Page.query.filter_by(id=page_id).first()
+    date = request.args.get('date')
+    images = Image.query.join(Page.images).filter(Page.id == page_id, Image.isDeleted is not True,
+                                                  cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
+    # datetime.strptime(date, "%Y-%m-%d").strftime('%B %d, %Y')
+
+    rows = []
+    for image in images:
+        capture_time = datetime.strftime(image.date, '%Y-%m-%d %H:%M')
+        imagepath = "<a href=\"static/images"+image.path+"\"data-toggle=\"lightbox\"  data-width=\"600\" data-gallery=\"remoteload\"><img  class=\"image-thumbnail\" src=\"static/images"+image.path+"\"<\/img></a>"
+        rows.append(
+            {'image_path': imagepath, 'Capture_Time': capture_time, 'Type': image.device, 'name': image.name, 'file': image.path, 'id': image.id}
+        )
+    return jsonify(rows)
 
 
 @app.route('/activate_page')

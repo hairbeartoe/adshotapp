@@ -423,7 +423,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
     gallery_parent_selector: 'document.body',
     left_arrow_class: '.glyphicon .glyphicon-chevron-left',
     right_arrow_class: '.glyphicon .glyphicon-chevron-right',
-    directional_arrows: true,
+    directional_arrows: false,
     type: null,
     always_show_close: true,
     no_related: false,
