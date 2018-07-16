@@ -106,7 +106,7 @@ def login():
                     try:
                         login_user(user, remember=login_form.remember.data)
                         # update the last login date
-                        user.last_login = datetime.today()
+                        user.last_login = datetime.datetime.today()
                         db.session.commit()
                         return redirect(url_for('dashboard'))
                     except Exception as e:
@@ -816,7 +816,7 @@ def add_user():
                         nickname=form.first_name.data+" "+form.last_name.data,
                         profile='Standard User',
                         status='Active',
-                        date_joined=datetime.today(),
+                        date_joined=datetime.datetime.today(),
                         collection_count=0)
         db.session.add(new_user)
         # addnew user to team
