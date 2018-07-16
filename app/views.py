@@ -17,6 +17,7 @@ from flask_admin.contrib.sqla import ModelView
 import os.path as op
 from flask_admin.contrib.fileadmin import FileAdmin
 from wtforms import form, validators
+import datetime
 
 
 ''' 
@@ -134,8 +135,8 @@ def signup():
                             password=hashed_password,
                             profile='Team Administrator',
                             status='Active',
-                            date_joined=datetime.today(),
-                            last_login=datetime.today(),
+                            date_joined=datetime.datetime.today(),
+                            last_login=datetime.datetime.today(),
                             confirmed_email=False,
                             collection_count=0)
             subscription = register_form.subscription_plan.data
