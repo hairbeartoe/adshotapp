@@ -423,11 +423,11 @@ def get_images_json():
     date = request.args.get('date')
     images = Image.query.join(Page.images).filter(Page.id == page_id, Image.isDeleted is not True,
                                                   cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
-    # datetime.strptime(date, "%Y-%m-%d").strftime('%B %d, %Y')
+    # datetime.datetime.strptime(date, "%Y-%m-%d").strftime('%B %d, %Y')
 
     rows = []
     for image in images:
-        capture_time = datetime.strftime(image.date, '%Y-%m-%d %H:%M')
+        capture_time = datetime.datetime.strftime(image.date, '%Y-%m-%d %H:%M')
         imagepath = "<a href=\"static/images"+image.path+"\"data-toggle=\"lightbox\"  data-width=\"600\" data-gallery=\"remoteload\"><img  class=\"image-thumbnail\" src=\"static/images"+image.path+"\"<\/img></a>"
         rows.append(
             {'image_path': imagepath, 'Capture_Time': capture_time, 'Type': image.device, 'name': image.name, 'file': image.path, 'id': image.id}
@@ -457,7 +457,7 @@ def get_images():
     site = Site.query.filter_by(id=page.site).first()
     domain = request.args.get('site')
     date = request.args.get('date')
-    formatted_date = datetime.strptime(date, "%Y-%m-%d").strftime('%B %d, %Y')
+    formatted_date = datetime.datetime.strptime(date, "%Y-%m-%d").strftime('%B %d, %Y')
     images = Image.query.join(Page.images).filter(Page.id == page_id, Image.isDeleted is not True, cast(Image.date, Date) == date).order_by(desc(Image.date)).all()
     image_count = len(images)
     dates = set()
@@ -505,7 +505,7 @@ def add_site():
         # if the site does not exist in the db
         directory = 'static/images/' + form.domain_name.data
         new_site = Site(domain=form.domain_name.data,
-                        date_added=datetime.now(),
+                        date_added=datetime.datetime.now(),
                         status='Active',
                         directory=directory)
         # Add the site to the DB
@@ -542,7 +542,7 @@ def add_page():
                             url=form.url.data,
                             capture_rate=form.rate.data,
                             mobile_capture=form.mobile.data,
-                            date_added=datetime.now(),
+                            date_added=datetime.datetime.now(),
                             status='Active',
                             site=add_to_site.id,
                             directory=page_directory)
@@ -573,8 +573,8 @@ def pay():
     # create the site in the Database
     new_site = Site(domain=request.form['domain_name'],
                     capture_rate=request.form['rate'],
-                    date_added=datetime.now(),
-                    last_screenshot=datetime.now(),
+                    date_added=datetime.datetime.now(),
+                    last_screenshot=datetime.datetime.now(),
                     status='Active')
     db.session.add(new_site)
     db.session.commit()
