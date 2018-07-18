@@ -21,7 +21,7 @@ def set_url_params(query):
     url = query.get('url')
     width = query.get('width')
     user_agent = query.get('user_agent')
-    delay = 9000
+    delay = 21000
     force = True
     full_page = True
     scroll = True
@@ -36,7 +36,7 @@ def set_file_params(query):
     width = query.get('width')
     user_agent = query.get('user_agent')
     type = query.get('type')
-    delay = 15
+    delay = 21000
     force = True
     full_page = True
     directory = query.get('directory')
