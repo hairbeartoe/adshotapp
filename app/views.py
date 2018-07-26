@@ -555,7 +555,7 @@ def add_page():
             # sites.append(new_site)
             # db.session.commit()
             flash('New page added', category='success')
-            return redirect(url_for('get_dates', page=new_page.url))
+            return redirect(url_for('get_dates', id=new_page.id))
         return render_template('addpage.html',
                                form=form,
                                title='Add Page',
