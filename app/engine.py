@@ -7,7 +7,9 @@ import datetime
 import os
 from app import db
 from app.models import User, Site, Image, subscriptions, Team, Collection, Page
+from random import randint
 
+time_delay = randint(15000, 26000)
 
 # util for making the name work by removing un-needed prefix
 def remove_prefix(text, prefix):
@@ -21,7 +23,7 @@ def set_url_params(query):
     url = query.get('url')
     width = query.get('width')
     user_agent = query.get('user_agent')
-    delay = 21000
+    delay = randint(15000, 26000)
     force = True
     full_page = True
     scroll = True
@@ -36,7 +38,7 @@ def set_file_params(query):
     width = query.get('width')
     user_agent = query.get('user_agent')
     type = query.get('type')
-    delay = 21000
+    delay = randint(15000, 26000)
     force = True
     full_page = True
     directory = query.get('directory')

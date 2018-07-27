@@ -30,7 +30,7 @@ class db_Query:
 
                     # Set the desktop information
                     page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
-                                 'user_agent': 'desktop', 'width': '1280'}
+                                 'user_agent': 'desktop', 'width': '1920'}
                     self.pl20.append(page_data)
 
                 elif page.capture_rate == 60:
