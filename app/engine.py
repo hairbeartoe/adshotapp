@@ -23,7 +23,7 @@ def set_url_params(query):
     url = query.get('url')
     width = query.get('width')
     user_agent = query.get('user_agent')
-    delay = randint(15000, 26000)
+    delay = randint(18000, 26000)
     force = True
     full_page = True
     scroll = True

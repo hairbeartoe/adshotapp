@@ -43,7 +43,7 @@ class db_Query:
 
                     # Set the desktop information
                     page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
-                                 'user_agent': 'desktop', 'width': '1280'}
+                                 'user_agent': 'desktop', 'width': '1920'}
                     self.pl60.append(page_data)
 
                 else:
@@ -56,7 +56,7 @@ class db_Query:
 
                     # Set the desktop information
                     page_data = {'url': page.url, 'rate': page.capture_rate, 'directory': page.directory, 'type': 'Desktop',
-                                 'user_agent': 'desktop', 'width': '1280'}
+                                 'user_agent': 'desktop', 'width': '1920'}
                     self.pl1440.append(page_data)
 
 
