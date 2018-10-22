@@ -111,6 +111,8 @@ class AddPageForm(FlaskForm):
     url = StringField(validators=[URL()])
     rate = SelectField(choices=[('1440', 'Once daily'), ('60', 'Once every hour'), ('20', 'Once every 20 minutes')])
     mobile = BooleanField(default=False)
+    article = BooleanField(default=False)
+    css_class = StringField()
     site = HiddenField()
 
 

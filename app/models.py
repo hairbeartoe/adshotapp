@@ -118,6 +118,10 @@ class Page(db.Model):
     last_screenshot = db.Column(db.DateTime, index=True)
     cover_image_path = db.Column(db.String(140))
     directory = db.Column(db.String(140))
+    aps_jobID = db.Column(db.String(140))
+    aps_jobID_mobile = db.Column(db.String(140))
+    track_class = db.Column(db.Boolean)
+    css_class = db.Column(db.String(140))
 
     def __repr__(self):
         return '<Page %r>' % self.name

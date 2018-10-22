@@ -18,36 +18,38 @@ import os.path as op
 from flask_admin.contrib.fileadmin import FileAdmin
 from wtforms import form, validators
 import datetime
+from apscheduler.schedulers.background import BackgroundScheduler
+from app.engine import capture2, capture3
+import uuid
+from uuid import uuid4
 
 
-''' 
-Table of contents
-1. Variables and Init
-2. User Management
-    a. Adding Users
-    b. Inviting Users
-3. Adding Sites
-4. Adding Collections
-
-'''
-
+# App configuration
 images = Images(app)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
+# Mail config
 mail = Mail(app)
 s = URLSafeTimedSerializer("this-is-secret")
 
+# Bootstrap and login config
 bootstrap = Bootstrap(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+# Stripe config - DEPRICATED
 stripe_pub_key = 'pk_test_upjxUBP80Gy8XJZMur6eSU28'
 stripe_secret_key = 'sk_test_PUE7j4ekbagC0dzP3HO0LD1T'
 stripe.api_key = stripe_secret_key
 
+# APScheduler cofig
+db_url = 'postgresql://postgres:postgres@localhost/adshotapp'
+scheduler = BackgroundScheduler()
+scheduler.add_jobstore('sqlalchemy', url=db_url)
+scheduler.start()
 
-# set up the admin page
+# Admin page config
 path = op.join(op.dirname(__file__), 'static')
 admin = Admin(app, index_view=MyAdminIndexView())
 admin.add_view(ModelView(Team, db.session))
@@ -59,13 +61,16 @@ admin.add_view(ModelView(Collection, db.session))
 admin.add_view(FileAdmin(path, '/static', name='Static Files'))
 
 
-# load the user
+# load the user for login management
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-
-# the index page
+'''
+The following are the views that run the app
+There may be some functions within the views
+'''
+# Index page
 @app.route('/')
 @app.route('/index',  methods=['GET', 'POST'])
 def index():
@@ -77,55 +82,73 @@ def index():
                            form=login_form)
 
 
+# Terms and Conditions page
 @app.route('/terms')
 def terms():
     return render_template("terms.html",
                            title='Terms')
 
 
+# Privacy Policy page
 @app.route('/privacy')
 def privacy():
     return render_template("privacy.html",
                            title='Privacy')
 
 
+# Copyright removal page
 @app.route('/copyright')
 def copyright():
     return render_template("copyright.html",
                            title='Copyright')
 
 
+# login page and functions
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    login_form = LoginForm()
+    login_form = LoginForm()  # load the login form
     if login_form.validate_on_submit():
+
+        ''' 
+        This is the function that handles login attempts.
+        If the user is found by email and the hashed PW matches
+        the user will be logged in
+        '''
+
         user = User.query.filter_by(email=login_form.email.data.lower()).first()
         if user is not None:
             if check_password_hash(user.password, login_form.password.data):
                 if user.status == 'Active':
                     try:
                         login_user(user, remember=login_form.remember.data)
+
                         # update the last login date
                         user.last_login = datetime.datetime.today()
                         db.session.commit()
                         return redirect(url_for('dashboard'))
+
                     except Exception as e:
+                        # If error, flash message
                         flash("Something went wrong! We've been notified. Error: " + str(e), category='danger')
                         return redirect(url_for('login'))
+
+        # if user or password is wrong, flash message
         flash("Invalid password or username")
     return render_template('login.html',
                            form=login_form)
 
 
+# Sign up page and functions
 # noinspection PyBroadException
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     register_form = RegisterForm()
     if request.method == "POST" and register_form.validate_on_submit():
-        # added = False
+        # start by checking the form validation
         try:
             # Generate the hashed password
             hashed_password = generate_password_hash(register_form.password.data, 'sha256')
+
             # add the new user to the database
             # noinspection PyArgumentList
             new_user = User(nickname=register_form.first_name.data + " " + register_form.last_name.data,
@@ -140,6 +163,7 @@ def signup():
                             confirmed_email=False,
                             collection_count=0)
             subscription = register_form.subscription_plan.data
+            # These are the plan options
             plans = {'Free': 1, 'Basic': 10, 'Pro': 15}
             # noinspection PyUnresolvedReferences
             new_team = Team(name=register_form.team_name.data,
@@ -149,6 +173,7 @@ def signup():
                             trial=True)
             db.session.add(new_user)
             try:
+                # commit the changes to the DB and login the new user
                 db.session.commit()
                 login_user(new_user)
                 new_team.admin_user.append(new_user)
@@ -157,7 +182,8 @@ def signup():
             except Exception:
                 flash("Yikes, looks like you've already signed up. Try logging in instead.", category='danger')
                 return redirect(url_for('signup'))
-            # added = True
+
+            # Send the confirmation email to the user
             email = register_form.email.data.lower()
             token = s.dumps(email, salt='email-confirm')
             msg = Message('Confirm Email', sender='Pagesnapsite@gmail.com', recipients=[email])
@@ -167,6 +193,8 @@ def signup():
             mail.send(msg)
             return redirect(url_for('dashboard'))
         except Exception as e:
+
+            # If there's an error, send admin email
             flash("Uh oh! Something went wrong. We've been notified and we're on it!.", category='danger')
             email = "heribertoflores@me.com"
             msg = Message('URGENT: ERROR', sender='e.eddieflores@gmail.com', recipients=[email])
@@ -177,9 +205,11 @@ def signup():
                            form=register_form)
 
 
+# Route to confirm the validation email
 @app.route('/confirm/<token>')
 def confirm_email(token):
     try:
+        # load the email token and update the checkbox
         email = s.loads(token, salt='email-confirm', max_age=86400)
         user = User.query.filter(User.email == email).first()
         user.confirmed_email = True
@@ -190,6 +220,7 @@ def confirm_email(token):
     return redirect(url_for('dashboard'))
 
 
+# Route that allows user to change password
 @app.route('/changepw/<int:userid>', methods=['GET', 'POST'])
 def changepw(userid):
     change_pw_form = ChangePasswordForm()
@@ -272,6 +303,7 @@ def dashboard():
     users = User.query.filter(User.team == user_team.id).all()
     user_count = len(users)
     images_count = 0
+    scheduler.print_jobs()
     for site in sites:
         image_counter = Image.query.join(Site.images).filter(Site.domain == site.domain).all()
         images_count += len(image_counter)
@@ -411,6 +443,7 @@ def deactivate_page():
     page = Page.query.filter_by(id=domain).first()
     team = Team.query.filter(Team.id == current_user.team).first()
     page.status = 'Inactive'
+    scheduler.remove_job(page.aps_jobID)
     team.pages_available += 1
     db.session.commit()
     return redirect(url_for('get_dates', id=page.id))
@@ -446,6 +479,7 @@ def activate_page():
     else:
         page.status = 'Active'
         team.pages_available -= 1
+        new_page_scheduler(page.id, 'Desktop', page.capture_rate, page.aps_jobID)
         db.session.commit()
     return redirect(url_for('get_dates', id=page.id))
 
@@ -545,15 +579,17 @@ def add_page():
                             date_added=datetime.datetime.now(),
                             status='Active',
                             site=add_to_site.id,
-                            directory=page_directory)
+                            directory=page_directory,
+                            track_class=form.article.data,
+                            css_class=form.css_class.data,
+                            aps_jobID=uuid4())
+            if new_page.mobile_capture is True:
+                new_page.aps_jobID_mobile = uuid4()
             db.session.add(new_page)
             db.session.commit()
-            # Add the new site to the current users team
-            # user_team = Team.query.filter(Team.id==current_user.team).first()
-            # user_team.subscriptions.append(new_site)
-            # sites = Site.query.join(Team.subscriptions).filter(Team.id == current_user.team).all()
-            # sites.append(new_site)
-            # db.session.commit()
+            new_page_scheduler(new_page.id, 'Desktop', new_page.capture_rate, new_page.aps_jobID, new_page.track_class, new_page.css_class)
+            if new_page.mobile_capture is True:
+                new_page_scheduler(new_page.id, 'Mobile', new_page.capture_rate, new_page.aps_jobID_mobile, new_page.track_class, new_page.css_class)
             flash('New page added', category='success')
             return redirect(url_for('get_dates', id=new_page.id))
         return render_template('addpage.html',
@@ -563,6 +599,17 @@ def add_page():
     else:
         flash('Not enough pages available at this plan. Please upgrade to continue', category='danger')
         return redirect(url_for('get_sites'))
+
+
+def new_page_scheduler(id, type, interval, job_id, track_class, css_class):
+    width_options = {'Desktop': 1920, 'Mobile': 508}
+    agent_options = {'Desktop': 1920, 'Mobile': 508}
+    width = width_options.get(type)
+    if track_class is True:
+        css_class = css_class
+        scheduler.add_job(capture3, 'interval', minutes=interval, args=[id, width, type, css_class], id=job_id, next_run_time=datetime.datetime.now())
+    else:
+        scheduler.add_job(capture2, 'interval', minutes=interval, args=[id, width, type], id=job_id, next_run_time=datetime.datetime.now())
 
 
 @app.route('/pay', methods=['GET', 'POST'])

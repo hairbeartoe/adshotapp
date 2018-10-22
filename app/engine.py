@@ -8,8 +8,14 @@ import os
 from app import db
 from app.models import User, Site, Image, subscriptions, Team, Collection, Page
 from random import randint
+from apscheduler.schedulers.background import BackgroundScheduler
+from app import app
+from bs4 import BeautifulSoup
+import requests
+import re
 
 time_delay = randint(15000, 26000)
+
 
 # util for making the name work by removing un-needed prefix
 def remove_prefix(text, prefix):
@@ -83,8 +89,8 @@ def download_image(file_params):
 
 
 # add a record with the image to the database so the new image can be viewed
-def add_db_record(query, file_params):
-    page = Page.query.filter_by(url=query.get('url')).first()
+def add_db_record(id, file_params):
+    page = Page.query.filter_by(id=id).first()
     site = Site.query.filter_by(id=page.site).first()
     date = file_params.get('capture_date')
     new_image = Image(name=file_params.get('name'),
@@ -112,3 +118,77 @@ def capture(query):
     file_params['capture_url'] = capture_url
     download_image(file_params)
     add_db_record(query, file_params)
+
+
+def gen_url(url, width, type):
+    url = url
+    width = width
+    agent_options = {'Desktop': 'desktop',
+                     'Mobile': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1'}
+    user_agent = agent_options.get(type)
+    delay = randint(18000, 26000)
+    force = True
+    full_page = True
+    scroll = True
+    url_args = {'url': url, 'delay': delay, 'width': width, 'user_agent': user_agent, 'force': force,
+                'full_page': full_page, 'scroll': scroll}
+    query_string = urllib.parse.urlencode(url_args, True)
+    capture_url = "http://138.197.201.156:5000/png?%s" % (query_string)
+    # print(capture_url)
+    return capture_url
+
+
+def set_file_params2(url, width, type, directory):
+    url = url
+    width = width
+    agent_options = {'Desktop': 'desktop', 'Mobile': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1'}
+    user_agent = agent_options.get(type)
+    type = type
+    delay = randint(15000, 26000)
+    force = True
+    full_page = True
+    directory = directory
+    capture_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    capture_url = 'abc'
+    name = datetime.datetime.now().strftime("%I:%M %p") + '-' + type + '.png'
+    date_folder = datetime.datetime.now().strftime("%m-%d-%Y")
+    file_path = remove_prefix(directory, 'static/images') + "/" + date_folder + "/" + name
+    file_args = {'url': url, 'delay': delay, 'width': width, 'force': force,
+                 'capture_date': capture_date, 'full_page': full_page, 'type': type, 'directory': directory,
+                 'name': name, 'file_path': file_path, 'capture_url': capture_url}
+    return file_args
+
+
+def capture2(page_id, width, type):
+    with app.app_context():
+        page = Page.query.filter_by(id=page_id).first()  # this is a query to gather all info for this capture
+        # print('page found')
+        capture_url = gen_url(page.url, width, type)
+        # print('url generated')
+        file_parameters = set_file_params2(page.url, width, type, page.directory)
+        # print('parameters set')
+        file_parameters['capture_url'] = capture_url
+        download_image(file_parameters)
+        # print('downloaded image')
+        add_db_record(page.id, file_parameters)
+        # print('added to DB')
+
+
+def capture3(page_id, width, type, css_class):
+    with app.app_context():
+        page = Page.query.filter_by(id=page_id).first()  # this is a query to gather all info for this capture
+        css_class = css_class
+        base_page = requests.get(page.url)
+        soup = BeautifulSoup(base_page.text, features="html.parser")
+        first_class = soup.find(class_=css_class)
+        a_tag = first_class.attrs['href']
+        download_url = a_tag
+        # print(download_url)
+        capture_url = gen_url(download_url, width, type)
+        file_parameters = set_file_params2(download_url, width, type, page.directory)
+        file_parameters['capture_url'] = capture_url
+        download_image(file_parameters)
+        add_db_record(page.id, file_parameters)
+
+
+
