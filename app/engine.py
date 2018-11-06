@@ -144,7 +144,7 @@ def set_file_params2(url, width, type, directory):
     agent_options = {'Desktop': 'desktop', 'Mobile': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1'}
     user_agent = agent_options.get(type)
     type = type
-    delay = randint(15000, 26000)
+    delay = randint(15, 40)*1000
     force = True
     full_page = True
     directory = directory
