@@ -38,7 +38,7 @@ Tempita==0.5.2
 timeago==1.0.8
 urllib3==1.22
 visitor==0.1.3
-Werkzeug==0.12.2
+Werkzeug==0.15.3
 Whoosh==2.7.4
 WTForms==2.1
 gunicorn
